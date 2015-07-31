@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="libs/sui/css/sm.min.css">
     <link rel="stylesheet" href="libs/sui/css/sm-extend.min.css">
     <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style-lyl.css">
 </head>
 <body>
 	<!-- 顶部标题 -->
@@ -35,11 +36,25 @@
 
 	<!-- 页面内容区域 -->
 	<div class="content" id="address-option">
-	    地址管理
+	    <div class="content">
+		  <!-- Slider -->
+		  <div class="swiper-container address-page-ad" data-space-between='10'>
+		    <div class="swiper-wrapper">
+		      <div class="swiper-slide"><img src="img/ad-banner-gd.jpg" alt=""></div>
+		     <div class="swiper-slide"><img src="img/ad-banner-gd.jpg" alt=""></div>
+		     <div class="swiper-slide"><img src="img/ad-banner-gd.jpg" alt=""></div>
+		    </div>
+		    <div class="swiper-pagination"></div>
+		  </div>
+		</div>
+
 	</div>
 
 	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
   	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
   	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
+  	<script type="text/javascript">
+  		 $(".swiper-container").swiper(); //广告banner
+  	</script>
 </body>
 </html>
