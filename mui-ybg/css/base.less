@@ -1,0 +1,70 @@
+/*云包公公共样式*/
+
+@font-face {
+    font-family: "iconfont-sm";
+
+    src: url('../libs/sui/fonts/ratchicons.eot');
+    src: url('../libs/sui/fonts/ratchicons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../libs/sui/fonts/ratchicons.woff') format('woff'), /* chrome、firefox */
+    url('../libs/sui/fonts/ratchicons.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../libs/sui/fonts/ratchicons.svg#iconfont') format('svg');
+
+    /* IE9*/
+    /* iOS 4.1- */
+}
+
+// 颜色参数-功能性划分
+@background-content-color:#f3f4f6; //背景内容区域颜色
+@default-color:#009fe8; //通用颜色，用于通用的按钮背景颜色，云包公项目为该色值的蓝色 
+@opposite-dark-color:#fff; //反差深色的背景的浅色字体类用色
+
+// 颜色种类划分
+@black:#313131;
+
+
+/*公共区域-内容content区域*/
+.content {
+    background: @background-content-color;
+}
+
+/*公共区域-底部导航*/
+.bar-tab {
+    background: @black;
+    height: auto;
+    .tab-item {
+        padding-top: 8px;
+        padding-bottom: 8px;
+        &.current {
+            background: @default-color;
+        }
+        .tab-label {
+            color: @opposite-dark-color;
+        }
+    }
+}
+
+/*公共区域-顶部导航*/
+.bar-nav {
+    background: @default-color;
+    .title {
+        color: @opposite-dark-color;
+    }
+}
+
+/*图标定义*/
+.bar-tab {
+    .icon {
+	display: block;
+    margin: 0 auto 5px;
+    background-size: 100%; 
+        &.icon-cart-white {
+            background-image: url(../img/ico-mall-white.png);
+        }
+        &.icon-address-white {
+            background-image: url(../img/ico-address-white.png);  
+        }
+        &.icon-me-white {
+            background-image: url(../img/ico-porfiles-white.png);
+        }
+    }
+}
