@@ -1,32 +1,50 @@
 /*云包公公共样式*/
-
 @font-face {
-    font-family: "iconfont-sm";
-
-    src: url('../libs/sui/fonts/ratchicons.eot');
-    src: url('../libs/sui/fonts/ratchicons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../libs/sui/fonts/ratchicons.woff') format('woff'), /* chrome、firefox */
-    url('../libs/sui/fonts/ratchicons.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-    url('../libs/sui/fonts/ratchicons.svg#iconfont') format('svg');
-
-    /* IE9*/
-    /* iOS 4.1- */
+  font-family: "iconfont-sm";
+  src: url('../libs/sui/fonts/ratchicons.eot');
+  src: url('../libs/sui/fonts/ratchicons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../libs/sui/fonts/ratchicons.woff') format('woff'), /* chrome、firefox */ url('../libs/sui/fonts/ratchicons.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../libs/sui/fonts/ratchicons.svg#iconfont') format('svg');
+  
+  /* IE9*/
+  /* iOS 4.1- */
 }
-
-/*底部导航*/
-
+/*公共区域-内容content区域*/
+.content {
+  background: #f3f4f6;
+}
+/*公共区域-底部导航*/
+.bar-tab {
+  background: #313131;
+  height: auto;
+}
+.bar-tab .tab-item {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+.bar-tab .tab-item.current {
+  background: #009fe8;
+}
+.bar-tab .tab-item .tab-label {
+  color: #ffffff;
+}
+/*公共区域-顶部导航*/
+.bar-nav {
+  background: #009fe8;
+}
+.bar-nav .title {
+  color: #ffffff;
+}
 /*图标定义*/
 .bar-tab .icon {
-	display: inline-block;
-	width: 50px;
-	height: 50px;
+  display: block;
+  margin: 0 auto 5px;
+  background-size: 100%;
 }
-.icon-cart-white {
-	background: url(../img/ico-mall-white.png);
+.bar-tab .icon.icon-cart-white {
+  background-image: url(../img/ico-mall-white.png);
 }
-.icon-address-white {
-	background: url(../img/ico-address-white.png);	
+.bar-tab .icon.icon-address-white {
+  background-image: url(../img/ico-address-white.png);
 }
-.icon-me-white {
-	background: url(../img/ico-profiles-white.png);
+.bar-tab .icon.icon-me-white {
+  background-image: url(../img/ico-porfiles-white.png);
 }
