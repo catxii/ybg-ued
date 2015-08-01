@@ -15,10 +15,11 @@
 .bar-tab {
   background: #313131;
   height: auto;
+  z-index: 20;
 }
 .bar-tab .tab-item {
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .bar-tab .tab-item.current {
   background: #009fe8;
@@ -36,7 +37,7 @@
 /*图标定义*/
 .bar-tab .icon {
   display: block;
-  margin: 0 auto 5px;
+  margin: 0 auto 0.25rem;
   background-size: 100%;
 }
 .bar-tab .icon.icon-cart-white {
@@ -47,4 +48,13 @@
 }
 .bar-tab .icon.icon-me-white {
   background-image: url(../img/ico-porfiles-white.png);
+}
+/* 排版布局 */
+ul,
+ol {
+  padding: 0;
+}
+ul li,
+ol li {
+  list-style: none;
 }
