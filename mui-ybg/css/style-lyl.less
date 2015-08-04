@@ -1,3 +1,16 @@
+// 颜色参数-功能性划分
+@background-content-color:#f3f4f6; //背景内容区域颜色
+@default-color:#009fe8; //通用主色，用于通用的按钮背景颜色，云包公项目为该色值的蓝色 
+@default-dark-color:#0675bb; //通用主色加深，可用不限于按钮点击时。
+@opposite-dark-color:#fff; //反差深色的背景的浅色字体类用色
+@border-gray-color:#a5a5a5; //通用灰色线框色
+
+// 颜色种类划分
+@black:#313131;
+@white:#fff;
+@gray:#ccc;
+@red:#ff0000;
+
 // 工地管理页面
 
 .address-page-ad {
@@ -16,4 +29,152 @@
     background-size: 0.5rem;
     padding-right: 2rem;
     text-align: justify;
+}
+
+.swiper-container {
+    padding-bottom: 0px;
+}
+.swiper-container-horizontal > .swiper-pagination {
+    bottom:0px;
+    .swiper-pagination-bullet {
+        background: #fff;
+        opacity: 1;
+        width: 0.5rem;
+        height: 0.5rem;
+        &.swiper-pagination-bullet-active {
+            background: #007aff;
+        }
+    }
+}
+
+// 商城首页
+.item-product-list {
+    &:active {
+        background: white!important;
+    }
+    .item-title {
+        margin-top:0.1rem;
+        margin-bottom: 0.1rem;
+    }
+    .item-subtitle {
+        margin-bottom: 0.1rem;
+    }
+    .item-price {
+        .old-price {
+            color: @gray;
+            text-decoration: line-through;
+        }
+        .hot-price {
+            color: @red;
+            font-size:1rem;
+        }
+    }
+}
+
+// 销售端-客户首页
+.position-right {
+    position: absolute;
+    right: 0.5rem;
+}
+.bar-header-secondary {
+    &.white-bg {
+        .searchbar {
+            background: white;
+            border-bottom: 1px solid #9c9d9e;
+            box-shadow: 1px 1px 4px #ccc;
+            input#search {
+                border: 1px solid #b4b4b4;
+            }
+        }
+        .position-right {
+            &.button{
+                position: absolute!important;
+                right: 0.5rem;
+                padding:0 0.25rem; 
+                top: 0.4rem;
+            }
+        }      
+    }
+}
+.address-area {
+    background: #333333;
+    color: white;
+    padding: .5rem 1rem;
+    position: relative;
+    ul {
+        margin:0;
+        padding-right: 4rem;
+    }
+    .position-right {
+        top: 50%;
+        -webkit-transform: translate3D(0, -50%, 0);
+        -ms-transform: translate3D(0, -50%, 0);
+        -o-transform: translate3D(0, -50%, 0);
+        transform: translate3D(0, -50%, 0);
+    }
+}
+
+.list-fix-border {
+    .item-content {
+        position: relative;
+        border-bottom: 1px solid #efefef;
+        .item-inner:after {
+            display: none;
+        }
+    }
+}
+
+.item-after {
+    &.default-color {
+        color: #009fe8;
+    }
+}
+
+.h4-title {
+    margin:.5rem  0 0;
+}
+
+.card {
+    font-size: .8rem;
+}
+
+i.icon {
+    width: 1.45rem;
+    height: 1.45rem;
+    background-size: 100%;
+    &.icon-diy-money{
+     background-image: url("../img/me-ico_03.png");  
+    }
+    &.icon-diy-lock{
+     background-image: url("../img/me-ico_07.png");  
+    }
+    &.icon-diy-search{
+     background-image: url("../img/me-ico_11.png");  
+    }
+    &.icon-diy-people{
+     background-image: url("../img/me-ico_13.png");  
+    }
+}
+
+.login-list {   
+    li {
+        line-height: 3rem;
+        margin-bottom: 0.5rem;
+        background-size: 1rem!important;
+    }
+    .username {
+        background: url(../img/username-ico.png) left center no-repeat;
+        border-bottom: 1px solid #ccc;
+        padding-left: 2rem;
+    }
+    .password {
+        background: url(../img/password-ico.png) left center no-repeat;
+        border-bottom: 1px solid #ccc;
+        padding-left: 2rem;
+    }
+    input {
+        border:none;
+        background: none;
+        font-size:1rem;
+    }
 }
