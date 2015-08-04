@@ -2,7 +2,6 @@
 
 @font-face {
     font-family: "iconfont-sm";
-
     src: url('../libs/sui/fonts/ratchicons.eot');
     src: url('../libs/sui/fonts/ratchicons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
     url('../libs/sui/fonts/ratchicons.woff') format('woff'), /* chrome、firefox */
@@ -15,11 +14,28 @@
 
 // 颜色参数-功能性划分
 @background-content-color:#f3f4f6; //背景内容区域颜色
-@default-color:#009fe8; //通用颜色，用于通用的按钮背景颜色，云包公项目为该色值的蓝色 
+@default-color:#009fe8; //通用主色，用于通用的按钮背景颜色，云包公项目为该色值的蓝色 
+@default-dark-color:#0675bb; //通用主色加深，可用不限于按钮点击时。
 @opposite-dark-color:#fff; //反差深色的背景的浅色字体类用色
+@border-gray-color:#a5a5a5; //通用灰色线框色
+@danger-color:red;
+@warning-color:#ff6300;
 
 // 颜色种类划分
 @black:#313131;
+@white:#fff;
+@gray:#efefef;
+@red:#ff0000;
+
+.default-color {
+    color: @default-color;
+}
+.danger-color {
+    color: @danger-color;
+}
+.warning-color {
+    color: @warning-color;
+}
 
 
 /*公共区域-内容content区域*/
@@ -31,31 +47,49 @@
 .bar-tab {
     background: @black;
     height: auto;
+    z-index: 20;
     .tab-item {
-        padding-top: 8px;
-        padding-bottom: 8px;
+        padding-top: 0.25rem;
+        padding-bottom: 0.25rem;
         &.current {
             background: @default-color;
         }
         .tab-label {
             color: @opposite-dark-color;
         }
+        .icon ~ .tab-label {
+            top: 0.05rem;
+            font-size: .8em;
+        }
     }
 }
 
+
 /*公共区域-顶部导航*/
 .bar-nav {
-    background: @default-color;
-    .title {
-        color: @opposite-dark-color;
+    &.default-style {
+        background: @default-color;
+        .title {
+            color: @opposite-dark-color;
+        }
+        .icon {
+            color: @opposite-dark-color;
+        }
+        .button-link {
+            color: @opposite-dark-color;
+            &:active {
+                border:none;
+            }
+        }
     }
 }
+
 
 /*图标定义*/
 .bar-tab {
     .icon {
 	display: block;
-    margin: 0 auto 5px;
+    margin: 0 auto 0.25rem;
     background-size: 100%; 
         &.icon-cart-white {
             background-image: url(../img/ico-mall-white.png);
@@ -65,6 +99,120 @@
         }
         &.icon-me-white {
             background-image: url(../img/ico-porfiles-white.png);
+            &.sm {
+                background-image:url(../img/ico-porfiles-white-sm.png); 
+            }
+        }
+        &.icon-clients-white {
+            background-image: url(../img/ico-clients-white.png);
+        }
+        &.icon-orderlist-white {
+            background-image: url(../img/ico-orderlist-white.png);  
+        }
+        &.icon-message-white {
+            background-image: url(../img/ico-message-white.png);
         }
     }
+}
+
+/*按钮样式定义*/
+.button:active {
+    color:@default-dark-color;
+    border:1px solid @default-dark-color;
+} 
+
+
+/* 排版布局 */ 
+ul,ol {
+    padding: 0;
+    li {
+        list-style: none;
+    }
+}
+.inline-block-ul {
+    letter-spacing: -0.15rem;
+    word-spacing: -0.15rem;
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        letter-spacing: 0;
+        word-spacing: 0;
+    }
+}
+.list-block {
+    margin: 0.5rem 0;
+}
+.fix-bottom-bar {   
+    position: fixed;
+    bottom: 2.5rem;
+}
+.content-padded-large { //内容区域填充加大号
+    padding: 2rem;
+}
+.btn-right {
+    text-align:right;
+}
+
+// 数量控件
+.count-ul {
+    border:0.05rem solid @border-gray-color;
+    width: 5rem;
+    border-radius: 0.4rem;
+    background: @white;
+    position: absolute;
+    margin-top: 1.5rem;
+    right: 10px;
+    z-index: 10;
+    overflow: hidden;
+    .count-li {
+        float: left;
+        &.del,&.plus {
+            width: 33%;
+            text-indent: -999px;
+            overflow: hidden;
+            line-height: 1.6rem;
+            &:active {
+                background: @gray;
+            }
+        }
+        &.del {
+            background: url(../img/del.png) no-repeat center;
+            background-size: 30%;
+        }
+        &.plus {
+            background: url(../img/plus.png) no-repeat center;
+            background-size: 30%;
+        }
+        &.count {
+            width: 33%;
+            input {
+                width: 100%;
+                line-height: 1.6rem;
+                border:none;
+                height: auto;
+                border-right: 1px solid  @border-gray-color;
+                border-left: 1px solid  @border-gray-color;
+                text-align: center;
+            }
+        }
+    }
+}
+
+//picker控件
+.picker-modal {
+    position: fixed!important;
+}
+
+// 列表样式
+.item-content {
+    &:active {
+        background: @background-content-color;
+    }
+}
+
+//按钮
+.button-default {
+   &.button-fill {
+        background: @default-color;
+    } 
 }

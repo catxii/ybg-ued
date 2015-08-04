@@ -1,3 +1,134 @@
 .address-page-ad img {
   width: 100%;
 }
+.card-footer-ul {
+  display: block;
+  margin-top: 0;
+}
+.arrow-bg-right {
+  background: url("../img/i-list-chevron-right.png") no-repeat 95% center;
+  background-size: 0.5rem;
+  padding-right: 2rem;
+  text-align: justify;
+}
+.swiper-container {
+  padding-bottom: 0px;
+}
+.swiper-container-horizontal > .swiper-pagination {
+  bottom: 0px;
+}
+.swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet {
+  background: #fff;
+  opacity: 1;
+  width: 0.5rem;
+  height: 0.5rem;
+}
+.swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #007aff;
+}
+.item-product-list:active {
+  background: white!important;
+}
+.item-product-list .item-title {
+  margin-top: 0.1rem;
+  margin-bottom: 0.1rem;
+}
+.item-product-list .item-subtitle {
+  margin-bottom: 0.1rem;
+}
+.item-product-list .item-price .old-price {
+  color: #cccccc;
+  text-decoration: line-through;
+}
+.item-product-list .item-price .hot-price {
+  color: #ff0000;
+  font-size: 1rem;
+}
+.position-right {
+  position: absolute;
+  right: 0.5rem;
+}
+.bar-header-secondary.white-bg .searchbar {
+  background: white;
+  border-bottom: 1px solid #9c9d9e;
+  box-shadow: 1px 1px 4px #ccc;
+}
+.bar-header-secondary.white-bg .searchbar input#search {
+  border: 1px solid #b4b4b4;
+}
+.bar-header-secondary.white-bg .position-right.button {
+  position: absolute!important;
+  right: 0.5rem;
+  padding: 0 0.25rem;
+  top: 0.4rem;
+}
+.address-area {
+  background: #333333;
+  color: white;
+  padding: .5rem 1rem;
+  position: relative;
+}
+.address-area ul {
+  margin: 0;
+  padding-right: 4rem;
+}
+.address-area .position-right {
+  top: 50%;
+  -webkit-transform: translate3D(0, -50%, 0);
+  -ms-transform: translate3D(0, -50%, 0);
+  -o-transform: translate3D(0, -50%, 0);
+  transform: translate3D(0, -50%, 0);
+}
+.list-fix-border .item-content {
+  position: relative;
+  border-bottom: 1px solid #efefef;
+}
+.list-fix-border .item-content .item-inner:after {
+  display: none;
+}
+.item-after.default-color {
+  color: #009fe8;
+}
+.h4-title {
+  margin: .5rem  0 0;
+}
+.card {
+  font-size: .8rem;
+}
+i.icon {
+  width: 1.45rem;
+  height: 1.45rem;
+  background-size: 100%;
+}
+i.icon.icon-diy-money {
+  background-image: url("../img/me-ico_03.png");
+}
+i.icon.icon-diy-lock {
+  background-image: url("../img/me-ico_07.png");
+}
+i.icon.icon-diy-search {
+  background-image: url("../img/me-ico_11.png");
+}
+i.icon.icon-diy-people {
+  background-image: url("../img/me-ico_13.png");
+}
+.login-list li {
+  line-height: 3rem;
+  margin-bottom: 0.5rem;
+  background-size: 1rem!important;
+}
+.login-list .username {
+  background: url(../img/username-ico.png) left center no-repeat;
+  border-bottom: 1px solid #ccc;
+  padding-left: 2rem;
+}
+.login-list .password {
+  background: url(../img/password-ico.png) left center no-repeat;
+  border-bottom: 1px solid #ccc;
+  padding-left: 2rem;
+}
+.login-list input {
+  border: none;
+  background: none;
+  font-size: 1rem;
+}

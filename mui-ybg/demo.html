@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>云包公-工地管理</title>
+    <title>云包公-组件效果示范</title>
     <link rel="stylesheet" href="libs/sui/css/sm.min.css">
     <link rel="stylesheet" href="libs/sui/css/sm-extend.min.css">
     <link rel="stylesheet" href="libs/glyphicons/css/glyphicons.css">
@@ -35,11 +35,13 @@
 	<!-- 页面内容区域 -->
 	<div class="content" id="me">
 	    <h1>数量控件</h1>
-	    <ul class="count-ul clearfix">
-	    	<li class="del">-</li>
-	    	<li class="count"><input type="tel" class="num-input" value=""></li>
-	    	<li class="plus" >+</li>
-	    </ul>
+	    <div style="position: relative; height: 100px; background: #ccc;">
+	    	<div class="count-ul clearfix">
+				<div class="count-li del">-</div>
+				<div class="count-li count"><input type="tel" class="num-input" value="0"></div>
+				<div class="count-li plus" >+</div>
+			</div>
+	    </div>
 
 	    <h1>可选择列表</h1>
 	    <div class="list-block media-list">
