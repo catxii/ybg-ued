@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>云包公-工地管理</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style-qc.css">
+    <link rel="stylesheet" href="libs/sui/css/sm.min.css">
+    <link rel="stylesheet" href="libs/sui/css/sm-extend.min.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/live_pen_remember_scroll.js"></script>
+    
+    <style>
+table{ width: 100%;}
+td{padding:2px;width:100px;}
+th{text-align:left;padding:4px;width:100px;}
+.parent { cursor:pointer;} 
+.odd{ } 
+</style>
+<script type="text/javascript">
+$(function(){	
+ $('.parent').click(function(){   // 获取父行
+   $(this)
+    .siblings('.child_row').toggle();  // 隐藏/显示子行
+ }).click();
+})
+</script>
+</head>
+<body>
+	
+	<!-- 页面内容区域 -->
+<div class="content">
+	
+	<div class="card">
+    	<div class="card-content">
+      <div class="list-block order_submit">
+        <ul>
+          <li>
+            <a href="#" class="item-link item-content">
+              <div class="item-inner row no-gutter">
+              <div class="col-30">[默认]</div>
+                <div class="col-70">长沙市-雨花区</div>
+                <div class="col-100">万家丽路2345号万科金域华府3栋</div>                
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    	</div>
+  	</div>
+  <div class="card">
+    <div class="list-block">
+    <ul>
+      <li class="item-content">
+        <div class="item-inner">
+          <div class="item-title">支付方式</div>
+          <div class="item-after">微信支付</div>
+        </div>
+      </li>
+      <li class="item-content">
+        <div class="item-inner">
+          <div class="item-title">优惠券</div>
+          <div class="item-after"><img src="img/1_03.jpg">满1000元减50元</div>
+        </div>
+      </li>
+    </ul>
+  	</div>
+    <div class="list-block">
+    <ul>
+      <li class="item-content">
+      	<div class="item-media"><img src="img/1_07.png"></div>
+        <div class="item-inner">
+          <div class="item-title">收货后72小时内使用<b>微信支付</b>可使用优惠券</div>
+        </div>
+      </li>
+    </ul>
+  	</div>
+  	
+  	<table>
+  <tbody>
+   <tr class="parent"><td colspan="3">前台设计组</td></tr>
+   <tr class="child_row"><td>张山</td><td>男</td><td>浙江宁波</td></tr>
+   <tr class="child_row"><td>李四</td><td>女</td><td>浙江杭州</td></tr>
+  </tbody>
+ </table>
+  <div class="content-block">
+    <div class="row">
+      <div class="col-50"><a href="index.html" class="button button-big button-fill button-danger">取消</a></div>
+      <div class="col-50"><a href="index.html" class="button button-big button-fill button-success">提交</a></div>
+    </div>
+  </div>
+</div>
+</div>
+	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
+  	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
+  	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
+</body>
+</html>
