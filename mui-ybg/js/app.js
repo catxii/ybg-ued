@@ -12,6 +12,6 @@ $(document).on('pageInit', '#client_index', function(e, id, content){
 	  ]
 	});
 });
-$(document).on('pageInit', '#page-detail', function(e, id, content){
-//初始化 page-detail
+$(document).on('pageInit', '#saler_me_statistics', function(e, id, content){
+	$("#date_picker").calendar();
 });
