@@ -1,3 +1,23 @@
+// 公用初始化
+$(document).on('pageInit', function(e, id, content){
+  //迷你弹出等待框
+  $(document).on('click','.wait-loading', function () {
+      $.showIndicator();
+      setTimeout(function () {
+          $.hideIndicator();
+      }, 2000);
+  });
+  // 标准弹出等待框，带标题
+  $(document).on('click','.wait-loading-large', function () {
+    $.showPreloader('加载中，请稍后')
+    setTimeout(function () {
+        $.hidePreloader();
+    }, 2000);
+  });
+
+});
+
+// 客户首页初始化
 $(document).on('pageInit', '#client_index', function(e, id, content){
 	$("#picker").picker({
 	  toolbarTemplate: '<header class="bar bar-nav">\
