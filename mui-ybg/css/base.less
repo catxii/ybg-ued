@@ -17,9 +17,11 @@
 @default-color:#009fe8; //通用主色，用于通用的按钮背景颜色，云包公项目为该色值的蓝色 
 @default-dark-color:#0675bb; //通用主色加深，可用不限于按钮点击时。
 @opposite-dark-color:#fff; //反差深色的背景的浅色字体类用色
-@border-gray-color:#a5a5a5; //通用灰色线框色
+@border-gray-color:#a5a5a5; //通用灰色线框色,加黑
+@border-gray-tint-color:#ccc; //浅灰色线框
 @danger-color:red;
 @warning-color:#ff6300;
+@warning-bg:#f7e2ca;
 
 // 颜色种类划分
 @black:#313131;
@@ -29,6 +31,9 @@
 
 .default-color {
     color: @default-color;
+    &:active {
+        color: @default-dark-color;
+    }
 }
 .danger-color {
     color: @danger-color;
@@ -215,4 +220,17 @@ ul,ol {
    &.button-fill {
         background: @default-color;
     } 
+}
+
+//警惕消息提示框
+.warning-message-bar {
+    background: @warning-bg;
+    color: @warning-color;
+    position:fixed;
+    top: 2.2rem;
+    right: 0;
+    left: 0;
+    padding: .2rem;
+    text-align: center;
+    z-index: 10;
 }

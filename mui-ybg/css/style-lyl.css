@@ -1,3 +1,193 @@
+/*云包公公共样式*/
+@font-face {
+  font-family: "iconfont-sm";
+  src: url('../libs/sui/fonts/ratchicons.eot');
+  src: url('../libs/sui/fonts/ratchicons.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../libs/sui/fonts/ratchicons.woff') format('woff'), /* chrome、firefox */ url('../libs/sui/fonts/ratchicons.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/ url('../libs/sui/fonts/ratchicons.svg#iconfont') format('svg');
+  
+  /* IE9*/
+  /* iOS 4.1- */
+}
+.default-color {
+  color: #009fe8;
+}
+.default-color:active {
+  color: #0675bb;
+}
+.danger-color {
+  color: #ff0000;
+}
+.warning-color {
+  color: #ff6300;
+}
+/*公共区域-内容content区域*/
+.content {
+  background: #f3f4f6;
+}
+/*公共区域-底部导航*/
+.bar-tab {
+  background: #313131;
+  height: auto;
+  z-index: 20;
+}
+.bar-tab .tab-item {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+.bar-tab .tab-item.current {
+  background: #009fe8;
+}
+.bar-tab .tab-item .tab-label {
+  color: #ffffff;
+}
+.bar-tab .tab-item .icon ~ .tab-label {
+  top: 0.05rem;
+  font-size: .8em;
+}
+/*公共区域-顶部导航*/
+.bar-nav.default-style {
+  background: #009fe8;
+}
+.bar-nav.default-style .title {
+  color: #ffffff;
+}
+.bar-nav.default-style .icon {
+  color: #ffffff;
+}
+.bar-nav.default-style .button-link {
+  color: #ffffff;
+}
+.bar-nav.default-style .button-link:active {
+  border: none;
+}
+/*图标定义*/
+.bar-tab .icon {
+  display: block;
+  margin: 0 auto 0.25rem;
+  background-size: 100%;
+}
+.bar-tab .icon.icon-cart-white {
+  background-image: url(../img/ico-mall-white.png);
+}
+.bar-tab .icon.icon-address-white {
+  background-image: url(../img/ico-address-white.png);
+}
+.bar-tab .icon.icon-me-white {
+  background-image: url(../img/ico-porfiles-white.png);
+}
+.bar-tab .icon.icon-me-white.sm {
+  background-image: url(../img/ico-porfiles-white-sm.png);
+}
+.bar-tab .icon.icon-clients-white {
+  background-image: url(../img/ico-clients-white.png);
+}
+.bar-tab .icon.icon-orderlist-white {
+  background-image: url(../img/ico-orderlist-white.png);
+}
+.bar-tab .icon.icon-message-white {
+  background-image: url(../img/ico-message-white.png);
+}
+/*按钮样式定义*/
+.button:active {
+  color: #0675bb;
+  border: 1px solid #0675bb;
+}
+/* 排版布局 */
+ul,
+ol {
+  padding: 0;
+}
+ul li,
+ol li {
+  list-style: none;
+}
+.inline-block-ul {
+  letter-spacing: -0.15rem;
+  word-spacing: -0.15rem;
+}
+.inline-block-ul li {
+  display: inline-block;
+  vertical-align: middle;
+  letter-spacing: 0;
+  word-spacing: 0;
+}
+.list-block {
+  margin: 0.5rem 0;
+}
+.fix-bottom-bar {
+  position: fixed;
+  bottom: 2.5rem;
+}
+.content-padded-large {
+  padding: 2rem;
+}
+.btn-right {
+  text-align: right;
+}
+.count-ul {
+  border: 0.05rem solid #a5a5a5;
+  width: 5rem;
+  border-radius: 0.4rem;
+  background: #ffffff;
+  position: absolute;
+  margin-top: 1.5rem;
+  right: 10px;
+  z-index: 10;
+  overflow: hidden;
+}
+.count-ul .count-li {
+  float: left;
+}
+.count-ul .count-li.del,
+.count-ul .count-li.plus {
+  width: 33%;
+  text-indent: -999px;
+  overflow: hidden;
+  line-height: 1.6rem;
+}
+.count-ul .count-li.del:active,
+.count-ul .count-li.plus:active {
+  background: #efefef;
+}
+.count-ul .count-li.del {
+  background: url(../img/del.png) no-repeat center;
+  background-size: 30%;
+}
+.count-ul .count-li.plus {
+  background: url(../img/plus.png) no-repeat center;
+  background-size: 30%;
+}
+.count-ul .count-li.count {
+  width: 33%;
+}
+.count-ul .count-li.count input {
+  width: 100%;
+  line-height: 1.6rem;
+  border: none;
+  height: auto;
+  border-right: 1px solid #a5a5a5;
+  border-left: 1px solid #a5a5a5;
+  text-align: center;
+}
+.picker-modal {
+  position: fixed!important;
+}
+.item-content:active {
+  background: #f3f4f6;
+}
+.button-default.button-fill {
+  background: #009fe8;
+}
+.warning-message-bar {
+  background: #f7e2ca;
+  color: #ff6300;
+  position: fixed;
+  top: 2.2rem;
+  right: 0;
+  left: 0;
+  padding: .2rem;
+  text-align: center;
+  z-index: 10;
+}
 .address-page-ad img {
   width: 100%;
 }
@@ -37,7 +227,7 @@
   margin-bottom: 0.1rem;
 }
 .item-product-list .item-price .old-price {
-  color: #cccccc;
+  color: #efefef;
   text-decoration: line-through;
 }
 .item-product-list .item-price .hot-price {
@@ -51,7 +241,7 @@
 .bar-header-secondary.white-bg .searchbar {
   background: white;
   border-bottom: 1px solid #9c9d9e;
-  box-shadow: 1px 1px 4px #ccc;
+  box-shadow: 1px 1px 4px #cccccc;
 }
 .bar-header-secondary.white-bg .searchbar input#search {
   border: 1px solid #b4b4b4;
@@ -113,22 +303,43 @@ i.icon.icon-diy-people {
   background-image: url("../img/me-ico_13.png");
 }
 .login-list li {
-  line-height: 3rem;
+  line-height: 2.5rem;
   margin-bottom: 0.5rem;
   background-size: 1rem!important;
 }
 .login-list .username {
-  background: url(../img/username-ico.png) left center no-repeat;
-  border-bottom: 1px solid #ccc;
+  background: url(../img/username-ico.png) 0.6rem 0.6rem no-repeat;
+  border-bottom: 1px solid #cccccc;
   padding-left: 2rem;
 }
 .login-list .password {
-  background: url(../img/password-ico.png) left center no-repeat;
-  border-bottom: 1px solid #ccc;
+  background: url(../img/password-ico.png) 0.6rem 0.6rem no-repeat;
+  border-bottom: 1px solid #cccccc;
   padding-left: 2rem;
 }
 .login-list input {
   border: none;
   background: none;
   font-size: 1rem;
+}
+.forget-list li {
+  border-bottom: 1px solid #cccccc;
+}
+.forget-list li input {
+  border: none;
+  display: block;
+  background: none;
+  line-height: 2rem;
+  width: 100%;
+}
+.forget-list li.verify {
+  position: relative;
+  padding-right: 5rem;
+}
+.forget-list li.verify .position-right {
+  top: .4rem;
+  z-index: 1;
+}
+.forget-list li.confirm {
+  margin-top: 1.5rem;
 }
