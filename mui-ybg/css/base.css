@@ -10,6 +10,9 @@
 .default-color {
   color: #009fe8;
 }
+.default-color:active {
+  color: #0675bb;
+}
 .danger-color {
   color: #ff0000;
 }
@@ -173,4 +176,14 @@ ol li {
 }
 .button-default.button-fill {
   background: #009fe8;
+}
+.warning-message-bar {
+  background: #f7e2ca;
+  color: #ff6300;
+  position: fixed;
+  top: 2.2rem;
+  right: 0;
+  left: 0;
+  padding: .5rem;
+  text-align: center;
 }
