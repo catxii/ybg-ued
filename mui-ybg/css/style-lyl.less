@@ -1,15 +1,4 @@
-// 颜色参数-功能性划分
-@background-content-color:#f3f4f6; //背景内容区域颜色
-@default-color:#009fe8; //通用主色，用于通用的按钮背景颜色，云包公项目为该色值的蓝色 
-@default-dark-color:#0675bb; //通用主色加深，可用不限于按钮点击时。
-@opposite-dark-color:#fff; //反差深色的背景的浅色字体类用色
-@border-gray-color:#a5a5a5; //通用灰色线框色
-
-// 颜色种类划分
-@black:#313131;
-@white:#fff;
-@gray:#ccc;
-@red:#ff0000;
+@import url("base.less");
 
 // 工地管理页面
 
@@ -81,7 +70,7 @@
         .searchbar {
             background: white;
             border-bottom: 1px solid #9c9d9e;
-            box-shadow: 1px 1px 4px #ccc;
+            box-shadow: 1px 1px 4px @border-gray-tint-color;
             input#search {
                 border: 1px solid #b4b4b4;
             }
@@ -117,7 +106,7 @@
 .list-fix-border {
     .item-content {
         position: relative;
-        border-bottom: 1px solid #efefef;
+        border-bottom: 1px solid @gray;
         .item-inner:after {
             display: none;
         }
@@ -126,7 +115,7 @@
 
 .item-after {
     &.default-color {
-        color: #009fe8;
+        color: @default-color;
     }
 }
 
@@ -158,23 +147,108 @@ i.icon {
 
 .login-list {   
     li {
-        line-height: 3rem;
+        line-height: 2.5rem;
         margin-bottom: 0.5rem;
         background-size: 1rem!important;
     }
     .username {
-        background: url(../img/username-ico.png) left center no-repeat;
-        border-bottom: 1px solid #ccc;
+        background: url(../img/username-ico.png) .6rem .6rem no-repeat;
+        .border-bottom-tint;
         padding-left: 2rem;
     }
     .password {
-        background: url(../img/password-ico.png) left center no-repeat;
-        border-bottom: 1px solid #ccc;
+        background: url(../img/password-ico.png) .6rem .6rem no-repeat;
+        .border-bottom-tint;
         padding-left: 2rem;
     }
     input {
         border:none;
         background: none;
         font-size:1rem;
+    }
+}
+
+.forget-list {
+    li {
+        .border-bottom-tint;
+        input {
+            border:none;
+            display: block;
+            background: none;
+            line-height: 2rem;
+            width: 100%;
+        }
+        &.verify {
+            position: relative;
+            padding-right:5rem;
+            .position-right {
+                top: .4rem;
+                z-index: 1;
+            }
+        }
+        &.confirm {
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+.profiles-list {
+    li {
+        .item-title {
+            color: @black;
+        }
+    }
+}
+
+.black-top-area {
+    background: @black;
+    .time-ul {
+        .inline-block-ul;
+        text-align: center;
+        margin:0;
+        li {
+            width: 33%;
+            line-height: 2.5rem;
+            a {
+                color:@white;
+                font-size:0.8rem;
+                &:active {
+                    color: @black; 
+                }
+            }
+        }
+    }
+}
+
+.material-list {
+    margin: 0;
+    li {
+        .border-bottom-tint-dashed;
+        line-height: 2.5rem;
+        text-align: center;
+        span {
+            width: 32%;
+            display: inline-block;
+            &.price {
+                color: @warning-color;
+                text-align: right;
+            }
+            &.name {
+                text-align: left;
+            }
+        }
+    }
+}
+.time-info {
+    .border-bottom;
+    margin-top: 0;
+    li {
+        line-height: 2.5rem;
+        &.type {
+            float:left;
+        }
+        &.value {
+            float:right;
+        }
     }
 }
