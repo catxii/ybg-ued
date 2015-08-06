@@ -176,9 +176,17 @@ ul,ol {
   overflow: hidden;
   vertical-align: middle;
 }
-.fix-bottom-bar {    //底部补丁栏
+.fix-bottom-bar {    //底部固定栏
     position: fixed;
-    bottom: 2.5rem;
+    bottom: 2.2rem;
+    &.white-bar {
+        background: @white;
+        border-top:@border-gray-tint;
+        line-height: 2rem;
+        .button {
+            .position-right;
+        }
+    }
 }
 .fix-top-bar {    //顶部挨着状态栏下的固定位置
     position: absolute;
@@ -186,6 +194,11 @@ ul,ol {
     left: 0;
     right: 0;
     z-index: 20;
+}
+
+.position-right {  //绝对定位到右侧
+    position: absolute;
+    right: 0.5rem;
 }
 .content-padded-large { //内容区域填充加大号
     padding: 2rem;
@@ -206,18 +219,21 @@ ul,ol {
 
 // 边框颜色和样式
 .border-bottom {  //标准下边框实线颜色
-    border-bottom:0.05rem solid @border-gray-color;
+    border-bottom:@border-gray;
 }
 .border-bottom-dashed {  //标准下边框虚线颜色
-    border-bottom:0.05rem dashed @border-gray-color;
+    border-bottom:@border-gray-dashed;
 }
 .border-bottom-tint { //浅色下边框实线颜色
-    border-bottom:0.05rem solid @border-gray-tint-color;
+    border-bottom:@border-gray-tint;
 }
 .border-bottom-tint-dashed { //浅色下边框虚线颜色
-    border-bottom:0.05rem dashed @border-gray-tint-color;
+    border-bottom:@border-tint-dashed;
 }
-
+@border-gray: 0.05rem solid @border-gray-color; //标准下边框实线颜色
+@border-gray-dashed: 0.05rem dashed @border-gray-color; //标准下边框虚线颜色
+@border-gray-tint: 0.05rem solid @border-gray-tint-color; //浅色下边框实线颜色
+@border-tint-dashed: 0.05rem dashed @border-gray-tint-color; //浅色下边框虚线颜色
 
 // 下拉控件
 .select-style {
