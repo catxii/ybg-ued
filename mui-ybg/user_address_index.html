@@ -13,24 +13,27 @@
 	<header class="bar bar-nav default-style">
 		<link rel="stylesheet" href="css/style-lyl.css">
 		<!-- <a class="icon icon-left pull-left" href="saler-me-index.html" data-transition="slide-out"></a> -->
+		<button class="button button-link pull-right">
+	    新增
+	  	</button>
 		<h1 class="title">工地管理</h1>
 	</header>
 
 	<!-- 底部导航栏 -->
 	<nav class="bar bar-tab">
-		<a class="tab-item" href="user-dynamic-index.html">
+		<a class="tab-item" href="user_dynamic_index.html">
 			<span class="icon icon-dynamic-white"></span>
 			<span class="tab-label">动态</span>
 		</a>
-		<a class="tab-item " data-transition="slide-in" href="user-address-index.html">
+		<a class="tab-item current" data-transition="slide-in" href="user_address_index.html">
 			<span class="icon icon-address-white"></span>
 			<span class="tab-label">工地</span>
 		</a>
-		<a class="tab-item current" data-transition="slide-in" href="user-mall-index.html">
+		<a class="tab-item" data-transition="slide-in" href="user_mall_index.html">
 			<span class="icon  icon-cart-white"></span>
 			<span class="tab-label">选购</span>
 		</a>
-		<a class="tab-item" data-transition="slide-in" href="user-me-index.html">
+		<a class="tab-item" data-transition="slide-in" href="user_me-index.html">
 			<span class="icon icon-me-white sm"></span>
 			<span class="tab-label">我的</span>
 		</a>
@@ -40,47 +43,48 @@
 
 	<!-- 页面内容区域 -->
 	<div class="content">
-	    <!-- 图片滚动 -->
+	  
+		<!-- 图片滚动 -->
 		<div class="swiper-container address-page-ad" data-space-between='10'>
 			<div class="swiper-wrapper">
-			  <div class="swiper-slide"><img src="img/mall-index-ad.jpg" alt=""></div>
-			 <div class="swiper-slide"><img src="img/mall-index-ad.jpg" alt=""></div>
-			 <div class="swiper-slide"><img src="img/mall-index-ad.jpg" alt=""></div>
+			  <div class="swiper-slide"><img src="img/ad-banner-gd.jpg" alt=""></div>
+			 <div class="swiper-slide"><img src="img/ad-banner-gd.jpg" alt=""></div>
+			 <div class="swiper-slide"><img src="img/ad-banner-gd.jpg" alt=""></div>
 			</div>
 			<div class="swiper-pagination"></div>
 		</div>
 
-		<!-- 商品列表开始 -->
-		<!-- <div class="content-block-title">水泥砂浆</div> -->
-		<div class="list-block media-list">
-		<ul>
-		  <li>
-		    <div href="#" class="item-link item-content item-product-list">
-		      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
-		      <div class="item-inner">
-		        <div class="item-title">坪塘水泥</div>
-		        <div class="item-subtitle">50KG/包</div>
-		        <div class="item-price">
-		        	<span class="old-price">￥18</span>
-		        	<span class="hot-price">￥15</span>
-		        </div>
-		      </div>
-				<div class="count-ul clearfix">
-					<div class="count-li del">-</div>
-					<div class="count-li count"><input type="tel" class="num-input" value="0"></div>
-					<div class="count-li plus" >+</div>
-				</div>
-		    </div>
-		  </li>
-		</ul>
+		<div class="card">
+			<div class="card-header">长沙市-雨花区</div>
+			<div class="card-content">
+			  <div class="card-content-inner  arrow-bg-right">金宇花苑17栋  电梯房  11楼1101</div>
+			</div>
+			<ul class="card-footer card-footer-ul clearfix">
+				<li class='pull-left'>
+					<a href="#" class="button button-warning">在线选购</a>
+				</li>
+				<li class='pull-right'>
+					<a href="#" class="button">查看订单</a>
+				</li>
+			</ul>
 		</div>
 
-		<ul class="inline-block-ul fix-bottom-bar">
-			<li><span>数量：00</span></li>
-			<li>应付金额：<span class="all-price">￥1230，00</span></li>
-			<li><a href="#">确认下单</a></li>
-		</ul>
-
+		<div class="card">
+			<div class="card-header">长沙市-雨花区</div>
+			<div class="card-content">
+			  <div class="card-content-inner  arrow-bg-right">金宇花苑17栋  电梯房  11楼1101</div>
+			</div>
+			<ul class="card-footer card-footer-ul clearfix">
+				<li class='pull-left'>
+					<a href="#" class="button button-warning">在线选购</a>
+				</li>
+				<li class='pull-right'>
+					<a href="#" class="button disabled">查看订单</a>
+				</li>
+			</ul>
+		</div>
+		
+		
 
 	</div>
 
