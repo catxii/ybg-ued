@@ -42,5 +42,20 @@
 	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
+	<script type="text/javascript">
+		$(document).on('click','.wait-loading', function () {
+		      $.showIndicator();
+		      setTimeout(function () {
+		          $.hideIndicator();
+		      }, 2000);
+		  });
+		  // 标准弹出等待框，带标题
+		  $(document).on('click','.wait-loading-large', function () {
+		    $.showPreloader('加载中，请稍后')
+		    setTimeout(function () {
+		        $.hidePreloader();
+		    }, 2000);
+		  });
+	</script>
 </body>
 </html>

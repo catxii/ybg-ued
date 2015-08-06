@@ -202,19 +202,50 @@ i.icon {
 
 .black-top-area {
     background: @black;
-    .time-ul {
+    ul {
         .inline-block-ul;
         text-align: center;
         margin:0;
+        white-space: nowrap;
         li {
-            width: 33%;
             line-height: 2.5rem;
             a {
                 color:@white;
-                font-size:0.8rem;
+                font-size:0.7rem;
+                padding:.2rem .3rem;
+                border-radius: 1rem;
+                position: relative;
                 &:active {
                     color: @black; 
                 }
+                i {
+                    display: block;
+                    border-radius: 2rem;
+                    background:@white;
+                    color: @default-color;
+                    width: 1rem;
+                    height: 1rem;
+                    text-align: center;
+                    line-height: 1rem;
+                    position: absolute;
+                    top: -.5rem;
+                    right: -.5rem;
+                }
+            }
+            &.current {
+                a {
+                    background:@default-color;
+                }
+            }
+        }
+        &.three-ul{
+             li{
+                width: 33%;
+            }   
+        }
+        &.four-ul {
+            li {
+                width:25%;
             }
         }
     }
@@ -251,4 +282,8 @@ i.icon {
             float:right;
         }
     }
+}
+
+.list-font-info {
+    color: @black;
 }
