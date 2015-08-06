@@ -1,5 +1,7 @@
 /*云包公公共样式*/
-
+// html,boyd {
+//     overflow: hidden;
+// }
 @font-face {
     font-family: "iconfont-sm";
     src: url('../libs/sui/fonts/ratchicons.eot');
@@ -17,28 +19,42 @@
 @default-color:#009fe8; //通用主色，用于通用的按钮背景颜色，云包公项目为该色值的蓝色 
 @default-dark-color:#0675bb; //通用主色加深，可用不限于按钮点击时。
 @opposite-dark-color:#fff; //反差深色的背景的浅色字体类用色
-@border-gray-color:#a5a5a5; //通用灰色线框色
-@danger-color:red;
-@warning-color:#ff6300;
+@border-gray-color:#a5a5a5; //通用灰色线框色,加黑
+@border-gray-tint-color:#ccc; //浅灰色线框
+@danger-color:red; //危险操作，警告文字
+@warning-color:#ff6300; //强调文字颜色
+@warning-bg:#f7e2ca; //强调区域背景色
+@unimportance-color:#999999; //次要的文字颜色
 
 // 颜色种类划分
 @black:#313131;
 @white:#fff;
-@gray:#efefef;
+@gray:#efefef; //灰色背景底色
 @red:#ff0000;
 @orange:#fa6a32;
 @blue:#009fe8;
 
-.default-color {
+.default-color {   //通用主色字体用色
     color: @default-color;
+    &:active {
+        color: @default-dark-color;
+    }
 }
-.danger-color {
+.danger-color {    //危险操作字体用色
     color: @danger-color;
 }
-.warning-color {
+.warning-color {  //强调字体用色
     color: @warning-color;
 }
+.unimportance-color {  //次要字体用色
+    color: @unimportance-color;
+}
 
+//背景色定义
+.white-bg {
+    background: @white!important;
+    color: @black!important;
+}
 
 /*公共区域-内容content区域*/
 .content {
@@ -143,18 +159,74 @@ ul,ol {
 }
 .list-block {
     margin: 0.5rem 0;
+    &.nomargin-list-block {
+        margin:0;
+    }
 }
-.fix-bottom-bar {   
+.font-overflow {  //字体溢出截取添加"..."处理,使用时需要给元素添加宽度
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.fix-bottom-bar {    //底部补丁栏
     position: fixed;
     bottom: 2.5rem;
 }
+.fix-top-bar {    //顶部挨着状态栏下的固定位置
+    position: fixed;
+    top: 2.11rem;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
 .content-padded-large { //内容区域填充加大号
     padding: 2rem;
-}
-.btn-right {
+} 
+.btn-right {  //文字居右显示
     text-align:right;
 }
+.padding {    //区域填充，可用于内容区域需要填充的地方
+    padding:.5rem;
+}
+.no-padding { //去掉容器的填充
+    padding:0!important;
+}
+.full-box {
+    margin-left:0!important;
+    margin-right:0!important;
+}
 
+// 边框颜色和样式
+.border-bottom {  //标准下边框实线颜色
+    border-bottom:0.05rem solid @border-gray-color;
+}
+.border-bottom-dashed {  //标准下边框虚线颜色
+    border-bottom:0.05rem dashed @border-gray-color;
+}
+.border-bottom-tint { //浅色下边框实线颜色
+    border-bottom:0.05rem solid @border-gray-tint-color;
+}
+.border-bottom-tint-dashed { //浅色下边框虚线颜色
+    border-bottom:0.05rem dashed @border-gray-tint-color;
+}
+
+
+// 下拉控件
+.select-style {
+    background: url(../img/select-arrow.png) no-repeat 92% center;
+    background-size: 1rem;
+    select{ 
+        border: 1px solid #ccc;
+        border-radius: 0.3rem;
+        height: auto;
+        padding: .2rem .4rem;  
+    }
+}
 // 数量控件
 .count-ul {
     border:0.05rem solid @border-gray-color;
@@ -164,7 +236,7 @@ ul,ol {
     position: absolute;
     margin-top: 1.5rem;
     right: 10px;
-    z-index: 10;
+    z-index: 2;
     overflow: hidden;
     .count-li {
         float: left;
@@ -217,4 +289,17 @@ ul,ol {
    &.button-fill {
         background: @default-color;
     } 
+}
+
+//警惕消息提示框
+.warning-message-bar {
+    background: @warning-bg;
+    color: @warning-color;
+    position:fixed;
+    top: 2.2rem;
+    right: 0;
+    left: 0;
+    padding: .2rem;
+    text-align: center;
+    z-index: 10;
 }
