@@ -141,37 +141,36 @@ i.icon {
      background-image: url("../img/me-ico_13.png");  
     }
     &.icon-user-ico {
-        background: url(../img/ico-me-1.gif) no-repeat;
-        background-size: 1.45rem;
+        background-size: 1.45rem!important;
         &.box-ico {
-            background-position: 0 0; 
+            background:url("../img/ico-me_box.gif") no-repeat; 
         }
         &.money-ico {
-            background-position: 0 -1.55rem; 
+            background:url("../img/ico-me_money.gif") no-repeat;
         }
         &.car-ico {
-            background-position: 0 -3.1rem; 
+            background:url("../img/ico-me_car.gif") no-repeat;
         }
         &.bag-ico {
-            background-position: 0 -4.65rem;
+            background:url("../img/ico-me_bag.gif") no-repeat;
         }
         &.title-ico {
-            background-position: 0 -6.2rem;
+            background:url("../img/ico-me_title.gif") no-repeat;
         }
         &.question-ico {
-            background-position: 0 -7.8rem;
+            background:url("../img/ico-me_question.gif") no-repeat;
         }
         &.note-ico {
-            background-position: 0 -9.4rem;
+            background:url("../img/ico-me_note.gif") no-repeat;
         }
         &.service-phone-ico {
-            background-position: 0 -11rem;
+            background:url("../img/ico-me_service.gif") no-repeat;
         }
         &.all-phone-ico {
-            background-position: 0 -12.6rem;
+            background:url("../img/ico-me_headset.gif") no-repeat;
         }
         &.complaint-phone-ico {
-            background-position: 0 -14.25rem;
+            background:url("../img/ico-me_complaint_phone.gif") no-repeat;
         }
     }
 }
@@ -319,7 +318,7 @@ i.icon {
     }
 }
 
-.list-font-info {
+.list-font-info {  //黑色字体
     color: @black;
 }
 
@@ -359,4 +358,41 @@ i.icon {
         right: 1.5rem;
         top:.5rem;
     }
+}
+
+.kit-list {
+    .card {
+        display: block;
+        text-align: center;
+        color: @black;
+        padding:1rem 0;
+        span {
+            vertical-align: middle;
+        }
+        &:active {
+            background: #efefef;
+            -webkit-box-shadow: none;
+            box-shadow:none;
+        }
+    }
+}
+.kit-banner {
+    .btn-center;
+    a{
+        color: @black;
+    }
+    .icon-no-bg {
+        display: block;
+        margin:.5rem auto;
+    }
+    .mid-box {
+        border:1px solid #b7e8ff;
+        border-style:none solid;
+    }
+    .col-33 {
+        padding-bottom: .5rem;
+        &:active {
+            background: #efefef;
+        }
+    } 
 }
