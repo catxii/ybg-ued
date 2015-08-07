@@ -20,7 +20,7 @@ html,boyd {
 @default-dark-color:#0675bb; //通用主色加深，可用不限于按钮点击时。
 @opposite-dark-color:#fff; //反差深色的背景的浅色字体类用色
 @border-gray-color:#a5a5a5; //通用灰色线框色,加黑
-@border-gray-tint-color:#ccc; //浅灰色线框
+@border-gray-tint-color:#efefef; //浅灰色线框
 @danger-color:red; //危险操作，警告文字
 @warning-color:#ff6300; //强调文字颜色
 @warning-bg:#f7e2ca; //强调区域背景色
@@ -33,6 +33,7 @@ html,boyd {
 @red:#ff0000;
 @orange:#fa6a32;
 @blue:#009fe8;
+@green:green;
 
 .default-color {   //通用主色字体用色
     color: @default-color;
@@ -48,6 +49,19 @@ html,boyd {
 }
 .unimportance-color {  //次要字体用色
     color: @unimportance-color;
+}
+.price {   //商品现价统一颜色
+    color: @danger-color;
+}
+.bg-ball {  //圆形背景，主要用于图标圆背景框
+    background: @green;
+    color: @white;
+    border-radius: 1rem;
+    padding:0.1rem;
+    font-size: 0.6rem;
+    &.green-bg {
+        background: @green;
+    }
 }
 
 //背景色定义
@@ -104,7 +118,7 @@ html,boyd {
 
 
 /*图标定义*/
-.bar-tab {
+.bar-tab { //底部按钮图标样式
     .icon {
 	display: block;
     margin: 0 auto 0.25rem;
@@ -135,6 +149,43 @@ html,boyd {
         }
     }
 }
+.icon-no-bg {  //没有背景的图标样式，最新动态首页
+    display: inline-block;
+    background-size: 100%!important;
+    margin-right: .2rem;
+    width: 1.5rem;
+    height:1.5rem;
+    vertical-align: middle;
+    &.card-ico {
+        background: url(../img/dynamic-ico_16.png) no-repeat;
+    }
+    &.warning-ico {
+        background: url(../img/dynamic-ico_23.png) no-repeat;
+    }
+    &.money-ico {
+        background: url(../img/dynamic-ico_03.png) no-repeat;
+    }
+    &.car-ico {
+        background: url(../img/dynamic-ico_05.png) no-repeat;
+    }
+    &.box-ico {
+        background: url(../img/dynamic-ico_07.png) no-repeat;
+    }
+    &.map-ico {
+        background: url(../img/dynamic-ico_13.png) no-repeat;
+    }
+    &.note-ico {
+        background: url(../img/dynamic-ico_21.png) no-repeat;
+    }
+}
+.warning-ico {
+    background: url(../img/warning-ico_03.gif) no-repeat;
+    background-size: 100%;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    vertical-align: middle;
+}
 
 /*按钮样式定义*/
 .button:active {
@@ -162,8 +213,19 @@ ul,ol {
 }
 .list-block {
     margin: 0.5rem 0;
-    &.nomargin-list-block {
+    li {
+        border-bottom: @border-gray-tint;
+        .item-inner:after {
+            display: none;
+        }
+    }
+    &.nomargin-list-block { //清理掉列表的边距
         margin:0;
+    }
+    &.no-fix-width { //去掉列表内容固定宽度
+        .item-title {
+            width: auto; 
+        }
     }
 }
 .font-overflow {  //字体溢出截取添加"..."处理,使用时需要给元素添加宽度
@@ -205,6 +267,9 @@ ul,ol {
 } 
 .btn-right {  //文字居右显示
     text-align:right;
+}
+.btn-center {
+    text-align: center;
 }
 .padding {    //区域填充，可用于内容区域需要填充的地方
     padding:.5rem;
