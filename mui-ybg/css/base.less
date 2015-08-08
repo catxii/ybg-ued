@@ -149,6 +149,65 @@ html,boyd {
         }
     }
 }
+
+// 列表菜单的图标
+i.icon {
+    width: 1.45rem;
+    height: 1.45rem;
+    background-size: 100%;
+    &.icon-diy-money{
+     background-image: url("../img/me-ico_03.png");  
+    }
+    &.icon-diy-lock{
+     background-image: url("../img/me-ico_07.png");  
+    }
+    &.icon-diy-search{
+     background-image: url("../img/me-ico_11.png");  
+    }
+    &.icon-diy-people{
+     background-image: url("../img/me-ico_13.png");  
+    }
+    &.icon-user-ico {
+        background-size: 1.45rem!important;
+        &.box-ico {
+            background:url("../img/ico-me_box.gif") no-repeat; 
+        }
+        &.money-ico {
+            background:url("../img/ico-me_money.gif") no-repeat;
+        }
+        &.car-ico {
+            background:url("../img/ico-me_car.gif") no-repeat;
+        }
+        &.bag-ico {
+            background:url("../img/ico-me_bag.gif") no-repeat;
+        }
+        &.title-ico {
+            background:url("../img/ico-me_title.gif") no-repeat;
+        }
+        &.question-ico {
+            background:url("../img/ico-me_question.gif") no-repeat;
+        }
+        &.note-ico {
+            background:url("../img/ico-me_note.gif") no-repeat;
+        }
+        &.service-phone-ico {
+            background:url("../img/ico-me_service.gif") no-repeat;
+        }
+        &.all-phone-ico {
+            background:url("../img/ico-me_headset.gif") no-repeat;
+        }
+        &.complaint-phone-ico {
+            background:url("../img/ico-me_complaint_phone.gif") no-repeat;
+        }
+        &.car2-ico {
+            background: url("../img/ico-me-car2.png") no-repeat;
+        }
+        &.weight-ico {
+            background: url("../img/ico-me-weight.png") no-repeat;
+        }
+    }
+}
+
 .icon-no-bg {  //没有背景的图标样式，最新动态首页
     display: inline-block;
     background-size: 100%!important;
@@ -227,6 +286,10 @@ ul,ol {
             width: auto; 
         }
     }
+}
+.list-font-info {  //订单信息类字体大小和黑色字体
+    color: @black;
+    font-size:.7rem;
 }
 .font-overflow {  //字体溢出截取添加"..."处理,使用时需要给元素添加宽度
   display: inline-block;
@@ -386,4 +449,12 @@ ul,ol {
     padding: .2rem;
     text-align: center;
     z-index: 10;
+}
+
+
+//搜索框
+.search-input {
+    input {
+        border-radius:1rem;
+    }
 }

@@ -35,3 +35,19 @@ $(document).on('pageInit', '#client_index', function(e, id, content){
 $(document).on('pageInit', '#saler_me_statistics', function(e, id, content){
 	$("#date_picker").calendar();
 });
+
+// 司机端-送货页面
+$(document).on('pageInit', '#driver_model', function(e, id, content){
+
+    $(document).on('click', '#add_delivery_cost',function () {
+      $.prompt('请输入搬运费金额（元）', '搬运费', 
+        function (value) {
+          $.alert(' 你输入的运费是' + value +'元');
+        },
+        function (value) {
+          $.alert('你输入的运费是' + value +'元');
+        }
+      );
+  });
+
+});
