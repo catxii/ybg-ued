@@ -428,10 +428,22 @@ ul,ol {
 .item-content {
     &:active {
         background: @background-content-color;
-    }
+    } 
 }
 
 //按钮
+.button{
+    line-height: 1.35rem;
+    color: #fff;
+    background: #0894ec;
+    border: none;
+    &.button-warning {
+        background: #f60;
+    }
+    &.button-danger {
+        background: #f6383a;
+    }
+}
 .button-default {
    &.button-fill {
         background: @default-color;
