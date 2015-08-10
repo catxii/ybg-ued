@@ -16,13 +16,13 @@
 		<h1 class="title">提交订单</h1>
 	</header>
 	<!-- 页面内容区域 -->
-<div class="content" id="user_modal">
+<div class="content" id="user_submit">
 	<div class="address-area">
-		<ul class="area-info">
-			<li><span class="order_img">您还没有添加工地</span></li>
-		</ul>			
-		<a href="user_address_new.html" data-transition="slide-in" class="button button-warning button-fill position-right">+ 添加工地</a>
-	</div>
+			<ul class="area-info">
+				<li>[默认]长沙市-雨花区</li>
+				<li class="font-7">万家丽路2345号万科金域华府3栋1104</li>
+			</ul>			
+		</div>
 	<div class="list-block media-list">
 		<ul class="saler-ul">
 		    <li>
@@ -57,6 +57,37 @@
 		    </li>
 		</ul>
 	</div>
+	<div class="list-block">
+	    <ul>
+	      <!-- Switch (Checkbox) -->
+	      <li>
+	        <div class="item-content">
+	          <div class="item-inner">
+	            <div class="label price">是否需要搬运上楼</div>
+	            <div class="btn-right">
+	              <label class="label-switch">
+	                <input type="checkbox">
+	                <div class="checkbox"></div>
+	              </label>
+	            </div>
+	          </div>
+	        </div>
+	      </li>
+	      <li>
+	        <div class="item-content">
+	          <div class="item-inner">
+	            <div class="label"><a href="#" class="orange-color">搬运费计费协议</a></div>
+	        </div>
+	      </li>
+	      <li>
+	        <div class="item-content">
+	          <div class="item-inner">
+	            <div class="label">搬运费 <span class="price
+	            	">¥88.00</span></div>
+	        </div>
+	      </li>
+	    </ul>
+	  </div>
 	<div class="list-block media-list">
 		<ul class="saler-ul">
 		    <li>
@@ -110,7 +141,7 @@
 	    <div class="card-footer no-border">
 	      <div>应付金额 <span class="red-color">¥588.00</span></div>
 	      <div>运费 <span class="red-color">¥60.00</span></div>
-	      <a href="javascript:void(0)" id="order_submit" data-transition="slide-in" class="button button-dafault button-fill order_button">提交订单</a>
+	      <a href="javascript:void(0)" id="user_order_submit" data-transition="slide-in" class="button button-dafault button-fill order_button">提交订单</a>
 	</div>
 </div>
 	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>

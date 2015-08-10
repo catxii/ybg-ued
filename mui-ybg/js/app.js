@@ -1,5 +1,6 @@
 // 公用初始化
 $(document).on('pageInit', function(e, id, content){
+	
   //迷你弹出等待框
   $(document).on('click','.wait-loading', function () {
       $.showIndicator();
@@ -14,9 +15,34 @@ $(document).on('pageInit', function(e, id, content){
         $.hidePreloader();
     }, 2000);
   });
+  // 按钮弹出提示
+	$(document).on('click','.confirm-ok', function () {
+      		$.confirm('确定取消订单??', function () {
+          		$.alert('你成功的取消了订单');
+      		});
+  		});
 
 });
-
+// 订单提交按钮提示
+	$(document).on('pageInit','#user_modal', function (e, id, content) {
+  
+  				$(document).on('click','#order_submit', function () {
+				      $.confirm('请添加您的工地收货地址', function () {
+				        window.location.href="user_address_new.html"
+				      });
+				  });
+	});
+	
+// 提交订单按钮提示
+	$(document).on('pageInit','#user_submit', function (e, id, content) {
+  
+  				$(document).on('click','#user_order_submit', function () {
+				      $.confirm('订单成功', function () {
+				        window.location.href="user_mall_index.html"
+				      });
+				  });
+	});
+	
 // 客户首页初始化
 $(document).on('pageInit', '#client_index', function(e, id, content){
 	$("#picker").picker({
@@ -35,3 +61,4 @@ $(document).on('pageInit', '#client_index', function(e, id, content){
 $(document).on('pageInit', '#saler_me_statistics', function(e, id, content){
 	$("#date_picker").calendar();
 });
+
