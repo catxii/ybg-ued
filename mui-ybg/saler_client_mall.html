@@ -12,48 +12,46 @@
 	<!-- 顶部标题 -->
 	<header class="bar bar-nav default-style">
 		<link rel="stylesheet" href="css/style-lyl.css">
-		<!-- <a class="icon icon-left pull-left" href="saler-me-index.html" data-transition="slide-out"></a> -->
-		<h1 class="title">工地管理</h1>
+		<a class="icon icon-left pull-left" href="saler-client-more.html" data-transition="slide-out"></a>
+		<h1 class="title">代客下单</h1>
 	</header>
 
 	<!-- 底部导航栏 -->
 	<nav class="bar bar-tab">
-		<a class="tab-item" href="user_dynamic_index.html">
-			<span class="icon icon-dynamic-white"></span>
-			<span class="tab-label">动态</span>
-		</a>
-		<a class="tab-item " data-transition="slide-in" href="user_address_index.html">
-			<span class="icon icon-address-white"></span>
-			<span class="tab-label">工地</span>
-		</a>
-		<a class="tab-item current" data-transition="slide-in" href="user_mall_index.html">
-			<span class="icon  icon-cart-white"></span>
-			<span class="tab-label">选购</span>
-		</a>
-		<a class="tab-item" data-transition="slide-in" href="user_me_index.html">
-			<span class="icon icon-me-white sm"></span>
-			<span class="tab-label">我的</span>
-		</a>
+	  <a class="tab-item current" href="saler-client-index.html">
+	    <span class="icon icon-clients-white"></span>
+	    <span class="tab-label">客户</span>
+	  </a>
+	  <a class="tab-item" data-transition="slide-in" href="saler-order-index.html">
+	    <span class="icon icon-orderlist-white"></span>
+	    <span class="tab-label">订单</span>
+	  </a>
+	  <a class="tab-item" data-transition="slide-in" href="saler-message-index.html">
+	    <span class="icon icon-message-white"></span>
+	    <span class="tab-label">消息</span>
+	  </a>
+	  <a class="tab-item" data-transition="slide-in" href="saler-me-index.html">
+	    <span class="icon icon-me-white sm"></span>
+	    <span class="tab-label">我的</span>
+	  </a>
 
 	</nav>
-
-
-	<ul class="bar bar-header-secondary inline-block-ul fix-bottom-bar white-bar" style="top:auto; ">
-		<li>应付金额：<span class="price">￥1230，00</span></li>
-		<li><a href="order_submit.html" class="button button-warning button-fill">确认下单</a></li>
-	</ul>
 	
 
 	<!-- 页面内容区域 -->
 	<div class="content" style="top:2.2rem;">
-	    <!-- 图片滚动 -->
-		<div class="swiper-container address-page-ad" data-space-between='10'>
-			<div class="swiper-wrapper">
-			  <div class="swiper-slide"><img src="img/mall-index-ad.jpg" alt=""></div>
-			 <div class="swiper-slide"><img src="img/mall-index-ad.jpg" alt=""></div>
-			 <div class="swiper-slide"><img src="img/mall-index-ad.jpg" alt=""></div>
-			</div>
-			<div class="swiper-pagination"></div>
+
+		<ul class="bar bar-header-secondary inline-block-ul fix-bottom-bar white-bar" style="top:auto; ">
+			<li>应付金额：<span class="price">￥1230，00</span></li>
+			<li><a href="order_submit.html" class="button button-warning button-fill">确认下单</a></li>
+		</ul>
+
+	    <div class="address-area">
+			<ul class="area-info">
+				<li>谭苛&nbsp;&nbsp;&nbsp;13467660967</li>
+				<li>长沙市-雨花区</li>
+				<li>万家丽路-金域华府一期</li>
+			</ul>
 		</div>
 
 		<!-- 商品列表开始 -->
@@ -62,11 +60,10 @@
 		<ul>
 		  <li>
 		    <div href="#" class="item-link item-content item-product-list">
-		      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
 		      <div class="item-inner">
 		        <div class="item-title">坪塘水泥</div>
-		        <div class="item-subtitle">50KG/包</div>
 		        <div class="item-price">
+		        	<span >50KG/包</span>
 		        	<span class="old-price">￥18</span>
 		        	<span class="hot-price">￥15</span>
 		        </div>

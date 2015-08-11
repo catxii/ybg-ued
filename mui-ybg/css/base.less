@@ -14,13 +14,15 @@ html,boyd {
     /* iOS 4.1- */
 }
 
+//图片路径配置
+@imgsrc:"../img";
+
 // 颜色参数-功能性划分
 @background-content-color:#f3f4f6; //背景内容区域颜色
 @default-color:#009fe8; //通用主色，用于通用的按钮背景颜色，云包公项目为该色值的蓝色 
 @default-dark-color:#0675bb; //通用主色加深，可用不限于按钮点击时。
 @opposite-dark-color:#fff; //反差深色的背景的浅色字体类用色
-@border-gray-color:#a5a5a5; //通用灰色线框色,加黑
-@border-gray-tint-color:#efefef; //浅灰色线框
+@gray-tint-color:#efefef; //浅灰色
 @danger-color:red; //危险操作，警告文字
 @warning-color:#ff6300; //强调文字颜色
 @warning-bg:#f7e2ca; //强调区域背景色
@@ -68,6 +70,18 @@ html,boyd {
 .white-bg {
     background: @white!important;
     color: @black!important;
+}
+
+
+//字体尺寸定义
+@font-size-biger:1.4rem;   //加大尺寸
+@font-size-big:1rem; //大尺寸
+@font-size-default:.85rem; //标准尺寸
+@font-size-small:.7rem;   //小尺寸
+@font-size-mini:.6rem;    //迷你尺寸
+
+.font-size(@default:.85rem,@small:.7rem,@mini){
+    font-size:@arguments;
 }
 
 /*公共区域-内容content区域*/
@@ -124,28 +138,28 @@ html,boyd {
     margin: 0 auto 0.25rem;
     background-size: 100%; 
         &.icon-cart-white {
-            background-image: url(../img/ico-mall-white.png);
+            background-image: url("@{imgsrc}/ico-mall-white.png");
         }
         &.icon-address-white {
-            background-image: url(../img/ico-address-white.png);  
+            background-image: url("@{imgsrc}/ico-address-white.png");  
         }
         &.icon-me-white {
-            background-image: url(../img/ico-porfiles-white.png);
+            background-image: url("@{imgsrc}/ico-porfiles-white.png");
             &.sm {
-                background-image:url(../img/ico-porfiles-white-sm.png); 
+                background-image:url("@{imgsrc}/ico-porfiles-white-sm.png"); 
             }
         }
         &.icon-clients-white {
-            background-image: url(../img/ico-clients-white.png);
+            background-image: url("@{imgsrc}/ico-clients-white.png");
         }
         &.icon-orderlist-white {
-            background-image: url(../img/ico-orderlist-white.png);  
+            background-image: url("@{imgsrc}/ico-orderlist-white.png");  
         }
         &.icon-message-white {
-            background-image: url(../img/ico-message-white.png);
+            background-image: url("@{imgsrc}/ico-message-white.png");
         }
         &.icon-dynamic-white {
-            background-image: url(../img/icon-star-white.png)
+            background-image: url("@{imgsrc}/icon-star-white.png");
         }
     }
 }
@@ -156,54 +170,54 @@ i.icon {
     height: 1.45rem;
     background-size: 100%;
     &.icon-diy-money{
-     background-image: url("../img/me-ico_03.png");  
+     background-image: url("@{imgsrc}/me-ico_03.png");  
     }
     &.icon-diy-lock{
-     background-image: url("../img/me-ico_07.png");  
+     background-image: url("@{imgsrc}/me-ico_07.png");  
     }
     &.icon-diy-search{
-     background-image: url("../img/me-ico_11.png");  
+     background-image: url("@{imgsrc}/me-ico_11.png");  
     }
     &.icon-diy-people{
-     background-image: url("../img/me-ico_13.png");  
+     background-image: url("@{imgsrc}/me-ico_13.png");  
     }
     &.icon-user-ico {
         background-size: 1.45rem!important;
         &.box-ico {
-            background:url("../img/ico-me_box.gif") no-repeat; 
+            background:url("@{imgsrc}/ico-me_box.gif") no-repeat; 
         }
         &.money-ico {
-            background:url("../img/ico-me_money.gif") no-repeat;
+            background:url("@{imgsrc}/ico-me_money.gif") no-repeat;
         }
         &.car-ico {
-            background:url("../img/ico-me_car.gif") no-repeat;
+            background:url("@{imgsrc}/ico-me_car.gif") no-repeat;
         }
         &.bag-ico {
-            background:url("../img/ico-me_bag.gif") no-repeat;
+            background:url("@{imgsrc}/ico-me_bag.gif") no-repeat;
         }
         &.title-ico {
-            background:url("../img/ico-me_title.gif") no-repeat;
+            background:url("@{imgsrc}/ico-me_title.gif") no-repeat;
         }
         &.question-ico {
-            background:url("../img/ico-me_question.gif") no-repeat;
+            background:url("@{imgsrc}/ico-me_question.gif") no-repeat;
         }
         &.note-ico {
-            background:url("../img/ico-me_note.gif") no-repeat;
+            background:url("@{imgsrc}/ico-me_note.gif") no-repeat;
         }
         &.service-phone-ico {
-            background:url("../img/ico-me_service.gif") no-repeat;
+            background:url("@{imgsrc}/ico-me_service.gif") no-repeat;
         }
         &.all-phone-ico {
-            background:url("../img/ico-me_headset.gif") no-repeat;
+            background:url("@{imgsrc}/ico-me_headset.gif") no-repeat;
         }
         &.complaint-phone-ico {
-            background:url("../img/ico-me_complaint_phone.gif") no-repeat;
+            background:url("@{imgsrc}/ico-me_complaint_phone.gif") no-repeat;
         }
         &.car2-ico {
-            background: url("../img/ico-me-car2.png") no-repeat;
+            background: url("@{imgsrc}/ico-me-car2.png") no-repeat;
         }
         &.weight-ico {
-            background: url("../img/ico-me-weight.png") no-repeat;
+            background: url("@{imgsrc}/ico-me-weight.png") no-repeat;
         }
     }
 }
@@ -216,29 +230,29 @@ i.icon {
     height:1.5rem;
     vertical-align: middle;
     &.card-ico {
-        background: url(../img/dynamic-ico_16.png) no-repeat;
+        background: url("@{imgsrc}/dynamic-ico_16.png") no-repeat;
     }
     &.warning-ico {
-        background: url(../img/dynamic-ico_23.png) no-repeat;
+        background: url("@{imgsrc}/dynamic-ico_23.png") no-repeat;
     }
     &.money-ico {
-        background: url(../img/dynamic-ico_03.png) no-repeat;
+        background: url("@{imgsrc}/dynamic-ico_03.png") no-repeat;
     }
     &.car-ico {
-        background: url(../img/dynamic-ico_05.png) no-repeat;
+        background: url("@{imgsrc}/dynamic-ico_05.png") no-repeat;
     }
     &.box-ico {
-        background: url(../img/dynamic-ico_07.png) no-repeat;
+        background: url("@{imgsrc}/dynamic-ico_07.png") no-repeat;
     }
     &.map-ico {
-        background: url(../img/dynamic-ico_13.png) no-repeat;
+        background: url("@{imgsrc}/dynamic-ico_13.png") no-repeat;
     }
     &.note-ico {
-        background: url(../img/dynamic-ico_21.png) no-repeat;
+        background: url("@{imgsrc}/dynamic-ico_21.png") no-repeat;
     }
 }
 .warning-ico {
-    background: url(../img/warning-ico_03.gif) no-repeat;
+    background: url("@{imgsrc}/warning-ico_03.gif") no-repeat;
     background-size: 100%;
     width: 1.5rem;
     height: 1.5rem;
@@ -292,14 +306,37 @@ ul,ol {
     font-size:.7rem;
 }
 .font-overflow {  //字体溢出截取添加"..."处理,使用时需要给元素添加宽度
-  display: inline-block;
-  zoom: 1;
-  *display: inline;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  overflow: hidden;
-  vertical-align: middle;
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.fix-center-middle {    //绝对定位垂直水平居中，兼容IE9以上
+    position: absolute;
+    left: 50%;
+    top:50%;
+    -webkit-transform: translate3D(-50%, -50%, 0);
+    -ms-transform: translate3D(-50%, -50%, 0);
+    -o-transform: translate3D(-50%, -50%, 0);
+    transform: translate3D(-50%, -50%, 0);
+    &.fixed {  //追加固定定位
+        position: fixed;
+    }
+}
+.fix-middle {    //绝对定位垂直水平居中，兼容IE9以上
+    position: absolute;
+    top:50%;
+    -webkit-transform: translate3D(0%, -50%, 0);
+    -ms-transform: translate3D(0%, -50%, 0);
+    -o-transform: translate3D(0%, -50%, 0);
+    transform: translate3D(0%, -50%, 0);
+    &.fixed {  //追加固定定位
+        position: fixed;
+    }
 }
 .fix-bottom-bar {    //底部固定栏
     position: fixed;
@@ -313,9 +350,28 @@ ul,ol {
         }
     }
 }
+.fix-top-header {  //固定在标题栏
+    .fix-center-middle;
+    &.list-block {
+        margin: 0;
+        select {
+            color:@opposite-dark-color;
+            padding-right: 1rem;
+            position: relative;
+            z-index: 21;
+            width: auto;
+        }
+        .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+            font-size: .8rem;
+        }
+    }
+}
 .fix-top-bar {    //顶部挨着状态栏下的固定位置
     position: absolute;
-    top: 2.11rem;
+    top: 1rem;
     left: 0;
     right: 0;
     z-index: 20;
@@ -346,26 +402,32 @@ ul,ol {
 }
 
 // 边框颜色和样式
-.border-bottom {  //标准下边框实线颜色
-    border-bottom:@border-gray;
+@border-gray: 0.05rem solid #ccc; //标准下边框实线颜色
+@border-gray-dashed: 0.05rem dashed #ccc; //标准下边框虚线颜色
+@border-gray-tint: 0.05rem solid #efefef; //浅色下边框实线颜色
+@border-gray-tint-dashed: 0.05rem dashed #efefef; //浅色下边框虚线颜色
+@border-gray-dark: 0.05rem solid #a5a5a5; //深灰色下边框实线颜色
+@border-gray-dark-dashed: 0.05rem dashed #a5a5a5; //深灰色下边框虚线颜色
+
+@border-warning:0.05rem solid @warning-color;
+@border-warning-dashed:0.05rem dashed @warning-color;
+
+.border-gray {
+    border:0.05rem solid #ccc;
+    &.bottom {
+        border-width:0 0 0.05rem 0;
+    }
+    &.dashed {
+        border-style: dashed;
+    }
+    &.tint{
+        border-color: #efefef;
+    }
 }
-.border-bottom-dashed {  //标准下边框虚线颜色
-    border-bottom:@border-gray-dashed;
-}
-.border-bottom-tint { //浅色下边框实线颜色
-    border-bottom:@border-gray-tint;
-}
-.border-bottom-tint-dashed { //浅色下边框虚线颜色
-    border-bottom:@border-tint-dashed;
-}
-@border-gray: 0.05rem solid @border-gray-color; //标准下边框实线颜色
-@border-gray-dashed: 0.05rem dashed @border-gray-color; //标准下边框虚线颜色
-@border-gray-tint: 0.05rem solid @border-gray-tint-color; //浅色下边框实线颜色
-@border-tint-dashed: 0.05rem dashed @border-gray-tint-color; //浅色下边框虚线颜色
 
 // 下拉控件
 .select-style {
-    background: url(../img/select-arrow.png) no-repeat 92% center;
+    background: url("@{imgsrc}/select-arrow.png") no-repeat 92% center;
     background-size: 1rem;
     select{ 
         border: 1px solid #ccc;
@@ -376,15 +438,14 @@ ul,ol {
 }
 // 数量控件
 .count-ul {
-    border:0.05rem solid @border-gray-color;
+    border:@border-gray-dark;
     width: 5rem;
     border-radius: 0.4rem;
     background: @white;
-    position: absolute;
-    margin-top: 1.5rem;
     right: 10px;
     z-index: 2;
     overflow: hidden;
+    .fix-middle;
     .count-li {
         float: left;
         &.del,&.plus {
@@ -397,11 +458,11 @@ ul,ol {
             }
         }
         &.del {
-            background: url(../img/del.png) no-repeat center;
+            background: url("@{imgsrc}/del.png") no-repeat center;
             background-size: 30%;
         }
         &.plus {
-            background: url(../img/plus.png) no-repeat center;
+            background: url("@{imgsrc}/plus.png") no-repeat center;
             background-size: 30%;
         }
         &.count {
@@ -411,8 +472,8 @@ ul,ol {
                 line-height: 1.6rem;
                 border:none;
                 height: auto;
-                border-right: 1px solid  @border-gray-color;
-                border-left: 1px solid  @border-gray-color;
+                border-right: @border-gray-dark;
+                border-left: @border-gray-dark;
                 text-align: center;
             }
         }
@@ -437,6 +498,9 @@ ul,ol {
     color: #fff;
     background: #0894ec;
     border: none;
+    &.tab-link {
+        background: none;
+    }
     &.button-warning {
         background: #f60;
     }
@@ -468,5 +532,60 @@ ul,ol {
 .search-input {
     input {
         border-radius:1rem;
+    }
+}
+
+.black-top-area {  //黑色顶部导航
+    background: @black;
+    height: auto;
+    ul {
+        .inline-block-ul;
+        text-align: center;
+        margin:0;
+        white-space: nowrap;
+        li {
+            line-height: 2.5rem;
+            a {
+                color:@white;
+                font-size:0.7rem;
+                padding:.2rem .3rem;
+                border-radius: 1rem;
+                position: relative;
+                &:active {
+                    color: @black; 
+                }
+                i {
+                    display: block;
+                    border-radius: 2rem;
+                    background:@white;
+                    color: @default-color;
+                    width: .8rem;
+                    height: .8rem;
+                    text-align: center;
+                    line-height: .8rem;
+                    position: absolute;
+                    top: -.5rem;
+                    right: -.5rem;
+                    font-size:.5rem;
+                    font-style: normal;
+                    font-weight: bolder;
+                }
+            }
+            &.current {
+                a {
+                    background:@default-color;
+                }
+            }
+        }
+        &.three-ul{
+             li{
+                width: 33%;
+            }   
+        }
+        &.four-ul {
+            li {
+                width:25%;
+            }
+        }
     }
 }

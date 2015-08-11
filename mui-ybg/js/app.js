@@ -24,13 +24,17 @@ $(document).on('pageInit', function(e, id, content){
 
 });
 // 订单提交按钮提示
-	$(document).on('pageInit','#user_modal', function (e, id, content) {
-  
+	$(document).on('pageAnimationStart','#user_modal', function (e, id, content) {
   				$(document).on('click','#order_submit', function () {
 				      $.confirm('请添加您的工地收货地址', function () {
 				        window.location.href="user_address_new.html"
 				      });
 				  });
+
+          $('.parent').click(function(){   // 获取父行
+             $(this).siblings('.child_row').toggle();  // 隐藏/显示子行
+            }).click();
+
 	});
 	
 // 提交订单按钮提示
@@ -43,24 +47,38 @@ $(document).on('pageInit', function(e, id, content){
 				  });
 	});
 	
-// 客户首页初始化
-$(document).on('pageInit', '#client_index', function(e, id, content){
-	$("#picker").picker({
-	  toolbarTemplate: '<header class="bar bar-nav">\
-	  <button class="button button-link pull-right close-picker">确定</button>\
-	  <h1 class="title">请选择销售人员</h1>\
-	  </header>',
-	  cols: [
-	    {
-	      textAlign: 'center',
-	      values: ['所有销售', '销售人员 4S', '销售人员 5', '销售人员 5S', '销售人员 6', '销售人员 6 Plus', '销售人员 2', '销售人员 Retina', '销售人员 Air', '销售人员 mini', '销售人员 mini 2', '销售人员 mini 3']
-	    }
-	  ]
-	});
-});
-$(document).on('pageInit', '#saler_me_statistics', function(e, id, content){
-	$("#date_picker").calendar();
-});
+  // 客户首页初始化
+  $(document).on('pageInit', '#saler_model', function(e, id, content){
+
+     function list_ctrl(){
+       util.toucher(document.getElementById('list_Group'))
+        .on('swipeLeft','.item-content',function(){
+          $(this).addClass('show-button');
+          return false;
+        })
+        .on('swipeRight','.item-content',function(){
+          $(this).removeClass('show-button');
+          return false;
+        })
+     }
+     list_ctrl();
+  });
+  $(document).on('pageInit', '#saler_me_statistics', function(e, id, content){
+  	$("#date_picker").calendar();
+
+    // 选择一个日期
+    $(document).on("click","#date_picker_ul li",function(){
+        $(this).addClass("current").siblings().removeClass("current");
+        if( $(this).hasClass("custom-btn")){
+          $(".date-info").hide();
+          $(".custom-date-list").show();
+        }else{
+          $(".date-info").show();
+          $(".custom-date-list").hide();
+        }
+    });
+
+  });
 
 
 // 司机端-送货页面

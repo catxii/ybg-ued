@@ -14,7 +14,7 @@
 }
 
 .arrow-bg-right {
-    background: url("../img/i-list-chevron-right.png") no-repeat 95% center;
+    background: url("@{imgsrc}/i-list-chevron-right.png") no-repeat 95% center;
     background-size: 0.5rem;
     padding-right: 2rem;
     text-align: justify;
@@ -50,12 +50,12 @@
     }
     .item-price {
         .old-price {
-            color: @gray;
+            color: @unimportance-color;
             text-decoration: line-through;
         }
         .hot-price {
             color: @red;
-            font-size:1rem;
+            font-size:0.9rem;
         }
     }
 }
@@ -66,7 +66,7 @@
         .searchbar {
             background: white;
             border-bottom: 1px solid #9c9d9e;
-            box-shadow: 1px 1px 4px @border-gray-tint-color;
+            box-shadow: 1px 1px 4px @gray-tint-color;
             input#search {
                 border: 1px solid #b4b4b4;
             }
@@ -86,7 +86,7 @@
     color: white;
     padding: .5rem 1rem;
     position: relative;
-    ul {
+    ul { 
         margin:0;
         padding-right: 4rem;
     }
@@ -131,16 +131,16 @@
         margin-bottom: 0.5rem;
         background-size: 1rem!important;
     }
-    .username {
-        background: url(../img/username-ico.png) .6rem .6rem no-repeat;
-        .border-bottom-tint; 
+    .username { 
+        background: url("@{imgsrc}/username-ico.png") .6rem .6rem  no-repeat;
+        border-bottom: @border-gray; 
         padding-left: 2rem;
     }
     .password {
-        background: url(../img/password-ico.png) .6rem .6rem no-repeat;
-        .border-bottom-tint;
+        background: url("@{imgsrc}/password-ico.png") .6rem .6rem no-repeat;
+        border-bottom: @border-gray; 
         padding-left: 2rem;
-    }
+    } 
     input {
         border:none;
         background: none;
@@ -150,7 +150,7 @@
 
 .forget-list {
     li {
-        .border-bottom-tint;
+        border-bottom:@border-gray;
         input {
             border:none;
             display: block;
@@ -180,65 +180,10 @@
     }
 }
 
-.black-top-area {
-    background: @black;
-    height: auto;
-    ul {
-        .inline-block-ul;
-        text-align: center;
-        margin:0;
-        white-space: nowrap;
-        li {
-            line-height: 2.5rem;
-            a {
-                color:@white;
-                font-size:0.7rem;
-                padding:.2rem .3rem;
-                border-radius: 1rem;
-                position: relative;
-                &:active {
-                    color: @black; 
-                }
-                i {
-                    display: block;
-                    border-radius: 2rem;
-                    background:@white;
-                    color: @default-color;
-                    width: .8rem;
-                    height: .8rem;
-                    text-align: center;
-                    line-height: .8rem;
-                    position: absolute;
-                    top: -.5rem;
-                    right: -.5rem;
-                    font-size:.5rem;
-                    font-style: normal;
-                    font-weight: bolder;
-                }
-            }
-            &.current {
-                a {
-                    background:@default-color;
-                }
-            }
-        }
-        &.three-ul{
-             li{
-                width: 33%;
-            }   
-        }
-        &.four-ul {
-            li {
-                width:25%;
-            }
-        }
-    }
-}
-
 .material-list {
     margin: 0;
     li {
-        .border-bottom-tint-dashed;
+        border-bottom:@border-gray-tint-dashed;
         line-height: 2.5rem;
         text-align: center;
         span {
@@ -255,15 +200,40 @@
     }
 }
 .time-info {
-    .border-bottom;
-    margin-top: 0;
+    background: white;
     li {
-        line-height: 2.5rem;
+        line-height: 2.5rem; 
         &.type {
             float:left;
         }
         &.value {
             float:right;
+        }
+    }
+    .custom-date-list {
+        display: none;
+        margin: 0;
+        li {
+            &.custom {
+                width:75%;
+                input {
+                    width: 43%;
+                    line-height: 1.3rem;
+                    font-size: .8rem;
+                    text-align: center;
+                    color: @black;
+                    font-weight: bolder;
+                    background: #f6f6f6;
+                    border:@border-gray-tint;
+                    border-radius: 8px;
+                    -moz-box-shadow:0px 2px 4px #ababab inset;               /* For Firefox3.6+ */
+                    -webkit-box-shadow:0px 2px 4px #ababab inset;            /* For Chrome5+, Safari5+ */
+                    box-shadow:0px 2px 4px #ababab inset;                    /* For Latest Opera */
+                }
+            }
+            &.btn {
+                width:25%;
+            }
         }
     }
 }
@@ -275,7 +245,7 @@
     li {
         white-space: nowrap;
         line-height: 2rem;
-        .border-bottom-tint-dashed;
+        border-bottom:@border-gray-tint-dashed;
         span {  
             display: inline-block;
             &.name {
@@ -343,4 +313,40 @@
             background: #efefef;
         }
     } 
+}
+
+.toucher-list {
+    position: relative;
+    overflow: hidden;
+}
+.tobuy-button {
+    position: absolute;
+    right: -4rem;
+    background: @default-color;
+    color: @opposite-dark-color;
+    top: 0;
+    bottom: 0;
+    width: 4rem;
+    line-height: 2.4rem;
+    text-align: center;
+    font-size: .7rem;
+    &:visited {
+        color: @gray;
+    }
+}
+&.show-button{
+    .item-inner  {
+        margin-left: -4rem;
+    }
+    .tobuy-button {
+        right: 0;
+    }
+}
+
+
+//调整日历控件样式
+.picker-modal .toolbar-inner{
+    .picker-calendar-month-picker,.picker-calendar-year-picker {
+        overflow: hidden;
+    }
 }

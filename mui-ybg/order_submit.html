@@ -16,7 +16,7 @@
 		<h1 class="title">提交订单</h1>
 	</header>
 	<!-- 页面内容区域 -->
-<div class="content" id="user_modal">
+<div class="content" id="user_modal" style="bottom:2rem">
 	<div class="address-area">
 		<ul class="area-info">
 			<li><span class="order_img">您还没有添加工地</span></li>
@@ -74,7 +74,7 @@
 		          	</div>
 		        </div>
 		    </li>
-		    <li class="child_row">
+		    <li class="child_row" style="display:none;">
 		      	<div class="item-content">
 			        <div class="item-inner">
 			            <div class="item-title-row">
@@ -84,7 +84,7 @@
 		          	</div>
 		        </div>
 		    </li>
-		    <li class="child_row">
+		    <li class="child_row" style="display:none;">
 		      	<div class="item-content">
 			        <div class="item-inner">
 			            <div class="item-title-row">
@@ -94,7 +94,7 @@
 		          	</div>
 		        </div>
 		    </li>
-		    <li class="child_row">
+		    <li class="child_row" style="display:none;">
 		      	<div class="item-content">
 			        <div class="item-inner">
 			            <div class="item-title-row">
@@ -106,24 +106,21 @@
 		    </li>
 		</ul>
 	</div>
-	<div class="card facebook-card">
+</div>
+	
+
+	<div class="card bar-footer-secondary fix-bottom-bar" style="bottom: 0;margin: 0!important;width: 100%; z-index:21;">
 	    <div class="card-footer no-border">
 	      <div>应付金额 <span class="red-color">¥588.00</span></div>
 	      <div>运费 <span class="red-color">¥60.00</span></div>
 	      <a href="javascript:void(0)" id="order_submit" data-transition="slide-in" class="button button-dafault button-fill order_button">提交订单</a>
+	   </div>
 	</div>
-</div>
+
 	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
   	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
   	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
-  	</style>
+
 </body>
-	<script type="text/javascript">
-	$(function(){	
-	 $('.parent').click(function(){   // 获取父行
-	   $(this)
-	    .siblings('.child_row').toggle();  // 隐藏/显示子行
-	 }).click();
-	});
-	</script>
+
 </html>
