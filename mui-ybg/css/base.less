@@ -1,5 +1,10 @@
+//h5调试用
+.preloader-indicator-modal,.preloader-indicator-overlay {
+    display: none!important;
+}
+ 
 /*云包公公共样式*/
-html,boyd {
+html,body {
     overflow-x: hidden;
 }
 @font-face {
@@ -23,20 +28,23 @@ html,boyd {
 @default-dark-color:#0675bb; //通用主色加深，可用不限于按钮点击时。
 @opposite-dark-color:#fff; //反差深色的背景的浅色字体类用色
 @gray-tint-color:#efefef; //浅灰色
-@danger-color:red; //危险操作，警告文字
-@warning-color:#ff6300; //强调文字颜色
+@danger-color:#fc2a2a; //危险操作，警告文字
+@warning-color:#ff9c00; //强调文字颜色
 @warning-bg:#f7e2ca; //强调区域背景色
-@unimportance-color:#999999; //次要的文字颜色
+@unimportance-color:#afafaf; //次要的文字颜色
 
 // 颜色种类划分
-@black:#313131;
+@black:#2b2c33;
 @white:#fff;
 @gray:#efefef; //灰色背景底色
 @red:#ff0000;
 @orange:#fa6a32;
-@blue:#009fe8;
+@blue:#3b7ffd;
 @green:green;
 
+a {
+    color: @blue;
+}
 .default-color {   //通用主色字体用色
     color: @default-color;
     &:active {
@@ -77,12 +85,39 @@ html,boyd {
 
 
 //字体尺寸定义
-@font-size-biger:1.4rem;   //加大尺寸
-@font-size-big:1rem; //大尺寸
-@font-size-default:.85rem; //标准尺寸
-@font-size-small:.7rem;   //小尺寸
-@font-size-mini:.6rem;    //迷你尺寸
+@font-size-large:.9rem; //特大尺寸（页面标题）
+@font-size-biger:.85rem;   //加大尺寸（头部的文字按钮、个人中心姓名、）
+@font-size-big:.8rem; //大尺寸 （文章标题、列表头部文字）
+@font-size-default:.75rem; //标准尺寸（文本、阅读性文字、列表内容的文字）
+@font-size-small:.7rem;   //小尺寸 （注释文字 、说明文字）
+@font-size-mini:.6rem;    //迷你尺寸 （）
 
+//公共区域文字定义
+.title{ //页面标题
+    font-size: @font-size-large;
+}
+.fix-top-header {
+    select {
+        font-size: @font-size-large;
+    }
+}
+.list-block {
+    .item-subtitle {
+        font-size: @font-size-default;
+    }
+}
+.card-header {
+    font-size:@font-size-big;
+}
+.profiles-list {
+    font-size: @font-size-big;
+}
+.list-block,.list-block input[type="text"], .list-block input[type="password"], .list-block input[type="search"], .list-block input[type="email"], .list-block input[type="tel"], .list-block input[type="url"], .list-block input[type="date"], .list-block input[type="datetime-local"], .list-block input[type="time"], .list-block input[type="number"], .list-block select, .list-block textarea {
+    font-size: @font-size-big;
+}
+.profiles-user-name {
+    font-size:@font-size-biger;
+}
 
 /*公共区域-内容content区域*/
 .content {
@@ -105,7 +140,7 @@ html,boyd {
         }
         .icon ~ .tab-label {
             top: 0.05rem;
-            font-size: .8em;
+            font-size: @font-size-small;
         }
     }
 }
@@ -303,7 +338,7 @@ ul,ol {
 }
 .list-font-info {  //订单信息类字体大小和黑色字体
     color: @black;
-    font-size:.7rem;
+    font-size:@font-size-small;
 }
 .font-overflow {  //字体溢出截取添加"..."处理,使用时需要给元素添加宽度
     display: inline-block;
@@ -365,7 +400,7 @@ ul,ol {
             position: absolute;
             right: 0;
             top: 0;
-            font-size: .8rem;
+            font-size: @font-size-big;
         }
     }
 }
@@ -395,6 +430,10 @@ ul,ol {
 }
 .no-padding { //去掉容器的填充
     padding:0!important;
+}
+.no-padding-margin {
+    padding:0;
+    margin:0;
 }
 .full-box {
     margin-left:0!important;
@@ -547,7 +586,7 @@ ul,ol {
             line-height: 2.5rem;
             a {
                 color:@white;
-                font-size:0.7rem;
+                font-size:@font-size-small;
                 padding:.2rem .3rem;
                 border-radius: 1rem;
                 position: relative;
@@ -566,7 +605,7 @@ ul,ol {
                     position: absolute;
                     top: -.5rem;
                     right: -.5rem;
-                    font-size:.5rem;
+                    font-size:@font-size-mini;
                     font-style: normal;
                     font-weight: bolder;
                 }
@@ -709,4 +748,16 @@ ul,ol {
     &:active {
         color: @unimportance-color;
     }
+}
+
+.alert-ul {
+  width: 50%;
+  margin: 3rem auto;
+  text-align: center;
+  background: url(../img/alert-ico.png)  center top no-repeat;
+  background-size: 50%;
+  padding-top: 4rem;
+  .btn {
+    margin-top: 1rem;
+  }
 }

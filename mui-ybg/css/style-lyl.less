@@ -1,5 +1,5 @@
 @import url("base.less");
-
+ 
 // 工地管理页面
 
 .address-page-ad {
@@ -55,7 +55,7 @@
         }
         .hot-price {
             color: @red;
-            font-size:0.9rem;
+            font-size:@font-size-large;
         }
     }
 }
@@ -119,8 +119,13 @@
     margin:.5rem  0 0;
 }
 
-.card {
-    font-size: .8rem;
+.kit-list {
+    .card {
+        font-size: @font-size-big;
+    }
+}
+.kit-banner {
+    font-size: @font-size-small;
 }
 
 
@@ -144,7 +149,7 @@
     input {
         border:none;
         background: none;
-        font-size:1rem;
+        font-size:@font-size-large;
     }
 }
 
@@ -219,7 +224,7 @@
                 input {
                     width: 43%;
                     line-height: 1.3rem;
-                    font-size: .8rem;
+                    font-size: @font-size-big;
                     text-align: center;
                     color: @black;
                     font-weight: bolder;
@@ -329,7 +334,7 @@
     width: 4rem;
     line-height: 2.4rem;
     text-align: center;
-    font-size: .7rem;
+    font-size: @font-size-small;
     &:visited {
         color: @gray;
     }
