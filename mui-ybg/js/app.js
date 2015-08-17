@@ -1,3 +1,7 @@
+$.config={
+  showPageLoadingIndicator:false
+}
+
 // 公用初始化
 $(document).on('pageInit', function(e, id, content){
 	
