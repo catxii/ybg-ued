@@ -127,7 +127,7 @@ a {
 /*公共区域-底部导航*/
 .bar-tab {
     background: @black;
-    height: auto;
+    height: 3rem;
     z-index: 20;
     .tab-item {
         padding-top: 0.25rem;
@@ -381,7 +381,8 @@ ul,ol {
 }
 .fix-bottom-bar {    //底部固定栏
     position: fixed;
-    bottom: 2.2rem;
+    bottom: 3rem;
+    margin: 0;
     &.white-bar {
         background: @white;
         border-top:@border-gray-tint;
@@ -547,6 +548,11 @@ ul,ol {
 }
 
 //按钮
+a {
+    &:visited {
+        color: #2b2c33;
+    }
+}
 .button{
     line-height: 1.35rem;
     color: #fff;
@@ -561,6 +567,9 @@ ul,ol {
     &.button-danger {
         background: #f6383a;
     }
+    &:visited {
+        color:#fff; 
+    } 
     &:active {
         color:@default-dark-color;
         border:1px solid @default-dark-color;
@@ -575,6 +584,14 @@ ul,ol {
 header {
     .button-link {
         background: none;
+        &:active {
+            background: @default-dark-color;
+        }
+    }
+    .icon-left {
+        &:active {
+            background: @default-dark-color;
+        }
     }
 }
 
