@@ -1,6 +1,3 @@
-$.config={
-  showPageLoadingIndicator:false
-}
 
 // 公用初始化
 $(document).on('pageInit', function(e, id, content){
@@ -98,5 +95,39 @@ $(document).on('pageInit', '#driver_model', function(e, id, content){
         }
       );
   });
+
+});
+
+// 用户端-新增工地
+$(document).on('pageInit', '#address_add', function(e, id, content){
+
+    $(document).on('click', '#add_new_linkman',function () {
+      var html = '<div class="list-block address-add-list" id="default_address_add">'+
+      '<a class="button button-danger remove-user position-right">删除</a>'+
+      '<ul>'+
+        '<li>'+
+          '<div class="item-content">'+
+            '<div class="item-inner">'+
+              '<div class="item-title label">收货人：</div>'+
+              '<div class="item-input">'+
+                '<input type="text" placeholder="请输入收货人名称">'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+        '</li>'+
+        '<li>'+
+          '<div class="item-content">'+
+            '<div class="item-inner">'+
+              '<div class="item-title label">联系电话：</div>'+
+              '<div class="item-input">'+
+                '<input type="tel" placeholder="请输入联系电话">'+
+              '</div>'+
+            '</div>'+
+          '</div>'+
+        '</li>'+
+      '</ul>'+
+    '</div>';
+      $(".address-add-list").after(html);
+    });
 
 });

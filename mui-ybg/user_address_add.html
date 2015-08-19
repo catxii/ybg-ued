@@ -42,7 +42,7 @@
 	</nav>
 
 	<!-- 页面内容区域 -->
-	<div class="content" >
+	<div class="content" id="address_add">
 	    
 		<div class="list-block">
 			<ul>
@@ -50,9 +50,9 @@
 			  <li>
 			    <div class="item-content">
 			      <div class="item-inner">
-			        <div class="item-title label">楼房性质：</div>
-			        <div class="item-input">
-		              <select>
+			        <div class="item-title label">选择城市：</div>
+			        <div class="item-input select-style disabled">
+		              <select disabled>
 		                <option>长沙市</option>
 		                <option>武汉市</option>
 		              </select>
@@ -64,7 +64,7 @@
 			    <div class="item-content">
 			      <div class="item-inner">
 			        <div class="item-title label">选择区域：</div>
-			        <div class="item-input">
+			        <div class="item-input select-style">
 		              <select>
 		                <option>雨花区</option>
 		                <option>天心区</option>
@@ -92,7 +92,8 @@
 			</ul>
 		</div>
 
-		<div class="list-block">
+		<div class="list-block address-add-list" id="default_address_add">
+
 			<ul>
 			  <li>
 			    <div class="item-content">
@@ -118,7 +119,7 @@
 		</div>
 
 		 <div class="row white-bg padding">
-		      <div class="col-50"><a href="#" class="button button-light">+ 添加收货人</a></div>
+		      <div class="col-50"><a href="#" class="button button-light" id="add_new_linkman">+ 添加收货人</a></div>
 		      <div class="col-50">
 		     	 <a href="user_address_carryinfo.html" class="button button-light">
 		     	 	<!-- + -->  <!--默认 没有搬运信息的时候显示 + -->

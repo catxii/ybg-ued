@@ -295,12 +295,6 @@ i.icon {
     vertical-align: middle;
 }
 
-/*按钮样式定义*/
-.button:active {
-    color:@default-dark-color;
-    border:1px solid @default-dark-color;
-} 
-
 
 /* 排版布局 */ 
 ul,ol {
@@ -362,6 +356,18 @@ ul,ol {
         position: fixed;
     }
 }
+.fix-middle {    //绝对定位垂直水平居中，兼容IE9以上
+    position: absolute;
+    top:50%;
+    -webkit-transform: translate3D(0%, -50%, 0);
+    -ms-transform: translate3D(0%, -50%, 0);
+    -o-transform: translate3D(0%, -50%, 0);
+    transform: translate3D(0%, -50%, 0);
+    &.fixed {  //追加固定定位
+        position: fixed;
+    }
+}
+
 .fix-middle {    //绝对定位垂直水平居中，兼容IE9以上
     position: absolute;
     top:50%;
@@ -475,7 +481,13 @@ ul,ol {
         border: 1px solid #ccc;
         border-radius: 0.3rem;
         height: auto;
-        padding: .2rem .4rem;  
+        padding: .2rem .4rem;
+    }
+    &.disabled {
+        background:none;
+        select {
+            border:none;
+        }
     }
 }
 // 数量控件
@@ -549,11 +561,21 @@ ul,ol {
     &.button-danger {
         background: #f6383a;
     }
+    &:active {
+        color:@default-dark-color;
+        border:1px solid @default-dark-color;
+    } 
 }
+
 .button-default {
    &.button-fill {
         background: @default-color;
     } 
+}
+header {
+    .button-link {
+        background: none;
+    }
 }
 
 //警惕消息提示框
