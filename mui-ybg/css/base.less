@@ -383,6 +383,7 @@ ul,ol {
     position: fixed;
     bottom: 3rem;
     margin: 0;
+    z-index: 16;
     &.white-bar {
         background: @white;
         border-top:@border-gray-tint;
@@ -422,6 +423,7 @@ ul,ol {
 .position-right {  //绝对定位到右侧
     position: absolute;
     right: 0.5rem;
+    z-index: 10;
 }
 .content-padded-large { //内容区域填充加大号
     padding: 2rem;
@@ -440,6 +442,9 @@ ul,ol {
 }
 .no-padding { //去掉容器的填充
     padding:0!important;
+}
+.list-padding-font { //列表值为纯文本的时候添加
+    padding-right:.25rem;
 }
 .no-padding-margin {
     padding:0;
@@ -797,8 +802,8 @@ header {
   margin: 3rem auto;
   text-align: center;
   background: url(../img/alert-ico.png)  center top no-repeat;
-  background-size: 50%;
-  padding-top: 4rem;
+  background-size: 3rem;
+  padding-top: 7rem;
   white-space: nowrap;
   .btn {
     margin-top: 1rem;

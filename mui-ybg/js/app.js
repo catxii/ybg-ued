@@ -109,7 +109,7 @@ $(document).on('pageInit', '#address_add', function(e, id, content){
           '<div class="item-content">'+
             '<div class="item-inner">'+
               '<div class="item-title label">收货人：</div>'+
-              '<div class="item-input">'+
+              '<div class="item-input" style="padding-right: 2.4rem;">'+
                 '<input type="text" placeholder="请输入收货人名称">'+
               '</div>'+
             '</div>'+
@@ -119,7 +119,7 @@ $(document).on('pageInit', '#address_add', function(e, id, content){
           '<div class="item-content">'+
             '<div class="item-inner">'+
               '<div class="item-title label">联系电话：</div>'+
-              '<div class="item-input">'+
+              '<div class="item-input"  style="padding-right: 2.4rem;">'+
                 '<input type="tel" placeholder="请输入联系电话">'+
               '</div>'+
             '</div>'+
@@ -127,7 +127,29 @@ $(document).on('pageInit', '#address_add', function(e, id, content){
         '</li>'+
       '</ul>'+
     '</div>';
-      $(".address-add-list").after(html);
+      $('.address-add-list').last().after(html);
     });
 
+   $(document).on("click",".remove-user",function(){
+      $(this).siblings().css("background","#fefeac");
+      var that = $(this);
+      setTimeout(function(){
+        that.parent().remove();
+      },300)
+      
+   });
+
 });
+
+
+// 提交订单按钮提示
+  $(document).on('pageInit','#mall_index', function (e, id, content) {
+  
+          $(document).on('focus','.num-input', function () {
+              $(".swiper-container").hide();
+          });
+          $(document).on('blur','.num-input', function () {
+              $(".swiper-container").show();
+          });
+
+  });
