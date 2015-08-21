@@ -368,6 +368,7 @@
     height: 6rem;
     width: 96%;
     margin: .5rem auto;
+    position: relative;
     .price {
         font-size: 3rem;
         color: @white;
@@ -380,6 +381,19 @@
         text-align: center;
         color: white;
         font-size: @font-size-mini;
+    }
+    &.finish {
+        background-image: url("@{imgsrc}/discount-finish-bg.gif") ;
+        opacity: .5;
+        .status {
+            display: block;
+            position: absolute;
+            background: #333;
+            color: white;
+            padding: .1rem .3rem;
+            font-size: .6rem;
+            top: 20%;
+        }
     }
 }
 .alert-area {

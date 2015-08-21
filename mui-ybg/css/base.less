@@ -1,7 +1,7 @@
 //h5调试用
-.preloader-indicator-modal,.preloader-indicator-overlay {
-    display: none!important;
-}
+// .preloader-indicator-modal,.preloader-indicator-overlay {
+//     display: none!important;
+// }
  
 /*云包公公共样式*/
 html,body {
@@ -127,7 +127,6 @@ a {
 /*公共区域-底部导航*/
 .bar-tab {
     background: @black;
-    height: 3rem;
     z-index: 20;
     .tab-item {
         padding-top: 0.25rem;
@@ -168,33 +167,37 @@ a {
 
 /*图标定义*/
 .bar-tab { //底部按钮图标样式
-    .icon {
-	display: block;
-    margin: 0 auto 0.25rem;
-    background-size: 100%; 
-        &.icon-cart-white {
-            background-image: url("@{imgsrc}/ico-mall-white.png");
-        }
-        &.icon-address-white {
-            background-image: url("@{imgsrc}/ico-address-white.png");  
-        }
-        &.icon-me-white {
-            background-image: url("@{imgsrc}/ico-porfiles-white.png");
-            &.sm {
-                background-image:url("@{imgsrc}/ico-porfiles-white-sm.png"); 
+    .tab-item{
+        .icon {
+    	display: block;
+        margin: 0 auto 0.25rem;
+        background-size: 100%; 
+        width: .9rem;
+        height: .9rem;
+            &.icon-cart-white {
+                background-image: url("@{imgsrc}/ico-mall-white.png");
             }
-        }
-        &.icon-clients-white {
-            background-image: url("@{imgsrc}/ico-clients-white.png");
-        }
-        &.icon-orderlist-white {
-            background-image: url("@{imgsrc}/ico-orderlist-white.png");  
-        }
-        &.icon-message-white {
-            background-image: url("@{imgsrc}/ico-message-white.png");
-        }
-        &.icon-dynamic-white {
-            background-image: url("@{imgsrc}/icon-star-white.png");
+            &.icon-address-white {
+                background-image: url("@{imgsrc}/ico-address-white.png");  
+            }
+            &.icon-me-white {
+                background-image: url("@{imgsrc}/ico-porfiles-white.png");
+                &.sm {
+                    background-image:url("@{imgsrc}/ico-porfiles-white-sm.png"); 
+                }
+            }
+            &.icon-clients-white {
+                background-image: url("@{imgsrc}/ico-clients-white.png");
+            }
+            &.icon-orderlist-white {
+                background-image: url("@{imgsrc}/ico-orderlist-white.png");  
+            }
+            &.icon-message-white {
+                background-image: url("@{imgsrc}/ico-message-white.png");
+            }
+            &.icon-dynamic-white {
+                background-image: url("@{imgsrc}/icon-star-white.png");
+            }
         }
     }
 }
@@ -381,9 +384,10 @@ ul,ol {
 }
 .fix-bottom-bar {    //底部固定栏
     position: fixed;
-    bottom: 3rem;
     margin: 0;
     z-index: 16;
+    height: 2.2rem;
+    bottom: 2.5rem;
     &.white-bar {
         background: @white;
         border-top:@border-gray-tint;
@@ -391,6 +395,15 @@ ul,ol {
         .button {
             .position-right;
         }
+    }
+    .absolute-all-button { //底部固定，全屏按钮
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        line-height: 2.2rem;
+        height: auto;
+        border-radius: 0;
     }
 }
 .fix-top-header {  //固定在标题栏
@@ -808,4 +821,8 @@ header {
   .btn {
     margin-top: 1rem;
   }
+}
+
+.content-no-tab ~ .bar-tab { //当页面元素先于bar-tab，有一个包含content-no-tab的类名，bar-tab不显示
+    display: none!important; 
 }

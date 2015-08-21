@@ -141,15 +141,3 @@ $(document).on('pageInit', '#address_add', function(e, id, content){
 
 });
 
-
-// 提交订单按钮提示
-  $(document).on('pageInit','#mall_index', function (e, id, content) {
-  
-          $(document).on('focus','.num-input', function () {
-              $(".swiper-container").hide();
-          });
-          $(document).on('blur','.num-input', function () {
-              $(".swiper-container").show();
-          });
-
-  });
