@@ -394,6 +394,7 @@ ul,ol {
         line-height: 2rem;
         .button {
             .position-right;
+            top:.45rem;
         }
     }
     .absolute-all-button { //底部固定，全屏按钮
@@ -810,17 +811,35 @@ header {
     }
 }
 
-.alert-ul {
-  width: 50%;
-  margin: 3rem auto;
-  text-align: center;
-  background: url(../img/alert-ico.png)  center top no-repeat;
-  background-size: 3rem;
-  padding-top: 7rem;
-  white-space: nowrap;
-  .btn {
-    margin-top: 1rem;
-  }
+.alert-ul {  //空白没内容区域提示区域
+    width: 50%;
+    margin: 3rem auto;
+    text-align: center;
+    background: url(../img/alert-ico.png)  center top no-repeat;
+    background-size: 3rem;
+    padding-top: 7rem;
+    white-space: nowrap;
+    .btn {
+        margin-top: 1rem;
+    }
+}
+.finish-box { //完成提示
+    text-align: center;
+    padding: .5rem 0;
+    font-size: @font-size-large;
+    font-weight: bolder;
+    .ball-bg {
+        border:.2rem solid @default-color;
+        color: @default-color;
+        font-size: 2.5rem;
+        font-weight: bolder;
+        border-radius: 10rem;
+        width: 4rem;
+        height: 4rem;
+        text-align: center;
+        line-height: 4rem;
+        margin: .5rem auto;
+    }
 }
 
 .content-no-tab ~ .bar-tab { //当页面元素先于bar-tab，有一个包含content-no-tab的类名，bar-tab不显示
