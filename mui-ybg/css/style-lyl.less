@@ -437,3 +437,65 @@
         margin: 0 1rem;
     }
 }
+
+//用户端订单详情
+.statu-info {
+    .inline-block-ul;
+    text-align: center;
+    padding:1rem 0;
+    margin: 0;
+    li {
+        font-size: @font-size-big;
+        color: @unimportance-color;
+        width: 25%;
+        &.line {
+            width: 8%;
+            background: @unimportance-color;
+            height: .05rem;
+            position: relative;
+            top:-1rem;
+        }
+        i {
+            display: block;
+            margin: .25rem auto;
+            width: 2rem;
+            height: 2rem;
+            background-position: center bottom;
+            background-repeat: no-repeat;
+            &.status-ico-1 {
+                background-image:url(../img/order-status-ico_06.gif);
+                background-size:  1.3rem;
+            }
+            &.status-ico-2 {
+                background-image:url(../img/order-status-ico_05.gif);
+                background-size:  1.4rem;
+            }
+            &.status-ico-3 {
+                background-image:url(../img/order-status-ico_07.gif);
+                background-size:  2rem;
+            }
+        }
+        &.finish {
+            color: @default-color;
+            &.line {
+                background:@default-color;
+            }
+            i{
+                background-position: center top;
+            }
+        }
+    }
+}
+
+.saler-ul  {
+    li {
+        border:none;
+    }
+}
+
+.todo-btn-list {
+    padding:.5rem 0!important;
+    li {
+        margin:0 1rem;
+    }
+}
