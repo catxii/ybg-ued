@@ -260,6 +260,43 @@ i.icon {
     }
 }
 
+.ico-style {
+    display: inline-block;
+    width: 1.45rem;
+    height: 1.45rem;
+}
+.check-ball-ico {  //radio样式
+    display: inline-block;
+    border:.05rem solid @unimportance-color;
+    border-radius: 10rem;
+    height: .7rem;
+    width: .7rem;
+    line-height: .5rem;
+    text-align: center;
+    margin-right: .2rem;
+    vertical-align: middle;
+    background: @white;
+    i {
+        background: @white;;
+        width: .4rem;
+        height: .4rem;
+        border-radius: 1rem;
+        display: inline-block;
+    }
+    &.active {
+        border-color: @default-color;
+        i{
+            background: @default-color;
+        }
+    }
+    &.disabled {
+        border-color: @unimportance-color;
+        i{
+            background: @unimportance-color;
+        }
+    }
+}
+
 .icon-no-bg {  //没有背景的图标样式，最新动态首页
     display: inline-block;
     background-size: 100%!important;
@@ -599,7 +636,7 @@ a {
         color: @unimportance-color;
     }
     &.button-big {
-        line-height: 2rem;
+        line-height: 2rem!important;
         height:2rem;
     }
     &:visited {

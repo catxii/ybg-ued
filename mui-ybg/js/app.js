@@ -141,7 +141,7 @@ $(document).on('pageInit', '#driver_model', function(e, id, content){
 
 });
 // 用户端-新增工地
-$(document).on('pageInit', '#suer_order_list', function(e, id, content){
+$(document).on('pageInit', '#user_order_list', function(e, id, content){
 
     //调用图片浏览器方法
     function imgBrower(img){

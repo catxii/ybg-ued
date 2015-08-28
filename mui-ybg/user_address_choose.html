@@ -47,9 +47,9 @@
 
 	<!-- 页面内容区域 -->
 	<div class="content" id="address_add">
-	    <div class="list-block media-list">
+	    <div class="list-block media-list padding">
 			<ul>
-			  <li>
+			  <li class="card">
 			    <label class="label-checkbox item-content" onclick="window.location.href= '#' ">
 			    <!-- 选中的地址默认勾选，需要在radio上添加checked -->
 			      <input type="radio" name="my-radio" checked>
@@ -61,8 +61,15 @@
 			        <div class="item-subtitle">金玉花园17栋 电梯房 11楼1101</div>
 			      </div>
 			    </label>
+			    <div class="card-footer card-footer-ul clearfix">
+			    	<div class="pull-left"><a href="javascript:$.alert('已设置为默认')" class="checkbox-style"><span class="check-ball-ico active"><i></i></span>设为默认</a></div>
+			    	<ul class="inline-block-ul pull-right">
+			    		<li style="margin-right:1rem;"><a href="user_address_choose_edit.html" class="button" >编辑</a></li>
+			    		<li><a href="" class="button" type="#">删除</a></li>
+			    	</ul>
+			    </div>
 			  </li>
-			  <li>
+			  <li class="card">
 			    <label class="label-checkbox item-content" onclick="window.location.href= '#' ">
 			      <input type="radio" name="my-radio">
 			      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
@@ -73,8 +80,15 @@
 			        <div class="item-subtitle">金玉花园17栋 电梯房 11楼1101</div>
 			      </div>
 			    </label>
+			    <div class="card-footer card-footer-ul clearfix">
+			    	<div class="pull-left"><a href="javascript:$.alert('已设置为默认')" class="checkbox-style"><i class="check-ball-ico"></i>设为默认</a></div>
+			    	<ul class="inline-block-ul pull-right">
+			    		<li style="margin-right:1rem;"><a href="user_address_choose_edit.html" class="button" >编辑</a></li>
+			    		<li><a href="" class="button" type="#">删除</a></li>
+			    	</ul>
+			    </div>
 			  </li>
-			  <li>
+			  <li class="card">
 			    <label class="label-checkbox item-content" onclick="window.location.href= '#' ">
 			      <input type="radio" name="my-radio">
 			      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
@@ -85,6 +99,13 @@
 			        <div class="item-subtitle">金玉花园17栋 电梯房 11楼1101</div>
 			      </div>
 			    </label>
+			    <div class="card-footer card-footer-ul clearfix">
+			    	<div class="pull-left"><a href="javascript:$.alert('已设置为默认')" class="checkbox-style"><i class="check-ball-ico"></i>设为默认</a></div>
+			    	<ul class="inline-block-ul pull-right">
+			    		<li style="margin-right:1rem;"><a href="user_address_choose_edit.html" class="button" >编辑</a></li>
+			    		<li><a href="" class="button" type="#">删除</a></li>
+			    	</ul>
+			    </div>
 			  </li>
 			</ul>
 		</div>
