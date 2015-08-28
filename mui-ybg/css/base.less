@@ -608,7 +608,10 @@ a {
     &:active {
         color:@default-dark-color;
         border:1px solid @default-dark-color;
-    } 
+    }
+    &.tab-link:visited {
+        color: #333;
+    }
 }
 
 .button-default {
@@ -858,6 +861,9 @@ header {
     }
 }
 
-.content-no-tab ~ .bar-tab { //当页面元素先于bar-tab，有一个包含content-no-tab的类名，bar-tab不显示
-    display: none!important; 
+.bar-tab { //当页面元素先于bar-tab，有一个包含content-no-tab的类名，bar-tab不显示
+    display: none;
+}
+.content {
+    bottom: 0!important;
 }

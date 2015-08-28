@@ -86,17 +86,87 @@ $(document).on('pageInit', function(e, id, content){
 $(document).on('pageInit', '#driver_model', function(e, id, content){
 
     $(document).on('click', '#add_delivery_cost',function () {
-      $.prompt('请输入搬运费金额（元）', '搬运费', 
-        function (value) {
-          $.alert(' 你输入的运费是' + value +'元');
-        },
-        function (value) {
-          $.alert('你输入的运费是' + value +'元');
-        }
-      );
-  });
+        $.prompt('请输入搬运费金额（元）', '搬运费', 
+          function (value) {
+            $.alert(' 你输入的运费是' + value +'元');
+          },
+          function (value) {
+            $.alert('你输入的运费是' + value +'元');
+          }
+        );
+    });
+
+    //调用图片浏览器方法
+    function imgBrower(img){
+      var myPhotoBrowserPopup = $.photoBrowser({
+          photos : [ img[0],img[1] ], //显示的图片
+          type: 'popup',
+          theme: 'light',
+          type: 'standalone'
+      });
+
+      //点击打开图片
+      $(".img-brower-list .img").click(function () {
+        //获取点击的图片索引
+        var index = $(this).index();
+        //打开图片显示
+        myPhotoBrowserPopup.open(index);
+        //增加删除按钮
+        $(".photo-browser .bar-nav").append("<a class='icon icon-remove pull-right'></a>");
+      
+        //删除图片按钮
+        $(".icon-remove").click(function(){
+          //当前展示的图片索引值
+          var currentImgNum = parseFloat($(".photo-browser-current").text())-1;
+          //上传按钮html
+          var uploadImgBtn ='<li><a href="javascript:void(0)" class="add-img-brower button button-light"><i class="icon icon-picture"></i>+</a></li>';
+          //删除数组对应的图片路劲数据位置
+          imgArray.splice([currentImgNum],1)
+          imgBrower(imgArray);
+          $(".img-brower-list li").eq(currentImgNum).remove();
+          $(".img-brower-list").append(uploadImgBtn);
+          $(".photo-browser").remove();
+
+          //打印
+          console.log(imgArray);
+        })
+
+      });
+    }
+    //新增加的图片
+    var imgArray = ["img/mall-index-ad.jpg","img/mall-index-ad.jpg"]; 
+    imgBrower(imgArray);
+
+    
 
 });
+// 用户端-新增工地
+$(document).on('pageInit', '#suer_order_list', function(e, id, content){
+
+    //调用图片浏览器方法
+    function imgBrower(img){
+      var myPhotoBrowserPopup = $.photoBrowser({
+          photos : [ img[0],img[1] ], //显示的图片
+          type: 'popup',
+          theme: 'light',
+          type: 'standalone'
+      });
+
+      //点击打开图片
+      $(".img-brower-list .img").click(function () {
+        //获取点击的图片索引
+        var index = $(this).index();
+        //打开图片显示
+        myPhotoBrowserPopup.open(index);
+
+      });
+    }
+    //新增加的图片
+    var imgArray = ["img/mall-index-ad.jpg","img/mall-index-ad.jpg"]; 
+    imgBrower(imgArray);
+
+});
+
 
 // 用户端-新增工地
 $(document).on('pageInit', '#address_add', function(e, id, content){
