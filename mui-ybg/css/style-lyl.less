@@ -274,12 +274,17 @@
 
 .profiles-list {
     .unread-message {
-        .danger-color;
+        color: @white;
+        background: @red;
+        border-radius: 2rem;
+        font-size: .6rem;
+        padding: 0 .3rem;
+        font-weight: bold;
     }
     .item-after {
         position:absolute;
         right: 1.5rem;
-        top:.5rem;
+        top:.7rem;
     }
 }
 
@@ -537,4 +542,10 @@
 }
 .card-footer .inline-block-ul {
     white-space: nowrap; 
+}
+
+.list-block {
+    .card-footer-ul {
+        padding: .5rem .75rem;
+    }
 }

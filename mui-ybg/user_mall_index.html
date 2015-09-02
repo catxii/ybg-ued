@@ -37,12 +37,16 @@
 		</a>
 
 	</nav>
-
-
 	
+	<div class="bar bar-footer-secondary fix-bottom-bar">
+		<ul class="inline-block-ul white-bar" style="top:auto; ">
+			<li>应付金额：<span class="price">￥1230,00</span></li>
+			<li><a href="order_submit.html" class="button button-warning button-fill" data-ignore="push" >确认下单</a></li>
+		</ul>
+	</div>
 
 	<!-- 页面内容区域 -->
-	<div class="content" id="mall_index" style="top:2.2rem; bottom:4.2rem">
+	<div class="content" id="mall_index" style="top:2.2rem; bottom:4.2rem!important" ng-app="mallApp">
 		<style type="text/css">
 			.content {
 			    bottom:2.2rem!important;
@@ -51,180 +55,177 @@
 			    display: block;
 			}
 		</style>
-		<div class="bar bar-footer-secondary fix-bottom-bar">
-			<ul class="inline-block-ul white-bar" style="top:auto; ">
-				<li>应付金额：<span class="price">￥1230，00</span></li>
-				<li><a href="order_submit.html" class="button button-warning button-fill">确认下单</a></li>
-			</ul>
-		</div>
-	    <!-- 图片滚动 -->
-		<div class="swiper-container address-page-ad" data-space-between='10'>
-			<div class="swiper-wrapper">
-			  <div class="swiper-slide"><img src="img/mall-index-ad.jpg" alt=""></div>
-			 <div class="swiper-slide"><img src="img/mall-index-ad.jpg" alt=""></div>
-			 <div class="swiper-slide"><img src="img/mall-index-ad.jpg" alt=""></div>
+		<form name="mall" ng-controller="mallCtr" novalidate="novalidate">
+			
+		    <!-- 图片滚动 -->
+			<div class="swiper-container address-page-ad" data-space-between='10'>
+				<div class="swiper-wrapper">
+				  <div class="swiper-slide"><img src="img/mall-index-ad.jpg" alt=""></div>
+				 <div class="swiper-slide"><img src="img/mall-index-ad.jpg" alt=""></div>
+				 <div class="swiper-slide"><img src="img/mall-index-ad.jpg" alt=""></div>
+				</div>
+				<div class="swiper-pagination"></div>
 			</div>
-			<div class="swiper-pagination"></div>
-		</div>
 
-		<!-- 商品列表开始 -->
-		<!-- <div class="content-block-title">水泥砂浆</div> -->
-		<div class="list-block media-list">
-		<ul>
-		  <li>
-		    <div href="#" class="item-link item-content item-product-list">
-		      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
-		      <div class="item-inner">
-		        <div class="item-title">坪塘水泥</div>
-		        <div class="item-subtitle">50KG/包</div>
-		        <div class="item-price">
-		        	<span class="old-price">￥18</span>
-		        	<span class="hot-price">￥15</span>
-		        </div>
-		      </div>
-				<div class="count-ul clearfix">
-					<div class="count-li del">-</div>
-					<div class="count-li count"><input type="tel" class="num-input" value="0"></div>
-					<div class="count-li plus" >+</div>
-				</div>
-		    </div>
-		  </li>
+			<!-- 商品列表开始 -->
+			<!-- <div class="content-block-title">水泥砂浆</div> -->
+			<div class="list-block media-list">
+			<ul>
+			  <li>
+			    <div href="#" class="item-link item-content item-product-list">
+			      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
+			      <div class="item-inner">
+			        <div class="item-title">坪塘水泥</div>
+			        <div class="item-subtitle">50KG/包</div>
+			        <div class="item-price">
+			        	<span class="old-price">￥18</span>
+			        	<span class="hot-price">￥15</span>
+			        </div>
+			      </div>
+					<div class="count-ul clearfix">
+						<div class="count-li del">-</div>
+						<div class="count-li count"><input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+						<div class="count-li plus" >+</div>
+					</div>
+			    </div>
+			  </li>
 
-		  <li>
-		    <div href="#" class="item-link item-content item-product-list">
-		      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
-		      <div class="item-inner">
-		        <div class="item-title">坪塘水泥</div>
-		        <div class="item-subtitle">50KG/包</div>
-		        <div class="item-price">
-		        	<span class="old-price">￥18</span>
-		        	<span class="hot-price">￥15</span>
-		        </div>
-		      </div>
-				<div class="count-ul clearfix">
-					<div class="count-li del">-</div>
-					<div class="count-li count"><input type="tel" class="num-input" value="0"></div>
-					<div class="count-li plus" >+</div>
-				</div>
-		    </div>
-		  </li>
+			  <li>
+			    <div href="#" class="item-link item-content item-product-list">
+			      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
+			      <div class="item-inner">
+			        <div class="item-title">坪塘水泥</div>
+			        <div class="item-subtitle">50KG/包</div>
+			        <div class="item-price">
+			        	<span class="old-price">￥18</span>
+			        	<span class="hot-price">￥15</span>
+			        </div>
+			      </div>
+					<div class="count-ul clearfix">
+						<div class="count-li del">-</div>
+						<div class="count-li count"><input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+						<div class="count-li plus" >+</div>
+					</div>
+			    </div>
+			  </li>
 
-		  <li>
-		    <div href="#" class="item-link item-content item-product-list">
-		      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
-		      <div class="item-inner">
-		        <div class="item-title">坪塘水泥</div>
-		        <div class="item-subtitle">50KG/包</div>
-		        <div class="item-price">
-		        	<span class="old-price">￥18</span>
-		        	<span class="hot-price">￥15</span>
-		        </div>
-		      </div>
-				<div class="count-ul clearfix">
-					<div class="count-li del">-</div>
-					<div class="count-li count"><input type="tel" class="num-input" value="0"></div>
-					<div class="count-li plus" >+</div>
-				</div>
-		    </div>
-		  </li>
+			  <li>
+			    <div href="#" class="item-link item-content item-product-list">
+			      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
+			      <div class="item-inner">
+			        <div class="item-title">坪塘水泥</div>
+			        <div class="item-subtitle">50KG/包</div>
+			        <div class="item-price">
+			        	<span class="old-price">￥18</span>
+			        	<span class="hot-price">￥15</span>
+			        </div>
+			      </div>
+					<div class="count-ul clearfix">
+						<div class="count-li del">-</div>
+						<div class="count-li count"><input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+						<div class="count-li plus" >+</div>
+					</div>
+			    </div>
+			  </li>
 
-		  <li>
-		    <div href="#" class="item-link item-content item-product-list">
-		      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
-		      <div class="item-inner">
-		        <div class="item-title">坪塘水泥</div>
-		        <div class="item-subtitle">50KG/包</div>
-		        <div class="item-price">
-		        	<span class="old-price">￥18</span>
-		        	<span class="hot-price">￥15</span>
-		        </div>
-		      </div>
-				<div class="count-ul clearfix">
-					<div class="count-li del">-</div>
-					<div class="count-li count"><input type="tel" class="num-input" value="0"></div>
-					<div class="count-li plus" >+</div>
-				</div>
-		    </div>
-		  </li>
+			  <li>
+			    <div href="#" class="item-link item-content item-product-list">
+			      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
+			      <div class="item-inner">
+			        <div class="item-title">坪塘水泥</div>
+			        <div class="item-subtitle">50KG/包</div>
+			        <div class="item-price">
+			        	<span class="old-price">￥18</span>
+			        	<span class="hot-price">￥15</span>
+			        </div>
+			      </div>
+					<div class="count-ul clearfix">
+						<div class="count-li del">-</div>
+						<div class="count-li count"><input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+						<div class="count-li plus" >+</div>
+					</div>
+			    </div>
+			  </li>
 
-		  <li>
-		    <div href="#" class="item-link item-content item-product-list">
-		      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
-		      <div class="item-inner">
-		        <div class="item-title">坪塘水泥</div>
-		        <div class="item-subtitle">50KG/包</div>
-		        <div class="item-price">
-		        	<span class="old-price">￥18</span>
-		        	<span class="hot-price">￥15</span>
-		        </div>
-		      </div>
-				<div class="count-ul clearfix">
-					<div class="count-li del">-</div>
-					<div class="count-li count"><input type="tel" class="num-input" value="0"></div>
-					<div class="count-li plus" >+</div>
-				</div>
-		    </div>
-		  </li>
+			  <li>
+			    <div href="#" class="item-link item-content item-product-list">
+			      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
+			      <div class="item-inner">
+			        <div class="item-title">坪塘水泥</div>
+			        <div class="item-subtitle">50KG/包</div>
+			        <div class="item-price">
+			        	<span class="old-price">￥18</span>
+			        	<span class="hot-price">￥15</span>
+			        </div>
+			      </div>
+					<div class="count-ul clearfix">
+						<div class="count-li del">-</div>
+						<div class="count-li count"><input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+						<div class="count-li plus" >+</div>
+					</div>
+			    </div>
+			  </li>
 
-		  <li>
-		    <div href="#" class="item-link item-content item-product-list">
-		      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
-		      <div class="item-inner">
-		        <div class="item-title">坪塘水泥</div>
-		        <div class="item-subtitle">50KG/包</div>
-		        <div class="item-price">
-		        	<span class="old-price">￥18</span>
-		        	<span class="hot-price">￥15</span>
-		        </div>
-		      </div>
-				<div class="count-ul clearfix">
-					<div class="count-li del">-</div>
-					<div class="count-li count"><input type="tel" class="num-input" value="0"></div>
-					<div class="count-li plus" >+</div>
-				</div>
-		    </div>
-		  </li>
+			  <li>
+			    <div href="#" class="item-link item-content item-product-list">
+			      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
+			      <div class="item-inner">
+			        <div class="item-title">坪塘水泥</div>
+			        <div class="item-subtitle">50KG/包</div>
+			        <div class="item-price">
+			        	<span class="old-price">￥18</span>
+			        	<span class="hot-price">￥15</span>
+			        </div>
+			      </div>
+					<div class="count-ul clearfix">
+						<div class="count-li del">-</div>
+						<div class="count-li count"><input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+						<div class="count-li plus" >+</div>
+					</div>
+			    </div>
+			  </li>
 
-		  <li>
-		    <div href="#" class="item-link item-content item-product-list">
-		      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
-		      <div class="item-inner">
-		        <div class="item-title">坪塘水泥</div>
-		        <div class="item-subtitle">50KG/包</div>
-		        <div class="item-price">
-		        	<span class="old-price">￥18</span>
-		        	<span class="hot-price">￥15</span>
-		        </div>
-		      </div>
-				<div class="count-ul clearfix">
-					<div class="count-li del">-</div>
-					<div class="count-li count"><input type="tel" class="num-input" value="0"></div>
-					<div class="count-li plus" >+</div>
-				</div>
-		    </div>
-		  </li>
+			  <li>
+			    <div href="#" class="item-link item-content item-product-list">
+			      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
+			      <div class="item-inner">
+			        <div class="item-title">坪塘水泥</div>
+			        <div class="item-subtitle">50KG/包</div>
+			        <div class="item-price">
+			        	<span class="old-price">￥18</span>
+			        	<span class="hot-price">￥15</span>
+			        </div>
+			      </div>
+					<div class="count-ul clearfix">
+						<div class="count-li del">-</div>
+						<div class="count-li count"><input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]\d*)$/"></div>
+						<div class="count-li plus" >+</div>
+					</div>
+			    </div>
+			  </li>
 
-		  <li>
-		    <div href="#" class="item-link item-content item-product-list">
-		      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
-		      <div class="item-inner">
-		        <div class="item-title">坪塘水泥</div>
-		        <div class="item-subtitle">50KG/包</div>
-		        <div class="item-price">
-		        	<span class="old-price">￥18</span>
-		        	<span class="hot-price">￥15</span>
-		        </div>
-		      </div>
-				<div class="count-ul clearfix">
-					<div class="count-li del">-</div>
-					<div class="count-li count"><input type="tel" class="num-input" value="0"></div>
-					<div class="count-li plus" >+</div>
-				</div>
-		    </div>
-		  </li>
-		  
-		</ul>
-		</div>
+			  <li>
+			    <div href="#" class="item-link item-content item-product-list">
+			      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
+			      <div class="item-inner">
+			        <div class="item-title">坪塘水泥</div>
+			        <div class="item-subtitle">50KG/包</div>
+			        <div class="item-price">
+			        	<span class="old-price">￥18</span>
+			        	<span class="hot-price">￥15</span>
+			        </div>
+			      </div>
+					<div class="count-ul clearfix">
+						<div class="count-li del">-</div>
+						<div class="count-li count"><input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+						<div class="count-li plus" >+</div>
+					</div>
+			    </div>
+			  </li>
+			  
+			</ul>
+			</div>
+		</form>
 
 
 	</div>
@@ -233,5 +234,16 @@
 	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
+    <script type="text/javascript" src="http://cdn.bootcss.com/angular.js/1.0.3/angular.min.js"></script>
+
+	<script type="text/javascript">
+	function hasNum(){
+		var numInput = parseFloat( $(".num-input").val() );
+		var isBuy = numInput+ numInput;
+		if(isBuy >0 ){
+		  alert("没有商品")
+		}
+	}
+	</script>
 </body>
 </html>

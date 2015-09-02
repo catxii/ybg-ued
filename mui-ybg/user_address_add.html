@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="ybgApp">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -43,96 +43,98 @@
 	</nav>
 
 	<!-- 页面内容区域 -->
-	<div class="content" id="address_add">
-	    
-		<div class="list-block">
-			<ul>
-			  <!-- Text inputs -->
-			  <li>
-			    <div class="item-content">
-			      <div class="item-inner">
-			        <div class="item-title label">选择城市：</div>
-			        <div class="item-input select-style disabled">
-		              <select disabled>
-		                <option>长沙市</option>
-		                <option>武汉市</option>
-		              </select>
-		            </div>
-			      </div>
-			    </div>
-			  </li>
-			  <li>
-			    <div class="item-content">
-			      <div class="item-inner">
-			        <div class="item-title label">选择区域：</div>
-			        <div class="item-input select-style">
-		              <select>
-		                <option>雨花区</option>
-		                <option>天心区</option>
-		                <option>雨花区</option>
-		                <option>天心区</option>
-		                <option>雨花区</option>
-		                <option>天心区</option>
-		              </select>
-		            </div>
-			      </div>
-			    </div>
-			  </li>
+	<div class="content" id="address_add" >
+	    <form name="verifyForm"  ng-controller="addressCtr" novalidate ng-submit="submitForm(verifyForm.$invalid)">
+			{{address}}
+			<div class="list-block">
+				<ul>
+				  <!-- Text inputs -->
+				  <li>
+				    <div class="item-content">
+				      <div class="item-inner">
+				        <div class="item-title label">选择城市：</div>
+				        <div class="item-input select-style disabled">
+			              <select disabled>
+			                <option>长沙市</option>
+			                <option>武汉市</option>
+			              </select>
+			            </div>
+				      </div>
+				    </div>
+				  </li>
+				  <li>
+				    <div class="item-content">
+				      <div class="item-inner">
+				        <div class="item-title label">选择区域：</div>
+				        <div class="item-input select-style">
+			              <select>
+			                <option>雨花区</option>
+			                <option>天心区</option>
+			                <option>雨花区</option>
+			                <option>天心区</option>
+			                <option>雨花区</option>
+			                <option>天心区</option>
+			              </select>
+			            </div>
+				      </div>
+				    </div>
+				  </li>
 
-			  <!-- Select -->
-			  <li>
-			    <div class="item-content">
-			      <div class="item-inner">
-			        <div class="item-title label">收货地址：</div>
-			        <div class="item-input">
-			          <input type="text" placeholder="请输入详细地址">
-			        </div>
+				  <!-- Select -->
+				  <li>
+				    <div class="item-content">
+				      <div class="item-inner">
+				        <div class="item-title label">收货地址：</div>
+				        <div class="item-input">
+				          <input name="address" type="text" placeholder="请输入详细地址" ng-required="true" ng-model="address">
+				        </div>
+				      </div>
+				    </div>
+				  </li>
+				</ul>
+			</div>
+
+			<div class="list-block address-add-list" id="default_address_add">
+
+				<ul>
+				  <li>
+				    <div class="item-content">
+				      <div class="item-inner">
+				        <div class="item-title label">收货人：</div>
+				        <div class="item-input">
+				          <input type="text" placeholder="请输入收货人名称">
+				        </div>
+				      </div>
+				    </div>
+				  </li>
+				  <li>
+				    <div class="item-content">
+				      <div class="item-inner">
+				        <div class="item-title label">联系电话：</div>
+				        <div class="item-input">
+				          <input type="tel" placeholder="请输入联系电话">
+				        </div>
+				      </div>
+				    </div>
+				  </li>
+				</ul>
+			</div>
+
+			 <div class="row white-bg padding">
+			      <div class="col-50"><a href="#" class="button button-light" id="add_new_linkman">+ 添加收货人</a></div>
+			      <div class="col-50">
+			     	 <a data-ignore="push"  data-transition="slide-in" href="user_address_carryinfo.html" class="button button-light">
+			     	 	<!-- + -->  <!--默认 没有搬运信息的时候显示 + -->
+			     	 	<span class="icon icon-edit "></span> <!--有搬运信息的时候显示编辑按钮-->
+			     	 	修改搬运信息
+			     	 </a>
 			      </div>
-			    </div>
-			  </li>
-			</ul>
-		</div>
+		    </div>
 
-		<div class="list-block address-add-list" id="default_address_add">
-
-			<ul>
-			  <li>
-			    <div class="item-content">
-			      <div class="item-inner">
-			        <div class="item-title label">收货人：</div>
-			        <div class="item-input">
-			          <input type="text" placeholder="请输入收货人名称">
-			        </div>
-			      </div>
-			    </div>
-			  </li>
-			  <li>
-			    <div class="item-content">
-			      <div class="item-inner">
-			        <div class="item-title label">联系电话：</div>
-			        <div class="item-input">
-			          <input type="tel" placeholder="请输入联系电话">
-			        </div>
-			      </div>
-			    </div>
-			  </li>
-			</ul>
-		</div>
-
-		 <div class="row white-bg padding">
-		      <div class="col-50"><a href="#" class="button button-light" id="add_new_linkman">+ 添加收货人</a></div>
-		      <div class="col-50">
-		     	 <a href="user_address_carryinfo.html" class="button button-light">
-		     	 	<!-- + -->  <!--默认 没有搬运信息的时候显示 + -->
-		     	 	<span class="icon icon-edit "></span> <!--有搬运信息的时候显示编辑按钮-->
-		     	 	修改搬运信息
-		     	 </a>
-		      </div>
-	    </div>
-
-	    <div class="padding">
-			<a href="#" class="button button-big button-fill">确认地址</a>
-		</div>
+		    <div class="padding">
+				<button  type="submit" class="button button-big button-fill button-full button-input-block">确认地址</button>
+			</div>
+		</form>
 
 
 	</div>
@@ -140,6 +142,22 @@
 	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
+	<script tyle="text/javascript" src="http://runjs.cn/js/sandbox/other/angular.min.js" charset="utf-8" ></script>
 	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
+	<script type="text/javascript">
+		  angular.module("ybgApp",[]);
+		  function addressCtr($scope){
+		    $scope.addressForm={
+		      address:'',
+		      consignee:'',
+		      consigneePhone:''
+		    }
+		    $scope.submitForm = function(valid){
+		    	if(valid){
+		    		$.alert("地址不能为空")
+		    	}
+		    }
+		  }
+	</script>
 </body>
 </html>

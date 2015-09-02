@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html  ng-app="ybgApp">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -14,7 +14,7 @@
 	<header class="bar bar-nav default-style">
 		<link rel="stylesheet" href="css/style-lyl.css?v=2">
 		<!-- <a class="icon icon-left pull-left" href="saler-me-index.html" data-transition="slide-out"></a> -->
-		<a href="user_address_add.html" data-transition="slide-in" class="button button-link pull-right">
+		<a data-ignore="push" href="user_address_add.html" data-transition="slide-in" class="button button-link pull-right">
 	    新增
 	  	</a>
 		<h1 class="title">工地管理</h1>
@@ -30,7 +30,7 @@
 			<span class="icon icon-address-white"></span>
 			<span class="tab-label">工地</span>
 		</a>
-		<a class="tab-item" data-transition="slide-in" href="user_mall_index.html">
+		<a data-ignore="push" class="tab-item" data-transition="slide-in" href="user_mall_index.html">
 			<span class="icon  icon-cart-white"></span>
 			<span class="tab-label">选购</span>
 		</a>
@@ -94,6 +94,7 @@
 	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
+	<script tyle="text/javascript" src="http://runjs.cn/js/sandbox/other/angular.min.js" charset="utf-8" ></script>
 	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
 </body>
 </html>

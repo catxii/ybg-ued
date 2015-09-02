@@ -73,9 +73,29 @@ a {
         background: @green;
     }
 }
+.green-bg-ico {
+    font-size: 12px;
+    background: #6ab948;
+    color: white;
+    border-radius: .2rem;
+    padding: 0rem .1rem;
+    margin: 0 .3rem;
+}
+.green-ball-ico {
+    background: #85dc61;
+    color: white;
+    font-size: 12px;
+    font-family: sans-serif;
+    width: 1.5rem;
+    display: inline-block;
+    border-radius: .2rem;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: .2rem;
+}
 
 //背景色定义
-.white-bg {
+.white-bg { 
     background: @white!important;
     color: @black!important;
 }
@@ -207,6 +227,7 @@ i.icon {
     width: 1.45rem;
     height: 1.45rem;
     background-size: 100%;
+    border-radius: .2rem;
     &.icon-diy-money{
      background-image: url("@{imgsrc}/me-ico_03.png");  
     }
@@ -353,6 +374,7 @@ ul,ol {
 .inline-block-ul {
     letter-spacing: -0.15rem;
     word-spacing: -0.15rem;
+    padding-left: 0;
     li {
         display: inline-block;
         vertical-align: middle;
@@ -563,7 +585,9 @@ ul,ol {
     right: 10px;
     z-index: 2;
     overflow: hidden;
-    .fix-middle;
+    position: absolute;
+    top: 50%;
+    margin-top: -.85rem; 
     .count-li {
         float: left;
         &.del,&.plus {
@@ -639,6 +663,11 @@ a {
         line-height: 2rem!important;
         height:2rem;
     }
+    &.disabled {
+        background: white;
+        color: #c8c9cb!important;
+        border:.05rem solid #c8c9cb;
+    }
     &:visited {
         color:#fff; 
     } 
@@ -650,7 +679,9 @@ a {
         color: #333;
     }
 }
-
+.button-input-block {
+    width: 100%;
+}
 .button-default {
    &.button-fill {
         background: @default-color;
