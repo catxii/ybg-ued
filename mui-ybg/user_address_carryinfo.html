@@ -6,7 +6,7 @@
 	<title>云包公-工地管理</title>
 	<link rel="stylesheet" href="libs/sui/css/sm.min.css">
 	<link rel="stylesheet" href="libs/sui/css/sm-extend.min.css">
-<link rel="stylesheet" href="css/style-plugin.css">
+<link rel="stylesheet" href="css/style-plugin.css?v=10">
 	
 </head>
 <body>
@@ -42,134 +42,124 @@
 	</nav>
 
 	<!-- 页面内容区域 -->
-	<div class="content" >
+	<div class="content white-bg" >
 	    
-		<div class="list-block no-fix-width">
-			<ul>
-			  <!-- Text inputs -->
-			  <li>
-			    <div class="item-content">
-			      <div class="item-inner">
-			        <div class="item-title label">楼房性质：</div>
-			        <div class="item-input">
-		              <select>
-		                <option>电梯房</option>
-		                <option>楼梯房</option>
-		              </select>
-		            </div>
-			      </div>
-			    </div>
-			  </li>
-			  <li>
-			    <div class="item-content">
-			      <div class="item-inner">
-			        <div class="item-title label">楼层数：</div>
-			        <div class="item-input">
-		              <select>
-		                <option>1层</option>
-		                <option>2层</option>
-		                <option>3层</option>
-		                <option>4层</option>
-		                <option>5层</option>
-		                <option>6层</option>
-		              </select>
-		            </div>
-			      </div>
-			    </div>
-			  </li>
-			  <li>
-			    <div class="item-content">
-			      <div class="item-inner">
-			        <div class="item-title label">停车位置与楼梯口距离：</div>
-			        <div class="item-input">
-		              <select>
-		                <option>0~20 米</option>
-		                <option>20~40 米</option>
-		                <option>40~60 米</option>
-		                <option>60~100 米</option>
-		              </select>
-		            </div>
-			      </div>
-			    </div>
-			  </li>
-			  <li>
-			    <div class="item-content">
-			      <div class="item-inner">
-			        <div class="item-title label">有无架空层或停车场：</div>
-			        <div class="item-input">
-		              <select>
-		                <option>有</option>
-		                <option>否</option>
-		              </select>
-		            </div>
-			      </div>
-			    </div>
-			  </li>
-			  <li>
-			    <div class="item-content">
-			      <div class="item-inner">
-			        <div class="item-title label">停车场楼层： </div>
-			        <div class="item-input">
-		              <select>
-		                <option>0</option>
-		                <option>-1</option>
-		                <option>-2</option>
-		                <option>-3</option>
-		                <option>-4</option>
-		                <option>-5</option>
-		              </select>
-		            </div>
-			      </div>
-			    </div>
-			  </li>
-			  <li>
-			    <div class="item-content">
-			      <div class="item-inner">
-			        <div class="item-title label">有无上坡平台及台阶：</div>
-			        <div class="item-input">
-		              <select>
-		                <option>有</option>
-		                <option>无</option>
-		              </select>
-		            </div>
-			      </div>
-			    </div>
-			  </li>
-			  <li>
-			    <div class="item-content">
-			      <div class="item-inner">
-			        <div class="item-title label">是否需要转乘电梯：</div>
-			        <div class="item-input">
-		              <select>
-		                <option>是</option>
-		                <option>否</option>
-		              </select>
-		            </div>
-			      </div>
-			    </div>
-			  </li>
-			  <li>
-			    <div class="item-content">
-			      <div class="item-inner">
-			        <div class="item-title label">转乘电梯中间多少米：</div>
-			        <div class="item-input">
-		              <select>
-		                <option>0~20 米</option>
-		                <option>20~40 米</option>
-		                <option>40~60 米</option>
-		                <option>60~100 米</option>
-		              </select>
-		            </div>
-			      </div>
-			    </div>
-			  </li>
-			</ul>
+	    <div class="buttons-tab carry-tab">
+	    	<div class="three">楼房性质:</div>
+	    	<div class="three">
+				<a href="#tab1" class="tab-link active button">电梯房</a>
+			</div>
+			<div class="three">
+				<a href="#tab2" class="tab-link button" style="margin:0;">楼梯房</a>
+			</div>
+		</div>
+		<div class="tabs">
+
+			<div id="tab1" class="list-block no-fix-width tab active">
+				<ul id="handing_ul">
+				  <!-- Text inputs -->
+
+				  <li>
+				    <div class="item-content">
+				      <div class="item-inner">
+				        <div class="item-title label">楼层数：</div>
+				        <div class="item-input select-style">
+			              <select>
+			                <option>1层</option>
+			                <option>2层</option>
+			                <option>3层</option>
+			                <option>4层</option>
+			                <option>5层</option>
+			                <option>6层</option>
+			              </select>
+			            </div>
+				      </div>
+				    </div>
+				  </li>
+				  <li>
+				    <div class="item-content">
+				      <div class="item-inner">
+				        <div class="item-title label">停车位置与楼梯口距离：</div>
+				        <div class="item-input select-style">
+			              <select>
+			                <option>0~20 米</option>
+			                <option>20~40 米</option>
+			                <option>40~60 米</option>
+			                <option>60~100 米</option>
+			              </select>
+			            </div>
+				      </div>
+				    </div>
+				  </li>
+
+				  <li>
+				    <div class="item-content">
+				      <div class="item-inner">
+				        <div class="item-title label">有无上坡平台：</div>
+				        <div class="item-input select-style">
+			              <select>
+			                <option>有</option>
+			                <option>无</option>
+			              </select>
+			            </div>
+				      </div>
+				    </div>
+				  </li>
+				  <li>
+				    <div class="item-content">
+				      <div class="item-inner">
+				        <div class="item-title label">楼梯口与送货地点距离：</div>
+				        <div class="item-input select-style">
+			              <select>
+			                <option>是</option>
+			                <option>否</option>
+			              </select>
+			            </div>
+				      </div>
+				    </div>
+				  </li>
+				</ul>
+			</div>
+
+			<div id="tab2" class="list-block no-fix-width tab">
+				<ul id="handing_ul">
+				  <!-- Text inputs -->
+				  <li>
+				    <div class="item-content">
+				      <div class="item-inner">
+				        <div class="item-title label">楼房性质：</div>
+				        <div class="item-input select-style">
+			              <select>
+			                <option>电梯房</option>
+			                <option>楼梯房</option>
+			              </select>
+			            </div>
+				      </div>
+				    </div>
+				  </li>
+				  <li>
+				    <div class="item-content">
+				      <div class="item-inner">
+				        <div class="item-title label">转乘电梯中间多少米：</div>
+				        <div class="item-input select-style">
+			              <select>
+			                <option>0~20 米</option>
+			                <option>20~40 米</option>
+			                <option>40~60 米</option>
+			                <option>60~100 米</option>
+			              </select>
+			            </div>
+				      </div>
+				    </div>
+				  </li>
+				</ul>
+			</div>
 		</div>
 		
-	    <div class="padding" style="padding:0 .5rem 1rem">
+	    <div class="padding carray-confirm" style="padding:0 .5rem 1rem">
 	    	<label class="btn-center" style="display:block; line-height:1.5rem;">
 	    		<input type="checkbox" checked>
-	    		<span class="warning-color">同意搬运计费协议</span>
+	    		<span class="warning-color agreen">同意搬运计费协议</span>
 	    	</label>
 			<a href="#" class="button button-big button-fill">确认地址</a>
 		</div>

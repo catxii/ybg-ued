@@ -47,21 +47,30 @@ a {
 }
 .default-color {   //通用主色字体用色
     color: @default-color;
-    &:active {
-        color: @default-dark-color;
+    &:visited {
+        color: @default-color;
     }
 }
 .danger-color {    //危险操作字体用色
     color: @danger-color;
+    &:visited {
+        color: @danger-color;
+    }
 }
 .warning-color {  //强调字体用色
     color: @warning-color;
+    &:visited {
+        color: @warning-color;
+    }
 }
 .unimportance-color {  //次要字体用色
     color: @unimportance-color;
+    &:visited {
+        color: @unimportance-color;
+    }
 }
 .price {   //商品现价统一颜色
-    color: @danger-color;
+    color: @danger-color!important;
 }
 .bg-ball {  //圆形背景，主要用于图标圆背景框
     background: @green;
@@ -174,9 +183,14 @@ a {
         }
         .icon {
             color: @opposite-dark-color;
+            margin-left: -.5rem;
+            padding: .5rem 1rem .5rem .6rem;
         }
         .button-link {
             color: @opposite-dark-color;
+            padding: 0 .5rem;
+            margin-right: -.5rem;
+            border-radius: 0;
             &:active {
                 border:none;
             }
@@ -288,27 +302,17 @@ i.icon {
 }
 .check-ball-ico {  //radio样式
     display: inline-block;
-    border:.05rem solid @unimportance-color;
-    border-radius: 10rem;
     height: .7rem;
     width: .7rem;
-    line-height: .5rem;
-    text-align: center;
-    margin-right: .2rem;
+    margin-right: .2rem; 
     vertical-align: middle;
-    background: @white;
+    background: url("@{imgsrc}/checkbox-ico_03.png") left top;
+    background-size:.7rem;
     i {
-        background: @white;;
-        width: .4rem;
-        height: .4rem;
-        border-radius: 1rem;
-        display: inline-block;
+        display: none;
     }
     &.active {
-        border-color: @default-color;
-        i{
-            background: @default-color;
-        }
+        background-position: bottom center;
     }
     &.disabled {
         border-color: @unimportance-color;
@@ -562,7 +566,7 @@ ul,ol {
 // 下拉控件
 .select-style {
     background: url("@{imgsrc}/select-arrow.png") no-repeat 92% center;
-    background-size: 1rem;
+    background-size: .5rem;
     select{ 
         border: 1px solid #ccc;
         border-radius: 0.3rem;
@@ -641,19 +645,19 @@ a {
     }
 }
 .button{
-    line-height: 1.35rem;
-    color: #fff;
-    background: #0894ec;
-    border: none;
+    line-height: 1.25rem;
+    // color: #fff;
+    // background: #0894ec;
+    // border: none;
     &.tab-link {
         background: none;
     }
-    &.button-warning {
-        background: #f60;
-    }
-    &.button-danger {
-        background: #f6383a;
-    }
+    // &.button-warning {
+    //     background: #f60;
+    // }
+    // &.button-danger {
+    //     background: #f6383a;
+    // }
     &.button-light {
         background: white;
         border:@border-gray-dark;
@@ -663,18 +667,18 @@ a {
         line-height: 2rem!important;
         height:2rem;
     }
-    &.disabled {
-        background: white;
-        color: #c8c9cb!important;
-        border:.05rem solid #c8c9cb;
-    }
-    &:visited {
-        color:#fff; 
-    } 
-    &:active {
-        color:@default-dark-color;
-        border:1px solid @default-dark-color;
-    }
+    // &.disabled {
+    //     background: white;
+    //     color: #c8c9cb!important;
+    //     border:.05rem solid #c8c9cb;
+    // }
+    // &:visited {
+    //     color:#fff; 
+    // } 
+    // &:active {
+    //     color:@default-dark-color;
+    //     border:1px solid @default-dark-color;
+    // }
     &.tab-link:visited {
         color: #333;
     }
@@ -933,5 +937,11 @@ header {
     display: none;
 }
 .content {
-    bottom: 0!important;
+    bottom: 0;
+    &.content-hidden {
+        overflow-x: hidden;
+    }
+}
+.bar-tab ~ .content {
+    bottom: 0;
 }
