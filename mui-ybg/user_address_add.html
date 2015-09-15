@@ -45,7 +45,7 @@
 	<!-- 页面内容区域 -->
 	<div class="content" id="address_add" >
 	    <form name="verifyForm"  ng-controller="addressCtr" novalidate ng-submit="submitForm(verifyForm.$invalid)">
-			{{address}}
+			<!-- {{address}} -->
 			<div class="list-block">
 				<ul>
 				  <!-- Text inputs -->
@@ -54,10 +54,13 @@
 				      <div class="item-inner">
 				        <div class="item-title label">选择城市：</div>
 				        <div class="item-input select-style disabled">
-			              <select disabled>
+			              <!-- <select disabled>
 			                <option>长沙市</option>
 			                <option>武汉市</option>
-			              </select>
+			              </select> -->
+			              <label>
+				              <input type="text" placeholder="" id="city-picker" readonly>
+				          </label>
 			            </div>
 				      </div>
 				    </div>
@@ -94,7 +97,7 @@
 				</ul>
 			</div>
 
-			<div class="list-block address-add-list" id="default_address_add">
+			<!-- <div class="list-block address-add-list" id="default_address_add">
 
 				<ul>
 				  <li>
@@ -118,18 +121,18 @@
 				    </div>
 				  </li>
 				</ul>
-			</div>
+			</div> -->
 
-			 <div class="row white-bg padding">
+			<!-- <div class="row white-bg padding">
 			      <div class="col-50"><a href="#" class="button button-light" id="add_new_linkman">+ 添加收货人</a></div>
 			      <div class="col-50">
-			     	 <a data-ignore="push"  data-transition="slide-in" href="user_address_carryinfo.html" class="button button-light">
+			     	 <a data-ignore="push"  data-transition="slide-in" href="user_address_carryinfo.html" class="button button-light"> -->
 			     	 	<!-- + -->  <!--默认 没有搬运信息的时候显示 + -->
-			     	 	<span class="icon icon-edit "></span> <!--有搬运信息的时候显示编辑按钮-->
-			     	 	修改搬运信息
+			     	 	<!-- <span class="icon icon-edit "></span> 有搬运信息的时候显示编辑按钮--> 
+			     	 	<!-- 修改搬运信息
 			     	 </a>
 			      </div>
-		    </div>
+		    </div> -->
 
 		    <div class="padding">
 				<button  type="submit" class="button button-big button-fill button-full button-input-block">确认地址</button>
@@ -142,22 +145,26 @@
 	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
-	<script tyle="text/javascript" src="http://runjs.cn/js/sandbox/other/angular.min.js" charset="utf-8" ></script>
+	<script type='text/javascript' src='libs/sui/js/sm-city-picker.js' charset='utf-8'></script>
+	<!-- <script tyle="text/javascript" src="http://runjs.cn/js/sandbox/other/angular.min.js" charset="utf-8" ></script> -->
 	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
 	<script type="text/javascript">
-		  angular.module("ybgApp",[]);
-		  function addressCtr($scope){
-		    $scope.addressForm={
-		      address:'',
-		      consignee:'',
-		      consigneePhone:''
-		    }
-		    $scope.submitForm = function(valid){
-		    	if(valid){
-		    		$.alert("地址不能为空")
-		    	}
-		    }
-		  }
+		  // angular.module("ybgApp",[]);
+		  // function addressCtr($scope){
+		  //   $scope.addressForm={
+		  //     address:'',
+		  //     consignee:'',
+		  //     consigneePhone:''
+		  //   }
+		  //   $scope.submitForm = function(valid){
+		  //   	if(valid){
+		  //   		$.alert("地址不能为空")
+		  //   	}
+		  //   }
+		  // }
+
+		  	$("#city-picker").cityPicker({});
+		  
 	</script>
 </body>
 </html>

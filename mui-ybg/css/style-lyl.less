@@ -710,11 +710,14 @@ h4.card-title-style {
             .count {
                 display: block;
             }
-            a:visited {
-                color: @white;
-            }
-            a:active {
-                color: @default-color;
+            a{
+                color: white;
+                &:visited {
+                    color: @white;
+                }
+                &:active {
+                    color: @default-color;
+                }
             }
         }
     }
@@ -732,9 +735,10 @@ h4.card-title-style {
         a{
             padding: .8rem 0;
             display: block;
+            color: @black;
         }
-        a:active {
-            background: @gray;
+        a:visited,a:active {
+            color: @black;
         }
         .name {
             font-size: @font-size-default;
@@ -763,4 +767,45 @@ h4.card-title-style {
         background-image: url("@{imgsrc}/address_ico_11.png");
         background-color: #5acbf7;
     }
+}
+
+.message-module {
+    .card {
+        margin-right:.5rem;
+        margin-left:.5rem; 
+    }
+}
+
+.header-title {
+    padding: .5rem;
+    border-bottom: @border-gray-tint;
+    margin-bottom: .5rem;
+    i,span {
+        vertical-align: middle;
+    }
+}
+
+.card-message {
+    .card-header {
+        font-size: @font-size-small;
+        color: @unimportance-color;
+        font-weight: 300;
+        .pull-left {
+            .blue-line {
+                display: inline-block;
+                vertical-align: middle;
+                background:@default-color;
+                width: .1rem;
+                height: .7rem;
+                margin-right: .25rem;
+            }
+        }
+    }
+    .card-content-inner {
+        text-align: justify;
+    }
+}
+
+.banner-index {
+    
 }
