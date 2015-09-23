@@ -13,11 +13,11 @@
 	<!-- 顶部标题 -->
 	<header class="bar bar-nav default-style">
 		
-		<style type="text/css">
-			.bar-tab { display:none!important; }
-			.content { bottom:0!important;}
-		</style>
-		<a class="icon icon-left pull-left" href="user_address_index.html" data-transition="slide-out"></a>
+
+		<a class="icon icon-left pull-left" href="user_address_choose.html" data-transition="slide-out"></a>
+		<a href="#" data-transition="slide-in" class="button button-link pull-right">
+	    保存
+	  	</a>
 		<h1 class="title">编辑工地</h1>
 	</header>
 
@@ -47,6 +47,18 @@
 	    
 		<div class="list-block">
 			<ul>
+
+			  <li>
+			    <div class="item-content">
+			      <div class="item-inner">
+			        <div class="item-title label">工地名称：</div>
+			        <div class="item-input">
+			          <input type="text" placeholder="万科金域华府一期" disabled>
+			        </div>
+			      </div>
+			    </div>
+			  </li>
+
 			  <!-- Text inputs -->
 			  <li>
 			    <div class="item-content">
@@ -99,13 +111,14 @@
 		      <input type="radio" name="my-radio" checked>
 		      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
 		    </label>
+		    <a href="javascript:void" class="button button-light button-fill remove-user position-right">删除</a>
 			<ul>
 			  <li>
 			    <div class="item-content">
 			      <div class="item-inner">
 			        <div class="item-title label">收货人：</div>
 			        <div class="item-input">
-			          <input type="text" placeholder="请输入收货人名称">
+			          <input type="text" placeholder="请输入收货人名称" value="张三">
 			        </div>
 			      </div>
 			    </div>
@@ -115,7 +128,7 @@
 			      <div class="item-inner">
 			        <div class="item-title label">联系电话：</div>
 			        <div class="item-input">
-			          <input type="tel" placeholder="请输入联系电话">
+			          <input type="tel" placeholder="请输入联系电话" value="13467676767">
 			        </div>
 			      </div>
 			    </div>
@@ -129,13 +142,14 @@
 		      <input type="radio" name="my-radio" checked>
 		      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
 		    </label>
+		    <a href="javascript:void" class="button button-light button-fill remove-user position-right">删除</a>
 			<ul>
 			  <li>
 			    <div class="item-content">
 			      <div class="item-inner">
 			        <div class="item-title label">收货人：</div>
 			        <div class="item-input">
-			          <input type="text" placeholder="请输入收货人名称">
+			          <input type="text" placeholder="请输入收货人名称" value="张三">
 			        </div>
 			      </div>
 			    </div>
@@ -145,7 +159,7 @@
 			      <div class="item-inner">
 			        <div class="item-title label">联系电话：</div>
 			        <div class="item-input">
-			          <input type="tel" placeholder="请输入联系电话">
+			          <input type="tel" placeholder="请输入联系电话" value="13467676767">
 			        </div>
 			      </div>
 			    </div>
@@ -159,13 +173,14 @@
 		      <input type="radio" name="my-radio" checked>
 		      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
 		    </label>
+		    <a href="javascript:void" class="button button-light button-fill remove-user position-right">删除</a>
 			<ul>
 			  <li>
 			    <div class="item-content">
 			      <div class="item-inner">
 			        <div class="item-title label">收货人：</div>
 			        <div class="item-input">
-			          <input type="text" placeholder="请输入收货人名称">
+			          <input type="text" placeholder="请输入收货人名称" value="张三">
 			        </div>
 			      </div>
 			    </div>
@@ -175,7 +190,7 @@
 			      <div class="item-inner">
 			        <div class="item-title label">联系电话：</div>
 			        <div class="item-input">
-			          <input type="tel" placeholder="请输入联系电话">
+			          <input type="tel" placeholder="请输入联系电话" value="13467676767">
 			        </div>
 			      </div>
 			    </div>
@@ -186,7 +201,7 @@
 
 
 	    <div class="padding">
-			<a href="#" class="button button-big button-fill">确认地址</a>
+			<a href="javascript:void(0)" class="button button-big button-fill" id="add_new_linkman">新增收货师傅</a>
 		</div>
 
 

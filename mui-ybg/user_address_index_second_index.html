@@ -6,13 +6,12 @@
 	<title>云包公-工地管理</title>
 	<link rel="stylesheet" href="libs/sui/css/sm.min.css">
 	<link rel="stylesheet" href="libs/sui/css/sm-extend.min.css">
-<link rel="stylesheet" href="css/style-plugin.css">
+	<link rel="stylesheet" href="css/style-plugin.css">
 	
 </head>
 <body>
 	<!-- 顶部标题 -->
 	<header class="bar bar-nav default-style">
-		<link rel="stylesheet" href="css/style-lyl.css?v=2">
 		<a class="icon icon-left pull-left" href="user_address_index_second.html" data-transition="slide-out"></a>
 		<!-- <a data-ignore="push" href="user_address_add.html" data-transition="slide-in" class="button button-link pull-right">
 	    新增
@@ -50,33 +49,45 @@
 			<div class="photo-box">
 				<a href="#"><img src="img/address_ico_07.jpg"></a>
 			</div>
-			<a data-transition="slide-in" href="user_address_index_second_index_edit.html" class="edit-btn"></a>
+			<a data-transition="slide-in" href="user_address_index_second_index_edit.html" class="edit-btn-position">
+				<i class="edit-btn"></i>
+			</a>
 			<div class="address-name">碧玺大厦工地一期</div>
 			<div class="address-info">长沙市芙蓉区东江二路十字路口左侧金玉花园17栋11楼1101</div>
 			<ul class="order-info clearfix">
 				<li><a href="#" data-transition="slide-in"><span class="count">0</span><span class="status">待确认</span></a></li>
 				<li><a href="#" data-transition="slide-in"><span class="count">0</span><span class="status">待付款</span></a></li>
 				<li><a href="#" data-transition="slide-in"><span class="count">0</span><span class="status">待收货</span></a></li>
+				<li><a href="#" data-transition="slide-in"><span class="count">0</span><span class="status">历史订单</span></a></li>
 			</ul>
 		</div>
 
 		<div class="clearfix kit-list-index">
-			<li><a href="#" data-transition="slide-in"><span class="kit-button shopping-ico"></span><span class="name">在线购物</span></a></li>
-			<li><a href="user_address_index_second_manage.html" data-transition="slide-in"><span class="kit-button manage-ico"></span><span class="name">员工管理</span></a></li>
+			<li><a href="#" data-transition="slide-in"><span class="kit-button photo-ico"></span><span class="name">拍照下单</span></a></li>
+			<li><a href="user_mall_index_v1.html" data-transition="slide-in"><span class="kit-button shopping-ico"></span><span class="name">在线购物</span></a></li>
+			<li><a href="user_address_index_second_manage.html" data-transition="slide-in"><span class="kit-button manage-ico"></span><span class="name">师傅管理</span></a></li>
 			<li><a href="user_address_index_second_addressinfo.html" data-transition="slide-in"><span class="kit-button onsite-ico"></span><span class="name">工地现场</span></a></li>
 		</div>
 		
 		<div class="white-bg message-module">
-			<div class="header-title"><i class="icon voice-ico"></i> <span>最新消息</span></div>
+			<div class="header-title"><i class="icon voice-ico"></i> 
+				<!-- <span>最新消息</span> -->
+				<a href="user_mall_index_v1_shoppingcar.html" class="has-underline" data-transition="slide-in">点击快速进入泥沙辅材专场</a>
+			</div>
 
 			<div class="card card-message">
-				<div class="card-header">
-					<div class="pull-left"><i class="blue-line"></i>单号:62354123254</div>
-					<div class="pull-right">2015年9月6日  14:48</div>
+				<div class="card-header clearfix" style="background:red;">
+					<div style="float:left;"><i class="blue-line"></i>单号:</div>
+					<div style="float:right;">2015年9月6日  14:48</div>
 				</div>
 				<div class="card-content">
-				  <div class="card-content-inner">您购买的【恒飞PPR软管\砂石\陶粒\瓷砖胶\乳胶...】正在<span class="warning-color">备货中</span>,预计当日18:20前送达，请耐心等待。
-				  </div>
+				  <ul class="statu-info">
+						<li class="finish"><i class="status-ico-1"></i>下单成功<br>10:12</li>
+						<li class="line"></li>
+						<li><i class="status-ico-2"></i>配送中<br>10:12</li>
+						<li class="line"></li>
+						<li><i class="status-ico-3"></i>已签收<br>--:--</li>
+					</ul>
 				</div>
 			</div>
 

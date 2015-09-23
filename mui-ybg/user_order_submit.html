@@ -13,18 +13,25 @@
 		<!-- 顶部标题 -->
 	<header class="bar bar-nav default-style">
 		
-		 <a class="icon icon-left pull-left" href="user_mall_index.html" data-transition="slide-out"></a> 
+		 <a class="icon icon-left pull-left" href="user_mall_index_v1_shoppingcar.html" data-transition="slide-out"></a> 
 		<h1 class="title">提交订单</h1>
 	</header>
-	<!-- 页面内容区域 -->
-<div class="content" id="user_submit">
-	<div class="address-area">
-			<ul class="area-info">
-				<li>[默认]长沙市-雨花区</li>
-				<li class="font-7">万家丽路2345号万科金域华府3栋1104</li>
-			</ul>
-			<a href="user_address_choose.html" data-transition="slide-in" class="button button-warning button-fill position-right">切换工地</a>			
+
+	<div class="card bar-header-secondary fix-bottom-bar" style="bottom: 0;margin: 0!important;width: 100%; z-index:21; top:auto;">
+	    <div class="card-footer no-border">
+		      <div>应付金额 <span class="red-color">¥588.00</span>&nbsp;&nbsp;&nbsp;运费 <span class="red-color">¥60.00</span></div>
+		      <a href="javascript:void(0)" id="user_order_submit" data-transition="slide-in" class="button button-dafault button-fill order_button">提交订单</a>
+		</div>
 	</div>
+
+	<!-- 页面内容区域 -->
+<div class="content" id="user_submit" style="top: 2.2rem; bottom: 1.4rem;">
+	<a href="user_address_choose.html" data-transition="slide-in" class="address-area arrow-bg-right">
+		<ul class="area-info">
+			<li>张三 13476859688</li>
+			<li class="font-7">万家丽路2345号万科金域华府3栋1104</li>
+		</ul>		
+	</a>
 	<div class="list-block media-list">
 		<ul class="saler-ul">
 		    <li>
@@ -37,7 +44,7 @@
 		          	</div>
 		        </a>
 		    </li>
-		    <li>
+		    <!-- <li>
 		      	<div class="item-content">
 			        <div class="item-inner">
 			            <div class="item-title-row">
@@ -56,7 +63,7 @@
 			            </div>
 		          	</div>
 		        </div>
-		    </li>
+		    </li> -->
 		</ul>
 	</div>
 
@@ -79,11 +86,11 @@
 	      <li>
 	        <div class="item-content">
 	          <div class="item-inner">
-	            <div class="label"><a href="#" class="orange-color">搬运费计费协议</a></div>
+	            <div class="label">查看<a href="#" class="default-color">《搬运费计费协议》</a></div>
 	          </div>
 	    	</div>
 	      </li>
-	      <li>
+	      <!-- <li>
 	        <div class="item-content">
 	          <div class="item-inner">
 	            <div class="label">搬运费 <span class="price
@@ -91,7 +98,7 @@
 	            </div>
 	        </div>
 	   		 </div>
-	      </li>
+	      </li> -->
 	  </ul>
 	</div>
 	<div class="list-block media-list">
@@ -145,12 +152,7 @@
 		
 	</div>
 </div>
-	<div class="card bar-header-secondary fix-bottom-bar" style="bottom: 0;margin: 0!important;width: 100%; z-index:21; top:auto;">
-	    <div class="card-footer no-border">
-	      <div>应付金额 <span class="red-color">¥588.00</span>&nbsp;&nbsp;&nbsp;运费 <span class="red-color">¥60.00</span></div>
-	      <a href="javascript:void(0)" id="user_order_submit" data-transition="slide-in" class="button button-dafault button-fill order_button">提交订单</a>
-	</div>
-</div>
+
 	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
   	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
   	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>

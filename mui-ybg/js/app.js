@@ -211,3 +211,34 @@ $(document).on('pageInit', '#address_add', function(e, id, content){
 
 
 });
+
+// 切除城市
+$(document).on('pageInit', '#address_Model', function(e, id, content){
+  $(".change-city").click(function () {
+        var buttons1 = [
+          {
+            text: '请选择您的城市',
+            label: true
+          },
+          {
+            text: '长沙',
+            onClick: function() {
+              $(".city-area").text( groups[0][1].text );
+            }
+          },
+          {
+            text: '武汉',
+            onClick: function() {
+              $(".city-area").text( groups[0][2].text );
+            }
+          }
+        ];
+        var buttons2 = [
+          {
+            text: '取消',
+          }
+        ];
+        var groups = [buttons1, buttons2];
+        $.actions(groups);
+  });
+});

@@ -1,7 +1,7 @@
 //h5调试用
-// .preloader-indicator-modal,.preloader-indicator-overlay {
-//     display: none!important;
-// }
+.preloader-indicator-modal,.preloader-indicator-overlay {
+    display: none!important;
+}
  
 /*云包公公共样式*/
 html,body {
@@ -170,6 +170,28 @@ a {
             top: 0.05rem;
             font-size: @font-size-small;
         }
+
+    }
+    &.white-bg {
+        background: @white;
+        .tab-item {
+            padding-top: 0.25rem;
+            padding-bottom: 0.25rem;
+            &.current {
+                background: @white;
+                .tab-label {
+                    color: @default-color;
+                }
+            }
+            .tab-label {
+                color: #9b9b9b; 
+            }
+            .icon ~ .tab-label {
+                top: 0.05rem;
+                font-size: @font-size-small;
+            }
+
+        }
     }
 }
 
@@ -185,6 +207,12 @@ a {
             color: @opposite-dark-color;
             margin-left: -.5rem;
             padding: .5rem 1rem .5rem .6rem;
+            background-repeat: no-repeat;
+            background-position: center;
+            &.icon-dingwei {
+                background-image: url("@{imgsrc}/dingwei-ico_03.png");
+                background-size: 50%;
+            }
         }
         .button-link {
             color: @opposite-dark-color;
@@ -203,11 +231,12 @@ a {
 .bar-tab { //底部按钮图标样式
     .tab-item{
         .icon {
-    	display: block;
-        margin: 0 auto 0.25rem;
-        background-size: 100%; 
-        width: .9rem;
-        height: .9rem;
+        	display: block;
+            margin: 0 auto 0.25rem;
+            background-size: 100%; 
+            width: .9rem;
+            height: .9rem;
+            background-repeat: no-repeat;
             &.icon-cart-white {
                 background-image: url("@{imgsrc}/ico-mall-white.png");
             }
@@ -216,9 +245,6 @@ a {
             }
             &.icon-me-white {
                 background-image: url("@{imgsrc}/ico-porfiles-white.png");
-                &.sm {
-                    background-image:url("@{imgsrc}/ico-porfiles-white-sm.png"); 
-                }
             }
             &.icon-clients-white {
                 background-image: url("@{imgsrc}/ico-clients-white.png");
@@ -231,6 +257,54 @@ a {
             }
             &.icon-dynamic-white {
                 background-image: url("@{imgsrc}/icon-star-white.png");
+            }
+            
+            &.icon-address-gray {
+                background-image: url("@{imgsrc}/user-index-ico-05.png");  
+            }
+            &.icon-mall-gray {
+                background-image: url("@{imgsrc}/user-index-ico-06.png");
+            }
+            &.icon-me-gray {
+                background-image: url("@{imgsrc}/user-index-ico-08.png");
+            }
+
+            &.icon-clients-gray {
+                background-image: url("@{imgsrc}/profile-ico_03-07.png");
+            }
+            &.icon-orderlist-gray {
+                background-image: url("@{imgsrc}/profile-ico_03-05.png");  
+            }
+            &.icon-message-gray {
+                background-image: url("@{imgsrc}/profile-ico_03-06.png");
+            }
+            &.icon-me-round-gray {
+                background-image: url("@{imgsrc}/profile-ico_03-08.png");
+            }
+        }
+        &.current {
+            .icon {
+                &.icon-address-gray {
+                    background-image: url("@{imgsrc}/user-index-ico.png"); 
+                }
+                &.icon-mall-gray {
+                    background-image: url("@{imgsrc}/user-index-ico-02.png");
+                }
+                &.icon-me-gray {
+                    background-image: url("@{imgsrc}/user-index-ico-04.png");
+                }
+                &.icon-clients-gray {
+                    background-image: url("@{imgsrc}/profile-ico_03-03.png");
+                }
+                &.icon-orderlist-gray {
+                    background-image: url("@{imgsrc}/profile-ico_03.png");  
+                }
+                &.icon-message-gray {
+                    background-image: url("@{imgsrc}/profile-ico_03-02.png");
+                }
+                &.icon-me-round-gray {
+                    background-image: url("@{imgsrc}/profile-ico_03-04.png");
+                }
             }
         }
     }
@@ -254,12 +328,19 @@ i.icon {
     &.icon-diy-people{
      background-image: url("@{imgsrc}/me-ico_13.png");  
     }
+    &.icon-laba {
+        background-image: url("@{imgsrc}/address-list-index-ico_01.png");
+    }
+    &.icon-car {
+        background-image: url("@{imgsrc}/address-list-index-ico_02.png");
+    }
     &.voice-ico {
         background-image: url("@{imgsrc}/address_ico_17.jpg");
         background-position: top center;
         width: 1rem;
         height: 1rem;
         margin-top: -.08rem;
+        border-radius: 0;
     }
     &.icon-user-ico {
         background-size: 1.45rem!important;
@@ -306,6 +387,10 @@ i.icon {
     display: inline-block;
     width: 1.45rem;
     height: 1.45rem;
+    &.icon-photo {
+        background: url("@{imgsrc}/photo-ico_03.png") no-repeat;
+        background-size: 100%;
+    }
 }
 .check-ball-ico {  //radio样式
     display: inline-block;
@@ -374,6 +459,9 @@ ul,ol {
     li {
         list-style: none;
     }
+}
+.button-nav-ico {
+
 }
 .list-block-h1 {
     font-size: 1rem;
@@ -646,11 +734,11 @@ ul,ol {
 }
 
 //按钮
-a {
-    &:visited {
-        color: #2b2c33;
-    }
-}
+// a {
+//     &:visited {
+//         color: #2b2c33;
+//     }
+// }
 .button{
     line-height: 1.25rem;
     // color: #fff;
@@ -952,3 +1040,27 @@ header {
 .bar-tab ~ .content {
     bottom: 0;
 }
+
+// 叹号图标
+.tanhao-ico {
+    background: red;
+    color: white;
+    font-style: normal;
+    text-align: center;
+    width: .8rem;
+    height: .8rem;
+    display: inline-block;
+    line-height: .8rem;
+    border-radius: 10rem;
+    font-weight: bolder;
+    padding: 0;
+    font-size: .6rem;
+    vertical-align: middle;
+    margin-right: .6rem;
+    position: absolute;
+    right: .5rem;
+    top: 50%;
+    margin-top: -.4rem;
+    opacity: .4;
+    zoom: 0;
+} 
