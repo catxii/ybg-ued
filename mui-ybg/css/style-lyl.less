@@ -43,6 +43,8 @@
 
 // 商城首页
 .item-product-list {
+    position: relative;
+    padding-left: .25rem!important;
     &:active {
         background: white!important;
     }
@@ -60,8 +62,11 @@
         }
         .hot-price {
             color: @red;
-            font-size:@font-size-large;
+            font-size:@font-size-default;
         }
+    }
+    .item-inner {
+        margin-left: .25rem!important;
     }
 }
 &.shopping-car-list {
@@ -88,7 +93,7 @@
         color: #666666;
     }
     .item-price {
-        font-size: @font-size-default;
+        font-size: @font-size-small;
     }
     .count-ul {
         top: auto;
@@ -176,6 +181,7 @@
         background: url("@{imgsrc}/username-ico.png") .6rem .6rem  no-repeat;
         border-bottom: @border-gray; 
         padding-left: 2rem;
+        position: relative;
     }
     .password {
         background: url("@{imgsrc}/password-ico.png") .6rem .6rem no-repeat;
@@ -349,7 +355,7 @@
     .item-after {
         position:absolute;
         right: 1.5rem;
-        top:.7rem;
+        top:.65rem;
     }
 }
 
@@ -433,7 +439,7 @@
 
 //优惠券页面
 .discount-card {
-    background: url("@{imgsrc}/discount-bg.gif") no-repeat right top;
+    background: url("@{imgsrc}/discount-bg.gif") repeat-x right top;
     background-size: 20rem;
     height: 6rem;
     width: 96%;
@@ -515,7 +521,7 @@
     padding:1rem 0;
     margin: 0;
     li {
-        font-size: @font-size-big;
+        font-size: @font-size-small;
         color: @unimportance-color;
         width: 25%;
         &.line {
@@ -529,20 +535,18 @@
             display: block;
             margin: .25rem auto;
             width: 2rem;
-            height: 2rem;
-            background-position: center bottom;
+            height: 1.8rem;
+            background-position: center;
             background-repeat: no-repeat;
+            background-size:  1.5rem;
             &.status-ico-1 {
-                background-image:url(../img/order-status-ico_06.gif);
-                background-size:  1.3rem;
+                background-image:url(../img/order-status_12.png);
             }
             &.status-ico-2 {
-                background-image:url(../img/order-status-ico_05.gif);
-                background-size:  1.4rem;
+                background-image:url(../img/order-status_13.png);
             }
             &.status-ico-3 {
-                background-image:url(../img/order-status-ico_07.gif);
-                background-size:  2rem;
+                background-image:url(../img/order-status_14.png);
             }
         }
         &.finish {
@@ -551,7 +555,15 @@
                 background:@default-color;
             }
             i{
-                background-position: center top;
+                &.status-ico-1 {
+                    background-image:url(../img/order-status_03.png);
+                }
+                &.status-ico-2 {
+                    background-image:url(../img/order-status_05.png);
+                }
+                &.status-ico-3 {
+                    background-image:url(../img/order-status_07.png);
+                }
             }
         }
     }
@@ -571,6 +583,7 @@
 }
 
 .img-brower-list {
+    padding-left:.7rem;
     li {
         margin-right: .5rem;
         vertical-align: top;
@@ -621,12 +634,13 @@
             .item-text {
                 font-size: @font-size-small;
                 color: @unimportance-color;
-                margin-bottom: .7rem;
+                // margin-bottom: .7rem;
                 height: auto;
             }
             img {
                 width: 3.4rem;
                 height: 3.1rem;
+                border:@border-gray-tint;
             }
         }
     }
@@ -669,9 +683,6 @@
         font-size: @font-size-small;
     }
 }
-.item-product-list {
-    position: relative;
-}
 .peisong-list-more {
     border-top: @border-gray-dashed;
     color: #999999;
@@ -701,7 +712,7 @@ h4.card-title-style {
     background:url("@{imgsrc}/address-index-bg.jpg") repeat-x;
     background-size: 100% 100%;
     position: relative;
-    height:13.3rem;
+    height:10.3rem; 
     margin-bottom:.5rem;
     .edit-btn-position {
         right: 0rem;
@@ -866,6 +877,8 @@ h4.card-title-style {
         font-size: @font-size-small;
         color: @unimportance-color;
         font-weight: 300;
+        display: block;
+        border-bottom: @border-gray-tint;
         .pull-left {
             .blue-line {
                 display: inline-block;
@@ -977,6 +990,7 @@ h4.card-title-style {
 }
 
 .message-area {
+    display: none;
     position: absolute;
     bottom: .25rem;
     left: 5rem;
@@ -1079,4 +1093,70 @@ h4.card-title-style {
 }
 .card-margin {
     margin: .5rem;
+}
+
+.system-message {
+    .face-img {
+        width: 5rem;
+        height: 10rem;
+        margin: 1rem auto;
+        background: url("@{imgsrc}/alert-ico.png") center no-repeat;
+        background-size:100%;
+    }
+    .error {
+        color: @unimportance-color;
+    }
+    .jump {
+        background: #eee;
+        border-radius: 1rem;
+        color: #333;
+        border: 1px #ccc solid;
+        line-height: 1.6rem;
+        font-size: @font-size-mini;
+        #wait {
+            color: red;
+        }
+    }
+}
+
+.fix-input {
+    position: fixed;
+    top: 5rem!important;
+    left: 50%;
+    margin-left: -40%;
+    bottom: auto!important;
+    z-index: 105900;
+    width: 80%;
+    border-radius: 0;
+    padding: .2rem 0;
+    box-shadow: 3px 6px 9px #ccc;
+    .count-li {
+        &.del {
+            display: none;
+        }
+        &.plus {
+            display: none;
+        }
+        &.name {
+            display: block;
+            line-height: 2.4rem;
+            font-size: @font-size-large;
+            width: 40%;
+            text-align: right;
+        }
+        &.count {
+            width: 60%;
+            padding: 0 1rem;
+            .num-input {
+                line-height: 2.4rem;
+                font-size: 1rem;
+                border: @border-gray;
+            }
+        }
+    }
+}
+
+//隐藏工地多余的地址
+.city-area-hide {
+    display: none;
 }

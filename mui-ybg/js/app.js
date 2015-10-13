@@ -43,7 +43,7 @@ $(document).on('pageInit', function(e, id, content){
   
   				$(document).on('click','#user_order_submit', function () {
 				      $.confirm('订单成功', function () {
-				        window.location.href="user_mall_index.html"
+				        window.location.href="user_address_index_second_index.html"
 				      });
 				  });
 	});
@@ -212,7 +212,7 @@ $(document).on('pageInit', '#address_add', function(e, id, content){
 
 });
 
-// 切除城市
+// 切换城市
 $(document).on('pageInit', '#address_Model', function(e, id, content){
   $(".change-city").click(function () {
         var buttons1 = [

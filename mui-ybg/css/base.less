@@ -1,8 +1,11 @@
 //h5调试用
-.preloader-indicator-modal,.preloader-indicator-overlay {
-    display: none!important;
-}
- 
+// .preloader-indicator-modal,.preloader-indicator-overlay {
+//     display: none!important;
+// }
+// #think_page_trace_open {
+//     z-index: 99999;
+// }
+
 /*云包公公共样式*/
 html,body {
     overflow-x: hidden;
@@ -31,7 +34,10 @@ html,body {
 @danger-color:#fc2a2a; //危险操作，警告文字
 @warning-color:#ff9c00; //强调文字颜色
 @warning-bg:#f7e2ca; //强调区域背景色
+@success-color:@green; //成功的颜色
+@information-color:@default-color;
 @unimportance-color:#afafaf; //次要的文字颜色
+@gray-empty:#ccc; //没有内容时候的提示背景灰色
 
 // 颜色种类划分
 @black:#2b2c33;
@@ -43,12 +49,18 @@ html,body {
 @green:green;
 
 a {
-    color: @blue;
+    color: @blue; 
 }
 .default-color {   //通用主色字体用色
     color: @default-color;
     &:visited {
         color: @default-color;
+    }
+}
+.black-color {
+    color:@black;
+    &:visited {
+        color: @black;
     }
 }
 .danger-color {    //危险操作字体用色
@@ -681,7 +693,7 @@ ul,ol {
     width: 5rem;
     border-radius: 0.4rem;
     background: @white;
-    right: 10px;
+    right: 10px; 
     z-index: 2;
     overflow: hidden;
     position: absolute;
@@ -690,7 +702,7 @@ ul,ol {
     .count-li {
         float: left;
         &.del,&.plus {
-            width: 33%;
+            width: 30%;
             text-indent: -999px;
             overflow: hidden;
             line-height: 1.6rem;
@@ -706,8 +718,11 @@ ul,ol {
             background: url("@{imgsrc}/plus.png") no-repeat center;
             background-size: 30%;
         }
+        &.name {
+            display: none;
+        }
         &.count {
-            width: 33%;
+            width: 40%;
             input {
                 width: 100%;
                 line-height: 1.6rem;
@@ -716,6 +731,7 @@ ul,ol {
                 border-right: @border-gray-dark;
                 border-left: @border-gray-dark;
                 text-align: center;
+                padding: 0;
             }
         }
     }
@@ -804,8 +820,8 @@ header {
 .warning-message-bar {
     background: @warning-bg;
     color: @warning-color;
-    position:fixed;
-    top: 2.2rem;
+    position:absolute;
+    top: 0rem;
     right: 0;
     left: 0;
     padding: .2rem;
@@ -973,6 +989,9 @@ header {
             }
             .name {
             }
+            .product-list {
+                font-size:.7rem;
+            }
         }
     }
 }
@@ -1064,3 +1083,60 @@ header {
     opacity: .4;
     zoom: 0;
 } 
+
+// 公共状态提示页面
+.alert-status-box  {
+    text-align: center;
+    padding: 3rem 1rem 0;
+    .button-list {
+        padding: 1rem 0;
+        .button {
+            width: 40%;
+            display: inline-block;
+            margin:0 0.5rem;
+        }
+    }
+    .icon {
+        font-size: 3rem;
+        width: 3rem;
+        height: 3rem;
+        line-height: 3rem;
+        display: block;
+        margin:1rem auto;
+    }
+    .right {
+        color: @success-color;
+    }
+    .warning {
+        color: @warning-color;
+    }
+    .wrong {
+        color: @danger-color;
+    }
+    .information {
+        color: @information-color;
+    }
+    .empty {
+        color: @gray-empty;
+    }
+}
+
+// 登录的删除按钮
+.clearuserinfo {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -.5rem;
+    line-height: .88rem;
+    background: #ccc;
+    border-radius: 5rem;
+    width: 1rem;
+    height: 1rem;
+    text-align: center;
+    color: @white;
+    padding: 0;
+    &:active {
+        background: @danger-color;
+        color: @white;
+    }
+}

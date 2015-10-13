@@ -95,6 +95,7 @@
     width: 100%;
     background-size:100% 100%;
     color: #fff;
+    position: relative;
 }
 .me-user-head{ 
     margin: 0 auto;
@@ -113,15 +114,18 @@
     .item-title{
         font-weight: bold;
         margin-bottom: 0;
-    }
+    } 
 }
 .me-user-list{
+    position: absolute;
+    width: 100%;
+    bottom: .25rem;
     margin: 0;
     a{
         color: #fff;
     }
     li{
-        background: rgba(0, 0, 0, 0) url("../img/me_one.png") no-repeat scroll right 0;
+        background: rgba(0, 0, 0, 0) url("../img/me_one.png") no-repeat scroll right center;
         float: left;
         width: 25%;
         text-align: center;

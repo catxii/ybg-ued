@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>云包公-工地管理</title>
+	<link rel="stylesheet" href="libs/sui/css/sm.min.css">
+	<link rel="stylesheet" href="libs/sui/css/sm-extend.min.css">
+<link rel="stylesheet" href="libs/alifontico/iconfont.css">
+<link rel="stylesheet" href="css/style-plugin.css">
+	
+</head>
+<style type="text/css">
+/**{ padding: 0; margin: 0; }
+body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16px; }
+.system-message{ padding: 24px 48px; }
+.system-message h1{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; }
+.system-message .jump{ padding-top: 10px}
+.system-message .jump a{ color: #333;}
+.system-message .success,.system-message .error{ line-height: 1.8em; font-size: 36px }*/
+.system-message .detail{ font-size: 12px; line-height: 20px; margin-top: 12px; display:none}
+</style>
+<style id="style-1-cropbar-clipper">/* Copyright 2014 Evernote Corporation. All rights reserved. */
+.en-markup-crop-options {
+    top: 18px !important;
+    left: 50% !important;
+    margin-left: -100px !important;
+    width: 200px !important;
+    border: 2px rgba(255,255,255,.38) solid !important;
+    border-radius: 4px !important;
+}
+
+.en-markup-crop-options div div:first-of-type {
+    margin-left: 0px !important;
+}
+</style></head>
+<body>
+<header class="bar bar-nav default-style">
+	<!-- <a class="icon icon-left pull-left" href="" data-transition="slide-out" data-ignore="push"></a> -->
+
+	<h1 class="title">信息提示页</h1>
+</header>
+<div class="content padding-plus "  style="top: 2.2rem;">
+	<div class="system-message" style="text-align:center;">
+
+		<div class="face-img"></div>
+	<p class="error">wang.dechen 请你不要重复登录! &nbsp;或&nbsp;<a href="/index.php?m=User&amp;c=Login&amp;a=out">点此退出</a></p>
+		<p class="detail"></p>
+	<p class="jump">
+	页面自动 <a id="href" href="javascript:history.back(-1);">跳转</a> 等待时间： <b id="wait">-1</b>
+	</p>
+	</div>
+</div>
+<script type="text/javascript">
+(function(){
+var wait = document.getElementById('wait'),href = document.getElementById('href').href;
+var interval = setInterval(function(){
+	var time = --wait.innerHTML;
+	if(time <= 0) {
+		location.href = href;
+		clearInterval(interval);
+	};
+}, 1000000000);
+})();
+</script>
+
+	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='libs/toucher/toucher.js' charset='utf-8'></script>
+	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
+	<script type="text/javascript">
+		$(document).on('click','.wait-loading', function () {
+		      $.showIndicator();
+		      setTimeout(function () {
+		          $.hideIndicator();
+		      }, 2000);
+		  });
+		  // 标准弹出等待框，带标题
+		  $(document).on('click','.wait-loading-large', function () {
+		    $.showPreloader('加载中，请稍后')
+		    setTimeout(function () {
+		        $.hidePreloader();
+		    }, 2000);
+		  });
+	</script>
+</body>
+</html>

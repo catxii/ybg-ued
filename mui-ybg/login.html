@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="loginApp">
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -9,20 +9,20 @@
 	<link rel="stylesheet" href="css/style-plugin.css?id=2">
 	
 </head>
-<body>
+<body ng-controller="loginCtr"  >
 	<!-- 顶部标题 -->
 	<header class="bar bar-nav default-style">
 		<!-- <a class="icon icon-left pull-left" href="#" data-transition="slide-out"></a> -->
 		<h1 class="title">云包公销售系统</h1>
 	</header>
 	
-	<div class="warning-message-bar">账号或密码错误，请重新输入</div>
+	<!-- <div class="warning-message-bar">账号或密码错误，请重新输入</div> -->
 
 	<!-- 页面内容区域 -->
 	<div class="content content-padded-large" id=""  style="top: 2.2rem;">
 		
-		<ul class="login-list">
-			<li class="username"><input type="text" placeholder="请输入用户名"></li>
+		<!-- <ul class="login-list"> -->
+			<!-- <li class="username"><input type="text" placeholder="请输入用户名" value="13467607656"></li>
 			<li class="password"><input type="password" placeholder="请输入密码"></li>
 			<li class="location">
 				当前城市：
@@ -30,12 +30,54 @@
 					<option value="1">长沙</option>
 					<option value="2">武汉</option>
 				</select>
-			</li>
+			</li> -->
 			<!-- <li class="btn-right">
 				<a href="forget-password.html" data-transition="slide-in" class="default-color">忘记密码</a>
 			</li> -->
-			<li><a href="saler-client-index.html" class="button button-fill button-big button-default">登 录</a></li>
-		</ul>
+			<!-- <li><a href="saler-client-index.html" class="button button-fill button-big button-default">登 录</a></li> -->
+		<!-- </ul> -->
+		<form class="form-signin" name="form" method="POST" action="{:U('')}">
+                <ul class="login-list">
+                    <li class="username">
+                        <input type="text" name="username" placeholder="请输手机号" tabIndex="1" value='13467607656' ng-required="true" ng-model="array.phone" ng-maxlength=11 ng-minlength=11 ng-pattern="/^([0-9]\d*)$/">
+                    </li>
+                    <li class="password">
+                        <input type="password" name="password" class="form-control" placeholder="请输密码" tabIndex="2" value='' ng-model="array.password" ng-required="true">
+
+                    </li>
+                    <li class="location">
+                        当前城市：
+                        <select name="city"><!--market信息在用户登录模块下完成的-->
+                            <volist name="Think.session.market" id="vo">
+                                <option value="{$vo.city_id}">长沙</option>
+                            </volist>
+                        </select>
+                    </li>
+
+                    <!-- <li class="btn-right">
+                      <a href="forget-password.html" data-transition="slide-in" class="default-color">忘记密码</a>
+                    </li> -->
+                    <!-- <li>
+                        <label>
+                          <input type="checkbox" name='auto_login' value='1' tabIndex="3" ng-disabled="form.$invalid"> 自动登录
+                        </label>
+                    </li> -->
+                    <li style="margin-top:2rem;">
+                        <button class="button button-fill button-big button-default" type="submit" ng-disabled="form.$invalid" style="width:100%;">确定登录</button>
+                    </li>
+                </ul>
+                <!-- 密码的验证提示 -->
+                <div ng-cloak class="warning-message-bar ng-cloak" ng-show="form.password.$dirty && form.password.$invalid">
+                    <div ng-show="form.password.$error.required">请输入密码</div>
+                </div>  
+                <!-- 账号的验证提示 -->
+                <div class="warning-message-bar" ng-show="form.username.$dirty && form.username.$invalid">
+                    <div ng-show="form.username.$error.required">请输入手机号码</div>
+                    <div ng-show="form.username.$error.maxlength">手机号码长度超出</div>
+                    <div ng-show="form.username.$error.minlength">手机号码长度不够</div>
+                    <div ng-show="form.username.$error.pattern">请输入正确的手机号码</div>
+                </div>
+            </form>
 
 
 	</div>
@@ -45,20 +87,15 @@
 	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='libs/toucher/toucher.js' charset='utf-8'></script>
 	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
-	<script type="text/javascript">
-		$(document).on('click','.wait-loading', function () {
-		      $.showIndicator();
-		      setTimeout(function () {
-		          $.hideIndicator();
-		      }, 2000);
-		  });
-		  // 标准弹出等待框，带标题
-		  $(document).on('click','.wait-loading-large', function () {
-		    $.showPreloader('加载中，请稍后')
-		    setTimeout(function () {
-		        $.hidePreloader();
-		    }, 2000);
-		  });
-	</script>
+	<script type="text/javascript" src="http://cdn.bootcss.com/angular.js/1.0.3/angular.min.js"></script>
+        <script>
+                        angular.module("loginApp", []);
+                        function loginCtr($scope) {
+                            $scope.array = {
+                                phone: "13162429212",
+                                password: "123456"
+                            }
+                        }
+        </script>
 </body>
 </html>

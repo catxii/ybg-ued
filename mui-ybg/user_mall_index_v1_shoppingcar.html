@@ -6,6 +6,7 @@
 	<title>云包公-工地管理</title>
 	<link rel="stylesheet" href="libs/sui/css/sm.min.css">
 	<link rel="stylesheet" href="libs/sui/css/sm-extend.min.css">
+<link rel="stylesheet" href="libs/alifontico/iconfont.css">
 <link rel="stylesheet" href="css/style-plugin.css">
 	
 </head>
@@ -18,21 +19,21 @@
 	</header>
 
 	<!-- 底部导航栏 -->
-	<nav class="bar bar-tab">
-		<a class="tab-item" href="user_message_index.html">
+	<nav class="bar bar-tab white-bg">
+		<a class="tab-item" href="user_message_index.html" style="display:none;">
 			<span class="icon icon-dynamic-white"></span>
 			<span class="tab-label">动态</span>
 		</a>
-		<a class="tab-item " data-transition="slide-in" href="user_address_index.html">
-			<span class="icon icon-address-white"></span>
+		<a class="tab-item " data-transition="slide-in" href="user_address_index_second.html">
+			<span class="icon icon-address-gray"></span>
 			<span class="tab-label">工地</span>
 		</a>
 		<a class="tab-item current" data-transition="slide-in" href="user_mall_index_v1.html">
-			<span class="icon  icon-cart-white"></span>
+			<span class="icon  icon-mall-gray"></span>
 			<span class="tab-label">选购</span>
 		</a>
-		<a class="tab-item" data-transition="slide-in" href="user_me_index.html">
-			<span class="icon icon-me-white sm"></span>
+		<a class="tab-item" data-transition="slide-in" href="user_me_index2.html">
+			<span class="icon icon-me-gray"></span>
 			<span class="tab-label">我的</span>
 		</a>
 
@@ -75,6 +76,7 @@
 			        </div>
 			      </div>
 					<div class="count-ul clearfix">
+						<div class="count-li name">购买数量</div>
 						<div class="count-li del">-</div>
 						<div class="count-li count"><input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
 						<div class="count-li plus" >+</div>
@@ -231,6 +233,27 @@
 		  alert("没有商品")
 		}
 	}
+
+	$(function(){
+				// $(".num-input").attr("value",0); //刷新后重置数量为空
+				// myinit();
+				$(".num-input").focus(function(){
+					$(this).val(""); //设置数量为空
+					$(this).closest(".count-ul").addClass("fix-input");
+					// $("body").append("<div class='modal-overlay modal-overlay-visible'></div>");
+				})
+				$(".num-input").blur(function(){
+					// myinit();
+					if(!($(this).val()>0)  ) {
+						$(this).val(0);
+					}
+					$(".count-ul").removeClass("fix-input");
+					$(".modal-overlay").remove();
+				})
+
+				// 输入法问题
+
+			})
 	</script>
 </body>
 </html>

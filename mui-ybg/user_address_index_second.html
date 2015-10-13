@@ -6,6 +6,7 @@
 	<title>云包公-工地管理</title>
 	<link rel="stylesheet" href="libs/sui/css/sm.min.css">
 	<link rel="stylesheet" href="libs/sui/css/sm-extend.min.css">
+<link rel="stylesheet" href="libs/alifontico/iconfont.css">
 <link rel="stylesheet" href="css/style-plugin.css">
 	
 </head>
@@ -15,8 +16,9 @@
 		<link rel="stylesheet" href="css/style-lyl.css?v=2">
 		<button class="button button-link button-nav button-nav-ico pull-left change-city">
 			<span class="icon icon-dingwei"></span>
-			<span class="city-area">长沙</span>
-		</button>
+            <span class="city-area" data-in="197">长沙</span>
+            <span class="city-area-hide" data-in="" data-city="197">长沙</span><span class="city-area-hide" data-in="" data-city="180">武汉</span>
+       </button>
 		<a data-ignore="push" href="user_address_index_second_index_edit.html" data-transition="slide-in" class="button button-link pull-right">
 	    新增
 	  	</a>
@@ -24,21 +26,21 @@
 	</header>
 
 	<!-- 底部导航栏 -->
-	<nav class="bar bar-tab">
-		<a class="tab-item" href="user_message_index.html">
+	<nav class="bar bar-tab white-bg">
+		<a class="tab-item" href="user_message_index.html" style="display:none;">
 			<span class="icon icon-dynamic-white"></span>
 			<span class="tab-label">动态</span>
 		</a>
-		<a class="tab-item current" data-transition="slide-in" href="user_address_index.html">
-			<span class="icon icon-address-white"></span>
+		<a class="tab-item current" data-transition="slide-in" href="user_address_index_second.html">
+			<span class="icon icon-address-gray"></span>
 			<span class="tab-label">工地</span>
 		</a>
-		<a data-ignore="push" class="tab-item" data-transition="slide-in" href="user_mall_index.html">
-			<span class="icon  icon-cart-white"></span>
+		<a data-ignore="push" class="tab-item" data-transition="slide-in" href="user_mall_index_v1.html">
+			<span class="icon  icon-mall-gray"></span>
 			<span class="tab-label">选购</span>
 		</a>
-		<a class="tab-item" data-transition="slide-in" href="user_me_index.html">
-			<span class="icon icon-me-white sm"></span>
+		<a class="tab-item" data-transition="slide-in" href="user_me_index2.html">
+			<span class="icon icon-me-gray"></span>
 			<span class="tab-label">我的</span>
 		</a>
 
@@ -120,5 +122,54 @@
 	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
 	<script tyle="text/javascript" src="http://runjs.cn/js/sandbox/other/angular.min.js" charset="utf-8" ></script>
 	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
+	<script type="text/javascript">
+
+	$(".change-city").click(function () {
+
+        var buttons1 = [
+          {
+            text: '请选择您的城市',
+            label: true
+          }
+        ];
+        //循环按钮
+        var hideArea = $(".city-area-hide");
+  		for(var i=0;i<hideArea.length;i++ ){
+  			var textArea = hideArea.eq(i).text();
+  			var textAreaData = hideArea.eq(i).attr("data-city");
+  				console.log("外面"+textAreaData);
+            var objArea = {
+            	text: textArea,
+            	area:textAreaData,
+            	onClick:function(){
+            		var areaUrl = "/index.php?m=Weixin&c=Site&a=switchCity&id="+$(this)[0].area;
+            		console.log("this"+JSON.stringify( $(this)[0].area ) );
+            		console.log("area"+objArea.area);
+            		console.log(areaUrl);
+            		$.ajax({
+            			url:areaUrl,
+            			type:"post",
+            			success:function(data){
+            				if( data.status == 1 ){
+            					$(".tab-item.current").trigger("click");
+            				}
+            			}
+            		});
+            		// $(".city-area").text( groups[0][i+1].text )
+            	}
+            }
+            buttons1.push(objArea);
+  		}
+
+        var buttons2 = [
+          {
+            text: '取消',
+          }
+        ];
+        var groups = [buttons1, buttons2];
+        $.actions(groups);
+  });
+
+	</script>
 </body>
 </html>

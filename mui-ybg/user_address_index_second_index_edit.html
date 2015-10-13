@@ -4,9 +4,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>云包公-工地管理</title>
-	<link rel="stylesheet" href="libs/sui/css/sm.min.css">
-	<link rel="stylesheet" href="libs/sui/css/sm-extend.min.css">
-<link rel="stylesheet" href="css/style-plugin.css">
+	<link rel="stylesheet" href="libs/sui/css/sm.min.css?v=1">
+	<link rel="stylesheet" href="libs/sui/css/sm-extend.min.css?v=1">
+<link rel="stylesheet" href="libs/alifontico/iconfont.css?v=1">
+<!-- <link rel="stylesheet" href="css/style-plugin.css?v=1"> -->
 	
 </head>
 <body>
@@ -21,21 +22,21 @@
 	</header>
 
 	<!-- 底部导航栏 -->
-	<nav class="bar bar-tab">
-		<a class="tab-item" href="user_message_index.html">
+	<nav class="bar bar-tab white-bg">
+		<a class="tab-item" href="user_message_index.html" style="display:none;">
 			<span class="icon icon-dynamic-white"></span>
 			<span class="tab-label">动态</span>
 		</a>
 		<a class="tab-item current" data-transition="slide-in" href="user_address_index_second.html">
-			<span class="icon icon-address-white"></span>
+			<span class="icon icon-address-gray"></span>
 			<span class="tab-label">工地</span>
 		</a>
-		<a data-ignore="push" class="tab-item" data-transition="slide-in" href="user_mall_index.html">
-			<span class="icon  icon-cart-white"></span>
+		<a data-ignore="push" class="tab-item" data-transition="slide-in" href="user_mall_index_v1.html">
+			<span class="icon  icon-mall-gray"></span>
 			<span class="tab-label">选购</span>
 		</a>
-		<a class="tab-item" data-transition="slide-in" href="user_me_index.html">
-			<span class="icon icon-me-white sm"></span>
+		<a class="tab-item" data-transition="slide-in" href="user_me_index2.html">
+			<span class="icon icon-me-gray"></span>
 			<span class="tab-label">我的</span>
 		</a>
 
@@ -43,17 +44,32 @@
 	
 
 	<!-- 页面内容区域 -->
-	<div class="content">
-		  
+	<div class="content" ng-controller="verifyCtr">
+	<form name="form" novalidate="novalidate">
+			<style>
+				.list-block select {
+					/*-webkit-appearance: push-button;
+					-moz-appearance: push-button;
+					-ms-appearance: push-button;
+					appearance: push-button;*/
+					}
+					.list-block li {
+						/*padding:1rem 0;*/
+						/*background: red;*/
+					}
+					select {
+						margin:1rem 0;
+					}
+			</style>
 		  <div class="list-block">
-		    <ul>
+		    <ul class="plus-list">
 		      
 		      <li>
 		        <div class="item-content">
 		          <div class="item-inner">
 		            <div class="item-title label">工地名称：</div>
 		            <div class="item-input">
-		              <input type="text" placeholder="请输入名称">
+		              <input type="text" placeholder="请输入名称" ng-required="true" ng-model="info.name">
 		            </div>
 		          </div>
 		        </div>
@@ -63,8 +79,35 @@
 		  </div>
 
 		  <div class="list-block">
-		    <ul>
+		    <ul class="plus-list">
 		      
+		      <li>
+			    <div class="item-content">
+			      <div class="item-inner">
+			        <div class="item-title label">选择城市：</div>
+			        <div class="item-input select-style">
+		              <select>
+		                <option>长沙市</option>
+		                <option>武汉市</option>
+		              </select>
+		            </div>
+			      </div>
+			    </div>
+			  </li>
+
+		      <li>
+		        <div class="item-content">
+		          <div class="item-inner">
+		            <div class="item-title label">选择区域：</div>
+		             <div class="item-input select-style">
+		              <select>
+		                <option>雨花区</option>
+		                <option>芙蓉区</option>
+		              </select>
+		            </div>
+		          </div>
+		        </div>
+		      </li>
 		      <li>
 			    <div class="item-content">
 			      <div class="item-inner">
@@ -98,18 +141,63 @@
 		          <div class="item-inner">
 		            <div class="item-title label">工地地址：</div>
 		            <div class="item-input">
-		              <input type="text" placeholder="请输入工地地址" value="东江二路十字路口左侧金宇花苑">
+		              <input type="text" placeholder="请输入工地地址" value="东江二路十字路口左侧金宇花苑" ng-required="true" ng-model="info.address">
 		            </div>
 		          </div>
 		        </div>
 		      </li>
 		      
 		    </ul>
+		    <ul>
+		    	<li><select>
+		                <option>长沙市</option>
+		                <option>武汉市</option>
+		              </select>
+				</li>
+				<li><select>
+		                <option>ddd</option>
+		                <option>dd</option>
+		              </select>
+				</li>
+				<li><select>
+		                <option>长sss沙市</option>
+		                <option>ss</option>
+		              </select>
+				</li>
+				<li><select>
+		                <option>ccc</option>
+		                <option>ccccc</option>
+		              </select>
+				</li>
+		    </ul>
+		    <div class="padding" style="margin-top:5rem">
+		    	<select>
+		                <option>jh</option>
+		                <option>武汉市</option>
+		              </select>
+		              <select>
+		                <option>长沙cc市</option>
+		                <option>武汉市</option>
+		              </select>
+		              <select>
+		                <option>长沙xx市</option>
+		                <option>武汉市</option>
+		              </select>
+		              <select>
+		                <option>长沙vv市</option>
+		                <option>武汉市</option>
+		              </select>
+		              <select>
+		                <option>长z沙市</option>
+		                <option>武汉市</option>
+		              </select>
+		    </div>
 		  </div>
 
 		    <div class="btn-center padding">
-		    	<a href="user_address_index_second_manage.html" class="button button-big button-fill" data-transition="slide-out" >保存</a>
+		    	<a href="user_address_index_second_manage.html" class="button button-big button-fill" data-transition="slide-out" ng-disabled="form.$invalid" ng-class="{'disabled':form.$invalid}">保存</a>
 		    </div>
+	    </form>
 
 	</div>
 
@@ -118,5 +206,15 @@
 	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
 	<script tyle="text/javascript" src="http://runjs.cn/js/sandbox/other/angular.min.js" charset="utf-8" ></script>
 	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
+	<script type="text/javascript">
+		// angular.module("ybgApp",[]);
+		// function verifyCtr($scope){
+		// 	var
+		// 	$scope.info = {
+		// 		address:"",
+		// 		name:""
+		// 	}
+		// }
+	</script>
 </body>
 </html>
