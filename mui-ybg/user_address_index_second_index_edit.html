@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="libs/sui/css/sm.min.css?v=1">
 	<link rel="stylesheet" href="libs/sui/css/sm-extend.min.css?v=1">
 <link rel="stylesheet" href="libs/alifontico/iconfont.css?v=1">
-<!-- <link rel="stylesheet" href="css/style-plugin.css?v=1"> -->
+<link rel="stylesheet" href="css/style-plugin.css?v=1">
 	
 </head>
 <body>
@@ -194,18 +194,41 @@
 		    </div>
 		  </div>
 
+		  <ul>
+		    	<li><select>
+		                <option>长沙市</option>
+		                <option>武汉市</option>
+		              </select>
+				</li>
+				<li><select>
+		                <option>ddd</option>
+		                <option>dd</option>
+		              </select>
+				</li>
+				<li><select>
+		                <option>长sss沙市</option>
+		                <option>ss</option>
+		              </select>
+				</li>
+				<li><select>
+		                <option>ccc</option>
+		                <option>ccccc</option>
+		              </select>
+				</li>
+		    </ul>
+
 		    <div class="btn-center padding">
-		    	<a href="user_address_index_second_manage.html" class="button button-big button-fill" data-transition="slide-out" ng-disabled="form.$invalid" ng-class="{'disabled':form.$invalid}">保存</a>
+		    	<a href="javascript:void(0)" id="do" class="button button-fill">点击</a>
 		    </div>
 	    </form>
 
 	</div>
 
-	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
-	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
-	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
-	<script tyle="text/javascript" src="http://runjs.cn/js/sandbox/other/angular.min.js" charset="utf-8" ></script>
-	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
+	<script type='text/javascript' src='libs/sui/js/zepto.min.js?v=1' charset='utf-8'></script>
+	<script type='text/javascript' src='libs/sui/js/sm.min.js?v=1' charset='utf-8'></script>
+	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js?v=1' charset='utf-8'></script>
+	<script tyle="text/javascript" src="http://runjs.cn/js/sandbox/other/angular.min.js?v=1" charset="utf-8" ></script>
+	<script type='text/javascript' src='js/app.js?v=1' charset='utf-8'></script>
 	<script type="text/javascript">
 		// angular.module("ybgApp",[]);
 		// function verifyCtr($scope){
@@ -215,6 +238,11 @@
 		// 		name:""
 		// 	}
 		// }
+		$(function(){
+			$("#do").click(function(){
+				alert( $("html").html());
+			});
+		})
 	</script>
 </body>
 </html>

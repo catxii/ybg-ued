@@ -39,10 +39,10 @@
 		<form class="form-signin" name="form" method="POST" action="{:U('')}">
                 <ul class="login-list">
                     <li class="username">
-                        <input type="text" name="username" placeholder="请输手机号" tabIndex="1" value='13467607656' ng-required="true" ng-model="array.phone" ng-maxlength=11 ng-minlength=11 ng-pattern="/^([0-9]\d*)$/">
+                        <input type="text" name="username" placeholder="请输手机号" tabIndex="1" value='' ng-required="true" ng-model="array.phone" ng-maxlength=11 ng-minlength=11 ng-pattern="/^([0-9]\d*)$/">
                     </li>
                     <li class="password">
-                        <input type="password" name="password" class="form-control" placeholder="请输密码" tabIndex="2" value='' ng-model="array.password" ng-required="true">
+                        <input type="password" name="password" class="form-control" placeholder="请输密码" tabIndex="2" value='' ng-model="array.pass" ng-required="true">
 
                     </li>
                     <li class="location">
@@ -53,6 +53,8 @@
                             </volist>
                         </select>
                     </li>
+                    <li><a href="javascript:void(0)" id="savecookie">记住密码</a></li>
+                    <li class="btn-center"><a href="javascript:window.location.href=window.location.href">刷新页面</a></li>
 
                     <!-- <li class="btn-right">
                       <a href="forget-password.html" data-transition="slide-in" class="default-color">忘记密码</a>
@@ -79,6 +81,8 @@
                 </div>
             </form>
 
+            <div class="footer-info">版权所有: 云包公电子商务（长沙）有限公司</div>
+
 
 	</div>
 
@@ -89,13 +93,51 @@
 	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
 	<script type="text/javascript" src="http://cdn.bootcss.com/angular.js/1.0.3/angular.min.js"></script>
         <script>
-                        angular.module("loginApp", []);
-                        function loginCtr($scope) {
-                            $scope.array = {
-                                phone: "13162429212",
-                                password: "123456"
-                            }
-                        }
+            $(function(){
+                $("#savecookie").click(function(){
+                    var userName = $("input[name=username]").val();
+                    var passWord = $("input[name=password]").val();
+                    document.cookie="username="+userName;
+                    document.cookie="password="+passWord;
+                });
+                var array = [];
+                array.push(document.cookie.split(";"))
+                var userNameValue = array[0][0].split("=")[1];
+                var passWordValue = array[0][1].split("=")[1];
+                console.log(document.cookie);
+                $("input[name=username]").attr("data-name",userNameValue);
+                $("input[name=password]").attr("data-password",passWordValue);
+                $("input[name=username]").val(userNameValue);
+                $("input[name=password]").val(passWordValue);
+            })
+
+            angular.module("loginApp", []);
+            function loginCtr($scope) {
+                $scope.array = {
+                    phone: "",
+                    pass: ""
+                }
+            }
+
+            function abc(){
+                alert("abc");
+            }
+            function efg(){
+                alert("efg");
+            }
+            function inWX(titleName,fn){
+                var wechatInfo = navigator.userAgent.match(/MicroMessenger\/([\d\.]+)/i) ;
+                fn();
+                if( !wechatInfo ) {
+                    alert(titleName+"功能仅支持微信") ;
+                } else if ( wechatInfo[1] < "5.2" ) {
+                    alert(titleName+"仅支持微信5.0以上版本") ;
+                }else{
+                    fn;
+                    fn2;
+                }
+            }
+            inWX("拍照",abc,efg);
         </script>
 </body>
 </html>

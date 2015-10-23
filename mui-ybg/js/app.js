@@ -212,6 +212,25 @@ $(document).on('pageInit', '#address_add', function(e, id, content){
 
 });
 
+// 工地管理
+$(document).on("pageInit","#address_view",function(e,id, content){
+  var firstStatusBigBox = $(".card-message").eq(0);
+      var firststatusBox = firstStatusBigBox.find(".ps-status-box");
+      firststatusBox.show();
+      firstStatusBigBox.find(".order_status_btn").text("关闭记录");
+      $(document).on("click",".order_status_btn",function(){
+        var thisBox = $(this).closest(".card-header").siblings(".card-content").find(".ps-status-box");
+        if( $(this).text() =="查看记录" ){
+          $(this).text("关闭记录");
+          $(this).closest(".card-header").siblings(".card-content").find(".ps-status-box").show();
+        }else{
+          $(this).text("查看记录");
+          $(this).closest(".card-header").siblings(".card-content").find(".ps-status-box").hide();
+        }
+        
+      })
+})
+
 // 切换城市
 $(document).on('pageInit', '#address_Model', function(e, id, content){
   $(".change-city").click(function () {
@@ -242,3 +261,4 @@ $(document).on('pageInit', '#address_Model', function(e, id, content){
         $.actions(groups);
   });
 });
+

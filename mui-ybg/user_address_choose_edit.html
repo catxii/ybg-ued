@@ -6,8 +6,7 @@
 	<title>云包公-工地管理</title>
 	<link rel="stylesheet" href="libs/sui/css/sm.min.css">
 	<link rel="stylesheet" href="libs/sui/css/sm-extend.min.css">
-<link rel="stylesheet" href="libs/alifontico/iconfont.css">
-<link rel="stylesheet" href="css/style-plugin.css">
+	<link rel="stylesheet" href="css/style-plugin.css">
 	
 </head>
 <body>
@@ -19,7 +18,7 @@
 		<a href="#" data-transition="slide-in" class="button button-link pull-right">
 	    保存
 	  	</a>
-		<h1 class="title">编辑工地</h1>
+		<h1 class="title">编辑收货人</h1>
 	</header>
 
 	<!-- 底部导航栏 -->
@@ -46,7 +45,7 @@
 	<!-- 页面内容区域 -->
 	<div class="content" id="address_add">
 	    
-		<div class="list-block">
+		<!-- <div class="list-block">
 			<ul>
 
 			  <li>
@@ -60,7 +59,7 @@
 			    </div>
 			  </li>
 
-			  <!-- Text inputs -->
+			  
 			  <li>
 			    <div class="item-content">
 			      <div class="item-inner">
@@ -92,7 +91,7 @@
 			    </div>
 			  </li>
 
-			  <!-- Select -->
+			  
 			  <li>
 			    <div class="item-content">
 			      <div class="item-inner">
@@ -104,11 +103,10 @@
 			    </div>
 			  </li>
 			</ul>
-		</div>
+		</div> -->
 
-		<div class="list-block address-add-list address-choose-edit" id="default_address_add">
+		<!-- <div class="list-block address-add-list address-choose-edit" id="default_address_add">
 			<label class="label-checkbox item-content" onclick="window.location.href= '#' ">
-		    <!-- 选中的地址默认勾选，需要在radio上添加checked -->
 		      <input type="radio" name="my-radio" checked>
 		      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
 		    </label>
@@ -135,15 +133,9 @@
 			    </div>
 			  </li>
 			</ul>
-		</div>
+		</div> -->
 		
 		<div class="list-block address-add-list address-choose-edit" id="default_address_add">
-			<label class="label-checkbox item-content" onclick="window.location.href= '#' ">
-		    <!-- 选中的地址默认勾选，需要在radio上添加checked -->
-		      <input type="radio" name="my-radio" checked>
-		      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
-		    </label>
-		    <a href="javascript:void" class="button button-light button-fill remove-user position-right">删除</a>
 			<ul>
 			  <li>
 			    <div class="item-content">
@@ -167,42 +159,10 @@
 			  </li>
 			</ul>
 		</div>
-
-		<div class="list-block address-add-list address-choose-edit" id="default_address_add">
-			<label class="label-checkbox item-content" onclick="window.location.href= '#' ">
-		    <!-- 选中的地址默认勾选，需要在radio上添加checked -->
-		      <input type="radio" name="my-radio" checked>
-		      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
-		    </label>
-		    <a href="javascript:void" class="button button-light button-fill remove-user position-right">删除</a>
-			<ul>
-			  <li>
-			    <div class="item-content">
-			      <div class="item-inner">
-			        <div class="item-title label">收货人：</div>
-			        <div class="item-input">
-			          <input type="text" placeholder="请输入收货人名称" value="张三">
-			        </div>
-			      </div>
-			    </div>
-			  </li>
-			  <li>
-			    <div class="item-content">
-			      <div class="item-inner">
-			        <div class="item-title label">联系电话：</div>
-			        <div class="item-input">
-			          <input type="tel" placeholder="请输入联系电话" value="13467676767">
-			        </div>
-			      </div>
-			    </div>
-			  </li>
-			</ul>
-		</div>
-
 
 
 	    <div class="padding">
-			<a href="javascript:void(0)" class="button button-big button-fill" id="add_new_linkman">新增收货师傅</a>
+			<a href="javascript:void(0)" class="button button-danger button-big button-fill" id="add_new_linkman">删除收货人</a>
 		</div>
 
 
