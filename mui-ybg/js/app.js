@@ -262,3 +262,206 @@ $(document).on('pageInit', '#address_Model', function(e, id, content){
   });
 });
 
+
+
+
+// $(document).on("pageInit", "#page-infinite-scroll",function(e, id, page) {
+
+//     // 加载flag
+//     var loading = false;
+//     // 最多可加载的条目
+//     var maxItems = 100;
+
+//     // 每次加载添加多少条目
+//     var itemsPerLoad = 20;
+ 
+//     function addItems(number, lastIndex) {
+//         // 生成新条目的HTML
+//         var html = '';
+//         for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
+//             html += '<li class="item-content"><div class="item-inner"><div class="item-title">Item ' + i + '</div></div></li>';
+//         }
+//         // 添加新条目
+//         $('.list-container').append(html);
+
+//     }
+//     //预先加载20条
+//     addItems(itemsPerLoad, 0);
+
+//     // 上次加载的序号
+//     var lastIndex = 20;
+
+//     // 注册'infinite'事件处理函数
+//     $(document).on('infinite', '.infinite-scroll',
+//     function() {
+
+//         // 如果正在加载，则退出
+//         if (loading) return;
+
+//         // 设置flag
+//         loading = true;
+
+//         // 模拟1s的加载过程
+//         setTimeout(function() {
+//             // 重置加载flag
+//             loading = false;
+
+//             if (lastIndex >= maxItems) {
+//                 // 加载完毕，则注销无限加载事件，以防不必要的加载
+//                 $.detachInfiniteScroll($('.infinite-scroll'));
+//                 // 删除加载提示符
+//                 $('.infinite-scroll-preloader').remove();
+//                 return;
+//             }
+
+//             // 添加新条目
+//             addItems(itemsPerLoad, lastIndex);
+//             // 更新最后加载的序号
+//             lastIndex = $('.list-container li').length;
+//             //容器发生改变,如果是js滚动，需要刷新滚动
+//             $.refreshScroller();
+//         },
+//         1000);
+//     });
+
+//     $(document).on("pageInit", "#page-infinite-scroll",
+//     function(e, id, page) {
+//         function addItems(number, lastIndex) {
+//             // 生成新条目的HTML
+//             var html = '';
+//             for (var i = 0; i < 20; i++) {
+//                 html += '<li class="item-content"><div class="item-inner"><div class="item-title">新条目</div></div></li>';
+//             }
+//             // 添加新条目
+//             $('.infinite-scroll .list-container').append(html);
+//         }
+//         var loading = false;
+//         $(page).on('infinite',
+//         function() {
+
+//             // 如果正在加载，则退出
+//             if (loading) return;
+
+//             // 设置flag
+//             loading = true;
+
+//             // 模拟1s的加载过程
+//             setTimeout(function() {
+//                 // 重置加载flag
+//                 loading = false;
+
+//                 addItems();
+//                 $.refreshScroller();
+//             },
+//             1000);
+//         });
+//     });
+// });
+
+$(document).on("pageInit", "#page-infinite-scroll",function(e, id, page) {
+
+    // 加载flag
+    var loading = false;
+    // 最多可加载的条目
+    var maxItems = 100;
+
+    // 每次加载添加多少条目
+    var itemsPerLoad = 3;
+ 
+    function addItems(number, lastIndex) {
+        // 生成新条目的HTML
+        var html = '';
+        var url = "json/sheng1.json";
+        $.ajax({
+              url:url,
+              type:'get',
+              success:function(data){
+                  for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
+                        var Id = data.list[i].id;
+                        var name = data.list[i].nickname;
+                        var mobile = data.list[i].mobile;
+                        html += '<li class="item-content"><a href="/index.php?m=Weixin&amp;c=Sales&amp;a=order&amp;id='+Id+'" data-transition="slide-in" class="item-inner arrow-bg-padding-right" data-ignore="push"><div class="item-title-row black-color"><div class="item-title">'+name+'</div></div><div class="item-subtitle clearfix"><div class="pull-left black-color">'+mobile+'</div><div class="pull-right" style="font-size:.6rem; line-height: 1rem;"><span class="warning-color"><span class="icon icon-app"></span> 订单进行中</span></div></div></a></li>';
+                        
+                         
+                  }
+                  console.log(html);
+                  // 添加新条目
+                  $('.list-container').append(html);
+               }
+         });
+        
+
+
+    }
+    //预先加载条
+    addItems(itemsPerLoad, 0);
+
+    // 上次加载的序号
+    var lastIndex = 3;
+
+    // 注册'infinite'事件处理函数
+    $(document).on('infinite', '.infinite-scroll',
+    function() {
+
+        // 如果正在加载，则退出
+        if (loading) return;
+
+        // 设置flag
+        loading = true;
+
+        // 模拟1s的加载过程
+        setTimeout(function() {
+            // 重置加载flag
+            loading = false;
+
+            if (lastIndex >= maxItems) {
+                // 加载完毕，则注销无限加载事件，以防不必要的加载
+                $.detachInfiniteScroll($('.infinite-scroll'));
+                // 删除加载提示符
+                $('.infinite-scroll-preloader').remove();
+                return;
+            }
+
+            // 添加新条目
+            addItems(itemsPerLoad, lastIndex);
+            // 更新最后加载的序号
+            lastIndex = $('.list-container li').length;
+            //容器发生改变,如果是js滚动，需要刷新滚动
+            $.refreshScroller();
+        },
+        1000);
+    });
+
+    $(document).on("pageInit", "#page-infinite-scroll",
+    function(e, id, page) {
+        function addItems(number, lastIndex) {
+            // 生成新条目的HTML
+            var html = '';
+            for (var i = 0; i < 20; i++) {
+                html += '<li class="item-content"><div class="item-inner"><div class="item-title">新条目</div></div></li>';
+            }
+            // 添加新条目
+            $('.infinite-scroll .list-container').append(html);
+        }
+        var loading = false;
+        $(page).on('infinite',
+        function() {
+
+            // 如果正在加载，则退出
+            if (loading) return;
+
+            // 设置flag
+            loading = true;
+
+            // 模拟1s的加载过程
+            setTimeout(function() {
+                // 重置加载flag
+                loading = false;
+
+                addItems();
+                $.refreshScroller();
+            },
+            1000);
+        });
+    });
+});

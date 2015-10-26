@@ -12,80 +12,119 @@
     
 </head>
 <body>
-	<!-- 顶部标题 -->
-	<header class="bar bar-nav">
-	  <h1 class="title">工地管理</h1>
-	</header>
 	
-	<!-- 底部导航栏 -->
-	<nav class="bar bar-tab white-bg">
-	  <a class="tab-item current" href="mall.html">
-	    <span class="icon icon-mall-gray"></span>
-	    <span class="tab-label">选购商品</span>
-	  </a>
-	  <a class="tab-item" data-transition="slide-in" href="index-address.html">
-	    <span class="icon icon-address-gray"></span>
-	    <span class="tab-label">工地管理</span>
-	  </a>
-	  <a class="tab-item" data-transition="slide-in" href="me.html">
-	    <span class="icon icon-me-white"></span>
-	    <span class="tab-label">个人中心</span>
-	  </a>
-	  
-	</nav>
-
-	<!-- 页面内容区域 -->
-	<div class="content">
-	    <!-- 图片滚动 -->
-		<div class="swiper-container address-page-ad" data-space-between='10'>
-			<div class="swiper-wrapper">
-			  <div class="swiper-slide"><img src="img/mall-index-ad.jpg" alt=""></div>
-			 <div class="swiper-slide"><img src="img/mall-index-ad.jpg" alt=""></div>
-			 <div class="swiper-slide"><img src="img/mall-index-ad.jpg" alt=""></div>
-			</div>
-			<div class="swiper-pagination"></div>
-		</div>
-
-		<!-- 商品列表开始 -->
-		<!-- <div class="content-block-title">水泥砂浆</div> -->
-		<div class="list-block media-list">
-		<ul>
-		  <li>
-		    <div href="#" class="item-link item-content item-product-list">
-		      <div class="item-media"><img src="img/product-list-pic.jpg" style='width: 4rem;'></div>
-		      <div class="item-inner">
-		        <div class="item-title">坪塘水泥</div>
-		        <div class="item-subtitle">50KG/包</div>
-		        <div class="item-price">
-		        	<span class="old-price">￥18</span>
-		        	<span class="hot-price">￥15</span>
-		        </div>
-		      </div>
-				<div class="count-ul clearfix">
-					<div class="count-li del">-</div>
-					<div class="count-li count"><input type="tel" class="num-input" value="0"></div>
-					<div class="count-li plus" >+</div>
-				</div>
-		    </div>
-		  </li>
-		</ul>
-		</div>
-
-		<ul class="inline-block-ul fix-bottom-bar">
-			<li><span>数量：00</span></li>
-			<li>应付金额：<span class="all-price">￥1230，00</span></li>
-			<li><a href="#">确认下单</a></li>
-		</ul>
 
 
+	<header class="bar bar-nav">
+    <h1 class='title'>下拉刷新</h1>
+</header>
+<!-- content应该拥有"pull-to-refresh-content"类,表示启用下拉刷新 -->
+<div class="content infinite-scroll" id="page-infinite-scroll" data-distance="50">
+	<div class="padding">
+		<a href="mall.html" class="button button-fill button-big">刷新</a>
 	</div>
+    <div class="list-block media-list">
+        <ul class="list-container">
+			<li class="item-content">
+		            <a href="/index.php?m=Weixin&amp;c=Sales&amp;a=order&amp;id=745" data-transition="slide-in" class="item-inner arrow-bg-padding-right" data-ignore="push">
+		            
+		              <div class="item-title-row black-color">
+		                <div class="item-title">张德</div>
+		              </div>
+		              <div class="item-subtitle clearfix">
+		              	<div class="pull-left black-color">18674822706</div>
+		              	<div class="pull-right" style="font-size:.6rem; line-height: 1rem;"><span class="warning-color"><span class="icon icon-app"></span> 订单进行中</span></div>
+		              </div>
+		             
+		           </a>
+		         </li>
+		         <li class="item-content">
+		            <a href="/index.php?m=Weixin&amp;c=Sales&amp;a=order&amp;id=745" data-transition="slide-in" class="item-inner arrow-bg-padding-right" data-ignore="push">
+		            
+		              <div class="item-title-row black-color">
+		                <div class="item-title">张德</div>
+		              </div>
+		              <div class="item-subtitle clearfix">
+		              	<div class="pull-left black-color">18674822706</div>
+		              	<div class="pull-right" style="font-size:.6rem; line-height: 1rem;"><span class="warning-color"><span class="icon icon-app"></span> 订单进行中</span></div>
+		              </div>
+		             
+		           </a>
+		         </li>
+		         <li class="item-content">
+		            <a href="/index.php?m=Weixin&amp;c=Sales&amp;a=order&amp;id=745" data-transition="slide-in" class="item-inner arrow-bg-padding-right" data-ignore="push">
+		            
+		              <div class="item-title-row black-color">
+		                <div class="item-title">张德</div>
+		              </div>
+		              <div class="item-subtitle clearfix">
+		              	<div class="pull-left black-color">18674822706</div>
+		              	<div class="pull-right" style="font-size:.6rem; line-height: 1rem;"><span class="warning-color"><span class="icon icon-app"></span> 订单进行中</span></div>
+		              </div>
+		             
+		           </a>
+		         </li>
+		         <li class="item-content">
+		            <a href="/index.php?m=Weixin&amp;c=Sales&amp;a=order&amp;id=745" data-transition="slide-in" class="item-inner arrow-bg-padding-right" data-ignore="push">
+		            
+		              <div class="item-title-row black-color">
+		                <div class="item-title">张德</div>
+		              </div>
+		              <div class="item-subtitle clearfix">
+		              	<div class="pull-left black-color">18674822706</div>
+		              	<div class="pull-right" style="font-size:.6rem; line-height: 1rem;"><span class="warning-color"><span class="icon icon-app"></span> 订单进行中</span></div>
+		              </div>
+		             
+		           </a>
+		         </li>
+		         <li class="item-content">
+		            <a href="/index.php?m=Weixin&amp;c=Sales&amp;a=order&amp;id=745" data-transition="slide-in" class="item-inner arrow-bg-padding-right" data-ignore="push">
+		            
+		              <div class="item-title-row black-color">
+		                <div class="item-title">张德</div>
+		              </div>
+		              <div class="item-subtitle clearfix">
+		              	<div class="pull-left black-color">18674822706</div>
+		              	<div class="pull-right" style="font-size:.6rem; line-height: 1rem;"><span class="warning-color"><span class="icon icon-app"></span> 订单进行中</span></div>
+		              </div>
+		             
+		           </a>
+		         </li>
+        </ul>
+    </div>
+    <!-- <div class="list-block">
+        <ul class="list-container">
+			<li class="item-content">
+	            <a href="/index.php?m=Weixin&amp;c=Sales&amp;a=order&amp;id=745" data-transition="slide-in" class="item-inner arrow-bg-padding-right" data-ignore="push">
+	            
+	              <div class="item-title-row black-color">
+	                <div class="item-title">张德</div>
+	              </div>
+	              <div class="item-subtitle clearfix">
+	              	<div class="pull-left black-color">18674822706</div>
+	              	<div class="pull-right" style="font-size:.6rem; line-height: 1rem;"><span class="warning-color"><span class="icon icon-app"></span> 订单进行中</span></div>
+	              </div>
+	             
+	           </a>
+	         </li>
+        </ul>
+    </div> -->
+
+    <!-- 加载提示符 -->
+    <div class="infinite-scroll-preloader">
+        <div class="preloader"></div>
+    </div>
+</div>
 
 	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
   	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
   	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
   	<script type="text/javascript">
-  		 $(".swiper-container").swiper(); //广告banner
+	$(function(){
+		$(".button-big").click();
+	})
+  		
   	</script>
 </body>
 </html>
