@@ -15,10 +15,10 @@
 	<header class="bar bar-nav default-style">
 		<link rel="stylesheet" href="css/style-lyl.css?v=2">
 		<a class="icon icon-left pull-left" href="user_address_index_second_index.html" data-transition="slide-out"></a>
-		<!-- <a data-ignore="push" href="user_address_add.html" data-transition="slide-in" class="button button-link pull-right">
-	    新增
-	  	</a> -->
-		<h1 class="title">工地信息编辑</h1>
+		<a data-ignore="push" href="user_address_add.html" data-transition="slide-in" class="button button-link pull-right">
+	    保存
+	  	</a>
+		<h1 class="title">添加工地</h1>
 	</header>
 
 	<!-- 底部导航栏 -->
@@ -61,165 +61,66 @@
 						margin:1rem 0;
 					}
 			</style>
-		  <div class="list-block">
-		    <ul class="plus-list">
-		      
-		      <li>
-		        <div class="item-content">
-		          <div class="item-inner">
-		            <div class="item-title label">工地名称：</div>
-		            <div class="item-input">
-		              <input type="text" placeholder="请输入名称" ng-required="true" ng-model="info.name">
-		            </div>
-		          </div>
-		        </div>
-		      </li>
-		      
-		    </ul>
-		  </div>
+			<div class="list-block">
+				<ul class="plus-list">
+				  
+				  <li>
+				    <div class="item-content">
+				      <div class="item-inner">
+				        <div class="item-title label">所在区域：</div>
+				        <div class="item-input select-style">
+				          <select>
+				            <option>长沙市</option>
+				            <option>武汉市</option>
+				          </select>
+				        </div>
+				      </div>
+				    </div>
+				  </li>
 
-		  <div class="list-block">
-		    <ul class="plus-list">
-		      
-		      <li>
-			    <div class="item-content">
-			      <div class="item-inner">
-			        <div class="item-title label">选择城市：</div>
-			        <div class="item-input select-style">
-		              <select>
-		                <option>长沙市</option>
-		                <option>武汉市</option>
-		              </select>
-		            </div>
-			      </div>
-			    </div>
-			  </li>
+				  <li>
+				    <div class="item-content">
+				      <div class="item-inner">
+				        <div class="item-title label">所在小区：</div>
+				        <div class="item-input">
+				          <input type="text" placeholder="请输入名称" ng-required="true" ng-model="info.name">
+				        </div>
+				      </div>
+				    </div>
+				  </li>
 
-		      <li>
-		        <div class="item-content">
-		          <div class="item-inner">
-		            <div class="item-title label">选择区域：</div>
-		             <div class="item-input select-style">
-		              <select>
-		                <option>雨花区</option>
-		                <option>芙蓉区</option>
-		              </select>
-		            </div>
-		          </div>
-		        </div>
-		      </li>
-		      <li>
-			    <div class="item-content">
-			      <div class="item-inner">
-			        <div class="item-title label">选择城市：</div>
-			        <div class="item-input select-style">
-		              <select>
-		                <option>长沙市</option>
-		                <option>武汉市</option>
-		              </select>
-		            </div>
-			      </div>
-			    </div>
-			  </li>
+				  <li>
+				    <div class="item-content">
+				      <div class="item-inner">
+				        <div class="item-title label">详细地址：</div>
+				        <div class="item-input">
+				          <input type="text" placeholder="请输入名称" ng-required="true" ng-model="info.name">
+				        </div>
+				      </div>
+				    </div>
+				  </li>
 
-		      <li>
-		        <div class="item-content">
-		          <div class="item-inner">
-		            <div class="item-title label">选择区域：</div>
-		             <div class="item-input select-style">
-		              <select>
-		                <option>雨花区</option>
-		                <option>芙蓉区</option>
-		              </select>
-		            </div>
-		          </div>
-		        </div>
-		      </li>
+				  <li>
+				    <div class="item-content">
+				      <div class="item-inner">
+				        <div class="item-title label">施工状态：</div>
+				        <div class="item-input select-style">
+				          <select>
+				            <option>施工中</option>
+				            <option>休息中</option>
+				          </select>
+				        </div>
+				      </div>
+				    </div>
+				  </li>
+				  
+				</ul>
+			</div>
+			<div class="padding">
+                <input type="submit" class="button button-danger button-big button-fill" value="删除工地" >
+            </div>
 
-		      <li>
-		        <div class="item-content">
-		          <div class="item-inner">
-		            <div class="item-title label">工地地址：</div>
-		            <div class="item-input">
-		              <input type="text" placeholder="请输入工地地址" value="东江二路十字路口左侧金宇花苑" ng-required="true" ng-model="info.address">
-		            </div>
-		          </div>
-		        </div>
-		      </li>
-		      
-		    </ul>
-		    <ul>
-		    	<li><select>
-		                <option>长沙市</option>
-		                <option>武汉市</option>
-		              </select>
-				</li>
-				<li><select>
-		                <option>ddd</option>
-		                <option>dd</option>
-		              </select>
-				</li>
-				<li><select>
-		                <option>长sss沙市</option>
-		                <option>ss</option>
-		              </select>
-				</li>
-				<li><select>
-		                <option>ccc</option>
-		                <option>ccccc</option>
-		              </select>
-				</li>
-		    </ul>
-		    <div class="padding" style="margin-top:5rem">
-		    	<select>
-		                <option>jh</option>
-		                <option>武汉市</option>
-		              </select>
-		              <select>
-		                <option>长沙cc市</option>
-		                <option>武汉市</option>
-		              </select>
-		              <select>
-		                <option>长沙xx市</option>
-		                <option>武汉市</option>
-		              </select>
-		              <select>
-		                <option>长沙vv市</option>
-		                <option>武汉市</option>
-		              </select>
-		              <select>
-		                <option>长z沙市</option>
-		                <option>武汉市</option>
-		              </select>
-		    </div>
-		  </div>
 
-		  <ul>
-		    	<li><select>
-		                <option>长沙市</option>
-		                <option>武汉市</option>
-		              </select>
-				</li>
-				<li><select>
-		                <option>ddd</option>
-		                <option>dd</option>
-		              </select>
-				</li>
-				<li><select>
-		                <option>长sss沙市</option>
-		                <option>ss</option>
-		              </select>
-				</li>
-				<li><select>
-		                <option>ccc</option>
-		                <option>ccccc</option>
-		              </select>
-				</li>
-		    </ul>
-
-		    <div class="btn-center padding">
-		    	<a href="javascript:void(0)" id="do" class="button button-fill">点击</a>
-		    </div>
 	    </form>
 
 	</div>

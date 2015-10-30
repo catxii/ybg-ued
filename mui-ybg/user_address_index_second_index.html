@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  ng-app="ybgApp">
+<html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -7,17 +7,17 @@
 	<link rel="stylesheet" href="libs/sui/css/sm.min.css">
 	<link rel="stylesheet" href="libs/sui/css/sm-extend.min.css">
 	<link rel="stylesheet" href="libs/alifontico/iconfont.css">
-<link rel="stylesheet" href="css/style-plugin.css">
+	<link rel="stylesheet" href="css/style-plugin.css">
 	
 </head>
 <body>
 	<!-- 顶部标题 -->
 	<header class="bar bar-nav default-style">
 		<a class="icon icon-left pull-left" href="user_address_index_second.html" data-transition="slide-out"></a>
-		<!-- <a data-ignore="push" href="user_address_add.html" data-transition="slide-in" class="button button-link pull-right">
-	    新增
-	  	</a> -->
-		<h1 class="title">工地管理</h1>
+		<a data-ignore="push" href="user_address_add.html" data-transition="slide-in" class="button button-link pull-right">
+	    编辑
+	  	</a>
+		<h1 class="title">工地详情</h1>
 	</header>
 
 	<!-- 底部导航栏 -->
@@ -45,7 +45,26 @@
 	<!-- 页面内容区域 -->
 	<div class="content" id="address_view">
 
-		<div class="address-area-show">
+		<div class="list-block media-list my-site-view-header">
+			<ul class="address-list-default">
+				<li>	        			
+		        <div  class="item-link item-content"> 
+		          <div class="item-media round"><img src="img/my-site-view_06.jpg" ></div>
+		          <div class="item-inner">
+		            <div class="item-title" style="margin-bottom:.25rem;">
+		            	<i class="icon icon-qiye"></i>
+		            	<span class="icon-middle-span">碧玺大厦工地一期</span>
+		            	<span class="tag-ico">施工中</span>
+		            </div>
+		            <div class="item-text">长沙市芙蓉区东江二路十字路口左侧金宇花苑17栋11楼1101</div>
+		          </div>
+		        </div>
+		    	</li>
+	    	</ul>
+	    </div>
+
+
+		<!-- <div class="address-area-show">
 
 			<div class="photo-box">
 				<a href="#"><img src="img/address_ico_07.jpg"></a>
@@ -55,119 +74,176 @@
 			</a>
 			<div class="address-name">碧玺大厦工地一期</div>
 			<div class="address-info">长沙市芙蓉区东江二路十字路口左侧金玉花园17栋11楼1101</div>
-			<!-- <ul class="order-info clearfix">
+			<ul class="order-info clearfix">
 				<li><a href="user_me_orders.html" data-transition="slide-in"><span class="count">0</span><span class="status">待确认</span></a></li>
 				<li><a href="user_me_orders.html" data-transition="slide-in"><span class="count">0</span><span class="status">待付款</span></a></li>
 				<li><a href="user_me_orders.html" data-transition="slide-in"><span class="count">0</span><span class="status">待收货</span></a></li>
 				<li><a href="user_me_orders.html" data-transition="slide-in"><span class="count">0</span><span class="status">历史订单</span></a></li>
-			</ul> -->
+			</ul>
+		</div> -->
+		<div class="padding" style=" padding-bottom: 0;">
+			<div id="islider"></div>
 		</div>
 
-		<div class="clearfix kit-list-index">
+		<div class="clearfix kit-list-index padding">
 			<li><a href="javascript:$.toast('拍照未配置');" data-transition="slide-in"><span class="kit-button photo-ico"></span><span class="name">拍照下单</span></a></li>
 			<li><a href="user_mall_index_v1.html" data-transition="slide-in"><span class="kit-button shopping-ico"></span><span class="name">在线购物</span></a></li>
-			<li><a href="user_address_index_second_manage.html" data-transition="slide-in"><span class="kit-button manage-ico"></span><span class="name">师傅管理</span></a></li>
-			<li><a href="user_address_index_second_addressinfo.html" data-transition="slide-in"><span class="kit-button onsite-ico"></span><span class="name">工地现场</span></a></li>
+			<!-- <li><a href="user_address_index_second_manage.html" data-transition="slide-in"><span class="kit-button manage-ico"></span><span class="name">师傅管理</span></a></li> -->
+			<!-- <li><a href="user_address_index_second_addressinfo.html" data-transition="slide-in"><span class="kit-button onsite-ico"></span><span class="name">工地现场</span></a></li> -->
+			<li><a href="user_address_index_second_addressinfo.html" data-transition="slide-in"><span class="kit-button money-ico"></span><span class="name">记账本</span></a></li>
 		</div>
+
 		
-		<div class="white-bg message-module">
-			<div class="header-title"><i class="icon voice-ico"></i> 
-				<!-- <span>最新消息</span> -->
-				<a href="user_mall_index_v1_shoppingcar.html" class="has-underline" data-transition="slide-in">点击快速进入泥沙辅材专场</a>
+		<div class="message-module">
+
+			<div class="header-title">
+				<i class="blue-line"></i> 
+				<span class="icon-middle-span">工地订单</span>
+			</div>
+
+			<div class="alert-status-box" style="padding: 1rem 1rem 2rem;">
+		    	<div class="alert-info empty"><span class="icon icon-app"></span> 暂无用户数据</div>
 			</div>
 
 			<div class="card card-message">
 				<div class="card-header">
-					<div class="pull-left"><i class="blue-line"></i>水电材料</div>
-					<div class="pull-right">
+					<div class="pull-left">
+						<span class="round-font-ball blue">水电</span>
 						<span>单号:62354123254 </span>
-						<a class="order_status_btn" href="javascript:void(0)" >查看记录</a>
+					</div>
+					<div class="pull-right">
+						<span data-status="查看记录" class="icon icon-caret order_status_btn close">
+							
+						</span>
 					</div>
 				</div>
 				<div class="card-content">
 					<div class="ps-status-box">
 					  <ul class="status-info-more">
-					  	<li><i class="status-ball"></i> 今天 09:00 正在送货途中，预计2小时到达</li>
-					  	<li class="finish"><i class="status-ball"></i> 今天 08:30 报价成功，订单待确认<a href="#">查看订单详情</a></li>
-					  	<li class="finish"><i class="status-ball"></i> 今天 08:19 拍照下单成功，待客服报价</li>
+					  	<li>
+					  		<div class="single-status">
+						  		<i class="status-ball active"></i> 
+						  		<h4 class="time-area">今天 09:00</h4>
+						  		正在送货途中，预计2小时到达
+						  		<ul class="status-info clearfix">
+						  			<li class="pull-left"><a href="javascript:void(0)">查看订单详情</a></li>
+						  			<li class="pull-right"><a href="javascript:void(0)">确认价格</a></li>
+						  		</ul>
+					  		</div>
+					  	</li>
+					  	<li class="finish">
+					  		<div class="single-status">
+						  		<i class="status-ball"></i>
+						  		<h4 class="time-area">今天 08:30</h4> 报价成功，订单待确认
+						  	</div>
+					  	</li>
+					  	<li class="finish">
+						  	<div class="single-status">
+						  		<i class="status-ball"></i>
+						  		<h4 class="time-area">今天 08:19</h4> 拍照下单成功，待客服报价
+						  	</div>
+					  	</li>
 					  </ul>
 					</div>
 				</div>
 			</div>
 
-			<div class="card card-message">
+			<div class="card card-message finish">
 				<div class="card-header">
-					<div class="pull-left"><i class="blue-line"></i>水电材料</div>
-					<div class="pull-right">
+					<div class="pull-left">
+						<span class="round-font-ball blue">水电</span>
 						<span>单号:62354123254 </span>
-						<a class="order_status_btn" href="javascript:void(0)" >查看记录</a>
+					</div>
+					<div class="pull-right">
+					<span data-status="查看记录" class="icon icon-caret order_status_btn close"></span>
 					</div>
 				</div>
 				<div class="card-content">
 					<div class="ps-status-box">
 					  <ul class="status-info-more">
-					  	<li class="finish"><i class="status-ball"></i> 昨天 10:21 订单已经完成<a href="#">联系售后</a></li>
-					  	<li class="finish"><i class="status-ball"></i> 昨天 10:19 已收货，收货人（刘佳妮）</li>
-					  	<li class="finish"><i class="status-ball"></i> 昨天 10:19 搬运费修改为223元，请确认</li>
-					  	<li class="finish"><i class="status-ball"></i> 昨天 09:00 正在送货途中，预计2小时到达</li>
-					  	<li class="finish"><i class="status-ball"></i> 昨天 08:30 报价成功，订单待确认<a href="#">查看订单详情</a></li>
-					  	<li class="finish"><i class="status-ball"></i> 昨天 08:19 拍照下单成功，待客服报价</li>
+					  	<li class="finish">
+					  		<div class="single-status">
+						  		<i class="status-ball"></i> <h4 class="time-area">2015/10/21  10:21</h4> 订单已经完成<a href="#">联系售后</a>
+						  	</div>
+					  	</li>
+					  	<li class="finish">
+					  		<div class="single-status">
+						  		<i class="status-ball"></i> <h4 class="time-area">2015/10/21  10:19</h4> 已收货，收货人（刘佳妮）
+						  	</div>
+					  	</li>
+					  	<li class="finish">
+					  		<div class="single-status">
+						  		<i class="status-ball"></i> <h4 class="time-area">2015/10/21  10:19</h4> 搬运费修改为223元，请确认
+						  	</div>
+					  	</li>
+					  	<li class="finish">
+					  		<div class="single-status">
+						  		<i class="status-ball"></i> <h4 class="time-area">2015/10/21  09:00</h4> 正在送货途中，预计2小时到达
+						  	</div>
+					  	</li>
+					  	<li class="finish">
+					  		<div class="single-status">
+					  			<i class="status-ball"></i> <h4 class="time-area">2015/10/21  08:30</h4> 报价成功，订单待确认<a href="javascript:void(0)">查看订单详情</a>
+					  		</div>
+					  	</li>
+					  	<li class="finish">
+					  		<div class="single-status">
+						  		<i class="status-ball"></i> <h4 class="time-area">2015/10/21  08:19</h4> 拍照下单成功，待客服报价
+						  	</div>
+					  	</li>
 					  </ul>
 					</div>
 				</div>
 			</div>
 
-			<div class="card card-message">
+			<div class="card card-message finish">
 				<div class="card-header">
-					<div class="pull-left"><i class="blue-line"></i>水电材料</div>
-					<div class="pull-right">
+					<div class="pull-left">
+						<span class="round-font-ball blue">水电</span>
 						<span>单号:62354123254 </span>
-						<a class="order_status_btn" href="javascript:void(0)" >查看记录</a>
+					</div>
+					<div class="pull-right">
+						<span data-status="查看记录" class="icon icon-caret order_status_btn close"></span>
 					</div>
 				</div>
 				<div class="card-content">
 					<div class="ps-status-box">
 					  <ul class="status-info-more">
-					  	<li  class="finish"><i class="status-ball"></i> 前天 10:21 订单已经完成<a href="#">联系售后</a></li>
-					  	<li class="finish"><i class="status-ball"></i> 前天 10:19 已收货，收货人（刘佳妮）</li>
-					  	<li class="finish"><i class="status-ball"></i> 前天 10:19 搬运费修改为223元，请确认</li>
-					  	<li class="finish"><i class="status-ball"></i> 前天 09:00 正在送货途中，预计2小时到达</li>
-					  	<li class="finish"><i class="status-ball"></i> 前天 08:30 报价成功，订单待确认<a href="#">查看订单详情</a></li>
-					  	<li class="finish"><i class="status-ball"></i> 前天 08:19 拍照下单成功，待客服报价</li>
+					  	<li  class="finish">
+					  		<div class="single-status">
+						  		<i class="status-ball"></i> <h4 class="time-area">2015/10/20  10:21</h4> 订单已经完成<a href="#">联系售后</a>
+						  	</div>
+					  	</li>
+					  	<li class="finish">
+					  		<div class="single-status">
+						  		<i class="status-ball"></i> <h4 class="time-area">2015/10/20  10:19</h4> 已收货，收货人（刘佳妮）
+						  	</div>
+					  	</li>
+					  	<li class="finish">
+					  		<div class="single-status">
+						  		<i class="status-ball"></i> <h4 class="time-area">2015/10/20  10:19</h4> 搬运费修改为223元，请确认
+						  	</div>
+					  	</li>
+					  	<li class="finish">
+					  		<div class="single-status">
+						  		<i class="status-ball"></i> <h4 class="time-area">2015/10/20  09:00</h4> 正在送货途中，预计2小时到达
+						  	</div>
+					  	</li>
+					  	<li class="finish">
+					  		<div class="single-status">
+						  		<i class="status-ball"></i> <h4 class="time-area">2015/10/20  08:30</h4> 报价成功，订单待确认<a href="#">查看订单详情</a>
+						  	</div>
+						</li>
+					  	<li class="finish">
+					  		<div class="single-status">
+						  		<i class="status-ball"></i> <h4 class="time-area">2015/10/20  08:19</h4> 拍照下单成功，待客服报价
+						  	</div>
+					  	</li>
 					  </ul>
 					</div>
 				</div>
 			</div>
 
-			<!-- <div class="card card-message">
-				<div class="card-header">
-					<div class="pull-left"><i class="blue-line"></i>单号:62354123254</div>
-					<div class="pull-right">
-						<a href="javascript:alert(0)" >查看记录</a>
-					</div>
-				</div>
-				<div class="card-content">
-				  <ul class="statu-info">
-						<li class="finish"><i class="status-ico-1"></i>下单成功<br>10:12</li>
-						<li class="line"></li>
-						<li><i class="status-ico-2"></i>配送中<br>10:12</li>
-						<li class="line"></li>
-						<li><i class="status-ico-3"></i>已签收<br>--:--</li>
-					</ul>
-				</div>
-			</div> -->
-
-			<!-- <div class="card card-message">
-				<div class="card-header">
-					<div class="pull-left"><i class="blue-line"></i>单号:62354123254</div>
-					<div class="pull-right">2015年9月6日  14:481</div>
-				</div>
-				<div class="card-content">
-				  <div class="card-content-inner">您购买的【恒飞PPR软管\砂石\陶粒\瓷砖胶\乳胶...】正在<span class="warning-color">备货中</span>,预计当日18:20前送达，请耐心等待。
-				  </div>
-				</div>
-			</div>
- -->
 
 		</div>
 
@@ -177,25 +253,73 @@
 	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
 	<script tyle="text/javascript" src="http://runjs.cn/js/sandbox/other/angular.min.js" charset="utf-8" ></script>
+	<!-- 滑动图 -->
+	<script src="libs/islider/js/iSlider.js"></script>
+	<script src="libs/islider/js/plugins/dot.js"></script>
+	<script src="libs/islider/js/plugins/button.js"></script>
+	<link rel="stylesheet" href="libs/islider/style/iSlider.css"/>
+
 	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
 	<script type="text/javascript">
 		$(function(){
+
+			//滚动图片js
+			var list = [{
+				    content: "img/my-site-view_11.jpg",
+				},{
+				    content: "img/my-site-view_11.jpg",
+				},{
+				    content: "img/my-site-view_11.jpg",
+				}];
+			var islider = new iSlider(
+            document.getElementById("islider"), list, {
+                // data: list
+                dom: document.getElementById("islider"),
+                // isVertical: true,
+                isLooping: 1,
+                isOverspread: 1,
+                animateType: 'default',
+                animateTime: 500,
+                fixPage: 1,
+                isDebug: 1,
+                // isDebug: 0,
+                // isLoading: true,
+                // isAutoplay: true,
+                // duration: 5000,
+                plugins: [['dot', {locate:'relative'}], 'button', ['zoompic', {zoomFactor: 2}]],
+                onslide: function () {
+                    console.debug(arguments)
+                },
+                onslidechange: function () {
+                    console.debug(arguments, 'Change~ juse one time');
+                    this.off('slideChange', arguments.callee);
+                }
+            });
+
+
+			//订单轨迹js
 			var firstStatusBigBox = $(".card-message").eq(0);
 			var firststatusBox = firstStatusBigBox.find(".ps-status-box");
 			firststatusBox.show();
-			firstStatusBigBox.find(".order_status_btn").text("关闭记录");
-			$(document).on("click",".order_status_btn",function(){
-				var thisBox = $(this).closest(".card-header").siblings(".card-content").find(".ps-status-box");
-				if( $(this).text() =="查看记录" ){
-					$(this).text("关闭记录");
-					$(this).closest(".card-header").siblings(".card-content").find(".ps-status-box").show();
+			firstStatusBigBox.find(".order_status_btn").attr("data-status","关闭记录").removeClass("close");
+			$(document).on("click",".card-header",function(){
+				var that = $(this).find(".order_status_btn");
+				if( that.attr("data-status") =="查看记录" ){
+					that.attr("data-status","关闭记录").removeClass("close");
+					that.closest(".card-header").siblings(".card-content").find(".ps-status-box").show();
 				}else{
-					$(this).text("查看记录");
-					$(this).closest(".card-header").siblings(".card-content").find(".ps-status-box").hide();
+					that.attr("data-status","查看记录").addClass("close");
+					that.closest(".card-header").siblings(".card-content").find(".ps-status-box").hide();
 				}
 				
 			})
 		})
+
+		var kitListBtn = $(".kit-list-index li"); //获取按钮的变量
+        if( kitListBtn.length<4 ){ //如果按钮的数量小于4个
+          kitListBtn.parent().addClass("three"); //添加three
+        }
+
 	</script>
 </body>
 </html>

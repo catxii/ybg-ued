@@ -40,7 +40,18 @@
 }
 .saler-order-content{
     .list-block{
-        .saler-ul{padding: 0 1rem;}
+        .saler-ul{
+            padding: 0 .75rem;
+            li {
+                border-bottom:@border-gray-tint-dashed;
+                &:last-child {
+                    border:none;
+                }
+            }
+            .li-title {
+                border-bottom:@border-gray;
+            }
+        }
     }
 }
 

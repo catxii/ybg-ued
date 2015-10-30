@@ -214,22 +214,67 @@ $(document).on('pageInit', '#address_add', function(e, id, content){
 
 // 工地管理
 $(document).on("pageInit","#address_view",function(e,id, content){
-  var firstStatusBigBox = $(".card-message").eq(0);
+  var js = '<script src="libs/islider/js/iSlider.js"></script><script src="libs/islider/js/plugins/dot.js"></script><script src="libs/islider/js/plugins/button.js"></script><link rel="stylesheet" href="libs/islider/style/iSlider.css"/>';
+  $("body").append(js);
+
+  //滚动图片js
+      var list = [{
+            content: "img/my-site-view_11.jpg",
+        },{
+            content: "img/my-site-view_11.jpg",
+        },{
+            content: "img/my-site-view_11.jpg",
+        }];
+      var islider = new iSlider(
+      document.getElementById("islider"), list, {
+          // data: list
+          dom: document.getElementById("islider"),
+          // isVertical: true,
+          isLooping: 1,
+          isOverspread: 1,
+          animateType: 'default',
+          animateTime: 500,
+          fixPage: 1,
+          isDebug: 1,
+          // isDebug: 0,
+          // isLoading: true,
+          // isAutoplay: true,
+          // duration: 5000,
+          plugins: [['dot', {locate:'relative'}], 'button', ['zoompic', {zoomFactor: 2}]],
+          onslide: function () {
+              console.debug(arguments)
+          },
+          onslidechange: function () {
+              console.debug(arguments, 'Change~ juse one time');
+              this.off('slideChange', arguments.callee);
+          }
+      });
+
+
+      //订单轨迹js
+      var firstStatusBigBox = $(".card-message").eq(0);
       var firststatusBox = firstStatusBigBox.find(".ps-status-box");
       firststatusBox.show();
-      firstStatusBigBox.find(".order_status_btn").text("关闭记录");
-      $(document).on("click",".order_status_btn",function(){
-        var thisBox = $(this).closest(".card-header").siblings(".card-content").find(".ps-status-box");
-        if( $(this).text() =="查看记录" ){
-          $(this).text("关闭记录");
-          $(this).closest(".card-header").siblings(".card-content").find(".ps-status-box").show();
+      firstStatusBigBox.find(".order_status_btn").attr("data-status","关闭记录").removeClass("close");
+      $(document).on("click",".card-header",function(){
+        var that = $(this).find(".order_status_btn");
+        if( that.attr("data-status") =="查看记录" ){
+          that.attr("data-status","关闭记录").removeClass("close");
+          that.closest(".card-header").siblings(".card-content").find(".ps-status-box").show();
         }else{
-          $(this).text("查看记录");
-          $(this).closest(".card-header").siblings(".card-content").find(".ps-status-box").hide();
+          that.attr("data-status","查看记录").addClass("close");
+          that.closest(".card-header").siblings(".card-content").find(".ps-status-box").hide();
         }
         
       })
-})
+
+
+    var kitListBtn = $(".kit-list-index li"); //获取按钮的变量
+    if( kitListBtn.length<4 ){ //如果按钮的数量小于4个
+      kitListBtn.parent().addClass("three"); //添加three
+    }
+
+});
 
 // 切换城市
 $(document).on('pageInit', '#address_Model', function(e, id, content){

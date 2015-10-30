@@ -82,7 +82,7 @@ a {
     }
 }
 .price {   //商品现价统一颜色
-    color: @danger-color!important;
+    color: @warning-color!important;
 }
 .bg-ball {  //圆形背景，主要用于图标圆背景框
     background: @green;
@@ -117,7 +117,7 @@ a {
 
 //背景色定义
 .white-bg { 
-    background: @white!important;
+    background-color: @white!important;
     color: @black!important;
 }
 .gray-bg {
@@ -354,6 +354,12 @@ i.icon {
         margin-top: -.08rem;
         border-radius: 0;
     }
+    &.icon-qiye {
+        background-image: url("@{imgsrc}/my-site-view_03.jpg");
+        width: .8rem;
+        height: .8rem;
+        vertical-align: middle;
+    }
     &.icon-user-ico {
         background-size: 1.45rem!important;
         &.box-ico {
@@ -393,6 +399,9 @@ i.icon {
             background: url("@{imgsrc}/ico-me-weight.png") no-repeat;
         }
     }
+}
+.icon-middle-span {
+    vertical-align: middle;
 }
 
 .ico-style {
@@ -494,7 +503,7 @@ ul,ol {
     }
 }
 .list-block {
-    margin: 0.5rem 0;
+    margin: 0.3rem 0;
     li {
         border-bottom: @border-gray-tint;
         .item-inner:after {
@@ -889,6 +898,11 @@ header {
                 width:25%;
             }
         }
+        &.five-ul {
+            li {
+                width:20%;
+            }
+        }
     }
 }
 
@@ -1139,4 +1153,11 @@ header {
         background: @danger-color;
         color: @white;
     }
+}
+.tag-ico {
+    font-size: .6rem;
+    border:.05rem @default-color solid;
+    color: @default-color;
+    padding:0 .05rem;
+    vertical-align: middle;
 }

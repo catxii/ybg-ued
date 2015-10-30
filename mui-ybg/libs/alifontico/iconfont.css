@@ -15,12 +15,7 @@
   -webkit-text-stroke-width: 0.2px;
   -moz-osx-font-smoothing: grayscale;
 }
-.ybg-icon-roundcheck:before { content: "\e600"; }
-.ybg-icon-roundclose:before { content: "\e601"; }
-.ybg-icon-warn:before { content: "\e602"; }
-.ybg-icon-camerafill:before { content: "\e605"; }
-.ybg-icon-camera:before { content: "\e606"; }
-.ybg-icon-info:before { content: "\e603"; }
-.ybg-icon-copy:before { content: "\e607"; }
-.ybg-icon-cameraaddfill:before { content: "\e608"; }
-.ybg-icon-empty:before { content: "\e604"; }
+.icon-info:before { content: "\e6e5"; }
+.icon-roundclose:before { content: "\e659"; }
+.icon-roundcheck:before { content: "\e657"; }
+.icon-warn:before { content: "\e663"; }
