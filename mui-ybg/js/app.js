@@ -510,3 +510,19 @@ $(document).on("pageInit", "#page-infinite-scroll",function(e, id, page) {
         });
     });
 });
+
+$(document).on("pageInit", "#pay_info_model",function(e, id, page) {
+  function copyUrl2(name,text,imgsrc){
+      // var  Url2 = document.getElementById(textarea);
+      // Url2.select(); // 选择对象 
+      // document.execCommand("Copy"); // 执行浏览器复制命令
+      $.alert("<p class='explain-area'>1，银行收款人均为：<span style='color:red;'>宁峥辉</span>；</br>2，长按银行卡号可复制粘贴；</br>3，二维码图片长按图片并点击“识别二维码“可快速添加。</p><p class='bank-name'>"+name+"</p><img src='"+imgsrc+"'><p class='bank-name danger-color'>"+text+"</p>");
+    }
+    $(".bank-list .item-content").click(function(){
+      var textarea =$(this).find("textarea").attr("id");
+      var copyNumber = $(this).find(".item-title").attr("data-id");
+      var name = $(this).find(".item-title").attr("data-name");
+      var imgsrc = $(this).find(".item-title").attr("data-img");
+      copyUrl2(name,copyNumber,imgsrc);
+    })
+});

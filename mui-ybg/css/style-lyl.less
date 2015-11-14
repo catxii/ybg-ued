@@ -550,7 +550,7 @@
             background: @unimportance-color;
             height: .05rem;
             position: relative;
-            top:-1rem;
+            top:-.5rem;
         }
         i {
             display: block;
@@ -652,6 +652,7 @@
         padding: .5rem .75rem;
     } 
     .address-list-default {
+
         li {
             .item-title {
                 font-size: @font-size-big;
@@ -662,6 +663,15 @@
                 // margin-bottom: .7rem;
                 height: auto;
                 -webkit-line-clamp:3;
+                &.bolder {
+                    font-size: .8rem;
+                    color: #000;
+                }
+                .icon-middle-span {
+                    font-size: .7rem;
+                    font-weight: bolder;
+                    color: #000;
+                }
             }
             img {
                 width: 3.4rem;
@@ -1255,10 +1265,12 @@ h4.card-title-style {
 
 .status-info-more {
     margin: 0;
-    li {
+     > li {
         padding-left: 1.2rem;
         position: relative;
         font-size:.6rem;
+        background: #e9e6e6;
+        color:  #999999;
         .single-status {
             border-left:@border-gray;
             padding-left: 1.2rem;
@@ -1281,7 +1293,7 @@ h4.card-title-style {
             }
         }
         .status-ball {
-            background:@white;
+            background:#999999;
             border-radius: 10rem;
             border:@border-gray;
             width: .5rem;
@@ -1296,7 +1308,26 @@ h4.card-title-style {
             line-height: .5rem;
             text-align: center;
             color: white;
-            &.active {
+        }
+        // &.finish {
+        //     background: #e9e6e6;
+        //     color:  #999999;
+        //     .status-ball {
+        //         background: #999999;
+        //         border:@default-color;
+        //     }
+        // }
+        // &.finish {
+        //     color: @unimportance-color;
+        //     .status-ball {
+        //         background: @default-color;
+        //         border:@default-color;
+        //     }
+        // }
+        &:first-child {
+            background: @white;
+            color:  #000;
+            .status-ball {
                 background: url("@{imgsrc}/zuobiao-ico_03.png");
                 border:none;
                 border-radius: 0;
@@ -1305,21 +1336,6 @@ h4.card-title-style {
                 width: .5rem;
             }
         }
-        &.finish {
-            background: #e9e6e6;
-            color:  #999999;
-            .status-ball {
-                background: #999999;
-                border:@default-color;
-            }
-        }
-        // &.finish {
-        //     color: @unimportance-color;
-        //     .status-ball {
-        //         background: @default-color;
-        //         border:@default-color;
-        //     }
-        // }
     }
 }
 
@@ -1415,10 +1431,14 @@ h4.card-title-style {
 }
 
 #islider {
-    height: 4rem;
+    height: auto;
     position: relative;
     overflow: hidden;
     width: 100%;
+    img {
+        width: 100%;
+        display: block;
+    }
     .islider-dot-wrap {
         bottom:.5rem;
         .islider-dot {
@@ -1497,8 +1517,8 @@ h4.card-title-style {
     padding: 0;
     left: 1rem;
     right: 1rem;
-    bottom: 1rem;
-    top: 1rem;
+    bottom: .5rem;
+    top: .5rem;
     height: auto;
     width: auto;
     position: absolute;
@@ -1506,9 +1526,19 @@ h4.card-title-style {
         height: 10%;
         text-align: center;
         display: block;
+        .close-popup {
+            position: absolute;
+            z-index: 100;
+            right: 0;
+            font-size: 1.5rem;
+            top: 0;
+            line-height: 1.8rem;
+            color: #ccc;
+            padding: 0 .8rem;
+        }
     }
     .card-content {
-        height: 80%;
+        height: 78%;
         padding: 5% 0;
         .card-content-inner {
             height: 100%;
@@ -1527,5 +1557,61 @@ h4.card-title-style {
     .item-after {
         color: @unimportance-color;
         font-size: @font-size-small;
+    }
+}
+
+.card-pay-info {
+    .content-block-title {
+        border-bottom: 1px solid #ccc;
+        padding: 10px 0;
+        font-size:14px;
+        margin-top: 0;
+        &.web {
+            margin-bottom: 0;
+        }
+    }
+    .bank-list {
+        overflow: hidden;
+        .item-media {
+            img {
+                width: 80px;
+            }
+            &.web {
+                padding-left:15px;
+                padding-right:15px; 
+                img {
+                    width: 50px;
+                }
+            }
+        }
+        .item-title {
+            font-size: 14px;
+        }
+        .item-inner {
+            position: relative;
+            overflow: hidden;
+        }
+        textarea {
+            position: absolute;
+            top:-10000px;
+        }
+    }
+}
+
+.explain-area {
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 12px;
+    text-align: left;
+    background: white;
+    margin: 0;
+}
+.bank-name {
+    margin:5px;
+}
+
+.choose-address-list {
+    .item-text {
+        height:auto;
     }
 }

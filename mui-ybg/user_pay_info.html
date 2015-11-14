@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="format-detection"content="telephone=no"/>
+
+	<title>云包公-工地管理</title>
+	<link rel="stylesheet" href="libs/sui/css/sm.min.css">
+	<link rel="stylesheet" href="libs/sui/css/sm-extend.min.css">
+<link rel="stylesheet" href="libs/alifontico/iconfont.css">
+<link rel="stylesheet" href="css/style-plugin.css?v=1">
+	
+</head>
+<body>
+	<!-- 顶部标题 -->
+	<header class="bar bar-nav default-style">
+		
+		<style type="text/css">
+			.bar-tab { display:none!important; }
+			.content { bottom:0!important;}
+		</style>
+		<a class="icon icon-left pull-left" href="user_address_index_second.html" data-transition="slide-out"></a>
+		
+		<h1 class="title">优惠券</h1>
+	</header>
+
+	<!-- 页面内容区域 -->
+	<div class="content padding" id="pay_info_model">
+
+		<div class="card card-pay-info">
+			<div class="content-block-title">
+				<div class="pull-left">网银付款</div>
+				<div class="pull-right">收款人：宁峥辉</div>
+			</div>
+			<div class="list-block">
+				<ul class="bank-list">
+				  <li class="item-content">
+				    <div class="item-media"><img src="img/pay-info_03.jpg" alt="中信银行"></div>
+				    <div class="item-inner">
+				      <div class="item-title" data-name="长沙中信银行东塘支行" data-id="6226981600174383" data-img="img/pay-info_03.jpg">6226 9816 0017 4383</div>
+				      <!-- <textarea id="text1">6226981600174383</textarea> -->
+				    </div>
+				  </li>
+				  <li class="item-content">
+				    <div class="item-media"><img src="img/pay-info_07.jpg" alt="中国工商银行"></div>
+				    <div class="item-inner">
+				      <div class="item-title"  data-name="长沙工商银行银讯支行 " data-id="6222081901001113575" data-img="img/pay-info_07.jpg">6222 0819 0100 1113 575</div>
+				      <!-- <textarea id="text2">a6222081901001113575</textarea> -->
+				    </div>
+				  </li>
+				  <li class="item-content">
+				    <div class="item-media"><img src="img/pay-info_10.jpg" alt="中国建设银行"></div>
+				    <div class="item-inner">
+				      <div class="item-title"  data-name="长沙建设银行恒达支行" data-id="6227002921000362168" data-img="img/pay-info_10.jpg">6227 0029 2100 0362 168</div>
+				      <!-- <textarea id="text3">6227002921000362168</textarea> -->
+				    </div>
+				  </li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="card card-pay-info">
+			<div class="content-block-title  web">
+				<div class="pull-left">微信付款</div>
+				<div class="pull-right">收款人：宁峥辉</div>
+			</div>
+			<div class="list-block">
+				<ul class="bank-list">
+				  <li class="item-content">
+				    <div class="item-media web"><img src="img/pay-info_13.jpg" alt="中信银行"></div>
+				    <div class="item-inner">
+				      <div class="item-title"  data-name="微信账号" data-id="18570358637" data-img="img/check-info_16.jpg">18570358637</div>
+				      <div class="item-after">
+						<a href="javascript:void(0)" class="button">扫一扫</a>
+				      </div>
+				    </div>
+				  </li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="card card-pay-info">
+			<div class="content-block-title web">
+				<div class="pull-left">支付宝付款</div>
+				<div class="pull-right">收款人：宁峥辉</div>
+			</div>
+			<div class="list-block">
+				<ul class="bank-list">
+				  <li class="item-content">
+				    <div class="item-media web"><img src="img/pay-info_17.jpg" alt="中信银行"></div>
+				    <div class="item-inner">
+				      <div class="item-title"  data-name="支付宝账号" data-id="18570358637"  data-img="img/check-info_13.jpg">18570358637</div>
+				      <div class="item-after">
+						<a href="javascript:void(0)" class="button">扫一扫</a>
+				      </div>
+				    </div>
+				  </li>
+				</ul>
+			</div>
+		</div>
+
+
+	</div>
+
+	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
+	<script>
+		function copyUrl2(name,text,imgsrc){
+			// var  Url2 = document.getElementById(textarea);
+			// Url2.select(); // 选择对象 
+			// document.execCommand("Copy"); // 执行浏览器复制命令
+			$.alert("<p class='explain-area'>1，银行收款人均为：<span style='color:red;'>宁峥辉</span>；</br>2，长按银行卡号可复制粘贴；</br>3，二维码图片长按图片并点击“识别二维码“可快速添加。</p><p class='bank-name'>"+name+"</p><img src='"+imgsrc+"'><p class='bank-name danger-color'>"+text+"</p>");
+		}
+		$(".bank-list .item-content").click(function(){
+			var textarea =$(this).find("textarea").attr("id");
+			var copyNumber = $(this).find(".item-title").attr("data-id");
+			var name = $(this).find(".item-title").attr("data-name");
+			var imgsrc = $(this).find(".item-title").attr("data-img");
+			copyUrl2(name,copyNumber,imgsrc);
+		})
+
+	</script>
+</body>
+</html>

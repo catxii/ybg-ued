@@ -1,0 +1,466 @@
+//h5调试用
+// .preloader-indicator-modal,.preloader-indicator-overlay {
+//     display: none!important;
+// }
+// #think_page_trace_open {
+//     z-index: 99999;
+// }
+
+/*云包公公共样式*/
+
+//图片路径配置
+@imgsrc:"../img";
+
+// 颜色参数-功能性划分
+@background-content-color:#f6f6f6; //背景内容区域颜色
+@default-color:#00b7ff; //通用主色，用于通用的按钮背景颜色，云包公项目为该色值的蓝色 
+@default-dark-color:#0675bb; //通用主色加深，可用不限于按钮点击时。
+@opposite-dark-color:#fff; //反差深色的背景的浅色字体类用色
+@gray-tint-color:#efefef; //浅灰色
+@danger-color:#fc2a2a; //危险操作，警告文字
+@warning-color:#ff9c00; //强调文字颜色
+@warning-bg:#f7e2ca; //强调区域背景色
+@success-color:@green; //成功的颜色
+@information-color:@default-color;
+@unimportance-color:#afafaf; //次要的文字颜色
+@gray-empty:#ccc; //没有内容时候的提示背景灰色
+
+// 颜色种类划分
+@black:#2b2c33;
+@white:#fff;
+@gray:#efefef; //灰色背景底色
+@red:#ff0000;
+@orange:#fa6a32;
+@blue:#3b7ffd;
+@green:#4acb12;
+
+a {
+    color: @unimportance-color; 
+}
+.default-color {   //通用主色字体用色
+    color: @default-color;
+    &:visited {
+        color: @default-color;
+    }
+}
+.black-color {
+    color:@black;
+    &:visited {
+        color: @black;
+    }
+}
+.danger-color {    //危险操作字体用色
+    color: @danger-color;
+    &:visited {
+        color: @danger-color;
+    }
+}
+.warning-color {  //强调字体用色
+    color: @warning-color;
+    &:visited {
+        color: @warning-color;
+    }
+}
+.unimportance-color {  //次要字体用色
+    color: @unimportance-color;
+    &:visited {
+        color: @unimportance-color;
+    }
+}
+.price {   //商品现价统一颜色
+    color: @warning-color!important;
+}
+.bg-ball {  //圆形背景，主要用于图标圆背景框
+    background: @green;
+    color: @white;
+    border-radius: 1rem;
+    padding:0.1rem;
+    font-size: 0.6rem;
+    &.green-bg {
+        background: @green;
+    }
+}
+.green-bg-ico {
+    font-size: 12px;
+    background: #6ab948;
+    color: white;
+    border-radius: .2rem;
+    padding: 0rem .1rem;
+    margin: 0 .3rem;
+}
+.green-ball-ico {
+    background: #85dc61;
+    color: white;
+    font-size: 12px;
+    font-family: sans-serif;
+    width: 1.5rem;
+    display: inline-block;
+    zoom:1;
+    *display: inline;
+    border-radius: .2rem;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: .2rem;
+}
+
+//背景色定义
+.white-bg { 
+    background-color: @white!important;
+    color: #999;
+}
+.gray-bg {
+    background: @background-content-color!important;
+}
+.unimportance-bg {
+    background: #fafafa;
+}
+body {
+    background: @background-content-color;
+}
+
+
+//字体尺寸定义
+@font-size-large:.9rem; //特大尺寸（页面标题）
+@font-size-biger:.85rem;   //加大尺寸（头部的文字按钮、个人中心姓名、）
+@font-size-big:.8rem; //大尺寸 （文章标题、列表头部文字）
+@font-size-default:.75rem; //标准尺寸（文本、阅读性文字、列表内容的文字）
+@font-size-small:.7rem;   //小尺寸 （注释文字 、说明文字）
+@font-size-mini:.6rem;    //迷你尺寸 （）
+
+//公共区域文字定义
+.title{ //页面标题
+    font-size: @font-size-large;
+}
+.fix-top-header {
+    select {
+        font-size: @font-size-large;
+    }
+}
+.list-block {
+    .item-subtitle {
+        font-size: @font-size-default;
+    }
+}
+.card-header {
+    font-size:@font-size-big;
+}
+.profiles-list {
+    font-size: @font-size-big;
+}
+.list-block,.list-block input[type="text"], .list-block input[type="password"], .list-block input[type="search"], .list-block input[type="email"], .list-block input[type="tel"], .list-block input[type="url"], .list-block input[type="date"], .list-block input[type="datetime-local"], .list-block input[type="time"], .list-block input[type="number"], .list-block select, .list-block textarea {
+    font-size: @font-size-big;
+}
+.profiles-user-name {
+    font-size:@font-size-biger;
+}
+
+/*公共区域-内容content区域*/
+.content {
+    background: @background-content-color;
+}
+
+// 列表菜单的图标
+i.icon {
+    width: 1.45rem;
+    height: 1.45rem;
+    background-size: 100%;
+    border-radius: .2rem;
+    &.icon-diy-money{
+     background-image: url("@{imgsrc}/me-ico_03.png");  
+    }
+    &.icon-diy-lock{
+     background-image: url("@{imgsrc}/me-ico_07.png");  
+    }
+    &.icon-diy-search{
+     background-image: url("@{imgsrc}/me-ico_11.png");  
+    }
+    &.icon-diy-people{
+     background-image: url("@{imgsrc}/me-ico_13.png");  
+    }
+    &.icon-laba {
+        background-image: url("@{imgsrc}/address-list-index-ico_01.png");
+    }
+    &.icon-car {
+        background-image: url("@{imgsrc}/address-list-index-ico_02.png");
+    }
+    &.voice-ico {
+        background-image: url("@{imgsrc}/address_ico_17.jpg");
+        background-position: top center;
+        width: 1rem;
+        height: 1rem;
+        margin-top: -.08rem;
+        border-radius: 0;
+    }
+    &.icon-qiye {
+        background-image: url("@{imgsrc}/my-site-view_03.jpg");
+        width: .8rem;
+        height: .8rem;
+        vertical-align: middle;
+    }
+    &.icon-user-ico {
+        background-size: 1.45rem!important;
+        &.box-ico {
+            background:url("@{imgsrc}/ico-me_box.gif") no-repeat; 
+        }
+        &.money-ico {
+            background:url("@{imgsrc}/ico-me_money.gif") no-repeat;
+        }
+        &.car-ico {
+            background:url("@{imgsrc}/ico-me_car.gif") no-repeat;
+        }
+        &.bag-ico {
+            background:url("@{imgsrc}/ico-me_bag.gif") no-repeat;
+        }
+        &.title-ico {
+            background:url("@{imgsrc}/ico-me_title.gif") no-repeat;
+        }
+        &.question-ico {
+            background:url("@{imgsrc}/ico-me_question.gif") no-repeat;
+        }
+        &.note-ico {
+            background:url("@{imgsrc}/ico-me_note.gif") no-repeat;
+        }
+        &.service-phone-ico {
+            background:url("@{imgsrc}/ico-me_service.gif") no-repeat;
+        }
+        &.all-phone-ico {
+            background:url("@{imgsrc}/ico-me_headset.gif") no-repeat;
+        }
+        &.complaint-phone-ico {
+            background:url("@{imgsrc}/ico-me_complaint_phone.gif") no-repeat;
+        }
+        &.car2-ico {
+            background: url("@{imgsrc}/ico-me-car2.png") no-repeat;
+        }
+        &.weight-ico {
+            background: url("@{imgsrc}/ico-me-weight.png") no-repeat;
+        }
+    }
+}
+.icon-middle-span {
+    vertical-align: middle;
+}
+
+.ico-style {
+    display: inline-block;
+    zoom:1;
+    *display: inline;
+    width: 1.45rem;
+    height: 1.45rem;
+    &.icon-photo {
+        background: url("@{imgsrc}/photo-ico_03.png") no-repeat;
+        background-size: 100%;
+    }
+}
+.check-ball-ico {  //radio样式
+    display: inline-block;
+    zoom:1;
+    *display: inline;
+    height: .7rem;
+    width: .7rem;
+    margin-right: .2rem; 
+    vertical-align: middle;
+    background: url("@{imgsrc}/checkbox-ico_03.png") left top;
+    background-size:.7rem;
+    i {
+        display: none;
+    }
+    &.active {
+        background-position: bottom center;
+    }
+    &.disabled {
+        border-color: @unimportance-color;
+        i{
+            background: @unimportance-color;
+        }
+    }
+}
+
+.icon-no-bg {  //没有背景的图标样式，最新动态首页
+    display: inline-block;
+    zoom:1;
+    *display: inline;
+    background-size: 100%!important;
+    margin-right: .2rem;
+    width: 1.5rem;
+    height:1.5rem;
+    vertical-align: middle;
+    &.card-ico {
+        background: url("@{imgsrc}/dynamic-ico_16.png") no-repeat;
+    }
+    &.warning-ico {
+        background: url("@{imgsrc}/dynamic-ico_23.png") no-repeat;
+    }
+    &.money-ico {
+        background: url("@{imgsrc}/dynamic-ico_03.png") no-repeat;
+    }
+    &.car-ico {
+        background: url("@{imgsrc}/dynamic-ico_05.png") no-repeat;
+    }
+    &.box-ico {
+        background: url("@{imgsrc}/dynamic-ico_07.png") no-repeat;
+    }
+    &.map-ico {
+        background: url("@{imgsrc}/dynamic-ico_13.png") no-repeat;
+    }
+    &.note-ico {
+        background: url("@{imgsrc}/dynamic-ico_21.png") no-repeat;
+    }
+}
+.warning-ico {
+    background: url("@{imgsrc}/warning-ico_03.gif") no-repeat;
+    background-size: 100%;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
+    zoom:1;
+    *display: inline;
+    vertical-align: middle;
+}
+
+
+/* 排版布局 */ 
+ul,ol {
+    padding: 0;
+    li {
+        list-style: none;
+    }
+}
+.button-nav-ico {
+
+}
+.list-block-h1 {
+    font-size: 1rem;
+    font-weight: 500;
+    border-bottom: @border-gray-dark;
+    padding: .5rem;
+    margin: 0;
+}
+.inline-block-ul {
+    letter-spacing: -0.15rem;
+    word-spacing: -0.15rem;
+    padding-left: 0;
+    margin: 0;
+    &.has-margin-lg {
+        li {
+          margin-right: 40px;
+        }
+    }
+    &.has-margin-lg-left {
+        li {
+          margin-left: 40px;
+        }
+    }
+    li {
+        display: inline-block;
+        zoom:1;
+        *display: inline;
+        vertical-align: middle;
+        letter-spacing: 0;
+        word-spacing: 0;
+    }
+}
+.list-block {
+    margin: 0.3rem 0;
+    li {
+        border-bottom: @border-gray-tint;
+        .item-inner:after {
+            display: none;
+        }
+    }
+    &.nomargin-list-block { //清理掉列表的边距
+        margin:0;
+    }
+    &.no-fix-width { //去掉列表内容固定宽度
+        .item-title {
+            width: auto; 
+        }
+    }
+}
+.list-font-info {  //订单信息类字体大小和黑色字体
+    color: @black;
+    font-size:@font-size-small;
+}
+.font-overflow {  //字体溢出截取添加"..."处理,使用时需要给元素添加宽度
+    display: inline-block;
+    zoom: 1;
+    *display: inline;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+.position-right {  //绝对定位到右侧
+    position: absolute;
+    right: 0.5rem;
+    z-index: 10;
+}
+.content-padded-large { //内容区域填充加大号
+    padding: 2rem;
+} 
+.btn-right {  //文字居右显示
+    text-align:right;
+}
+.btn-center {
+    text-align: center;
+}
+.padding {    //区域填充，可用于内容区域需要填充的地方
+    padding:.5rem;
+}
+.padding-plus {    //区域填充，可用于内容区域需要填充的地方
+    padding:1rem;
+}
+.no-padding { //去掉容器的填充
+    padding:0!important;
+}
+
+
+// 边框颜色和样式
+@border-gray: 0.05rem solid #ccc; //标准下边框实线颜色
+@border-gray-dashed: 0.05rem dashed #ccc; //标准下边框虚线颜色
+@border-gray-tint: 0.05rem solid #efefef; //浅色下边框实线颜色
+@border-gray-tint-dashed: 0.05rem dashed #efefef; //浅色下边框虚线颜色
+@border-gray-dark: 0.05rem solid #a5a5a5; //深灰色下边框实线颜色
+@border-gray-dark-dashed: 0.05rem dashed #a5a5a5; //深灰色下边框虚线颜色
+
+@border-warning:0.05rem solid @warning-color;
+@border-warning-dashed:0.05rem dashed @warning-color;
+
+.border-gray {
+    border:0.05rem solid #ccc;
+    &.bottom {
+        border-width:0 0 0.05rem 0;
+    }
+    &.dashed {
+        border-style: dashed;
+    }
+    &.tint{
+        border-color: #efefef;
+    }
+}
+
+
+// 按钮样式重置
+.btn {
+    border-radius: 0;
+    &.btn-primary {
+        background: @default-color;
+    }
+    &.btn-success {
+        background: @success-color;
+    }
+}
+
+//表单对齐文本
+.form-span-middle {
+    padding-top: 5px; 
+}
+
+// 边距调整
+.no-margin {
+    &.bottom{
+        margin-bottom:0;
+    }
+}

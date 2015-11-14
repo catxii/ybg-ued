@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>云包公电商-电脑版</title>
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- <link href="libs/glyphicons/css/glyphicons.css" rel="stylesheet"> -->
+    <link href="libs/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class="top-nav-bar">
+      <div class="all-page-width clearfix">
+        <div class="pull-right top-phone">
+            客服电话 <i class="icon-headphones"></i> 0731-88033822
+        </div>
+        <div class="pull-left clearfix">
+          <div class="pull-left logo">云包公logo</div>
+          <div class="pull-right page-title">欢迎登录</div>
+
+        </div>
+        
+      </div>
+    </div>
+    <div class="login-bg">
+      <div class="all-page-width card">
+        <div class="white-bg login-panel">
+            <div class="login-header">
+              <h1 class="model-title">会员注册<span>REGISTRATION</span></h1>
+            </div>
+            <div class="login-content rule-box">
+              <ul class="input-list">
+                <li>
+                  <form id="form" class="form-horizontal" action="#">
+                    <div class="control-group">
+                      <label class="control-label" for="phone">手机号</label>
+                      <div class="controls">
+                        <input type="text" data-rule id="phone" placeholder="">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" for="yanzhengma">验证码</label>
+                      <div class="controls">
+                        <input style="width:77px;" type="text" data-rule id="yanzhengma" placeholder="">
+                        <input type="button" class="btn btn-primary" id="getverify" value="获取验证码" onclick="timer(60)">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" for="password">密码</label>
+                      <div class="controls">
+                        <input type="text" data-rule id="password" placeholder="">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" for="password2">确认密码</label>
+                      <div class="controls">
+                        <input type="text" data-rule id="password2" placeholder="">
+                      </div>
+                    </div>
+                    
+                  </form>
+                </li>
+                <li class="clearfix btn-center">
+                  <a href="javascript:void(0)" id="submit_btn" class="btn btn-success btn-large" data-loading-text="验证中...">注册</a>
+                </li>
+              </ul>
+            </div>
+            <div class="login-footer">
+              <a href="login-index.html" class="default-color">已有账号返回登陆></a>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="footer">
+      本网站所有素材均有本公司或版权所有人授权发布，侵权必究。 湘ICP备15004864号-2
+    </div>
+
+
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="libs/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+    <script>
+        //验证规则
+        var rule = function(name){
+           switch(name){
+              case 0:   
+                 return /^1\d{10}$/; //手机号码
+              case 1:   
+                 return /^\d*$/; //只能为数字
+              case 2:   
+                 return /^[0-9a-zA-Z]*$/; //只能为数字和字母;
+              case 3:   
+                 return /^\d{4}$/; //只能为4位数字验证码;
+           }
+        }
+        //插入状态提示
+        function appendRule(rulebox,stats,text){ //参数分别为：插入alert的容器\状态\显示的文本
+          $(".alert").remove();
+          var alert_box = function(stats,text){
+            return '<div class="alert alert-'+stats+'"><button type="button" class="close" data-dismiss="alert">×</button>'+text+'</div>'
+          }
+          $(rulebox).append(alert_box(stats,text));
+        }
+        //验证规则
+        function rule_model(rulenumber,index,rulebox,stats,text1,text2){//rulenumber-规则编号,index-对象索引值,rulebox-插入alert的容器，stats-状态,text-显示的文本
+          //验证判断
+          if(!input.eq(index).val()=="" ){ //如果为空
+            if( rule(rulenumber).test(input.eq(index).val()) ){ //验证手机号码
+              return true;
+            }else{
+              appendRule(rulebox,stats,text2);
+            }
+          }else{
+            appendRule(rulebox,stats,text1);
+          }
+        }
+        //提交点击验证
+        var input = $("input[data-rule]");
+        input.on("input",function(){
+          $(".rule-box .alert").remove();
+        });
+
+        //点击按钮时候
+        $("#submit_btn").click(function(){
+
+          $(".rule-box .alert").remove();
+          var rulebox = ".rule-box";
+          var stats = "error";
+          if (!rule_model(0,0,rulebox,stats,"手机号码不能为空","手机号码格式错误")) {
+            return;            
+          };
+          if (!rule_model(1,1,rulebox,stats,"验证码不能为空","验证码格式错误")) {
+            return;  
+          };
+          if (!rule_model(2,2,rulebox,stats,"密码不能为空","密码只能为字母和数字")) {
+            return;
+          };
+          if (!rule_model(2,3,rulebox,stats,"确认密码不能为空","确认密码只能为字母和数字")) {
+            return;
+          };
+          if(input.eq(2).val()==input.eq(3).val()){
+            alert("成功了");
+            $("#form").submit();
+          }else{
+            appendRule(rulebox,stats,"两次密码不一致，请重新输入");
+          }
+
+          //改变按钮提示
+          var btn = $(this);
+          btn.button('loading');
+          setTimeout(function(){
+            btn.button('reset');
+          },300)
+          
+        })
+
+        function timer(time) {
+            var btn = $("#getverify");
+            btn.attr("disabled", true);  //按钮禁止点击
+            btn.addClass("disabled");  //按钮禁止点击样式
+            btn.val(time <= 0 ? "发送动态密码" : ("" + (time) + "秒后可发送"));
+            var hander = setInterval(function() {
+                if (time <= 0) {
+                    clearInterval(hander); //清除倒计时
+                    btn.val("获取验证码");
+                    btn.removeAttr("disabled", false);
+                          btn.removeClass("disabled");
+                          $('#yes').hide();
+                          $('#no').hide();
+                    return false;
+                }else {
+                    btn.val("" + (time--) + "秒后可发送");
+                }
+            }, 1000);
+        }
+    </script>
+  </body>
+</html>

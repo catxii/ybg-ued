@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>云包公电商-电脑版</title>
+    <link href="libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- <link href="libs/glyphicons/css/glyphicons.css" rel="stylesheet"> -->
+    <link href="libs/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+    <div class="top-nav-bar">
+      <div class="all-page-width clearfix">
+        <div class="pull-right top-phone">
+            客服电话 <i class="icon-headphones"></i> 0731-88033822
+        </div>
+        <div class="pull-left clearfix">
+          <div class="pull-left logo">云包公logo</div>
+          <div class="pull-right page-title">欢迎登录</div>
+
+        </div>
+        
+      </div>
+    </div>
+    <div class="login-bg">
+      <div class="all-page-width card">
+        <div class="white-bg login-panel">
+            <div class="login-header">
+              <h1 class="model-title">修改手机号码<span>CHANGE PHONE</span></h1>
+            </div>
+            <ul class="step clearfix">
+              <li class="finish one"><a href="javascript:void(0)">验证手机号</a></li>
+              <li class="finish two"><a href="javascript:void(0)">验证信息</a></li>
+              <li class="three"><a href="javascript:void(0)">等待审核</a></li>
+            </ul>
+            <div class="login-content">
+              <ul class="input-list">
+                <li>
+                  <form class="form-horizontal">
+                    <div class="control-group">
+                      <label class="control-label" for="phone">企业名称</label>
+                      <div class="controls">
+                        <input type="text" id="phone" placeholder="请输入企业名称">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" for="phone">企业地址</label>
+                      <div class="controls">
+                        <input type="text" id="phone" placeholder="请输入详细地址">
+                      </div>
+                    </div>
+                    <div class="control-group">
+                      <label class="control-label" for="phone">联系方式</label>
+                      <div class="controls">
+                        <input type="text" id="phone" placeholder="请输入联系方式">
+                      </div>
+                    </div>
+                    
+                  </form>
+                </li>
+                <li class="clearfix btn-center">
+                  <a href="login-change-phone3.html" class="btn btn-primary btn-large">下一步</a>
+                </li>
+              </ul>
+              <div class="alert alert-error">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                手机号码已被占用
+              </div>
+              <!-- <div class="alert alert-success">
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                登陆成功，跳转中，请稍后...
+              </div> -->
+            </div>
+            <div class="login-footer clearfix">
+              <a href="login-index.html" class="default-color">已有账号返回登陆></a>
+              <a href="login-index.html" class="default-color pull-right">联系客服更换</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="footer">
+      本网站所有素材均有本公司或版权所有人授权发布，侵权必究。 湘ICP备15004864号-2
+    </div>
+
+
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="libs/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="libs/bootstrap-datetimepicker-master/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+    <script>
+        $(".form_datetime").datetimepicker({
+          language:  'zh-CN',
+          weekStart: 1,
+          todayBtn:  1,
+          autoclose: 1,
+          todayHighlight: 1,
+          startView: 2,
+          minView: 2,
+          forceParse: 0,
+          format: 'yyyy-mm-dd '
+        });
+    </script>
+  </body>
+</html>
