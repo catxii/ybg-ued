@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -13,28 +13,12 @@
 <body>
 	<!-- 顶部标题 -->
 	<header class="bar bar-nav">
-      
 	  <h1 class="title">工地管理</h1>
 	</header>
 	
-	<!-- 底部导航栏 -->
-	<nav class="bar bar-tab white-bg">
-	  <a class="tab-item"  data-transition="slide-out" href="mall.html">
-	    <span class="icon icon-cart-white"></span>
-	    <span class="tab-label">选购商品</span>
-	  </a>
-	  <a class="tab-item"  data-transition="slide-out" href="index-address.html">
-	    <span class="icon icon-address-white"></span>
-	    <span class="tab-label">工地管理</span>
-	  </a>
-	  <a class="tab-item current" href="me.html">
-	    <span class="icon icon-me-white"></span>
-	    <span class="tab-label">个人中心</span>
-	  </a>
-	</nav>
 
 	<!-- 页面内容区域 -->
-	<div class="content" id="me">
+	<!--<div class="content infinite-scroll-top" data-distance="100">
 	    <h1>数量控件</h1>
 	    <div style="position: relative; height: 100px; background: #ccc;">
 	    	<div class="count-ul clearfix">
@@ -44,44 +28,85 @@
 			</div>
 	    </div>
 
-	    <h1>可选择列表</h1>
-	    <div class="list-block media-list">
-		    <ul>
-			  <li>
-			    <label class="label-checkbox item-content">
-			      <input type="radio" name="my-radio">
-			      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
-			      <div class="item-inner">
-			        <div class="item-title-row">
-			          <div class="item-title">石头</div>
-			          <div class="item-after">17:14</div>
-			        </div>
-			        <div class="item-subtitle">New messages from John Doe</div>
-			        <div class="item-text">Lorem ipsum dolor sit amet...</div>
-			      </div>
-			    </label>
-			  </li>
-			  <li>
-			    <label class="label-checkbox item-content">
-			      <input type="radio" name="my-radio">
-			      <div class="item-media"><i class="icon icon-form-checkbox"></i></div>
-			      <div class="item-inner">
-			        <div class="item-title-row">
-			          <div class="item-title">剪刀</div>
-			          <div class="item-after">17:14</div>
-			        </div>
-			        <div class="item-subtitle">New messages from John Doe</div>
-			        <div class="item-text">Lorem ipsum dolor sit amet...</div>
-			      </div>
-			    </label>
-			  </li>
-			</ul>
-        </div>
+	</div> -->
+	
+	<div class="content infinite-scroll" id="demo" data-distance="100">
+		<a href="demo.html" >demo{{123}}</a>
+	    <div class="list-block">
+	        <ul class="list-container">
+	        </ul>
+	    </div>
+	    <!-- 加载提示符 -->
+	    <div class="infinite-scroll-preloader">
+	        <div class="preloader"></div>
+	    </div>
 	</div>
 
 	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
   	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
   	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
+  	<script type="text/javascript" src="http://cdn.bootcss.com/angular.js/1.5.0-beta.1/angular.min.js"></script>
 	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
+	<script>
+
+
+		$.init()
+		$.attachInfiniteScroll(".infinite-scroll");
+		// 加载flag
+	    var loading = false;
+	    // 最多可加载的条目
+	    var maxItems = 20;
+
+	    // 每次加载添加多少条目
+	    var itemsPerLoad = 2;
+
+	    function addItems(number, lastIndex) {
+	            // 生成新条目的HTML
+	            var html = '';
+	            for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
+	                html += '<div class="card card-margin " data-id="card-info-company"> <div class="card-header" ><div class="header-info"><span class="round-font-ball blue">泥沙</span><span class="price-span">15件商品，订单总额<span class="price">¥590.98</span></span></div></div><div class="card-content"><div class="list-block media-list"><ul><li class="item-content"><a href="saler_order_details.html" data-transition="slide-in" class="item-inner arrow-bg-padding-right"><div class="item-subtitle clearfix"><div class="black-color">霞霞 15467587655</div></div><div class="item-subtitle clearfix"><div class="black-color">湖南惠装装修有限公司</div></div></a></li></ul></div></div><div class="card-footer card-mini nobefore clearfix"><span class="pull-left" style="line-height:1.2rem;">待报价 | 待支付</span><span class="pull-right">2015-11-18 17:09:37 </span></div></div>';
+	            }
+	            // 添加新条目
+	            $('.list-container').append(html);
+
+	        }
+        //预先加载20条
+	    addItems(itemsPerLoad, 0);
+
+	    // 上次加载的序号
+	    var lastIndex = 2;
+	    // 注册'infinite'事件处理函数
+	    $(document).on('infinite', '.infinite-scroll',function() {
+
+	        // 如果正在加载，则退出
+	        if (loading) return;
+	        // 设置flag
+	        loading = true;
+
+	         // 模拟1s的加载过程
+        setTimeout(function() {
+            // 重置加载flag
+            loading = false;
+
+            if (lastIndex >= maxItems) {
+                // 加载完毕，则注销无限加载事件，以防不必要的加载
+                $.detachInfiniteScroll($('.infinite-scroll'));
+                // 删除加载提示符
+                $('.infinite-scroll-preloader').remove();
+                return;
+            }
+
+            // 添加新条目
+            addItems(itemsPerLoad, lastIndex);
+            // 更新最后加载的序号
+            lastIndex = $('.list-container li').length;
+            //容器发生改变,如果是js滚动，需要刷新滚动
+            $.refreshScroller();
+        }, 1000);
+	    });
+
+
+
+	</script>
 </body>
 </html>

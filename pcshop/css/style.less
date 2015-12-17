@@ -2,13 +2,31 @@
 * {
     box-sizing: content-box;
 } 
+.modal-body {
+	overflow-x: hidden;
+}
+.modal-backdrop {
+	*display: none;
+}
+.content-fix-box {
+    position: absolute;
+    top: 38px;
+    right: 0;
+    left: 100px;
+    bottom: 0;
+    overflow-y: auto;
+    padding:10px;
+    &.close-top-nav {
+		left: 35px;
+    }
+}
 .all-page-width {
-	width: 1080px;
+	width: 100%;
 	margin-left:auto;
 	margin-right:auto;
 	&.card {
 		padding:10px;
-		width: 1060px;
+		width: auto;
 	}
 }
 
@@ -19,17 +37,26 @@
 }
 
 .header {
-	background: #000;
-	height:30px;
-	line-height: 28px; 
-	color: white;
+	background: #0099cb;
+	height:45px;
+	line-height: 43px; 
+	color: white;    
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
 	.no-style {
+		padding-right: 10px;
 		.btn {
 			border:none;
-			background:none;
+			background:none!important;
 			color: white;
 			padding-top:3px;
 			padding-bottom:3px;
+			border:none;
+			box-shadow: none;
+			padding: 0;
 			.ybg-chevron-down {
 				color: white; 
 			}
@@ -45,15 +72,15 @@
 	text-align: center;
 	width: 100%;
 	line-height: 60px;
-	background:#333333;
-	color: white;
+	// background:#333333;
+	color: #ccc;
 	margin-top: 10px;
 }
 .top-search{
-	position: absolute;
-	top: 45px;
-	left: 50%;
-	margin-left: 270px;
+	position: fixed;
+    top: 7px;
+    right: 287px;
+    z-index: 1;
 }
 
 .top-nav-bar {
@@ -61,47 +88,70 @@
 	position: relative;
 	background: white;
 	.clearfix.pull-left {
-		width:240px;
+		width:250px;
 	}
 }
 .logo {
 	background: url("@{imgsrc}/logo_03.jpg") no-repeat center;
-	background-size:100%; 
-	width: 112px;
-	height: 40px;
-	overflow: hidden;
-	text-indent: -999px;
-	margin:10px 0;
+    background-size: 100%;
+    width: 80px;
+    height: 40px;
+    overflow: hidden;
+    text-indent: -999px;
+    margin: 3px 10px 0 12px;
+    float: left;
+}
+.logo-old {
+	background: url("@{imgsrc}/logo_03_old.jpg") no-repeat center;
+    background-size: 100%;
+    width: 100px;
+    height: 40px;
+    overflow: hidden;
+    text-indent: -999px;
+    margin: 9px 10px 0 12px;
+    float: left;
 }
 .top-nav {
-	position: absolute;
-	width:500px;
-	margin-left: 200px;
-	position: relative;
+    background: #293038;
+    position: absolute;
+    left: 0;
+    margin: 0;
+    width: 100px;
+    top: 45px;
+    bottom: 0;
 	li {
-		display: inline-block;
-		zoom:1;
-		*display:inline;
-		vertical-align: middle;
-		width: 24%;
-		text-align: center;
-		a {
-			line-height: 60px;
-			color: black;
-			font-size: 18px;
+		a{
+			padding-left: 10px;
 			display: block;
-			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			text-align: left;
 			text-decoration: none;
-			&:hover{
-				background:@gray;
+			color: #adb8c0;
+			cursor: pointer;
+			&:hover {
+				background: #0099cb;
 			}
 		}
 		&.current {
 			a {
-				background:@default-color;
-				color: white;
-				opacity: 1;
+				background: @default-color;
+				color: @white;
 			}
+		}
+		&.show-area-btn {
+			a {
+				padding-left: 0;
+				text-align: center;
+				background: #394555;
+			}
+		}
+
+	}
+	&.close-top-nav {
+		width: 35px;
+		.nav-font {
+			display: none;
 		}
 	}
 }
@@ -126,6 +176,9 @@
 		line-height: 40px;
 		width: 80px;
 		margin-right: 20px; 
+		a {
+			cursor: pointer;
+		}
 		&.title {
 			font-size:13px;
 			color: @unimportance-color;
@@ -215,9 +268,9 @@
 }
 
 .breadcrumb {
-	// background: white;
-	margin:10px 10px 0px 0;
-	padding:0;
+	background: white;
+	margin:10px 0px 0px 0;
+	padding:10px;
 }
 .todoarea {
 	a {
@@ -260,6 +313,7 @@
 .top-phone {
 	font-size:14px;
 	margin-top:30px;
+	margin-right: 25px;
 	i {
 		margin-left: 15px;
 	}
@@ -276,8 +330,9 @@
 			width: 365px; 
 			top:20px;
 			bottom: 20px;
-			right: 0;
+			left: 50%;
 			padding: 20px;
+			margin-left: 113px;
 			// opacity: .9;
 			.model-title {
 				font-size: 24px;
@@ -569,7 +624,8 @@
 #myModalLabel {
 	font-size:16px;	
 }
-.wx-tb {
+.wx-tb { 
+	*margin: 0;
 	.wx,.zfb {
 		display: inline-block;
 		zoom:1;
@@ -622,4 +678,121 @@
 }
 form {
     margin: 0;
+}
+
+.empty-info {
+	text-align: center;
+	line-height: 200px;
+	font-size: 14px;
+}
+
+.saosao {
+	margin-right: 10px;
+	position: relative;
+	padding: 0 10px;
+	border-right: 1px solid #008ebd;
+	border-left: 1px solid #008ebd;
+	span {
+		vertical-align: middle;
+	}
+	.erweima {
+		display: none;
+	}
+	&:hover {
+		background: #008fbf;
+		.erweima {
+			display: block;
+			position: absolute;
+			width: 300px;
+			right: 0;
+			top: 45px;
+			z-index: 111;
+			padding: 50px 50px 20px;
+			background: #000;
+			opacity: .8;
+			img {
+				width: 300px;
+				height: 300px;
+				display: block;
+			}
+			span {
+				display: block;
+				text-align: center;
+				line-height: 50px;
+				font-size:16px;
+			}
+		}
+	}
+}
+
+.phone-ico {
+	background: url("@{imgsrc}/phone-ico_03.png") no-repeat center;
+	display: inline-block;
+	zoom:1;
+	vertical-align:middle;
+	width: 15px;
+	height: 30px;
+}
+
+.login-welcome {
+    background-image: none;
+    position: absolute;
+    left: 50%;
+    margin-left: -290px;
+    top: 50%;
+    margin-top: -280px;
+}
+.welcome-box {
+    width: 560px;
+    margin: 70px auto;
+    p {
+    	font-size: 20px;
+	    color: white;
+	    font-weight: bolder;
+    }
+    ul {
+    	margin: 0;
+    	text-align: center;
+    	li {
+	        display: inline-block;
+		    vertical-align: middle;
+		    width: 24%;
+		    text-align: center;
+		    padding: 9px 4%;
+		    position: relative;
+		    .box {
+		    	color: #0099cb;
+			    background: #fff;
+			    padding: 15px;
+			    border-radius: 9px;
+			    text-align: center;
+			    display: none;
+			    box-shadow: 3px 3px 0;
+			    position: absolute;
+			    bottom: -70px;
+		    }
+		    a {
+			    width: 100%;
+			    display: block;
+			    text-align: center;
+			    background: #000;
+			    height: 134px;
+			    border-radius: 120px;
+			    line-height: 134px;
+			    font-size: 20px;
+			    color: #fff;
+			    opacity: .5;
+			    font-weight: bolder;
+			    box-shadow: 5px 5px 0px #0099cb;
+			    text-decoration: none;
+			    &:hover {
+					opacity: .7;
+					box-shadow: none;
+			    }
+			}
+			&:hover .box {
+				display: block;
+			}
+		}
+    }
 }

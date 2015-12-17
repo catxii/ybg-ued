@@ -19,12 +19,14 @@
 
     <div class="header">
       <div class="all-page-width clearfix">
+        <div class="logo">云包公logo</div>
         <div class="pull-right text-right">
-          <span class="label">未认证</span>
-          你好，13112345678
+          <span class="label label-important">未认证</span>
+          
           <!-- 下拉按钮 -->
           <div class="btn-group no-style">
               <button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                13112345678
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
@@ -35,12 +37,25 @@
               </ul>
           </div>
         </div>
+        <div class="pull-right saosao">
+          <i class="phone-ico"></i> 手机微信版
+          <div class="erweima">
+            <img src="img/erweima.png"> 
+            <span>使用微信扫一扫，立即进入微信用户端</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="top-nav-bar">
-      <div class="all-page-width clearfix">
-        <div class="pull-right top-search">
+    <ul class="top-nav ">
+      <li class="show-area-btn"><a href="javascript:void(0)"><i class=" icon-minus icon-white"></i></a></li>
+      <li><a href="index.html"><i class="icon-home icon-white"></i> <span class="nav-font">首页</span></a></li>
+      <li class="current"><a href="object-index.html"><i class="icon-user icon-white"></i> <span class="nav-font">项目经理</span></a></li>
+      <li><a href="address-index.html"><i class="icon-globe icon-white"></i> <span class="nav-font">施工工地</span></a></li>
+      <li><a href="#"><i class="icon-shopping-cart icon-white"></i> <span class="nav-font">辅材商城</span></a></li>
+    </ul>
+
+    <div class="pull-right top-search">
             <div class="input-prepend input-append">
               <div class="btn-group">
                 <button class="btn dropdown-toggle" data-toggle="dropdown">
@@ -57,172 +72,162 @@
               <button class="btn btn-primary" type="button"><i class="icon-search icon-white"></i></button>
             </div>
         </div>
-        <div class="pull-left">
-          <div class="logo">云包公logo</div>
-        </div>
-        <ul class="top-nav">
-          <li><a href="index.html">首页</a></li>
-          <li class="current"><a href="object-index.html">项目经理</a></li>
-          <li><a href="address-index.html">施工工地</a></li>
-          <li><a href="#">辅材商城</a></li>
-        </ul>
-        
-      </div>
-    </div>
     
-    <div class="all-page-width">
-      <ul class="breadcrumb">
-        <li class="gray-color">当前位置：</li>
-        <li><a href="index.html">首页</a> <span class="divider">></span></li>
-        <li><a href="object-index.html">项目经理</a>  <span class="divider">></span></li>
-        <li><a href="object-index.html">项目经理</a>  <span class="divider">></span></li>
-      </ul>
-    </div>
-
-    <div class="all-page-width card padding white-bg">
-      <ul class="nav nav-tabs">
-        <li><a href="#home" data-toggle="tab">基本信息</a></li>
-        <li class="active"><a href="#profile" data-toggle="tab">工地信息</a></li>
-        <li><a href="#messages" data-toggle="tab">订单信息</a></li>
-      </ul>
-
-      <!-- <div class="do-info-area">
-        <a href="javascript:void(0)" class="btn btn-primary">批量导出Excel</a> 
-      </div> -->
-
-      <table class="table table-hover text-center ">
-        <tr class="table-important">
-          <td>序号</td>
-          <td>城市</td>
-          <td>区域</td>
-          <td>工地名称</td>
-          <td>工地地址</td>
-          <td>工地状态</td>
-          <td>项目经理</td>
-          <td>联系方式</td>
-          <td>订单数量</td>
-          <td>订单总额</td>
-          <td>操作</td>
-        </tr>
-        <tr>
-          <td>1</td>
-          <td>长沙</td>
-          <td>雨花区</td>
-          <td>金域华府一期</td>
-          <td>雨花区万家丽路586号</td>
-          <td>未动工</td>
-          <td>/</td>
-          <td>13145675655</td>
-          <td>13</td>
-          <td>￥5020</td>
-          <td class="todoarea">
-            <a class="default-color" href="#">指派</a>
-            <a class="default-color" href="#">查看</a>
-          </td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>长沙</td>
-          <td>雨花区</td>
-          <td>金域华府一期</td>
-          <td>雨花区万家丽路586号</td>
-          <td>未动工</td>
-          <td>/</td>
-          <td>13145675655</td>
-          <td>13</td>
-          <td>￥5020</td>
-          <td class="todoarea">
-            <a class="default-color" href="#">指派</a>
-            <a class="default-color" href="#">查看</a>
-          </td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>长沙</td>
-          <td>雨花区</td>
-          <td>金域华府一期</td>
-          <td>雨花区万家丽路586号</td>
-          <td>未动工</td>
-          <td>/</td>
-          <td>13145675655</td>
-          <td>13</td>
-          <td>￥5020</td>
-          <td class="todoarea">
-            <a class="default-color" href="#">指派</a>
-            <a class="default-color" href="#">查看</a>
-          </td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>长沙</td>
-          <td>雨花区</td>
-          <td>金域华府一期</td>
-          <td>雨花区万家丽路586号</td>
-          <td>未动工</td>
-          <td>/</td>
-          <td>13145675655</td>
-          <td>13</td>
-          <td>￥5020</td>
-          <td class="todoarea">
-            <a class="default-color" href="#">指派</a>
-            <a class="default-color" href="#">查看</a>
-          </td>
-        </tr>
-        <tr>
-          <td>5</td>
-          <td>长沙</td>
-          <td>雨花区</td>
-          <td>金域华府一期</td>
-          <td>雨花区万家丽路586号</td>
-          <td>未动工</td>
-          <td>/</td>
-          <td>13145675655</td>
-          <td>13</td>
-          <td>￥5020</td>
-          <td class="todoarea">
-            <a class="default-color" href="#">指派</a>
-            <a class="default-color" href="#">查看</a>
-          </td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>长沙</td>
-          <td>雨花区</td>
-          <td>金域华府一期</td>
-          <td>雨花区万家丽路586号</td>
-          <td>未动工</td>
-          <td>/</td>
-          <td>13145675655</td>
-          <td>13</td>
-          <td>￥5020</td>
-          <td class="todoarea">
-            <a class="default-color" href="#">指派</a>
-            <a class="default-color" href="#">查看</a>
-          </td>
-        </tr>
-      </table>
-      
-      <div class="pagination  pagination-centered pageination-style">
-        <ul>
-          <li><a href="#"><i class="icon-step-backward"></i></a></li>
-          <li><a href="#"><i class="icon-chevron-left"></i></a></li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#"><i class="icon-chevron-right"></i></a></li>
-          <li><a href="#"><i class="icon-step-forward"></i></a></li>
-          <li>
-            <span class="no-style-span">到</span><input type="text" style="width:30px;"><span class="no-style-span">页</span><a href="javascript:void(0)" class="no-style default-color">跳转</a>
-          </li>
-          <li class="all-page-number "><a class="no-style" href="javascript:void(0)">共 11 页</a></li>
+    <div class="content-fix-box ">
+      <div class="all-page-width">
+        <ul class="breadcrumb">
+          <li class="gray-color">当前位置：</li>
+          <li><a href="index.html">首页</a> <span class="divider">></span></li>
+          <li><a href="object-index.html">项目经理</a>  <span class="divider">></span></li>
+          <li><a href="object-index.html">项目经理</a>  <span class="divider">></span></li>
         </ul>
       </div>
-    </div>
 
-    <div class="footer">
-      本网站所有素材均有本公司或版权所有人授权发布，侵权必究。 湘ICP备15004864号-2
+      <div class="all-page-width card padding white-bg">
+        <ul class="nav nav-tabs">
+          <li><a href="#home" data-toggle="tab">基本信息</a></li>
+          <li class="active"><a href="#profile" data-toggle="tab">工地信息</a></li>
+          <li><a href="#messages" data-toggle="tab">订单信息</a></li>
+        </ul>
+
+        <!-- <div class="do-info-area">
+          <a href="javascript:void(0)" class="btn btn-primary">批量导出Excel</a> 
+        </div> -->
+
+        <table class="table table-hover text-center ">
+          <tr class="table-important">
+            <td>序号</td>
+            <td>城市</td>
+            <td>区域</td>
+            <td>工地名称</td>
+            <td>工地地址</td>
+            <td>工地状态</td>
+            <td>项目经理</td>
+            <td>联系方式</td>
+            <td>订单数量</td>
+            <td>订单总额</td>
+            <td>操作</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>长沙</td>
+            <td>雨花区</td>
+            <td>金域华府一期</td>
+            <td>雨花区万家丽路586号</td>
+            <td>未动工</td>
+            <td>/</td>
+            <td>13145675655</td>
+            <td>13</td>
+            <td>￥5020</td>
+            <td class="todoarea">
+              <a class="default-color" href="#">指派</a>
+              <a class="default-color" href="#">查看</a>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>长沙</td>
+            <td>雨花区</td>
+            <td>金域华府一期</td>
+            <td>雨花区万家丽路586号</td>
+            <td>未动工</td>
+            <td>/</td>
+            <td>13145675655</td>
+            <td>13</td>
+            <td>￥5020</td>
+            <td class="todoarea">
+              <a class="default-color" href="#">指派</a>
+              <a class="default-color" href="#">查看</a>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>长沙</td>
+            <td>雨花区</td>
+            <td>金域华府一期</td>
+            <td>雨花区万家丽路586号</td>
+            <td>未动工</td>
+            <td>/</td>
+            <td>13145675655</td>
+            <td>13</td>
+            <td>￥5020</td>
+            <td class="todoarea">
+              <a class="default-color" href="#">指派</a>
+              <a class="default-color" href="#">查看</a>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>长沙</td>
+            <td>雨花区</td>
+            <td>金域华府一期</td>
+            <td>雨花区万家丽路586号</td>
+            <td>未动工</td>
+            <td>/</td>
+            <td>13145675655</td>
+            <td>13</td>
+            <td>￥5020</td>
+            <td class="todoarea">
+              <a class="default-color" href="#">指派</a>
+              <a class="default-color" href="#">查看</a>
+            </td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>长沙</td>
+            <td>雨花区</td>
+            <td>金域华府一期</td>
+            <td>雨花区万家丽路586号</td>
+            <td>未动工</td>
+            <td>/</td>
+            <td>13145675655</td>
+            <td>13</td>
+            <td>￥5020</td>
+            <td class="todoarea">
+              <a class="default-color" href="#">指派</a>
+              <a class="default-color" href="#">查看</a>
+            </td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>长沙</td>
+            <td>雨花区</td>
+            <td>金域华府一期</td>
+            <td>雨花区万家丽路586号</td>
+            <td>未动工</td>
+            <td>/</td>
+            <td>13145675655</td>
+            <td>13</td>
+            <td>￥5020</td>
+            <td class="todoarea">
+              <a class="default-color" href="#">指派</a>
+              <a class="default-color" href="#">查看</a>
+            </td>
+          </tr>
+        </table>
+        
+        <div class="pagination  pagination-centered pageination-style">
+          <ul>
+            <li><a href="#"><i class="icon-step-backward"></i></a></li>
+            <li><a href="#"><i class="icon-chevron-left"></i></a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#"><i class="icon-chevron-right"></i></a></li>
+            <li><a href="#"><i class="icon-step-forward"></i></a></li>
+            <li>
+              <span class="no-style-span">到</span><input type="text" style="width:30px;"><span class="no-style-span">页</span><a href="javascript:void(0)" class="no-style default-color">跳转</a>
+            </li>
+            <li class="all-page-number "><a class="no-style" href="javascript:void(0)">共 11 页</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer">
+        本网站所有素材均有本公司或版权所有人授权发布，侵权必究。 湘ICP备15004864号-2
+      </div>
     </div>
 
 

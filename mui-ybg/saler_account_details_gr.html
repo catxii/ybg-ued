@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>云包公-工地管理</title>
+    <link rel="stylesheet" href="libs/sui/css/sm.min.css">
+    <link rel="stylesheet" href="libs/sui/css/sm-extend.min.css">
+<link rel="stylesheet" href="libs/alifontico/iconfont.css">
+<link rel="stylesheet" href="css/style-plugin.css?v=1">
+    <link rel="stylesheet" href="libs/glyphicons/css/glyphicons.css">
+</head>
+<body>
+	<!-- 顶部标题 -->
+	<header class="bar bar-nav default-style">
+		
+		
+		 <a class="icon icon-left pull-left" href="saler-client-index.html" data-transition="slide-out"></a> 
+		<h1 class="title">宦帆装饰公司</h1>
+	</header>
+
+	<!-- 底部导航栏 -->
+	<nav class="bar bar-tab bar-mini has-border" style="display:block;">
+		<a class="tab-item" href="#" >
+			<span class="icon icon-phone"></span>
+			<span class="tab-label">联系客户</span>
+		</a>
+		<a class="tab-item " data-transition="slide-in" href="#">
+			<span class="icon icon-cart"></span>
+			<span class="tab-label">代客下单</span>
+		</a>
+		
+
+	</nav>
+	
+
+	<!-- 页面内容区域 -->
+	<div class="content">
+		<style type="text/css">
+			.content {
+			    bottom:2.5rem!important;
+			}
+			.bar-tab {
+			    display: block;
+			}
+		</style>  
+		<!-- warning 配送中 &&  success 配送完成 -->
+		<div class="status-area information"> 
+			<div class="alert-box alert-information">
+				<i class="icon icon-geren-v1 icon-ball diamond large"></i>
+				<h4>共 15 笔订单</h4>
+				<p class="info">应付 <span class='price'>¥62000</span>，已付 <span class='price'>¥42000</span>，剩余 <span class='price'>¥20000</span></p>
+			</div>
+		</div>
+		<!-- <div class="address-area no-padding-right">
+			<ul class="area-info">
+				<li>刘江 13456787656</li>
+				<li class="address-detail">长沙市雨花区万家丽路2345号万科金域华府3栋1104</li>
+			</ul>			
+		</div> --> 
+
+		<div class="address-module">
+			<div class="header-title clearfix" style="margin:0;">
+				<div class="pull-left">
+					<i class="blue-line"></i> 
+					<span class="icon-middle-span">最新订单</span>
+				</div>
+				<div class="pull-right">
+					<a class="button button-sm" href="#">查看全部订单</a>
+				</div>
+			</div>
+		
+			<div class="card card-margin " data-id="card-info-company">
+			 	<div class="card-header" >
+					<div class="header-info">
+				    	<span class="round-font-ball blue">泥沙</span>
+				    	<span class="price-span">15件商品，订单总额
+							<span class="price">¥590.98</span>
+				    	</span>
+					</div>
+			    </div>
+			    <div class="card-content">
+			      <div class="list-block media-list">
+			        <ul>
+			          <li class="item-content">
+			            <a href="saler_order_details.html" data-transition="slide-in" class="item-inner arrow-bg-padding-right">
+			              <div class="item-subtitle clearfix">
+			              	<div class="black-color">霞霞 15467587655</div>
+			              </div>
+			              <div class="item-subtitle clearfix">
+			              	<div class="black-color">湖南惠装装修有限公司</div>
+			              </div>
+			            </a>
+			          </li>
+			        </ul>
+			      </div>
+			    </div>
+			    <div class="card-footer card-mini nobefore clearfix">
+			    	<span class="pull-left" style="line-height:1.2rem;">待报价 | 待支付</span>
+				    <span class="pull-right">2015-11-18 17:09:37 </span>
+			    </div>
+			</div>
+
+		</div>  
+
+		<div class="address-module">
+
+			<div class="header-title clearfix" style="margin:0;">
+				<div class="pull-left">
+					<i class="blue-line"></i> 
+					<span class="icon-middle-span">订单统计</span>
+				</div>
+			</div>
+			
+			<div class="padding">
+
+				<div class="card">
+				    <div class="card-content" onclick="javascript:window.location.href='saler_account_details_gr.html'">
+				      <div class="list-block media-list">
+				        <ul>
+				          <li class="item-content">
+				            <div class="item-media">
+				              <i class="icon icon-qiye-v1"></i>
+				            </div>
+				            <div class="item-inner">
+				              <div class="item-title-row">
+				              <div class="item-title">吴江</div>
+				              </div>
+				              <div class="item-subtitle">13467607677</div>
+				            </div>
+				            <div class="item-after account-info">
+								<ul class="inline-block-ul">
+									<li style="border:none; margin-right:.7rem;"><span class="number">木工</span><span class="gray">当前阶段</span></li>
+								</ul>
+				            </div>
+				          </li>
+				        </ul>
+				      </div>
+				    </div>
+				    <div class="card-footer">
+				    	<span>共 3 笔订单</span>
+				      	<a href="#" class="button  button-warning open_btn">点击展开</a>
+				    </div>
+				    <div class="card-footer order-list-info">
+				    	<div class="list-block media-list" style="width:100%;">
+					    	<ul class="saler-ul small">
+					      		<li>
+					          		<div class="item-inner">
+					              			<div class="item-title">商品清单</div>
+					          		</div>
+					      		</li>
+					      		<li>
+					          		<div class="item-inner">
+					            		<div class="item-title-row">
+					            			<div>水电</div>
+					            			<div>应付:<span class="price">¥1000</span></div>
+					            			<div>已付:<span class="price">¥1000</span></div>
+					            			<div>剩余:<span class="price">¥1000</span></div>
+					              		</div>
+					              	</div>
+					      		</li>
+					      		<li>
+					          		<div class="item-inner">
+					            		<div class="item-title-row">
+					            			<div>泥工</div>
+					            			<div>应付:<span class="price">¥1000</span></div>
+					            			<div>已付:<span class="price">¥1000</span></div>
+					            			<div>剩余:<span class="price">¥1000</span></div>
+					              		</div>
+					              	</div>
+					      		</li>
+					      		<li>
+					          		<div class="item-inner">
+					            		<div class="item-title-row">
+					            			<div>木工</div>
+					            			<div>应付:<span class="price">¥1000</span></div>
+					            			<div>已付:<span class="price">¥1000</span></div>
+					            			<div>剩余:<span class="price">¥1000</span></div>
+					              		</div>
+					              	</div>
+					      		</li>
+					      		<li>
+					          		<div class="item-inner">
+					            		<div class="item-title-row">
+					            			<div>木工</div>
+					            			<div>暂时还没有订单</div>
+					              		</div>
+					              	</div>
+					      		</li>
+					      		<li>
+					          		<div class="item-inner">
+					            		<div class="item-title-row">
+					            			<div>油漆</div>
+					            			<div>未开始</div>
+					              		</div>
+					              	</div>
+					      		</li>
+					      		<li>
+					          		<div class="item-inner">
+					            		<div class="item-title-row">
+					            			<div>总计</div>
+					            			<div>应付:<span class="price">¥1000</span></div>
+					            			<div>已付:<span class="price">¥1000</span></div>
+					            			<div>剩余:<span class="price">¥1000</span></div>
+					              		</div>
+					              	</div>
+					      		</li>
+					    	</ul>
+					 	</div>
+				    </div>
+				</div> 
+
+				<div class="card">
+				    <div class="card-content" onclick="javascript:window.location.href='saler_account_details_gr.html'">
+				      <div class="list-block media-list">
+				        <ul>
+				          <li class="item-content">
+				            <div class="item-media">
+				              <i class="icon icon-qiye-v1"></i>
+				            </div>
+				            <div class="item-inner">
+				              <div class="item-title-row">
+				              <div class="item-title">吴江</div>
+				              </div>
+				              <div class="item-subtitle">13467607677</div>
+				            </div>
+				            <div class="item-after account-info">
+								<ul class="inline-block-ul">
+									<li style="border:none; margin-right:.7rem;"><span class="number">木工</span><span class="gray">当前阶段</span></li>
+								</ul>
+				            </div>
+				          </li>
+				        </ul>
+				      </div>
+				    </div>
+				    <div class="card-footer">
+				    	<span>共 3 笔订单</span>
+				      	<a href="#" class="button  button-warning open_btn">点击展开</a>
+				    </div>
+				    <div class="card-footer order-list-info">
+				    	<div class="list-block media-list" style="width:100%;">
+					    	<ul class="saler-ul small">
+					      		<li>
+					          		<div class="item-inner">
+					              			<div class="item-title">商品清单</div>
+					          		</div>
+					      		</li>
+					      		<li>
+					          		<div class="item-inner">
+					            		<div class="item-title-row">
+					            			<div>水电</div>
+					            			<div>应付:<span class="price">¥1000</span></div>
+					            			<div>已付:<span class="price">¥1000</span></div>
+					            			<div>剩余:<span class="price">¥1000</span></div>
+					              		</div>
+					              	</div>
+					      		</li>
+					      		<li>
+					          		<div class="item-inner">
+					            		<div class="item-title-row">
+					            			<div>泥工</div>
+					            			<div>应付:<span class="price">¥1000</span></div>
+					            			<div>已付:<span class="price">¥1000</span></div>
+					            			<div>剩余:<span class="price">¥1000</span></div>
+					              		</div>
+					              	</div>
+					      		</li>
+					      		<li>
+					          		<div class="item-inner">
+					            		<div class="item-title-row">
+					            			<div>木工</div>
+					            			<div>应付:<span class="price">¥1000</span></div>
+					            			<div>已付:<span class="price">¥1000</span></div>
+					            			<div>剩余:<span class="price">¥1000</span></div>
+					              		</div>
+					              	</div>
+					      		</li>
+					      		<li>
+					          		<div class="item-inner">
+					            		<div class="item-title-row">
+					            			<div>木工</div>
+					            			<div>暂时还没有订单</div>
+					              		</div>
+					              	</div>
+					      		</li>
+					      		<li>
+					          		<div class="item-inner">
+					            		<div class="item-title-row">
+					            			<div>油漆</div>
+					            			<div>未开始</div>
+					              		</div>
+					              	</div>
+					      		</li>
+					      		<li>
+					          		<div class="item-inner">
+					            		<div class="item-title-row">
+					            			<div>总计</div>
+					            			<div>应付:<span class="price">¥1000</span></div>
+					            			<div>已付:<span class="price">¥1000</span></div>
+					            			<div>剩余:<span class="price">¥1000</span></div>
+					              		</div>
+					              	</div>
+					      		</li>
+					    	</ul>
+					 	</div>
+				    </div>
+				</div> 
+
+			</div>
+
+		</div>  
+
+
+
+		<div class="address-module">
+			<div class="header-title clearfix" style="margin:0;border-bottom: none;">
+				<div class="pull-left">
+					<i class="blue-line"></i> 
+					<span class="icon-middle-span">隶属公司</span>
+				</div>
+			</div>
+			<div class="list-block" style="margin-top:0;">
+				<ul>
+				  	<li class="item-content item-link">
+				        <div class="item-media"><i class="icon icon-qiye-v1 finish"></i></div>
+				        <div class="item-inner">
+				          <div class="item-title">柠檬树装饰公司</div>
+				          <div class="item-after small success-color">已认证</div>
+				        </div>
+			    	</li>
+			    	<li class="item-content item-link">
+				        <div class="item-media"><i class="icon icon-qiye-v1"></i></div>
+				        <div class="item-inner">
+				          <div class="item-title">柠檬树装饰公司</div>
+				          <div class="item-after small danger-color">未认证</div>
+				        </div>
+			    	</li>
+			    	<li class="item-content item-link">
+				        <div class="item-media"><i class="icon icon-qiye-v1"></i></div>
+				        <div class="item-inner">
+				          <div class="item-title">柠檬树装饰公司</div>
+				          <div class="item-after small">未认证</div>
+				        </div>
+			    	</li>
+				</ul>
+			</div>
+
+		</div>  
+
+
+
+		 		
+	</div>
+
+	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
+  	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
+  	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
+	<script>
+	$(function(){
+		$(document).on("click",".open_btn",function(){
+			//隐藏订单信息
+			var order_info = $(this).parent().siblings(".order-list-info");
+			order_info.toggle();
+		})
+	})
+	</script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>云包公-工地管理</title>
+    <link rel="stylesheet" href="libs/sui/css/sm.min.css">
+    <link rel="stylesheet" href="libs/sui/css/sm-extend.min.css">
+<link rel="stylesheet" href="libs/alifontico/iconfont.css">
+<link rel="stylesheet" href="css/style-plugin.css">
+    
+</head>
+<body>
+	<!-- 顶部标题 -->
+	<header class="bar bar-nav default-style">
+		<h1 class="title">订单</h1>
+	</header>
+	
+	<!-- 底部导航栏 -->
+	<nav class="bar bar-tab white-bg">
+	  <a class="tab-item current" data-transition="slide-in" href="saler_order_list.html" data-ignore="push">
+	    <span class="icon icon-orderlist-gray"></span>
+	    <span class="tab-label">订单</span>
+	  </a>
+	  <a class="tab-item" href="saler-client-index.html">
+	    <span class="icon icon-clients-gray"></span>
+	    <span class="tab-label">客户</span>
+	  </a>
+	  <!-- <a class="tab-item" data-transition="slide-in" href="saler-message-index.html">
+	    <span class="icon icon-message-gray"></span>
+	    <span class="tab-label">消息</span>
+	  </a> -->
+	  <a class="tab-item" data-transition="slide-in" href="saler_me_index.html">
+	    <span class="icon icon-me-round-gray"></span>
+	    <span class="tab-label">我的</span>
+	  </a>
+
+	</nav>
+	
+	<!-- 搜索栏 -->
+	<div class="bar bar-header-secondary white-bg bar-header-puls" >
+	  <div class="searchbar" >
+	    <!-- <a class="searchbar-cancel">取消</a> -->
+	    <div class="search-input  btn-right">
+	      <label class="icon icon-search" for="search"></label>
+	      <input type="search" id='search' placeholder='输入关键字...'/>
+	    </div>
+	  </div>
+	  <div class="black-top-area still-white bar bar-header-secondary">
+			<ul class="five-ul">
+				<li  class="current">
+					<a data-transition="slide-out" href="#">全部</a>
+				</li>
+				<li>
+					<a data-transition="slide-out" href="#">待报价</a>
+				</li>
+				<li>
+					<a data-transition="slide-out" href="#">待确认</a>
+				</li>
+				<li>
+					<a data-transition="slide-in" href="#">待支付<i style="font-size:10px;">1</i></a>
+				</li>
+				<li>
+					<a data-transition="slide-in" href="#">待签收<i style="font-size:10px;">1</i></a>
+				</li>
+			</ul>
+	</div>
+	</div>
+
+
+	<!-- 页面内容区域 -->
+	<div class="content infinite-scroll" data-distance="100" id="client_index">
+		<style type="text/css">
+			.content {
+			    bottom:2.2rem!important;
+			    top: 7rem!important;
+			}
+			.bar-tab {
+			    display: block;
+			}
+		</style>   
+
+		 <div class="card card-margin " data-id="card-info-company">
+		 	<div class="card-header" >
+		 		<div class="header-info">
+			    	<span class="round-font-ball blue">泥沙</span>
+			    	<span class="price-span">总额:
+			    		<span class="price">¥590.98</span>
+			    	</span>   
+			    	<span class="price-span">未收:
+						<span class="price">¥590.98</span>
+			    	</span>
+				</div>
+		    </div>
+		    <div class="card-content">
+		      <div class="list-block media-list">
+		        <ul>
+		          <li class="item-content">
+		            <a href="saler_order_details.html" data-transition="slide-in" class="item-inner arrow-bg-padding-right">
+		              <div class="item-subtitle clearfix">
+		              	<div class="black-color">霞霞 15467587655</div>
+		              </div>
+		              <div class="item-subtitle clearfix">
+		              	<div class="black-color">湖南惠装装修有限公司</div>
+		              </div>
+		            </a>
+		          </li>
+		        </ul>
+		      </div>
+		    </div>
+		    <div class="card-footer card-mini nobefore clearfix">
+		    	<span class="pull-left" style="line-height:1.2rem;">待报价 | 待支付</span>
+			    <span class="pull-right">2015-11-18 17:09:37 </span>
+		    </div>
+		    <ul class="card-footer inline-block-ul do-area clearfix">
+		    	<li>
+		    		<a href="javascript:void(0);"  class="button button-primary getphoto" style="font-size:.6rem;"><span class="icon icon-search"></span> 查看订单</a>
+		    	</li>
+		    	<li>
+		    		<a href="javascript:void(0);"  class="button button-danger getphoto" style="font-size:.6rem;"><span class="icon icon-remove"></span> 删除订单</a>
+		    	</li>
+		    </ul>
+		 </div>    
+
+		 <div class="card card-margin " data-id="card-info-company">
+		 	<div class="card-header" >
+		 		<div class="header-info">
+			    	<span class="round-font-ball blue">泥沙</span>
+			    	<span class="price-span">总额:
+			    		<span class="price">¥590.98</span>
+			    	</span>   
+			    	<span class="price-span">未收:
+						<span class="price">¥590.98</span>
+			    	</span>
+				</div>
+		    </div>
+		    <div class="card-content">
+		      <div class="list-block media-list">
+		        <ul>
+		          <li class="item-content">
+		            <a href="saler_order_details.html" data-transition="slide-in" class="item-inner arrow-bg-padding-right">
+		              <div class="item-subtitle clearfix">
+		              	<div class="black-color">霞霞 15467587655</div>
+		              </div>
+		              <div class="item-subtitle clearfix">
+		              	<div class="black-color">湖南惠装装修有限公司</div>
+		              </div>
+		            </a>
+		          </li>
+		        </ul>
+		      </div>
+		    </div>
+		    <div class="card-footer card-mini nobefore clearfix">
+		    	<span class="pull-left" style="line-height:1.2rem;">待报价 | 待支付</span>
+			    <span class="pull-right">2015-11-18 17:09:37 </span>
+		    </div>
+		    <ul class="card-footer inline-block-ul do-area clearfix">
+		    	<li>
+		    		<a href="javascript:void(0);"  class="button button-primary getphoto" style="font-size:.6rem;"><span class="icon icon-search"></span> 查看订单</a>
+		    	</li>
+		    	<li>
+		    		<a href="javascript:void(0);"  class="button button-danger getphoto" style="font-size:.6rem;"><span class="icon icon-remove"></span> 删除订单</a>
+		    	</li>
+		    </ul>
+		 </div>   
+
+		 <div class="card card-margin " data-id="card-info-company">
+		 	<div class="card-header" >
+		 		<div class="header-info">
+			    	<span class="round-font-ball blue">泥沙</span>
+			    	<span class="price-span">总额:
+			    		<span class="price">¥590.98</span>
+			    	</span>   
+			    	<span class="price-span">未收:
+						<span class="price">¥590.98</span>
+			    	</span>
+				</div>
+		    </div>
+		    <div class="card-content">
+		      <div class="list-block media-list">
+		        <ul>
+		          <li class="item-content">
+		            <a href="saler_order_details.html" data-transition="slide-in" class="item-inner arrow-bg-padding-right">
+		              <div class="item-subtitle clearfix">
+		              	<div class="black-color">霞霞 15467587655</div>
+		              </div>
+		              <div class="item-subtitle clearfix">
+		              	<div class="black-color">湖南惠装装修有限公司</div>
+		              </div>
+		            </a>
+		          </li>
+		        </ul>
+		      </div>
+		    </div>
+		    <div class="card-footer card-mini nobefore clearfix">
+		    	<span class="pull-left" style="line-height:1.2rem;">待报价 | 待支付</span>
+			    <span class="pull-right">2015-11-18 17:09:37 </span>
+		    </div>
+		    <ul class="card-footer inline-block-ul do-area clearfix">
+		    	<li>
+		    		<a href="javascript:void(0);"  class="button button-primary getphoto" style="font-size:.6rem;"><span class="icon icon-search"></span> 查看订单</a>
+		    	</li>
+		    	<li>
+		    		<a href="javascript:void(0);"  class="button button-danger getphoto" style="font-size:.6rem;"><span class="icon icon-remove"></span> 删除订单</a>
+		    	</li>
+		    </ul>
+		 </div>   
+
+		 <!-- 加载提示符 -->
+	    <div class="infinite-scroll-preloader">
+	        <div class="preloader"></div>
+	    </div>
+
+		  	
+
+		
+	</div>
+
+	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
+  	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
+  	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
+  	<script>
+  	$(function(){
+  		
+		$.init()
+		$.attachInfiniteScroll(".infinite-scroll");
+		// 加载flag
+	    var loading = false;
+	    // 最多可加载的条目
+	    var maxItems = 20;
+
+	    // 每次加载添加多少条目
+	    var itemsPerLoad = 2;
+
+	    function addItems(number, lastIndex) {
+	            // 生成新条目的HTML
+	            var html = '';
+	            for (var i = lastIndex + 1; i <= lastIndex + number; i++) {
+	                html += '<div class="card card-margin " data-id="card-info-company"> <div class="card-header" ><div class="header-info"><span class="round-font-ball blue">泥沙</span><span class="price-span">15件商品，订单总额<span class="price">¥590.98</span></span></div></div><div class="card-content"><div class="list-block media-list"><ul><li class="item-content"><a href="saler_order_details.html" data-transition="slide-in" class="item-inner arrow-bg-padding-right"><div class="item-subtitle clearfix"><div class="black-color">霞霞 15467587655</div></div><div class="item-subtitle clearfix"><div class="black-color">湖南惠装装修有限公司</div></div></a></li></ul></div></div><div class="card-footer card-mini nobefore clearfix"><span class="pull-left" style="line-height:1.2rem;">待报价 | 待支付</span><span class="pull-right">2015-11-18 17:09:37 </span></div></div>';
+	            }
+	            // 添加新条目
+	            $('.content-inner').append(html);
+
+	        }
+        //预先加载20条
+	    addItems(itemsPerLoad, 0);
+
+	    // 上次加载的序号
+	    var lastIndex = 2;
+	    // 注册'infinite'事件处理函数
+	    $(document).on('infinite', '.infinite-scroll',function() {
+
+	        // 如果正在加载，则退出
+	        if (loading) return;
+	        // 设置flag
+	        loading = true;
+
+	         // 模拟1s的加载过程
+	        setTimeout(function() {
+	            // 重置加载flag
+	            loading = false;
+
+	            if (lastIndex >= maxItems) {
+	                // 加载完毕，则注销无限加载事件，以防不必要的加载
+	                $.detachInfiniteScroll($('.infinite-scroll'));
+	                // 删除加载提示符
+	                $('.infinite-scroll-preloader').remove();
+	                return;
+	            }
+
+	            // 添加新条目
+	            addItems(itemsPerLoad, lastIndex);
+	            // 更新最后加载的序号
+	            lastIndex = $('.list-container li').length;
+	            //容器发生改变,如果是js滚动，需要刷新滚动
+	            $.refreshScroller();
+	        }, 1000);
+	    });
+  	})
+  	</script>
+</body>
+</html>

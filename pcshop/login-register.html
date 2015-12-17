@@ -149,11 +149,13 @@
           if (!rule_model(2,3,rulebox,stats,"确认密码不能为空","确认密码只能为字母和数字")) {
             return;
           };
-          if(input.eq(2).val()==input.eq(3).val()){
-            alert("成功了");
-            $("#form").submit();
-          }else{
+          if( input.eq(2).val()!==input.eq(3).val()){
             appendRule(rulebox,stats,"两次密码不一致，请重新输入");
+            return;
+          };
+          if( !(input.eq(2).val().length >= 6) ){
+            appendRule(rulebox,stats,"密码不能少于6位");
+            return;
           }
 
           //改变按钮提示

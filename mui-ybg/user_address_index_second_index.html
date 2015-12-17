@@ -248,53 +248,54 @@
 		</div>
 
 	</div>
-
+	
+	<script type='text/javascript' src='libs/requirejs/require.js' charset='utf-8' data-main="js/main"></script>
 	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
 	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
-	<script tyle="text/javascript" src="http://runjs.cn/js/sandbox/other/angular.min.js" charset="utf-8" ></script>
-	<!-- 滑动图 -->
+	<!-- <script tyle="text/javascript" src="http://runjs.cn/js/sandbox/other/angular.min.js" charset="utf-8" ></script> -->
+	<!-- 滑动图 --><!-- 
 	<script src="libs/islider/js/iSlider.js"></script>
 	<script src="libs/islider/js/plugins/dot.js"></script>
 	<script src="libs/islider/js/plugins/button.js"></script>
-	<link rel="stylesheet" href="libs/islider/style/iSlider.css"/>
+	<link rel="stylesheet" href="libs/islider/style/iSlider.css"/> -->
 
 	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
 	<script type="text/javascript">
 		$(function(){
 
 			//滚动图片js
-			var list = [{
-				    content: "img/my-site-view_11.jpg",
-				},{
-				    content: "img/my-site-view_11.jpg",
-				},{
-				    content: "img/my-site-view_11.jpg",
-				}];
-			var islider = new iSlider(
-            document.getElementById("islider"), list, {
-                // data: list
-                dom: document.getElementById("islider"),
-                // isVertical: true,
-                isLooping: 1,
-                isOverspread: 1,
-                animateType: 'default',
-                animateTime: 500,
-                fixPage: 1,
-                isDebug: 1,
-                // isDebug: 0,
-                // isLoading: true,
-                // isAutoplay: true,
-                // duration: 5000,
-                plugins: [['dot', {locate:'relative'}], 'button', ['zoompic', {zoomFactor: 2}]],
-                onslide: function () {
-                    console.debug(arguments)
-                },
-                onslidechange: function () {
-                    console.debug(arguments, 'Change~ juse one time');
-                    this.off('slideChange', arguments.callee);
-                }
-            });
+			// var list = [{
+			// 	    content: "img/my-site-view_11.jpg",
+			// 	},{
+			// 	    content: "img/my-site-view_11.jpg",
+			// 	},{
+			// 	    content: "img/my-site-view_11.jpg",
+			// 	}];
+			// var islider = new iSlider(
+   //          document.getElementById("islider"), list, {
+   //              // data: list
+   //              dom: document.getElementById("islider"),
+   //              // isVertical: true,
+   //              isLooping: 1,
+   //              isOverspread: 1,
+   //              animateType: 'default',
+   //              animateTime: 500,
+   //              fixPage: 1,
+   //              isDebug: 1,
+   //              // isDebug: 0,
+   //              // isLoading: true,
+   //              // isAutoplay: true,
+   //              // duration: 5000,
+   //              plugins: [['dot', {locate:'relative'}], 'button', ['zoompic', {zoomFactor: 2}]],
+   //              onslide: function () {
+   //                  console.debug(arguments)
+   //              },
+   //              onslidechange: function () {
+   //                  console.debug(arguments, 'Change~ juse one time');
+   //                  this.off('slideChange', arguments.callee);
+   //              }
+   //          });
 
 
 			//订单轨迹js

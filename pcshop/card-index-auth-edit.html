@@ -19,12 +19,14 @@
 
     <div class="header">
       <div class="all-page-width clearfix">
+        <div class="logo">云包公logo</div>
         <div class="pull-right text-right">
-          <span class="label">未认证</span>
-          你好，13112345678
+          <span class="label label-important">未认证</span>
+          
           <!-- 下拉按钮 -->
           <div class="btn-group no-style">
               <button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                13112345678
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
@@ -35,12 +37,25 @@
               </ul>
           </div>
         </div>
+        <div class="pull-right saosao">
+          <i class="phone-ico"></i> 手机微信版
+          <div class="erweima">
+            <img src="img/erweima.png"> 
+            <span>使用微信扫一扫，立即进入微信用户端</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="top-nav-bar">
-      <div class="all-page-width clearfix">
-        <div class="pull-right top-search">
+    <ul class="top-nav ">
+      <li class="show-area-btn"><a href="javascript:void(0)"><i class=" icon-minus icon-white"></i></a></li>
+      <li><a href="index.html"><i class="icon-home icon-white"></i> <span class="nav-font">首页</span></a></li>
+      <li class="current"><a href="object-index.html"><i class="icon-user icon-white"></i> <span class="nav-font">项目经理</span></a></li>
+      <li><a href="address-index.html"><i class="icon-globe icon-white"></i> <span class="nav-font">施工工地</span></a></li>
+      <li><a href="#"><i class="icon-shopping-cart icon-white"></i> <span class="nav-font">辅材商城</span></a></li>
+    </ul>
+
+    <div class="pull-right top-search">
             <div class="input-prepend input-append">
               <div class="btn-group">
                 <button class="btn dropdown-toggle" data-toggle="dropdown">
@@ -57,139 +72,129 @@
               <button class="btn btn-primary" type="button"><i class="icon-search icon-white"></i></button>
             </div>
         </div>
-        <div class="pull-left">
-          <div class="logo">云包公logo</div>
-        </div>
-        <ul class="top-nav">
-          <li><a href="index.html">首页</a></li>
-          <li class="current"><a href="object-index.html">项目经理</a></li>
-          <li><a href="address-index.html">施工工地</a></li>
-          <li><a href="#">辅材商城</a></li>
-        </ul>
-        
-      </div>
-    </div>
     
-    <div class="all-page-width">
-      <ul class="breadcrumb">
-        <li class="gray-color">当前位置：</li>
-        <li><a href="index.html">首页</a> <span class="divider">></span></li>
-        <li><a href="object-index.html">项目经理</a>  <span class="divider">></span></li>
-        <li><a href="object-index.html">项目经理</a>  <span class="divider">></span></li>
-      </ul>
-    </div>
-
-    <div class="all-page-width card padding white-bg">
-      
-      <!-- <ul class="nav nav-tabs">
-        <li class="active"><a href="#home" data-toggle="tab">基本信息</a></li>
-        <li><a href="#profile" data-toggle="tab">工地信息</a></li>
-        <li><a href="#messages" data-toggle="tab">订单信息</a></li>
-      </ul> -->
-
-      <!-- <div class="do-info-area">
-        <a href="javascript:void(0)" class="btn btn-primary">批量导出Excel</a> 
-      </div> -->
-
-      <form class="form-horizontal padding-large">
-        <h4 class="model-title">第一步：请填写企业基本信息</h4>
-        <div class="control-group">
-          <label class="control-label" for="name"><span class="danger-color">*</span> 企业名称：</label>
-          <div class="controls">
-            <input type="text" id="name" placeholder="请输入企业名称">
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="phone">企业地址</label>
-          <div class="controls">
-            <input type="text" id="phone" placeholder="请输入企业地址">
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="phone">联系方式：</label>
-          <div class="controls">
-              <input type="text" id="phone" placeholder="请输入联系方式">
-          </div>
-        </div>
-        <div class="control-group">
-          <label class="control-label" for="count">备注信息：</label>
-          <div class="controls">
-            <textarea type="text" id="count" placeholder="请输入数量"></textarea>
-          </div>
-        </div>
-
-        <h4 class="model-title">第二步：请上传企业经营相关许可证</h4>
-        <ul class="inline-block-ul zhizhao-list">
-          <li>
-            <label>
-              <input id="upload1" class="upload" type="file" value="">
-              <div class="button-box">
-                <span class="name">企业营业执照</span>
-                <div class="plus">+</div>
-              </div>
-              <span class="return-load">重新上传</span>
-              <div class="img-view" id="img_view1">
-              </div>
-            </label>
-          </li>
-          <li>
-            <label>
-              <input id="upload2" class="upload" type="file" value="">
-              <div class="button-box">
-                <span class="name">企业营业执照</span>
-                <div class="plus">+</div>
-              </div>
-              <span class="return-load">重新上传</span>
-              <div class="img-view" id="img_view2">
-              </div>
-            </label>
-          </li>
-          <li>
-            <label>
-              <input id="upload3" class="upload" type="file" value="">
-              <div class="button-box">
-                <span class="name">企业营业执照</span>
-                <div class="plus">+</div>
-              </div>
-              <span class="return-load">重新上传</span>
-              <div class="img-view" id="img_view3">
-              </div>
-            </label>
-          </li>
-          <li>
-            <label>
-              <input id="upload4" class="upload" type="file" value="">
-              <div class="button-box">
-                <span class="name">企业营业执照</span>
-                <div class="plus">+</div>
-              </div>
-              <span class="return-load">重新上传</span>
-              <div class="img-view" id="img_view4">
-              </div>
-            </label>
-          </li>
+    <div class="content-fix-box ">
+      <div class="all-page-width">
+        <ul class="breadcrumb">
+          <li class="gray-color">当前位置：</li>
+          <li><a href="index.html">首页</a> <span class="divider">></span></li>
+          <li><a href="object-index.html">项目经理</a>  <span class="divider">></span></li>
+          <li><a href="object-index.html">项目经理</a>  <span class="divider">></span></li>
         </ul>
+      </div>
 
-        <ul class="introduce-ul">
-          <li>认证说明</li>
-          <li>1 所有认证提交的信息，平台都将绝对保密，保证信息安全性</li>
-          <li>2 企业提交认证后，将由平台对企业进行信息真实有效性的验证，审核通过后，企业即可认证通过</li>
-          <li>3 认证企业可尊享平台的专属福利，下单金额没有限制、可周期性款项结算、支持货到付款</li>
-        </ul>
+      <div class="all-page-width card padding white-bg">
+        
+        <!-- <ul class="nav nav-tabs">
+          <li class="active"><a href="#home" data-toggle="tab">基本信息</a></li>
+          <li><a href="#profile" data-toggle="tab">工地信息</a></li>
+          <li><a href="#messages" data-toggle="tab">订单信息</a></li>
+        </ul> -->
 
-        <div class="control-group to-do-area-list">
-          <div class="controls">
-            <button type="submit" class="btn btn-primary btn-large">提交</button>
-            <a href="#" class="btn btn-default btn-large">取消</a>
+        <!-- <div class="do-info-area">
+          <a href="javascript:void(0)" class="btn btn-primary">批量导出Excel</a> 
+        </div> -->
+
+        <form class="form-horizontal padding-large">
+          <h4 class="model-title">第一步：请填写企业基本信息</h4>
+          <div class="control-group">
+            <label class="control-label" for="name"><span class="danger-color">*</span> 企业名称：</label>
+            <div class="controls">
+              <input type="text" id="name" placeholder="请输入企业名称">
+            </div>
           </div>
-        </div>
-      </form>
-      
+          <div class="control-group">
+            <label class="control-label" for="phone">企业地址</label>
+            <div class="controls">
+              <input type="text" id="phone" placeholder="请输入企业地址">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="phone">联系方式：</label>
+            <div class="controls">
+                <input type="text" id="phone" placeholder="请输入联系方式">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="count">备注信息：</label>
+            <div class="controls">
+              <textarea type="text" id="count" placeholder="请输入数量"></textarea>
+            </div>
+          </div>
 
-    </div>
+          <h4 class="model-title">第二步：请上传企业经营相关许可证</h4>
+          <ul class="inline-block-ul zhizhao-list">
+            <li>
+              <label>
+                <input id="upload1" class="upload" type="file" value="">
+                <div class="button-box">
+                  <span class="name">企业营业执照</span>
+                  <div class="plus">+</div>
+                </div>
+                <span class="return-load">重新上传</span>
+                <div class="img-view" id="img_view1">
+                </div>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input id="upload2" class="upload" type="file" value="">
+                <div class="button-box">
+                  <span class="name">企业营业执照</span>
+                  <div class="plus">+</div>
+                </div>
+                <span class="return-load">重新上传</span>
+                <div class="img-view" id="img_view2">
+                </div>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input id="upload3" class="upload" type="file" value="">
+                <div class="button-box">
+                  <span class="name">企业营业执照</span>
+                  <div class="plus">+</div>
+                </div>
+                <span class="return-load">重新上传</span>
+                <div class="img-view" id="img_view3">
+                </div>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input id="upload4" class="upload" type="file" value="">
+                <div class="button-box">
+                  <span class="name">企业营业执照</span>
+                  <div class="plus">+</div>
+                </div>
+                <span class="return-load">重新上传</span>
+                <div class="img-view" id="img_view4">
+                </div>
+              </label>
+            </li>
+          </ul>
 
-    <div class="footer">
-      本网站所有素材均有本公司或版权所有人授权发布，侵权必究。 湘ICP备15004864号-2
+          <ul class="introduce-ul">
+            <li>认证说明</li>
+            <li>1 所有认证提交的信息，平台都将绝对保密，保证信息安全性</li>
+            <li>2 企业提交认证后，将由平台对企业进行信息真实有效性的验证，审核通过后，企业即可认证通过</li>
+            <li>3 认证企业可尊享平台的专属福利，下单金额没有限制、可周期性款项结算、支持货到付款</li>
+          </ul>
+
+          <div class="control-group to-do-area-list">
+            <div class="controls">
+              <button type="submit" class="btn btn-primary btn-large">提交</button>
+              <a href="#" class="btn btn-default btn-large">取消</a>
+            </div>
+          </div>
+        </form>
+        
+
+      </div>
+
+      <div class="footer">
+        本网站所有素材均有本公司或版权所有人授权发布，侵权必究。 湘ICP备15004864号-2
+      </div>
     </div>
 
 

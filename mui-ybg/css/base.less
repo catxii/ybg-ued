@@ -45,8 +45,12 @@ html,body {
 @gray:#efefef; //灰色背景底色
 @red:#ff0000;
 @orange:#fa6a32;
+@pink-orange:#d5b246;
 @blue:#3b7ffd;
-@green:green;
+@pink-blue:#61af62;
+@green:#309831;
+@pink-green:#61af62;
+@yellow-color:#ffcd00;
 
 a {
     color: @blue; 
@@ -328,6 +332,7 @@ i.icon {
     height: 1.45rem;
     background-size: 100%;
     border-radius: .2rem;
+    vertical-align: middle;
     &.icon-diy-money{
      background-image: url("@{imgsrc}/me-ico_03.png");  
     }
@@ -353,12 +358,52 @@ i.icon {
         height: 1rem;
         margin-top: -.08rem;
         border-radius: 0;
-    }
+    } 
     &.icon-qiye {
         background-image: url("@{imgsrc}/my-site-view_03.jpg");
         width: .8rem;
         height: .8rem;
         vertical-align: middle;
+    }
+    &.ico-weixin {
+        background-image: url("@{imgsrc}/pay-ico.gif");
+        background-position: top center;
+        margin-right:.25rem;
+    }
+    &.ico-zfb {
+        background-image: url("@{imgsrc}/pay-ico.gif");
+        background-position: 0px -52px;
+        margin-right:.25rem;
+    }
+    &.ico-hdfk {
+        background-image: url("@{imgsrc}/pay-ico.gif");
+        background-position: bottom center;
+        margin-right:.25rem;
+    }
+    &.icon-qiye-v1 {
+        background-image: url("@{imgsrc}/account-ico_06.png");
+        width: 1.4rem;
+        height: 1.4rem;
+        vertical-align: middle;
+        &.small {
+            width: .7rem;
+            height: .7rem;
+            border-radius: 0;
+        }
+        &.finish {
+            background-image: url("@{imgsrc}/account-ico_06_finish.png");
+        } 
+    }
+    &.icon-geren-v1 {
+        background-image: url("@{imgsrc}/account-ico_03.png");
+        width: 1.4rem;
+        height: 1.4rem;
+        vertical-align: middle;
+        &.small {
+            width: .7rem;
+            height: .7rem;
+            border-radius: 0;
+        }
     }
     &.icon-user-ico {
         background-size: 1.45rem!important;
@@ -403,7 +448,7 @@ i.icon {
         }
     }
 }
-.icon-middle-span {
+.icon-middle-span {  //跟图标对齐的文本
     vertical-align: middle;
 }
 
@@ -519,6 +564,11 @@ ul,ol {
     &.no-fix-width { //去掉列表内容固定宽度
         .item-title {
             width: auto; 
+        }
+    }
+    .item-after {
+        &.small {
+            font-size:60%;
         }
     }
 }
@@ -805,6 +855,9 @@ ul,ol {
     &.tab-link:visited {
         color: #333;
     }
+    &.disabled {
+        pointer-events: none;
+    }
 }
 .button-input-block {
     width: 100%;
@@ -851,7 +904,8 @@ header {
 
 .black-top-area {  //黑色顶部导航
     background: @black;
-    height: auto;
+    height: auto; 
+    box-shadow: 1px 1px 4px #ccc;
     ul {
         .inline-block-ul;
         text-align: center;
@@ -861,7 +915,7 @@ header {
             line-height: 2.5rem;
             a {
                 color:@white;
-                font-size:@font-size-small;
+                font-size:@font-size-mini;
                 padding:.2rem .3rem;
                 border-radius: 1rem;
                 position: relative;
@@ -904,6 +958,26 @@ header {
         &.five-ul {
             li {
                 width:20%;
+            }
+        }
+    }
+    &.still-white {
+        background:@white;
+        ul {
+            li {
+                a {
+                    color: @black;
+                    i {
+                        background:@default-color;
+                        color: @white;
+                    }
+                }
+                &.current {
+                    a {
+                        background:@default-color;
+                        color: white;
+                    }
+                }
             }
         }
     }

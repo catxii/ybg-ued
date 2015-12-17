@@ -1,0 +1,14 @@
+{
+  "name": "mui-ybg",
+  "version": "1.0.0",
+  "description": "云包公自动化部署",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+      "grunt": "~0.4.1",
+      "grunt-contrib-jshint": "~0.6.0",
+      "grunt-contrib-nodeunit": "~0.2.0",
+      "grunt-contrib-uglify": "~0.2.2"
+  },
+  "author": "lyl",
+  "license": "ISC"
+}

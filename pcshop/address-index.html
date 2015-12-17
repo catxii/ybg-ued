@@ -19,12 +19,14 @@
 
     <div class="header">
       <div class="all-page-width clearfix">
+        <div class="logo">云包公logo</div>
         <div class="pull-right text-right">
-          <span class="label">未认证</span>
-          你好，13112345678
+          <span class="label label-important">未认证</span>
+          
           <!-- 下拉按钮 -->
           <div class="btn-group no-style">
               <button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                13112345678
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
@@ -35,12 +37,25 @@
               </ul>
           </div>
         </div>
+        <div class="pull-right saosao">
+          <i class="phone-ico"></i> 手机微信版
+          <div class="erweima">
+            <img src="img/erweima.png"> 
+            <span>使用微信扫一扫，立即进入微信用户端</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="top-nav-bar">
-      <div class="all-page-width clearfix">
-        <div class="pull-right top-search">
+    <ul class="top-nav ">
+      <li class="show-area-btn"><a href="javascript:void(0)"><i class=" icon-minus icon-white"></i></a></li>
+      <li><a href="index.html"><i class="icon-home icon-white"></i> <span class="nav-font">首页</span></a></li>
+      <li class="current"><a href="object-index.html"><i class="icon-user icon-white"></i> <span class="nav-font">项目经理</span></a></li>
+      <li><a href="address-index.html"><i class="icon-globe icon-white"></i> <span class="nav-font">施工工地</span></a></li>
+      <li><a href="#"><i class="icon-shopping-cart icon-white"></i> <span class="nav-font">辅材商城</span></a></li>
+    </ul>
+
+    <div class="pull-right top-search">
             <div class="input-prepend input-append">
               <div class="btn-group">
                 <button class="btn dropdown-toggle" data-toggle="dropdown">
@@ -56,264 +71,254 @@
               <input class="span2" id="appendedPrependedDropdownButton" type="text">
               <button class="btn btn-primary" type="button"><i class="icon-search icon-white"></i></button>
             </div>
-        </div>
-        <div class="pull-left">
-          <div class="logo">云包公logo</div>
-        </div>
-        <ul class="top-nav">
-          <li><a href="index.html">首页</a></li>
-          <li><a href="object-index.html">项目经理</a></li>
-          <li class="current"><a href="address-index.html">施工工地</a></li>
-          <li><a href="#">辅材商城</a></li>
-        </ul>
-        
-      </div>
     </div>
 
-    <div class="all-page-width">
-      <ul class="breadcrumb">
-        <li class="gray-color">当前位置：</li>
-        <li><a href="index.html">首页</a> <span class="divider">></span></li>
-        <li><a href="address-index.html">施工工地</a> </li>
-      </ul>
-    </div>
-
-    <div class="all-page-width card padding white-bg">
-      <ul class="inline-block-ul filter-area">
-        <li class="title">所在省份：</li>
-        <li class="current"><a href="javascript:void(0)">不限</a></li>
-        <li><a href="javascript:void(0)">湖南</a></li>
-        <li><a href="javascript:void(0)">湖北</a></li>
-      </ul>
-      <ul class="inline-block-ul filter-area">
-        <li class="title">所在城市：</li>
-        <li class="current"><a href="javascript:void(0)">不限</a></li>
-        <li><a href="javascript:void(0)">益阳</a></li>
-        <li><a href="javascript:void(0)">娄底</a></li>
-        <li><a href="javascript:void(0)">邵阳</a></li>
-        <li><a href="javascript:void(0)">怀化</a></li>
-        <li><a href="javascript:void(0)">株洲</a></li>
-        <li><a href="javascript:void(0)">湘潭</a></li>
-      </ul>
-      <ul class="inline-block-ul filter-area">
-        <li class="title">所在区域：</li>
-        <li class="current"><a href="javascript:void(0)">不限</a></li>
-        <li><a href="javascript:void(0)">雨花区</a></li>
-        <li><a href="javascript:void(0)">芙蓉区</a></li>
-        <li><a href="javascript:void(0)">开福区</a></li>
-        <li><a href="javascript:void(0)">岳麓区</a></li>
-        <li><a href="javascript:void(0)">天心区</a></li>
-        <li><a href="javascript:void(0)">长沙县</a></li>
-      </ul>
-      <ul class="inline-block-ul filter-area">
-        <li class="title">工地状态：</li>
-        <li class="current"><a href="javascript:void(0)">不限</a></li>
-        <li><a href="javascript:void(0)">未开始</a></li>
-        <li><a href="javascript:void(0)">施工中</a></li>
-        <li><a href="javascript:void(0)">已结束</a></li>
-      </ul>
-    </div>
-
-    <div class="all-page-width card padding white-bg">
-      <div class="do-info-area">
-        <a href="javascript:void(0)" class="btn btn-primary">批量导出Excel</a> 
-        <a href="javascript:void(0)" class="btn btn-primary">新增工地</a> 
-      </div>
-      <table class="table table-hover text-center">
-        <tr class="table-important">
-          <td><label><input type="checkbox"></label></td>
-          <td>序号</td>
-          <td>城市</td>
-          <td>区域</td>
-          <td>工地名称</td>
-          <td>工地地址</td>
-          <td>工地状态</td>
-          <td>项目经理</td>
-          <td>联系方式</td>
-          <td>订单数量</td>
-          <td>订单总额</td>
-          <td>操作</td>
-        </tr>
-        <tr>
-          <td><label><input type="checkbox"></label></td>
-          <td>1</td>
-          <td><a href="#" class="default-color">20141314140</a></td>
-          <td>2015-09-12 18:30:25</td>
-          <td>待审核</td>
-          <td>待支付</td>
-          <td>￥4000</td>
-          <td>￥30</td>
-          <td>￥40</td>
-          <td>￥520</td>
-          <td>武汉邗江区测试地址</td>
-          <td class="todoarea">
-            <a class="default-color" href="javascript:void(0)"  data-target="#appoint" data-toggle="modal">指派</a>
-            <a class="default-color" href="#">查看</a>
-            <div id="appoint" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="myModalLabel">请选择要指派的工地</h3>
-              </div>
-              <div class="modal-body">
-                <div class="community-list">
-                  <label class="checkbox">
-                    <input type="checkbox"  value="option3"> 金域华府一期
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox"  value="option3"> 金域华府一期
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox"  value="option3"> 金域华府一期
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox"  value="option3"> 金域华府一期
-                  </label>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button class="btn pull-left"  aria-hidden="true">全选</button>
-                <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
-                <button class="btn btn-primary">确定</button>
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td><label><input type="checkbox"></label></td>
-          <td>2</td>
-          <td><a href="#" class="default-color">20141314140</a></td>
-          <td>2015-09-12 18:30:25</td>
-          <td>待审核</td>
-          <td>待支付</td>
-          <td>￥4000</td>
-          <td>￥30</td>
-          <td>￥40</td>
-          <td>￥520</td>
-          <td>武汉邗江区测试地址</td>
-          <td class="todoarea">
-            <a class="default-color" href="javascript:void(0)"  data-target="#appoint" data-toggle="modal">指派</a>
-            <a class="default-color" href="#">查看</a>
-            <div id="appoint" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="myModalLabel">请选择要指派的工地</h3>
-              </div>
-              <div class="modal-body">
-                <div class="community-list">
-                  <label class="checkbox">
-                    <input type="checkbox"  value="option3"> 金域华府一期
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox"  value="option3"> 金域华府一期
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox"  value="option3"> 金域华府一期
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox"  value="option3"> 金域华府一期
-                  </label>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button class="btn pull-left"  aria-hidden="true">全选</button>
-                <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
-                <button class="btn btn-primary">确定</button>
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td><label><input type="checkbox"></label></td>
-          <td>3</td>
-          <td><a href="#" class="default-color">20141314140</a></td>
-          <td>2015-09-12 18:30:25</td>
-          <td>待审核</td>
-          <td>待支付</td>
-          <td>￥4000</td>
-          <td>￥30</td>
-          <td>￥40</td>
-          <td>￥520</td>
-          <td>武汉邗江区测试地址</td>
-          <td class="todoarea">
-            <a class="default-color" href="javascript:void(0)"  data-target="#appoint" data-toggle="modal">指派</a>
-            <a class="default-color" href="#">查看</a>
-            <div id="appoint" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="myModalLabel">请选择要指派的工地</h3>
-              </div>
-              <div class="modal-body">
-                <div class="community-list">
-                  <label class="checkbox">
-                    <input type="checkbox"  value="option3"> 金域华府一期
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox"  value="option3"> 金域华府一期
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox"  value="option3"> 金域华府一期
-                  </label>
-                  <label class="checkbox">
-                    <input type="checkbox"  value="option3"> 金域华府一期
-                  </label>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button class="btn pull-left"  aria-hidden="true">全选</button>
-                <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
-                <button class="btn btn-primary">确定</button>
-              </div>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td><label><input type="checkbox"></label></td>
-          <td>4</td>
-          <td><a href="#" class="default-color">20141314140</a></td>
-          <td>2015-09-12 18:30:25</td>
-          <td>待审核</td>
-          <td>待支付</td>
-          <td>￥4000</td>
-          <td>￥30</td>
-          <td>￥40</td>
-          <td>￥520</td>
-          <td>武汉邗江区测试地址</td>
-          <td class="todoarea">
-            <a class="default-color" href="javascript:void(0)"  data-target="#appoint" data-toggle="modal">指派</a>
-            <a class="default-color" href="#">查看</a>
-            <div id="appoint" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="myModalLabel">Modal header</h3>
-              </div>
-              <div class="modal-body">
-                <p>One fine body…</p>
-              </div>
-              <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
-                <button class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </td>
-        </tr>
-      </table>
-      <div class="pagination  pagination-centered pageination-style">
-        <ul>
-          <li><a href="#"><i class="icon-step-backward"></i></a></li>
-          <li><a href="#"><i class="icon-chevron-left"></i></a></li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#"><i class="icon-chevron-right"></i></a></li>
-          <li><a href="#"><i class="icon-step-forward"></i></a></li>
+    <div class="content-fix-box ">
+      <div class="all-page-width">
+        <ul class="breadcrumb">
+          <li class="gray-color">当前位置：</li>
+          <li><a href="index.html">首页</a> <span class="divider">></span></li>
+          <li><a href="address-index.html">施工工地</a> </li>
         </ul>
       </div>
-    </div>
 
-    <div class="footer">
-      本网站所有素材均有本公司或版权所有人授权发布，侵权必究。 湘ICP备15004864号-2
+      <div class="all-page-width card padding white-bg">
+        <ul class="inline-block-ul filter-area">
+          <li class="title">所在省份：</li>
+          <li class="current"><a href="javascript:void(0)">不限</a></li>
+          <li><a href="javascript:void(0)">湖南</a></li>
+          <li><a href="javascript:void(0)">湖北</a></li>
+        </ul>
+        <ul class="inline-block-ul filter-area">
+          <li class="title">所在城市：</li>
+          <li class="current"><a href="javascript:void(0)">不限</a></li>
+          <li><a href="javascript:void(0)">益阳</a></li>
+          <li><a href="javascript:void(0)">娄底</a></li>
+          <li><a href="javascript:void(0)">邵阳</a></li>
+          <li><a href="javascript:void(0)">怀化</a></li>
+          <li><a href="javascript:void(0)">株洲</a></li>
+          <li><a href="javascript:void(0)">湘潭</a></li>
+        </ul>
+        <ul class="inline-block-ul filter-area">
+          <li class="title">所在区域：</li>
+          <li class="current"><a href="javascript:void(0)">不限</a></li>
+          <li><a href="javascript:void(0)">雨花区</a></li>
+          <li><a href="javascript:void(0)">芙蓉区</a></li>
+          <li><a href="javascript:void(0)">开福区</a></li>
+          <li><a href="javascript:void(0)">岳麓区</a></li>
+          <li><a href="javascript:void(0)">天心区</a></li>
+          <li><a href="javascript:void(0)">长沙县</a></li>
+        </ul>
+        <ul class="inline-block-ul filter-area">
+          <li class="title">工地状态：</li>
+          <li class="current"><a href="javascript:void(0)">不限</a></li>
+          <li><a href="javascript:void(0)">未开始</a></li>
+          <li><a href="javascript:void(0)">施工中</a></li>
+          <li><a href="javascript:void(0)">已结束</a></li>
+        </ul>
+      </div>
+
+      <div class="all-page-width card padding white-bg">
+        <div class="do-info-area">
+          <a href="javascript:void(0)" class="btn btn-primary">批量导出Excel</a> 
+          <a href="javascript:void(0)" class="btn btn-primary">新增工地</a> 
+        </div>
+        <table class="table table-hover text-center">
+          <tr class="table-important">
+            <td><label><input type="checkbox"></label></td>
+            <td>序号</td>
+            <td>城市</td>
+            <td>区域</td>
+            <td>工地名称</td>
+            <td>工地地址</td>
+            <td>工地状态</td>
+            <td>项目经理</td>
+            <td>联系方式</td>
+            <td>订单数量</td>
+            <td>订单总额</td>
+            <td>操作</td>
+          </tr>
+          <tr>
+            <td><label><input type="checkbox"></label></td>
+            <td>1</td>
+            <td><a href="#" class="default-color">20141314140</a></td>
+            <td>2015-09-12 18:30:25</td>
+            <td>待审核</td>
+            <td>待支付</td>
+            <td>￥4000</td>
+            <td>￥30</td>
+            <td>￥40</td>
+            <td>￥520</td>
+            <td>武汉邗江区测试地址</td>
+            <td class="todoarea">
+              <a class="default-color" href="javascript:void(0)"  data-target="#appoint" data-toggle="modal">指派</a>
+              <a class="default-color" href="#">查看</a>
+              <div id="appoint" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h3 id="myModalLabel">请选择要指派的工地</h3>
+                </div>
+                <div class="modal-body">
+                  <div class="community-list">
+                    <label class="checkbox">
+                      <input type="checkbox"  value="option3"> 金域华府一期
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"  value="option3"> 金域华府一期
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"  value="option3"> 金域华府一期
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"  value="option3"> 金域华府一期
+                    </label>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn pull-left"  aria-hidden="true">全选</button>
+                  <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+                  <button class="btn btn-primary">确定</button>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><label><input type="checkbox"></label></td>
+            <td>2</td>
+            <td><a href="#" class="default-color">20141314140</a></td>
+            <td>2015-09-12 18:30:25</td>
+            <td>待审核</td>
+            <td>待支付</td>
+            <td>￥4000</td>
+            <td>￥30</td>
+            <td>￥40</td>
+            <td>￥520</td>
+            <td>武汉邗江区测试地址</td>
+            <td class="todoarea">
+              <a class="default-color" href="javascript:void(0)"  data-target="#appoint" data-toggle="modal">指派</a>
+              <a class="default-color" href="#">查看</a>
+              <div id="appoint" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h3 id="myModalLabel">请选择要指派的工地</h3>
+                </div>
+                <div class="modal-body">
+                  <div class="community-list">
+                    <label class="checkbox">
+                      <input type="checkbox"  value="option3"> 金域华府一期
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"  value="option3"> 金域华府一期
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"  value="option3"> 金域华府一期
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"  value="option3"> 金域华府一期
+                    </label>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn pull-left"  aria-hidden="true">全选</button>
+                  <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+                  <button class="btn btn-primary">确定</button>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><label><input type="checkbox"></label></td>
+            <td>3</td>
+            <td><a href="#" class="default-color">20141314140</a></td>
+            <td>2015-09-12 18:30:25</td>
+            <td>待审核</td>
+            <td>待支付</td>
+            <td>￥4000</td>
+            <td>￥30</td>
+            <td>￥40</td>
+            <td>￥520</td>
+            <td>武汉邗江区测试地址</td>
+            <td class="todoarea">
+              <a class="default-color" href="javascript:void(0)"  data-target="#appoint" data-toggle="modal">指派</a>
+              <a class="default-color" href="#">查看</a>
+              <div id="appoint" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h3 id="myModalLabel">请选择要指派的工地</h3>
+                </div>
+                <div class="modal-body">
+                  <div class="community-list">
+                    <label class="checkbox">
+                      <input type="checkbox"  value="option3"> 金域华府一期
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"  value="option3"> 金域华府一期
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"  value="option3"> 金域华府一期
+                    </label>
+                    <label class="checkbox">
+                      <input type="checkbox"  value="option3"> 金域华府一期
+                    </label>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn pull-left"  aria-hidden="true">全选</button>
+                  <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+                  <button class="btn btn-primary">确定</button>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><label><input type="checkbox"></label></td>
+            <td>4</td>
+            <td><a href="#" class="default-color">20141314140</a></td>
+            <td>2015-09-12 18:30:25</td>
+            <td>待审核</td>
+            <td>待支付</td>
+            <td>￥4000</td>
+            <td>￥30</td>
+            <td>￥40</td>
+            <td>￥520</td>
+            <td>武汉邗江区测试地址</td>
+            <td class="todoarea">
+              <a class="default-color" href="javascript:void(0)"  data-target="#appoint" data-toggle="modal">指派</a>
+              <a class="default-color" href="#">查看</a>
+              <div id="appoint" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h3 id="myModalLabel">Modal header</h3>
+                </div>
+                <div class="modal-body">
+                  <p>One fine body…</p>
+                </div>
+                <div class="modal-footer">
+                  <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+                  <button class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="pagination  pagination-centered pageination-style">
+          <ul>
+            <li><a href="#"><i class="icon-step-backward"></i></a></li>
+            <li><a href="#"><i class="icon-chevron-left"></i></a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#"><i class="icon-chevron-right"></i></a></li>
+            <li><a href="#"><i class="icon-step-forward"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer">
+        本网站所有素材均有本公司或版权所有人授权发布，侵权必究。 湘ICP备15004864号-2
+      </div>
     </div>
 
 

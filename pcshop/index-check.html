@@ -19,12 +19,14 @@
 
     <div class="header">
       <div class="all-page-width clearfix">
+        <div class="logo">云包公logo</div>
         <div class="pull-right text-right">
-          <span class="label">未认证</span>
-          你好，13112345678
+          <span class="label label-important">未认证</span>
+          
           <!-- 下拉按钮 -->
           <div class="btn-group no-style">
               <button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                13112345678
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
@@ -35,12 +37,25 @@
               </ul>
           </div>
         </div>
+        <div class="pull-right saosao">
+          <i class="phone-ico"></i> 手机微信版
+          <div class="erweima">
+            <img src="img/erweima.png"> 
+            <span>使用微信扫一扫，立即进入微信用户端</span>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div class="top-nav-bar">
-      <div class="all-page-width clearfix">
-        <div class="pull-right top-search">
+    <ul class="top-nav ">
+      <li class="show-area-btn"><a href="javascript:void(0)"><i class=" icon-minus icon-white"></i></a></li>
+      <li><a href="index.html"><i class="icon-home icon-white"></i> <span class="nav-font">首页</span></a></li>
+      <li class="current"><a href="object-index.html"><i class="icon-user icon-white"></i> <span class="nav-font">项目经理</span></a></li>
+      <li><a href="address-index.html"><i class="icon-globe icon-white"></i> <span class="nav-font">施工工地</span></a></li>
+      <li><a href="#"><i class="icon-shopping-cart icon-white"></i> <span class="nav-font">辅材商城</span></a></li>
+    </ul>
+
+    <div class="pull-right top-search">
             <div class="input-prepend input-append">
               <div class="btn-group">
                 <button class="btn dropdown-toggle" data-toggle="dropdown">
@@ -56,277 +71,274 @@
               <input class="span2" id="appendedPrependedDropdownButton" type="text">
               <button class="btn btn-primary" type="button"><i class="icon-search icon-white"></i></button>
             </div>
-        </div>
-        <div class="pull-left">
-          <div class="logo">云包公logo</div>
-        </div>
-        <ul class="top-nav">
-          <li><a href="index.html">首页</a></li>
-          <li><a href="object-index.html">项目经理</a></li>
-          <li class="current"><a href="address-index.html">施工工地</a></li>
-          <li><a href="#">辅材商城</a></li>
+    </div>
+
+    <div class="content-fix-box ">
+      <div class="all-page-width">
+        <ul class="breadcrumb">
+          <li class="gray-color">当前位置：</li>
+          <li><a href="index.html">首页</a> <span class="divider">></span></li>
+          <li><a href="#">应付账单</a> </li>
         </ul>
-        
       </div>
-    </div>
 
-    <div class="all-page-width">
-      <ul class="breadcrumb">
-        <li class="gray-color">当前位置：</li>
-        <li><a href="index.html">首页</a> <span class="divider">></span></li>
-        <li><a href="#">应付账单</a> </li>
-      </ul>
-    </div>
+      <div class="all-page-width card padding white-bg">
+        <ul class="inline-block-ul filter-area">
+          <li class="title">订单来源：</li>
+          <li class="current"><a href="javascript:void(0)">全部</a></li>
+          <li><a href="javascript:void(0)">企业订单</a></li>
+          <li><a href="javascript:void(0)">项目经理订单</a></li>
+        </ul>
+        <ul class="inline-block-ul filter-area">
+          <li class="title">订单类型：</li>
+          <li class="current"><a href="javascript:void(0)">拍照下单</a></li>
+          <li><a href="javascript:void(0)">自主下单</a></li>
+        </ul>
+        <ul class="inline-block-ul filter-area">
+          <li class="title">订单状态：</li>
+          <li class="current"><a href="javascript:void(0)">全部</a></li>
+          <li><a href="javascript:void(0)">待确认</a></li>
+          <li><a href="javascript:void(0)">待报价</a></li>
+          <li><a href="javascript:void(0)">待调度</a></li>
+          <li><a href="javascript:void(0)">待发货</a></li>
+          <li><a href="javascript:void(0)">待收货</a></li>
+          <li><a href="javascript:void(0)">已签收</a></li>
+        </ul>
+        <ul class="inline-block-ul filter-area">
+          <li class="title">支付状态：</li>
+          <li class="current"><a href="javascript:void(0)">全部</a></li>
+          <li><a href="javascript:void(0)">未付款</a></li>
+          <li><a href="javascript:void(0)">已支付部分</a></li>
+          <li><a href="javascript:void(0)">已支付</a></li>
+        </ul>
+        <ul class="inline-block-ul filter-area">
+          <li class="title">订单时间：</li>
+          <li class="time-area">
+              <input size="16" type="text" value="2015-06-15" readonly class="form_datetime">
+              <div class="to">-</div>
+              <input size="16" type="text" value="2015-06-15" readonly class="form_datetime">
+              <div class="to">
+                <a href="#" class="btn btn-default">确定</a>
+              </div>
+          </li>
+        </ul>
+        <ul class="inline-block-ul filter-area">
+          <li class="title">结算周期：</li>
+          <li class="current"><a href="javascript:void(0)">全部</a></li>
+          <li><a href="javascript:void(0)">2月结算</a></li>
+          <li><a href="javascript:void(0)">周结算</a></li>
+        </ul>
+        <ul class="inline-block-ul filter-area">
+          <li class="title">施工工地：</li>
+          <li class="current"><a href="javascript:void(0)">全部</a></li>
+          <li><a href="javascript:void(0)">自定义</a></li>
+        </ul>
+      </div>
 
-    <div class="all-page-width card padding white-bg">
-      <ul class="inline-block-ul filter-area">
-        <li class="title">订单来源：</li>
-        <li class="current"><a href="javascript:void(0)">全部</a></li>
-        <li><a href="javascript:void(0)">企业订单</a></li>
-        <li><a href="javascript:void(0)">项目经理订单</a></li>
-      </ul>
-      <ul class="inline-block-ul filter-area">
-        <li class="title">订单类型：</li>
-        <li class="current"><a href="javascript:void(0)">拍照下单</a></li>
-        <li><a href="javascript:void(0)">自主下单</a></li>
-      </ul>
-      <ul class="inline-block-ul filter-area">
-        <li class="title">订单状态：</li>
-        <li class="current"><a href="javascript:void(0)">全部</a></li>
-        <li><a href="javascript:void(0)">待确认</a></li>
-        <li><a href="javascript:void(0)">待报价</a></li>
-        <li><a href="javascript:void(0)">待调度</a></li>
-        <li><a href="javascript:void(0)">待发货</a></li>
-        <li><a href="javascript:void(0)">待收货</a></li>
-        <li><a href="javascript:void(0)">已签收</a></li>
-      </ul>
-      <ul class="inline-block-ul filter-area">
-        <li class="title">支付状态：</li>
-        <li class="current"><a href="javascript:void(0)">全部</a></li>
-        <li><a href="javascript:void(0)">未付款</a></li>
-        <li><a href="javascript:void(0)">已支付部分</a></li>
-        <li><a href="javascript:void(0)">已支付</a></li>
-      </ul>
-      <ul class="inline-block-ul filter-area">
-        <li class="title">订单时间：</li>
-        <li class="time-area">
-            <input size="16" type="text" value="2015-06-15" readonly class="form_datetime">
-            <div class="to">-</div>
-            <input size="16" type="text" value="2015-06-15" readonly class="form_datetime">
-            <div class="to">
-              <a href="#" class="btn btn-default">确定</a>
+      <div class="all-page-width card padding white-bg">
+        <div class="do-info-area clearfix">
+          <a href="javascript:void(0)" class="pull-right btn btn-link" data-toggle="modal" data-target="#check_info_model">查看云包公付款方式及账户信息</a>
+          <a href="javascript:void(0)" class="btn btn-primary">批量导出Excel</a>
+          
+
+          <div id="check_info_model" class="modal hide fade modal-middle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h3 id="myModalLabel">支付账户信息</h3>
             </div>
-        </li>
-      </ul>
-      <ul class="inline-block-ul filter-area">
-        <li class="title">结算周期：</li>
-        <li class="current"><a href="javascript:void(0)">全部</a></li>
-        <li><a href="javascript:void(0)">2月结算</a></li>
-        <li><a href="javascript:void(0)">周结算</a></li>
-      </ul>
-      <ul class="inline-block-ul filter-area">
-        <li class="title">施工工地：</li>
-        <li class="current"><a href="javascript:void(0)">全部</a></li>
-        <li><a href="javascript:void(0)">自定义</a></li>
-      </ul>
-    </div>
-
-    <div class="all-page-width card padding white-bg">
-      <div class="do-info-area clearfix">
-        <a href="javascript:void(0)" class="btn btn-primary">批量导出Excel</a>
-        <a href="javascript:void(0)" class="pull-right btn btn-link" data-toggle="modal" data-target="#check_info_model">查看云包公付款方式及账户信息</a>
-
-        <div id="check_info_model" class="modal hide fade modal-middle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h3 id="myModalLabel">支付账户信息</h3>
-          </div>
-          <div class="modal-body pay-modal-body" >
-            <blockquote class="blockquote clearfix">
-              <p class="pull-left">网银账户</p>
-              <span class="pull-right">账户名:宁峥辉</span>
-            </blockquote>
-            <ul class="bank-list">
-              <li class="clearfix">
-                <img src="img/bank-ico_03.jpg" alt="长沙中信银行东塘支行">
-                <span class="card-name">长沙中信银行东塘支行</span>
-                <span class="card-number">6226 9816 0017 4383</span>
-                <div class="pull-right">
-                  <a href="#" class="btn copy-btn btn-link" data-loading-text="成功复制">复制账号</a>
-                  <textarea name="" id="copyCardNumber1" cols="30" rows="10">6226981600174383</textarea>
-                </div>
-              </li>
-              <li class="clearfix">
-                <img src="img/bank-ico_07.jpg" alt="长沙建设银行恒达支行">
-                <span class="card-name">长沙建设银行恒达支行</span>
-                <span class="card-number">6222 0819 0100 1113 575</span>
-                <div class="pull-right">
-                  <a href="#" class="btn copy-btn btn-link" data-loading-text="成功复制">复制账号</a>
-                  <textarea name="" id="copyCardNumber2" cols="30" rows="10">6222081901001113575</textarea>
-                </div>
-              </li>
-              <li class="clearfix">
-                <img src="img/bank-ico_11.jpg" alt="长沙工商银行银讯支行">
-                <span class="card-name">长沙工商银行银讯支行</span>
-                <span class="card-number">6227 0029 2100 0362 168</span>
-                <div class="pull-right">
-                  <a href="#" class="btn copy-btn btn-link" data-loading-text="成功复制">复制账号</a>
-                  <textarea name="" id="copyCardNumber3" cols="30" rows="10">6227002921000362168</textarea>
-                </div>
-              </li>
-            </ul>
-            <blockquote class="blockquote clearfix">
-              <p class="pull-left">微信/支付宝账号</p>
-              <span class="pull-right">账户名:宁峥辉</span>
-            </blockquote>
-            <div class="text-center pay-other-panel">
-      
-              <ul class="wx-tb">
-                <li class="wx" style="margin-right:80px;">
-                  <img src="img/check-info_16.jpg" >
-                  <ul class="pay-info">
-                    <li><span class="unimportance-color">
-                      微信账号
-                    </span>
-                    </li>
-                    <li class="clearfix">
-                      <span>18570358637</span>
-                      <a href="#" class="btn copy-btn btn-link" data-loading-text="成功复制">复制账号</a>
-                      <textarea name="" id="copyCardNumber4" cols="30" rows="10">18570358637</textarea>
-                    </li>
-                  </ul>
+            <div class="modal-body pay-modal-body" >
+              <blockquote class="blockquote clearfix">
+                <p class="pull-left">网银账户</p>
+                <span class="pull-right">账户名:宁峥辉</span>
+              </blockquote>
+              <ul class="bank-list">
+                <li class="clearfix">
+                  <div class="pull-left">
+                    <img src="img/bank-ico_03.jpg" alt="长沙中信银行东塘支行">
+                    <span class="card-name">长沙中信银行东塘支行</span>
+                    <span class="card-number">6226 9816 0017 4383</span>
+                  </div>
+                  <div class="pull-right">
+                    <a href="#" class="btn copy-btn btn-link" data-loading-text="成功复制">复制账号</a>
+                    <textarea name="" id="copyCardNumber1" cols="30" rows="10">6226981600174383</textarea>
+                  </div>
                 </li>
-                <li class="zfb">
-                  <img src="img/check-info_13.jpg">
-                  <ul class="pay-info">
-                    <li><span class="unimportance-color">
-                      微信账号
-                    </span>
-                    </li>
-                    <li class="clearfix">
-                      <span>18570358637</span>
-                      <a href="#" class="btn copy-btn btn-link" data-loading-text="成功复制">复制账号</a>
-                      <textarea name="" id="copyCardNumber4" cols="30" rows="10">18570358637</textarea>
-                    </li>
-                  </ul>
+                <li class="clearfix">
+                  <div class="pull-left">
+                    <img src="img/bank-ico_07.jpg" alt="长沙建设银行恒达支行">
+                    <span class="card-name">长沙建设银行恒达支行</span>
+                    <span class="card-number">6222 0819 0100 1113 575</span>
+                  </div>
+                  <div class="pull-right">
+                    <a href="#" class="btn copy-btn btn-link" data-loading-text="成功复制">复制账号</a>
+                    <textarea name="" id="copyCardNumber2" cols="30" rows="10">6222081901001113575</textarea>
+                  </div>
+                </li>
+                <li class="clearfix">
+                  <div class="pull-left">
+                    <img src="img/bank-ico_11.jpg" alt="长沙工商银行银讯支行">
+                    <span class="card-name">长沙工商银行银讯支行</span>
+                    <span class="card-number">6227 0029 2100 0362 168</span>
+                  </div>
+                  <div class="pull-right">
+                    <a href="#" class="btn copy-btn btn-link" data-loading-text="成功复制">复制账号</a>
+                    <textarea name="" id="copyCardNumber3" cols="30" rows="10">6227002921000362168</textarea>
+                  </div>
                 </li>
               </ul>
-            </div>  
-          </div>
-          <div class="modal-footer">
-            <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
-          </div>
+              <blockquote class="blockquote clearfix">
+                <p class="pull-left">微信/支付宝账号</p>
+                <span class="pull-right">账户名:宁峥辉</span>
+              </blockquote>
+              <div class="text-center pay-other-panel">
+        
+                <ul class="wx-tb">
+                  <li class="wx" style="margin-right:80px;">
+                    <img src="img/check-info_16.jpg" >
+                    <ul class="pay-info">
+                      <li><span class="unimportance-color">
+                        微信账号
+                      </span>
+                      </li>
+                      <li class="clearfix">
+                        <span>18570358637</span>
+                        <a href="#" class="btn copy-btn btn-link" data-loading-text="成功复制">复制账号</a>
+                        <textarea name="" id="copyCardNumber4" cols="30" rows="10">18570358637</textarea>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="zfb">
+                    <img src="img/check-info_13.jpg">
+                    <ul class="pay-info">
+                      <li><span class="unimportance-color">
+                        微信账号
+                      </span>
+                      </li>
+                      <li class="clearfix">
+                        <span>18570358637</span>
+                        <a href="#" class="btn copy-btn btn-link" data-loading-text="成功复制">复制账号</a>
+                        <textarea name="" id="copyCardNumber4" cols="30" rows="10">18570358637</textarea>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>  
+            </div>
+            <div class="modal-footer">
+              <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+            </div>
+        </div>
+        </div>
+        <table class="table table-hover text-center  table-bordered">
+          <tr class="table-important">
+            <td><label><input type="checkbox"></label></td>
+            <td>序号</td>
+            <td>订单编号</td>
+            <td>下单时间</td>
+            <td>订单状态</td>
+            <td>支付状态</td>
+            <td>材料总额</td>
+            <td>订单总额</td>
+            <td>收货地址</td>
+            <td>订单来源</td>
+            <td>应付金额</td>
+            <td>已付金额</td>
+            <td>剩余金额</td>
+            <td>操作</td>
+          </tr>
+          <tr>
+            <td><label><input type="checkbox"></label></td>
+            <td>1</td>
+            <td><a href="#" class="default-color">20141314140</a></td>
+            <td>2015-09-12 18:30:25</td>
+            <td>待审核</td>
+            <td>待支付</td>
+            <td>￥4000</td>
+            <td>￥30</td>
+            <td>雨花区测试地址</td> 
+            <td>项目经理订单</td> 
+            <td>￥40</td>
+            <td>￥520</td>
+            <td>/</td>
+            <td><a href="#" class="default-color">查看订单</a></td>
+          </tr>
+          <tr>
+            <td><label><input type="checkbox"></label></td>
+            <td>2</td>
+            <td><a href="#" class="default-color">20141314140</a></td>
+            <td>2015-09-12 18:30:25</td>
+            <td>待审核</td>
+            <td>待支付</td>
+            <td>￥4000</td>
+            <td>￥30</td>
+            <td>雨花区测试地址</td> 
+            <td>项目经理订单</td> 
+            <td>￥40</td>
+            <td>￥520</td>
+            <td>/</td>
+            <td><a href="#" class="default-color">查看订单</a></td>
+          </tr>
+          <tr>
+            <td><label><input type="checkbox"></label></td>
+            <td>3</td>
+            <td><a href="#" class="default-color">20141314140</a></td>
+            <td>2015-09-12 18:30:25</td>
+            <td>待审核</td>
+            <td>待支付</td>
+            <td>￥4000</td>
+            <td>￥30</td>
+            <td>雨花区测试地址</td> 
+            <td>项目经理订单</td> 
+            <td>￥40</td>
+            <td>￥520</td>
+            <td>/</td>
+            <td><a href="#" class="default-color">查看订单</a></td>
+          </tr>
+          <tr>
+            <td><label><input type="checkbox"></label></td>
+            <td>4</td>
+            <td><a href="#" class="default-color">20141314140</a></td>
+            <td>2015-09-12 18:30:25</td>
+            <td>待审核</td>
+            <td>待支付</td>
+            <td>￥4000</td>
+            <td>￥30</td>
+            <td>雨花区测试地址</td> 
+            <td>项目经理订单</td> 
+            <td>￥40</td>
+            <td>￥520</td>
+            <td>/</td>
+            <td><a href="#" class="default-color">查看订单</a></td>
+          </tr>
+          <tr class="table-important">
+            <td colspan="14" class="crearfix" style="text-align:right;">
+                <ul class="inline-block-ul has-margin-lg-left text-right">
+                  <li class="pull-left">总计金额：</li>
+                  <li>应付金额：<span class="danger-color">￥3200</span></li>
+                  <li>已付金额：<span class="danger-color">￥3200</span></li>
+                  <li>余额金额：<span class="danger-color">￥3200</span></li>
+                </ul>
+            </td>
+          </tr>
+        </table>
+        <div class="pagination  pagination-centered pageination-style">
+          <ul>
+            <li><a href="#"><i class="icon-step-backward"></i></a></li>
+            <li><a href="#"><i class="icon-chevron-left"></i></a></li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#"><i class="icon-chevron-right"></i></a></li>
+            <li><a href="#"><i class="icon-step-forward"></i></a></li>
+          </ul>
+        </div>
       </div>
-      </div>
-      <table class="table table-hover text-center  table-bordered">
-        <tr class="table-important">
-          <td><label><input type="checkbox"></label></td>
-          <td>序号</td>
-          <td>订单编号</td>
-          <td>下单时间</td>
-          <td>订单状态</td>
-          <td>支付状态</td>
-          <td>材料总额</td>
-          <td>订单总额</td>
-          <td>收货地址</td>
-          <td>订单来源</td>
-          <td>应付金额</td>
-          <td>已付金额</td>
-          <td>剩余金额</td>
-          <td>操作</td>
-        </tr>
-        <tr>
-          <td><label><input type="checkbox"></label></td>
-          <td>1</td>
-          <td><a href="#" class="default-color">20141314140</a></td>
-          <td>2015-09-12 18:30:25</td>
-          <td>待审核</td>
-          <td>待支付</td>
-          <td>￥4000</td>
-          <td>￥30</td>
-          <td>雨花区测试地址</td> 
-          <td>项目经理订单</td> 
-          <td>￥40</td>
-          <td>￥520</td>
-          <td>/</td>
-          <td><a href="#" class="default-color">查看订单</a></td>
-        </tr>
-        <tr>
-          <td><label><input type="checkbox"></label></td>
-          <td>2</td>
-          <td><a href="#" class="default-color">20141314140</a></td>
-          <td>2015-09-12 18:30:25</td>
-          <td>待审核</td>
-          <td>待支付</td>
-          <td>￥4000</td>
-          <td>￥30</td>
-          <td>雨花区测试地址</td> 
-          <td>项目经理订单</td> 
-          <td>￥40</td>
-          <td>￥520</td>
-          <td>/</td>
-          <td><a href="#" class="default-color">查看订单</a></td>
-        </tr>
-        <tr>
-          <td><label><input type="checkbox"></label></td>
-          <td>3</td>
-          <td><a href="#" class="default-color">20141314140</a></td>
-          <td>2015-09-12 18:30:25</td>
-          <td>待审核</td>
-          <td>待支付</td>
-          <td>￥4000</td>
-          <td>￥30</td>
-          <td>雨花区测试地址</td> 
-          <td>项目经理订单</td> 
-          <td>￥40</td>
-          <td>￥520</td>
-          <td>/</td>
-          <td><a href="#" class="default-color">查看订单</a></td>
-        </tr>
-        <tr>
-          <td><label><input type="checkbox"></label></td>
-          <td>4</td>
-          <td><a href="#" class="default-color">20141314140</a></td>
-          <td>2015-09-12 18:30:25</td>
-          <td>待审核</td>
-          <td>待支付</td>
-          <td>￥4000</td>
-          <td>￥30</td>
-          <td>雨花区测试地址</td> 
-          <td>项目经理订单</td> 
-          <td>￥40</td>
-          <td>￥520</td>
-          <td>/</td>
-          <td><a href="#" class="default-color">查看订单</a></td>
-        </tr>
-        <tr class="table-important">
-          <td colspan="14" class="crearfix" style="text-align:right;">
-              <ul class="inline-block-ul has-margin-lg-left text-right">
-                <li class="pull-left">总计金额：</li>
-                <li>应付金额：<span class="danger-color">￥3200</span></li>
-                <li>已付金额：<span class="danger-color">￥3200</span></li>
-                <li>余额金额：<span class="danger-color">￥3200</span></li>
-              </ul>
-          </td>
-        </tr>
-      </table>
-      <div class="pagination  pagination-centered pageination-style">
-        <ul>
-          <li><a href="#"><i class="icon-step-backward"></i></a></li>
-          <li><a href="#"><i class="icon-chevron-left"></i></a></li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li><a href="#">5</a></li>
-          <li><a href="#"><i class="icon-chevron-right"></i></a></li>
-          <li><a href="#"><i class="icon-step-forward"></i></a></li>
-        </ul>
-      </div>
-    </div>
 
-    <div class="footer">
-      本网站所有素材均有本公司或版权所有人授权发布，侵权必究。 湘ICP备15004864号-2
+      <div class="footer">
+        本网站所有素材均有本公司或版权所有人授权发布，侵权必究。 湘ICP备15004864号-2
+      </div>
     </div>
 
 

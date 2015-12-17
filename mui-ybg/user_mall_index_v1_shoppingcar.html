@@ -6,15 +6,14 @@
 	<title>云包公-工地管理</title>
 	<link rel="stylesheet" href="libs/sui/css/sm.min.css">
 	<link rel="stylesheet" href="libs/sui/css/sm-extend.min.css">
-<link rel="stylesheet" href="libs/alifontico/iconfont.css">
-<link rel="stylesheet" href="css/style-plugin.css">
-	
-</head>
+	<!-- <link rel="stylesheet" href="libs/alifontico/iconfont.css">
+	-->
+	<link rel="stylesheet" href="css/style-plugin.css"></head>
 <body>
 	<!-- 顶部标题 -->
 	<header class="bar bar-nav default-style  ">
-		
-		<a class="icon icon-left pull-left" href="user_address_index_second.html" data-transition="slide-out"></a> 
+
+		<a class="icon icon-left pull-left" href="user_address_index_second.html" data-transition="slide-out"></a>
 		<h1 class="title">商品选购</h1>
 	</header>
 
@@ -40,192 +39,2248 @@
 	</nav>
 
 	<div class="card bar-footer-secondary fix-bottom-bar shoppingcar-bottom-bar">
-	    <div class="card-footer no-border">
-	      <div>
-	      	合计总金额 <span class="red-color">¥588.00</span>
-			<span class="gray-info">为您节省￥785.0</span>
-	      </div>
-	      <a href="user_order_submit.html" id="order_submit" data-transition="slide-in" class="button button-dafault button-fill order_button ">下 单</a>
-	   </div>
+		<div class="card-footer no-border">
+			<div>
+				合计总金额
+				<span class="red-color">¥588.00</span>
+				<span class="gray-info">为您节省￥785.0</span>
+			</div>
+			<a href="user_me_order_confirmed2.html" id="order_submit" data-transition="slide-in" class="button button-dafault button-fill order_button ">下 单</a>
+		</div>
 	</div>
-	
 
 	<!-- 页面内容区域 -->
-	<div class="content"  style="top:2.2rem; bottom:3rem; " >
-		
+	<div class="content" id="imgbox"  style="top:2.2rem; bottom:3rem; " >
 
 		<div class="list-block media-list shopping-car-list">
 			<ul>
 
-			  <li>
-			    <div href="#" class="item-link item-content item-product-list">
-			      <div class="item-media"><img src="img/shoppingcar_03.jpg" style='width: 4rem;'></div>
-			      <div class="item-inner">
-			        <div class="item-title clearfix">
-			        	<span class="pull-left">坪塘水泥</span>
-			        	<span class="pull-right">
-							<a href="#" class="del-btn"><i class="icon icon-remove"></i></a>
-			        	</span>
-			        </div>
-			        <div class="item-subtitle clearfix">
-			        	<span class="pull-left">规格：50*3.5</span>
-			        	<span class="pull-right">包装：30M</span>
-			        </div>
-			        <div class="item-price">
-			        	<span class="hot-price">￥15</span>
-			        </div>
-			      </div>
-					<div class="count-ul clearfix">
-						<div class="count-li name">购买数量</div>
-						<div class="count-li del">-</div>
-						<div class="count-li count"><input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
-						<div class="count-li plus" >+</div>
-					</div>
-			    </div>
-			  </li>
+				<div class="list-block media-list shopping-car-list">
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn"> <i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
 
-				<li>
-			    <div href="#" class="item-link item-content item-product-list">
-			      <div class="item-media"><img src="img/shoppingcar_03.jpg" style='width: 4rem;'></div>
-			      <div class="item-inner">
-			        <div class="item-title clearfix">
-			        	<span class="pull-left">坪塘水泥</span>
-			        	<span class="pull-right">
-							<a href="#" class="del-btn"><i class="icon icon-remove"></i></a>
-			        	</span>
-			        </div>
-			        <div class="item-subtitle clearfix">
-			        	<span class="pull-left">规格：50*3.5</span>
-			        	<span class="pull-right">包装：30M</span>
-			        </div>
-			        <div class="item-price">
-			        	<span class="hot-price">￥15</span>
-			        </div>
-			      </div>
-					<div class="count-ul clearfix">
-						<div class="count-li del">-</div>
-						<div class="count-li count"><input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
-						<div class="count-li plus" >+</div>
-					</div>
-			    </div>
-			  </li>
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img04.sogoucdn.com/app/a/1005200913/2a5ac85aaaa2d951-48ebc1dba4f3112d-7022ab585b7468744cee99e7cfc47231.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn"> <i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
 
-			  <li>
-			    <div href="#" class="item-link item-content item-product-list">
-			      <div class="item-media"><img src="img/shoppingcar_03.jpg" style='width: 4rem;'></div>
-			      <div class="item-inner">
-			        <div class="item-title clearfix">
-			        	<span class="pull-left">坪塘水泥</span>
-			        	<span class="pull-right">
-							<a href="#" class="del-btn"><i class="icon icon-remove"></i></a>
-			        	</span>
-			        </div>
-			        <div class="item-subtitle clearfix">
-			        	<span class="pull-left">规格：50*3.5</span>
-			        	<span class="pull-right">包装：30M</span>
-			        </div>
-			        <div class="item-price">
-			        	<span class="hot-price">￥15</span>
-			        </div>
-			      </div>
-					<div class="count-ul clearfix">
-						<div class="count-li del">-</div>
-						<div class="count-li count"><input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
-						<div class="count-li plus" >+</div>
-					</div>
-			    </div>
-			  </li>
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img03.sogoucdn.com/app/a/100520093/30c40e020f63f81f-c00171587126b6cf-f74337645f9642c36eb63249cdbbecaf.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
 
-			  <li>
-			    <div href="#" class="item-link item-content item-product-list">
-			      <div class="item-media"><img src="img/shoppingcar_03.jpg" style='width: 4rem;'></div>
-			      <div class="item-inner">
-			        <div class="item-title clearfix">
-			        	<span class="pull-left">坪塘水泥</span>
-			        	<span class="pull-right">
-							<a href="#" class="del-btn"><i class="icon icon-remove"></i></a>
-			        	</span>
-			        </div>
-			        <div class="item-subtitle clearfix">
-			        	<span class="pull-left">规格：50*3.5</span>
-			        	<span class="pull-right">包装：30M</span>
-			        </div>
-			        <div class="item-price">
-			        	<span class="hot-price">￥15</span>
-			        </div>
-			      </div>
-					<div class="count-ul clearfix">
-						<div class="count-li del">-</div>
-						<div class="count-li count"><input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
-						<div class="count-li plus" >+</div>
-					</div>
-			    </div>
-			  </li>
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img03.sogoucdn.com/app/a/100520093/d22f70151feea573-27b1c41a9baedcf3-b916a8be720b4963e543183e48a3bdac.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
 
-			  <li>
-			    <div href="#" class="item-link item-content item-product-list">
-			      <div class="item-media"><img src="img/shoppingcar_03.jpg" style='width: 4rem;'></div>
-			      <div class="item-inner">
-			        <div class="item-title clearfix">
-			        	<span class="pull-left">坪塘水泥</span>
-			        	<span class="pull-right">
-							<a href="#" class="del-btn"><i class="icon icon-remove"></i></a>
-			        	</span>
-			        </div>
-			        <div class="item-subtitle clearfix">
-			        	<span class="pull-left">规格：50*3.5</span>
-			        	<span class="pull-right">包装：30M</span>
-			        </div>
-			        <div class="item-price">
-			        	<span class="hot-price">￥15</span>
-			        </div>
-			      </div>
-					<div class="count-ul clearfix">
-						<div class="count-li del">-</div>
-						<div class="count-li count"><input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
-						<div class="count-li plus" >+</div>
-					</div>
-			    </div>
-			  </li>
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img01.sogoucdn.com/app/a/100520093/137f7d5bc12ad4fc-9bf5547e8cef1005-5e008c268f9a5d5a6d49eceb3d171b27.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
 
-			  <li>
-			    <div href="#" class="item-link item-content item-product-list">
-			      <div class="item-media"><img src="img/shoppingcar_03.jpg" style='width: 4rem;'></div>
-			      <div class="item-inner">
-			        <div class="item-title clearfix">
-			        	<span class="pull-left">坪塘水泥</span>
-			        	<span class="pull-right">
-							<a href="#" class="del-btn"><i class="icon icon-remove"></i></a>
-			        	</span>
-			        </div>
-			        <div class="item-subtitle clearfix">
-			        	<span class="pull-left">规格：50*3.5</span>
-			        	<span class="pull-right">包装：30M</span>
-			        </div>
-			        <div class="item-price">
-			        	<span class="hot-price">￥15</span>
-			        </div>
-			      </div>
-					<div class="count-ul clearfix">
-						<div class="count-li del">-</div>
-						<div class="count-li count"><input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
-						<div class="count-li plus" >+</div>
-					</div>
-			    </div>
-			  </li>
-			  
-			</ul>
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img02.sogoucdn.com/app/a/100520093/928da9a0ca740e4d-5181da4938ffcfb4-7767efbfd0db1fb17c8647088fba0367.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img01.sogoucdn.com/app/a/100520093/97e46e4c262ab077-e08426d869a2e1cb-ca42dc3a62c006fa857f7458dd96891b.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img04.sogoucdn.com/app/a/100520093/67e5176c636c3e51-30671221e9cb8892-d682d6b6fa8d8b81ac915a2f6da0fe39.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img04.sogoucdn.com/app/a/100520093/013d20860a59d114-df5b4a05f7c173f3-7e866343d6ed14122f7512cd53e13aad.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img01.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-af640e269b3a3e1c-af0336e27774103cd1e0dfa5d634abb6.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img01.sogoucdn.com/app/a/100520093/2ad11b094c93197d-4afaf786506af54b-9fd277aea03c8387ebd35dcfba4ba3dd.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img03.sogoucdn.com/app/a/100520093/ca86e620b9e623ff-e7ae36db714776c0-b5519fad890d08508a931b72740891cf.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img04.sogoucdn.com/app/a/100520093/ca86e620b9e623ff-d72d635343d5bade-dcf2acda7a45cb44f172db138bdf8d2d.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img02.sogoucdn.com/app/a/100520093/dc72c3c04ef01fdf-22176402958c6b80-07a672bfee66dfefb47a3d911799f1b0.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img03.sogoucdn.com/app/a/100520093/3c28af542f2d49f7-da1566425074a021-4dd500a08535394bc4c64c68f672a2d6.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img02.sogoucdn.com/app/a/100520093/3c28af542f2d49f7-8331c86ff317d9f5-8ee52078d03feac9b8502dad26f33c31.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img01.sogoucdn.com/app/a/100520093/66ccbe631f3b0ce2-06138918aa1f7763-69f5926dc0b97baf69c3f7c84f3067c8.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img03.sogoucdn.com/app/a/100520093/3c28af542f2d49f7-da1566425074a021-49652b4db4e26f742bdf91d5ddf65e2f.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img01.sogoucdn.com/app/a/100520093/5e99014f4b69c15f-aaa2e461bdf9e9e9-c1e7813c6289cd60b01e25fe65fddc81.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img02.sogoucdn.com/app/a/100520093/dc72c3c04ef01fdf-22176402958c6b80-905bd70751b08a1c0359aa1f57932314.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img04.sogoucdn.com/app/a/100520093/dbc21f35d5a48c94-32f84562fc6a903b-f1c0412d3136d2e305469ab9c26bef81.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img01.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-d3e639ff657519ea-a9d4d43a8f00e80cfae6b8f74af91564.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img03.sogoucdn.com/app/a/100520093/e66ef30eb5f7b090-27de262591e8caea-30ba748bab7a6a5a10ee1b451712b4b9.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img04.sogoucdn.com/app/a/100520093/728b3e97663bb9a3-8b6df27c7c8892db-067739029e30aa22042b3d9a2f5b72cd.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img01.sogoucdn.com/app/a/100520093/5cc134da6d223663-45855b527cf3e1a5-4d17bdd819a13e838a5a8e6fddd15f3d.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img03.sogoucdn.com/app/a/100520093/3c28af542f2d49f7-eb73de10adcb3ad6-97f4256178f363446e56f9ff1d8e37e6.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img03.sogoucdn.com/app/a/100520093/8ac969855cc9e003-33eb23cdef07e30d-97772e8589c06fcb70f6eb921e33047a.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img02.sogoucdn.com/app/a/100520093/2ad11b094c93197d-4afaf786506af54b-621e1ceb60d9841ba38b82ed95e2ff67.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img02.sogoucdn.com/app/a/100520093/3c28af542f2d49f7-da1566425074a021-bd8227b8b00d760d48ef7a679e81790f.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img04.sogoucdn.com/app/a/100520093/ac75323d6b6de243-88c2ddd55cb8bca2-944dc7a9050ea493ee98c2e2a6d3cca0.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img03.sogoucdn.com/app/a/100520093/5e99014f4b69c15f-aaa2e461bdf9e9e9-1511794b5b4efc86acb2f6826c5225d6.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img03.sogoucdn.com/app/a/100520093/30c40e020f63f81f-85679ec6a342f6f1-1e4a0b660c6daa86c584d601c621e1b5.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img02.sogoucdn.com/app/a/100520093/9243fbcd523532c7-65a10dc900adf004-16cb2e34a14409c94f53ee8772786500.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img01.sogoucdn.com/app/a/100520093/728b3e97663bb9a3-8b6df27c7c8892db-80fa483f0eeb44967c401aff1c07f25b.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img01.sogoucdn.com/app/a/100520093/67c3ee3864534d43-66f63e9e771e8e94-ec64f6676a8d2c899c9c8eab521d701c.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img02.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-f0b91d6f9753a2cf-a69f4dac34c216c49cd47b53518f357b.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img01.sogoucdn.com/app/a/100520093/53e981f88a8af750-0ef8d06ea308ee25-2ffafe5f0020b0ffe74c636ace796a42.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img01.sogoucdn.com/app/a/100520093/dc72c3c04ef01fdf-22176402958c6b80-c38b335da7c9b59cca351a1973458b0f.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img01.sogoucdn.com/app/a/100520093/3c28af542f2d49f7-da1566425074a021-9d07bac9023e41945d272afa57d3a688.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img02.sogoucdn.com/app/a/100520093/9d0091db716ca3d7-d8cfb50654102235-21a5b85ec159fc294f4c98bdb8d65417.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img04.sogoucdn.com/app/a/100520093/728b3e97663bb9a3-8b6df27c7c8892db-a7ed59234f76151a5c7d1ab3d6610850.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img03.sogoucdn.com/app/a/100520093/10e8b9550acde0b8-459f14f6a089053d-e879bbcb128a7b240716f9531571fc2c.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img04.sogoucdn.com/app/a/100520093/e18d20c94006dfe0-feec70b0eb485633-e7e784240dab719c6e65117bcc3abd7a.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img02.sogoucdn.com/app/a/100520093/0015e77674b7604f-69a26da5b7f98fc0-22ec7bd31817b56fca90c84c573bcc66.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img04.sogoucdn.com/app/a/100520093/12400ee0679b6e1e-f0b91d6f9753a2cf-9fb4d606d750ecb83231b016ed7b5fd3.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img03.sogoucdn.com/app/a/100520093/e18d20c94006dfe0-feec70b0eb485633-bec953997d224b9a1fae638a7fbf2cce.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img01.sogoucdn.com/app/a/100520093/0015e77674b7604f-2daaebee7677c9c5-945f4ccc58399b51d07ef241feb45aaf.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img04.sogoucdn.com/app/a/100520093/30c40e020f63f81f-85679ec6a342f6f1-69312be693369ee75b908d0927189517.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img03.sogoucdn.com/app/a/100520093/3c28af542f2d49f7-da1566425074a021-9c373de8439e52c5d885c8459d285946.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img04.sogoucdn.com/app/a/100520093/ca86e620b9e623ff-e7ae36db714776c0-b0158348187351632005e109f7faff29.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img04.sogoucdn.com/app/a/100520093/728b3e97663bb9a3-8b6df27c7c8892db-a364e73601fe4ad3b7faa60a12b9847b.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img02.sogoucdn.com/app/a/100520093/0944a3e222b753b6-1c353d0d046bb42d-32e440bc71d72eaca3e1bdaa558d2a88.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img02.sogoucdn.com/app/a/100520093/9d86b99a90ca66e7-948af3d7dd96bb65-676640be6121656acbc25808407d7bb2.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img02.sogoucdn.com/app/a/100520093/18b802f0eb835f7e-f90693c95e6a93be-c5ff88da9ec2f2faf772a07b8a56687d.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://cdn.t02.pic.sogou.com/0fcfd3e5c305f29f-322e62d2777c5b50-148c8a22dfc1f845ed9725807eaffef8.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://cdn.t01.pic.sogou.com/164547244e60c58b-3c357154e0b1f2ec-ae4b345ab7771bd48d400756a2281483.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://cdn.t02.pic.sogou.com/30b30b6c3013fff8-a807c704bd5a8c80-2e254ca74a4194e5203d90beec1c4edb.jpg
+" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://cdn.t04.pic.sogou.com/12400ee0679b6e1e-b51e220c4c38bb74-e5c6d7674ec615736f1ca116844b5215.jpg
+" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://cdn.t01.pic.sogou.com/226b8654cc8872ac-017e9dc36f0568b5-61a9ad920fc0fa60ab8f42e482d52473.jpg
+" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://cdn.t02.pic.sogou.com/0cd5c15a97ca506b-6c4028f8ed64a15b-597247ba7d1be6e599c10a996a073c70.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://cdn.t04.pic.sogou.com/12400ee0679b6e1e-9dc04af53662b93c-2962c4c3264f6187956cdaa7d8e377de.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://cdn.t01.pic.sogou.com/127eb55287e4428f-48261c01bff0b1fe-51b413b7dabb27b4eb6cd50d876e4a86.jpg" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img02.sogoucdn.com/app/a/07/2fb1e12f11c693eaa260652bd709e77f
+" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img03.sogoucdn.com/app/a/100520024/925820a7ab76983df9b46b9d2a88a7fb
+" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img01.sogoucdn.com/app/a/100520024/e80ae37a14960fa28e4f778bfb2a6a7c
+" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img03.sogoucdn.com/app/a/100520024/30e0dce583b0975e51a5f3a1196851a1
+" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img01.sogoucdn.com/app/a/100520024/54e9608e1be7417a77759bced1b70545
+" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img02.sogoucdn.com/app/a/100520024/88e18ac1de4278f59fb19476ccb61b8c
+" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img01.sogoucdn.com/app/a/100520024/d6f4e069cad2df35e1e45f37925a4ccf
+" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img02.sogoucdn.com/app/a/100520024/4ecb64ceb29d6549aa14580904bc7b6b
+" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div href="#" class="item-link item-content item-product-list">
+							<div class="item-media">
+								<img src="img/default-ico.gif" data-layzr="http://img02.sogoucdn.com/app/a/100520024/14773eb7518f7ba8c7cf27605637e72c" style='width: 4rem;'></div>
+							<div class="item-inner">
+								<div class="item-title clearfix">
+									<span class="pull-left">坪塘水泥</span>
+									<span class="pull-right">
+										<a href="#" class="del-btn">
+											<i class="icon icon-remove"></i>
+										</a>
+									</span>
+								</div>
+								<div class="item-subtitle clearfix">
+									<span class="pull-left">规格：50*3.5</span>
+									<span class="pull-right">包装：30M</span>
+								</div>
+								<div class="item-price">
+									<span class="hot-price">￥15</span>
+								</div>
+							</div>
+							<div class="count-ul clearfix">
+								<div class="count-li name">购买数量</div>
+								<div class="count-li del">-</div>
+								<div class="count-li count">
+									<input type="tel" class="num-input" value="" placeholder="0" name="count" ng-model="array.count[0]" ng-pattern="/^([0-9]/d*)$/"></div>
+								<div class="count-li plus" >+</div>
+							</div>
+						</div>
+					</li>
+
+				</ul>
 			</div>
 
-	</div>
+		</div>
 
-	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
-	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
-	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
-	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
-    <script type="text/javascript" src="http://cdn.bootcss.com/angular.js/1.0.3/angular.min.js"></script>
+		<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
+		<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
+		<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
+		<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
+		<script type="text/javascript" src="http://cdn.bootcss.com/angular.js/1.0.3/angular.min.js"></script>
+		<script type="text/javascript" src="libs/layzr/layzr.min.js"></script>
 
-	<script type="text/javascript">
+		<script type="text/javascript">
+	
+
 	function hasNum(){
 		var numInput = parseFloat( $(".num-input").val() );
 		var isBuy = numInput+ numInput;
@@ -254,6 +2309,30 @@
 				// 输入法问题
 
 			})
+
+
+			var layzr = new Layzr({
+			  container: '.content',
+			  selector: '[data-layzr]',
+			  attr: 'data-layzr',
+			  retinaAttr: 'data-layzr-retina',
+			  bgAttr: 'data-layzr-bg',
+			  hiddenAttr: 'data-layzr-hidden',
+			  threshold: 0,
+			  callback: function(){
+			  	this.onload = function(){
+			  		console.log(this);
+			  	}
+			  	var noneImg = this.getAttribute("src");
+
+			  	if(noneImg==""||noneImg==null  ){
+			  		console.log(this)
+			  		this.setAttribute("src","img/emptyico.gif")
+			  	}
+
+			  }
+			});
+
 	</script>
 </body>
-</html>
+	</html>

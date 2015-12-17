@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>云包公-工地管理</title>
+    <link rel="stylesheet" href="libs/sui/css/sm.min.css">
+    <link rel="stylesheet" href="libs/sui/css/sm-extend.min.css">
+<link rel="stylesheet" href="libs/alifontico/iconfont.css">
+<link rel="stylesheet" href="css/style-plugin.css?v=1">
+    <link rel="stylesheet" href="libs/glyphicons/css/glyphicons.css">
+</head>
+<body>
+	<!-- 顶部标题 -->
+	<header class="bar bar-nav default-style">
+		
+		
+		 <a class="icon icon-left pull-left" href="address_order.html" data-transition="slide-out"></a> 
+		<h1 class="title">订单详情</h1>
+	</header>
+
+	<!-- 底部导航栏 -->
+	<nav class="bar bar-tab bar-mini has-border" style="display:block;">
+		<a class="tab-item" href="#" >
+			<span class="icon icon-phone"></span>
+			<span class="tab-label">联系客户</span>
+		</a>
+		<!-- <a class="tab-item " data-transition="slide-in" href="#">
+			<span class="icon icon-cart"></span>
+			<span class="tab-label">代客下单</span>
+		</a> -->
+		<a class="tab-item" data-transition="slide-in" href="#">
+			<span class="icon icon-me"></span>
+			<span class="tab-label">咨询客服</span>
+		</a>
+		<!-- <a class="tab-item" data-transition="slide-in" href="saler_order_timeline.html">
+			<span class="icon icon-clock"></span>
+			<span class="tab-label">查看订单轴</span>
+		</a> -->
+
+	</nav>
+	
+
+	<!-- 页面内容区域 -->
+	<div class="content">
+		<style type="text/css">
+			.content {
+			    bottom:2.5rem!important;
+			}
+			.bar-tab {
+			    display: block;
+			}
+		</style>  
+		<!-- warning 配送中 &&  success 配送完成 -->
+		<div class="status-area warning"> 
+			<div class="alert-box alert-warning">
+				<i class="icon icon-clock icon-ball warning"></i>
+				<h4>已支付,配送中</h4>
+			</div>
+			<div class="alert-box alert-success">
+				<i class="icon icon-check icon-ball success"></i>
+				<h4>已支付,订单已完成</h4>
+			</div>
+		</div>
+		<div class="card card-message message-module">
+			<div class="card-header">
+				<div class="pull-left">
+					<span class="black-color">订单跟踪 </span>
+				</div>
+			</div>
+			<div class="card-content">
+				<div class="ps-status-box" style="display:block;">
+				  <ul class="status-info-more">
+				  	<li>
+				  		<div class="single-status">
+					  		<i class="status-ball active"></i> 
+					  		正在送货途中，预计2小时到达
+					  		<h4 class="time-area">今天 09:00</h4>
+				  		</div>
+				  	</li>
+				  	<li class="finish">
+				  		<div class="single-status">
+					  		<i class="status-ball"></i>报价成功，订单待确认
+							<h4 class="time-area">今天 08:30</h4>  
+					  	</div>
+				  	</li>
+				  	<li class="finish">
+					  	<div class="single-status">
+					  		<i class="status-ball"></i>拍照下单成功，待客服报价
+					  		<h4 class="time-area">今天 08:19</h4>
+					  	</div>
+				  	</li>
+				  </ul>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
+  	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
+  	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
+</body>
+</html>

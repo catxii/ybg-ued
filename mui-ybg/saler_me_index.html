@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>云包公-工地管理</title>
+	<link rel="stylesheet" href="libs/sui/css/sm.min.css">
+	<link rel="stylesheet" href="libs/sui/css/sm-extend.min.css">
+<link rel="stylesheet" href="libs/alifontico/iconfont.css">
+<link rel="stylesheet" href="css/style-plugin.css">
+	
+</head>
+<body>
+	<!-- 顶部标题 -->
+	<!-- <header class="bar bar-nav default-style">
+		
+		<a class="icon icon-left pull-left" href="saler-me-index.html" data-transition="slide-out"></a>
+		<h1 class="title">我的个人中心</h1>
+	</header> -->
+
+	<!-- 底部导航栏 -->
+	<nav class="bar bar-tab white-bg">
+		<a class="tab-item " data-transition="slide-in" href="saler_order_list.html" data-ignore="push">
+	    <span class="icon icon-orderlist-gray"></span>
+	    <span class="tab-label">订单</span>
+	  </a>
+	  <a class="tab-item" href="saler-client-index.html">
+	    <span class="icon icon-clients-gray"></span>
+	    <span class="tab-label">客户</span>
+	  </a>
+	  <!-- <a class="tab-item" data-transition="slide-in" href="saler-message-index.html">
+	    <span class="icon icon-message-gray"></span>
+	    <span class="tab-label">消息</span>
+	  </a> -->
+	  <a class="tab-item current" data-transition="slide-in" href="saler_me_index.html">
+	    <span class="icon icon-me-round-gray"></span>
+	    <span class="tab-label">我的</span>
+	  </a>
+
+	</nav>
+	
+
+	<!-- 页面内容区域 -->
+	<div class="content" >
+		<style type="text/css">
+			.content {
+			    bottom:2.2rem!important;
+			}
+			.bar-tab {
+			    display: block;
+			}
+		</style>
+		<div class="me-user small">
+			<div class="me-user-head">
+			  <div class="me-user-img"><img src="img/me_user.png" style='width: 3rem;'></div>
+			  <div class="me-user-size">
+			    <!-- <p class="item-title" style="margin-top:0;">ybg演示账号</p> -->
+			    <p class="item-subtitle" style="margin:0.25rem auto 1.25rem">刘江，欢迎您回来</p>
+			  </div>
+			</div>
+		</div>
+
+		<div class="padding">
+		    <div class="buttons-row">
+		      <a href="#tab1" class="tab-link button"><span class="icon icon-left"></span> 上一月</a>
+		      <a href="#tab2" class="tab-link button active">12月(当前月份)</a>
+		      <a href="#tab3" class="tab-link button">下一月 <span class="icon icon-right"></span></a>
+		    </div>
+		  </div>
+
+		<div class="address-module">
+
+			<div class="header-title clearfix" style="margin:0;">
+				<div class="pull-left">
+					<i class="blue-line"></i> 
+					<span class="icon-middle-span">客户统计<span class="unimportant-title">2015-11</span></span>
+				</div>
+			</div>
+			
+			<ul class="statistics-ball">
+				<li class="green">
+					<h4 class="number">156</h4>
+					<span class="name">客户</span>
+				</li>
+				<li class="blue ">
+					<h4 class="number">26</h4>
+					<span class="name">本月增长</span>
+				</li>
+				<li class="purple">
+					<h4 class="number">￥156000</h4>
+					<span class="name">月成交客户</span>
+				</li>
+			</ul>
+
+		</div>
+
+		<div class="address-module">
+
+			<div class="header-title clearfix" style="margin:0;">
+				<div class="pull-left">
+					<i class="blue-line"></i> 
+					<span class="icon-middle-span">订单统计<span class="unimportant-title">2015-11</span></span>
+				</div>
+			</div>
+			
+			<ul class="statistics-ball">
+				<li class="green">
+					<h4 class="number">156</h4>
+					<span class="name">本月订单数</span>
+				</li>
+				<li class="blue ">
+					<h4 class="number">26</h4>
+					<span class="name">本月订单总额</span>
+				</li>
+				<li class="purple">
+					<h4 class="number">￥156000</h4>
+					<span class="name">本月新增订单</span>
+				</li>
+			</ul>
+
+		</div>
+
+		<div class="address-module">
+
+			<div class="header-title clearfix" style="margin:0;">
+				<div class="pull-left">
+					<i class="blue-line"></i> 
+					<span class="icon-middle-span">收款统计<span class="unimportant-title">2015-11</span></span>
+				</div>
+			</div>
+			
+			<ul class="statistics-ball">
+				<li class="yellow ">
+					<h4 class="number">￥1000000</h4>
+					<span class="name">本月已收</span>
+				</li>
+				<li class="red">
+					<h4 class="number">￥530900</h4>
+					<span class="name">本月剩余未收</span>
+				</li>
+				<li class="orange">
+					<h4 class="number">￥356000</h4>
+					<span class="name">累计订单总额</span>
+				</li>
+			</ul>
+
+		</div>
+
+		<div class="status-area warning"> 
+			<div class="alert-box alert-warning">
+				<h1>第 <span class="ranking">1</span> 名</h1>
+				<h4>销售排名</h4>
+				<p class="info">本月的提成金额为¥29000</p>
+			</div>
+		</div>
+	
+
+
+	</div>
+
+	<script type='text/javascript' src='libs/sui/js/zepto.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='libs/sui/js/sm.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='libs/sui/js/sm-extend.min.js' charset='utf-8'></script>
+	<script type='text/javascript' src='js/app.js' charset='utf-8'></script>
+</body>
+</html>

@@ -19,12 +19,14 @@
 
     <div class="header">
       <div class="all-page-width clearfix">
+        <div class="logo">云包公logo</div>
         <div class="pull-right text-right">
-          <span class="label">未认证</span>
-          你好，13112345678
+          <span class="label label-important">未认证</span>
+          
           <!-- 下拉按钮 -->
           <div class="btn-group no-style">
               <button type="button" class="btn btn-inverse dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                13112345678
                 <span class="caret"></span>
               </button>
               <ul class="dropdown-menu">
@@ -35,42 +37,40 @@
               </ul>
           </div>
         </div>
-      </div>
-    </div>
-
-    <div class="top-nav-bar">
-      <div class="all-page-width clearfix">
-        <div class="pull-left">
-          <div class="logo">云包公logo</div>
-        </div>
-        <ul class="top-nav">
-          <li class="current"><a href="index.html">首页</a></li>
-          <li><a href="object-index.html">项目经理</a></li>
-          <li><a href="address-index.html">施工工地</a></li>
-          <li><a href="#">辅材商城</a></li>
-        </ul>
-        
-      </div>
-    </div>
-
-    <div class="top-search">
-        <div class="input-prepend input-append">
-          <div class="btn-group">
-            <button class="btn dropdown-toggle" data-toggle="dropdown">
-              项目经理
-              <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a href="javascript:void(0)">项目经理</a></li>
-              <li><a href="javascript:void(0)">商品辅材</a></li>
-              <li><a href="javascript:void(0)">项目经理</a></li>
-            </ul>
+        <div class="pull-right saosao">
+          <i class="phone-ico"></i> 手机微信版
+          <div class="erweima">
+            <img src="img/erweima.png"> 
+            <span>使用微信扫一扫，立即进入微信用户端</span>
           </div>
-          <input class="span2" id="appendedPrependedDropdownButton" type="text">
-          <label for="search_btn" class="btn btn-primary" >
-            <input id="search_btn" type="submit" style="display:none;"><i class="icon-search icon-white"></i>
-          </label>
         </div>
+      </div>
+    </div>
+
+    <ul class="top-nav ">
+      <li class="show-area-btn"><a href="javascript:void(0)"><i class=" icon-minus icon-white"></i></a></li>
+      <li><a href="index.html"><i class="icon-home icon-white"></i> <span class="nav-font">首页</span></a></li>
+      <li class="current"><a href="object-index.html"><i class="icon-user icon-white"></i> <span class="nav-font">项目经理</span></a></li>
+      <li><a href="address-index.html"><i class="icon-globe icon-white"></i> <span class="nav-font">施工工地</span></a></li>
+      <li><a href="#"><i class="icon-shopping-cart icon-white"></i> <span class="nav-font">辅材商城</span></a></li>
+    </ul>
+
+    <div class="pull-right top-search">
+            <div class="input-prepend input-append">
+              <div class="btn-group">
+                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                  项目经理
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="javascript:void(0)">项目经理</a></li>
+                  <li><a href="javascript:void(0)">商品辅材</a></li>
+                  <li><a href="javascript:void(0)">项目经理</a></li>
+                </ul>
+              </div>
+              <input class="span2" id="appendedPrependedDropdownButton" type="text">
+              <button class="btn btn-primary" type="button"><i class="icon-search icon-white"></i></button>
+            </div>
     </div>
 
     <div class="all-page-width card padding white-bg">
@@ -83,6 +83,7 @@
       </ul>
     </div>
 
+  <div class="content-fix-box ">
     <div class="all-page-width card padding white-bg">
       <ul class="inline-block-ul filter-area">
         <li class="title">订单来源：</li>
@@ -130,7 +131,7 @@
       <div class="do-info-area">
         <a href="javascript:void(0)" class="btn btn-primary">批量导出Excel</a> 
       </div>
-      <table class="table table-hover text-center  table-bordered">
+      <!-- <table class="table table-hover text-center  table-bordered">
         <tr class="table-important">
           <td><label><input type="checkbox"></label></td>
           <td>序号</td>
@@ -206,7 +207,8 @@
           <td>企业订单</td>
           <td><a href="#" class="default-color">查看订单</a></td>
         </tr>
-      </table>
+      </table> -->
+      <div class="empty-info">暂无信息</div>
       <div class="pagination  pagination-centered pageination-style">
         <ul>
           <li><a href="#"><i class="icon-step-backward"></i></a></li>
@@ -225,6 +227,7 @@
     <div class="footer">
       本网站所有素材均有本公司或版权所有人授权发布，侵权必究。 湘ICP备15004864号-2
     </div>
+  </div>
 
 
     <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
