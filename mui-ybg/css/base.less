@@ -1,7 +1,7 @@
 //h5调试用
-// .preloader-indicator-modal,.preloader-indicator-overlay {
-//     display: none!important;
-// }
+.preloader-indicator-modal,.preloader-indicator-overlay {
+    display: none!important;
+}
 // #think_page_trace_open {
 //     z-index: 99999;
 // }
@@ -148,7 +148,7 @@ a {
 }
 .list-block {
     .item-subtitle {
-        font-size: @font-size-default;
+        font-size: @font-size-small;
     }
 }
 .card-header {
@@ -578,6 +578,7 @@ ul,ol {
 }
 .font-overflow {  //字体溢出截取添加"..."处理,使用时需要给元素添加宽度
     display: inline-block;
+    width: 100%;
     zoom: 1;
     *display: inline;
     white-space: nowrap;

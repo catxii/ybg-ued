@@ -627,6 +627,9 @@
         color:@unimportance-color!important;
     }
 }
+.small {
+    font-size: @font-size-mini;
+}
 
 .todo-btn-list {
     padding:.5rem 0!important;
@@ -1904,14 +1907,17 @@ h4.card-title-style {
 }
 
 .search-input {
+    overflow:hidden;
     &.btn-right {
         #search {
             padding-left: .4rem;
         }
         .icon-search {
+            background: white;
             left: auto;
             right: .3rem;
-            padding-left: 1rem;
+            padding: 0 .3rem 0 2rem;
+            border-radius: .8rem;
             &:active {
                 opacity: .2;
             }
@@ -1932,4 +1938,31 @@ h4.card-title-style {
     font-size: .6rem;
     color: #ccc;
     margin-left: .5rem;
+}
+
+.badge-bg,.badge-bg:active {
+    background-repeat: no-repeat;
+    background-position: 90% center;
+    background-size: .7rem;
+    &.badge-company-bg {
+        background-image: url("@{imgsrc}/badge_06.png");
+    }
+    &.badge-person-bg {
+        background-image: url("@{imgsrc}/badge_03.png");
+    }
+    .arrow-bg-padding-right {
+        padding-right:2.5rem!important;
+    }
+    &.badge-black-bg {
+        padding-right: 0rem;
+        background-size: 1rem;
+        background-position: right top; 
+        background-size: 1rem;
+        &.badge-company-bg {
+            background-image: url("@{imgsrc}/badge-bg-ny_05.gif");
+        }
+        &.badge-person-bg {
+            background-image: url("@{imgsrc}/badge-bg-ny_03.gif");
+        }
+    }
 }

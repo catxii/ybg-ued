@@ -10,7 +10,7 @@
     "icons": {
         "72": "icon.png"
     },
-    "launch_path": "driver_me_index.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "launch_path": "login.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
     "developer": {
         "name": "",/*开发者名称*/
         "email": "",/*开发者邮箱地址*/
@@ -1353,7 +1353,188 @@
 					"img/user-ico_03.png",
 					"libs/sui/fonts/ratchicons.woff",
 					"driver_index_status.html",
-					"img/i-list-chevron-right.png"
+					"img/i-list-chevron-right.png",
+					"saler-me-changepassword.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"saler-me-changepassword.html": {
+				"resources": [
+					"img/me-ico_03.png",
+					"img/profile-ico_03-06.png",
+					"img/profile-ico_03-04.png",
+					"saler-me-index.html",
+					"img/profile-ico_03-05.png",
+					"img/user-ico_03.png",
+					"img/me-ico_11.png",
+					"img/profile-ico_03-07.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"saler-me-index.html": {
+				"resources": [
+					"img/profile-ico_03.png",
+					"img/profile-ico_03-08.png",
+					"saler-order-index.html",
+					"css/style-plugin.css",
+					"img/user-ico_03.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"saler_account_details_gr.html": {
+				"resources": [
+					"libs/sui/js/zepto.min.js",
+					"js/app.js",
+					"img/profile-ico_03-08.png",
+					"img/account-ico_06_finish.png",
+					"libs/alifontico/iconfont.css",
+					"libs/sui/fonts/ratchicons.woff",
+					"img/profile-ico_03-05.png",
+					"libs/glyphicons/css/glyphicons.css",
+					"libs/sui/img/i-list-chevron-right.png",
+					"libs/sui/js/sm-extend.min.js",
+					"saler-client-index.html",
+					"libs/sui/js/sm.min.js",
+					"css/style-plugin.css",
+					"img/account-ico_06.png",
+					"img/i-list-chevron-right.png",
+					"libs/sui/css/sm-extend.min.css",
+					"img/address_ico_07.jpg",
+					"img/account-ico_03.png",
+					"img/profile-ico_03-03.png",
+					"libs/sui/css/sm.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"saler_order_list.html": {
+				"resources": [
+					"libs/sui/js/zepto.min.js",
+					"js/app.js",
+					"img/profile-ico_03.png",
+					"img/profile-ico_03-08.png",
+					"libs/alifontico/iconfont.css",
+					"libs/sui/fonts/ratchicons.woff",
+					"libs/sui/js/sm-extend.min.js",
+					"libs/sui/js/sm.min.js",
+					"libs/sui/css/sm.min.css",
+					"css/style-plugin.css",
+					"img/i-list-chevron-right.png",
+					"img/profile-ico_03-07.png",
+					"libs/sui/css/sm-extend.min.css",
+					"img/profile-ico_03-04.png",
+					"img/profile-ico_03-05.png",
+					"libs/sui/img/i-list-chevron-right.png",
+					"saler-client-index.html",
+					"img/account-ico_06.png",
+					"img/me_user.png",
+					"img/address_ico_07.jpg",
+					"img/login_bg_f102979.jpg",
+					"saler_me_index.html",
+					"img/account-ico_03.png",
+					"img/me_zron.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"saler-order-index.html": {
+				"resources": [
+					"img/address_ico_07.jpg",
+					"img/account-ico_03.png",
+					"saler-client-index.html",
+					"img/profile-ico_03-03.png",
+					"img/account-ico_06.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"saler-client-index.html": {
+				"resources": [
+					"saler_account_details_gr.html",
+					"saler_order_list.html",
+					"img/profile-ico_03-05.png",
+					"img/profile-ico_03-03.png",
+					"img/me_user.png",
+					"img/address_ico_07.jpg",
+					"img/login_bg_f102979.jpg",
+					"img/profile-ico_03-04.png",
+					"saler_me_index.html",
+					"img/me_zron.png",
+					"img/profile-ico_03-07.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"saler_me_index.html": {
+				"resources": [
+					"img/address_ico_07.jpg",
+					"img/me_user.png",
+					"img/account-ico_03.png",
+					"libs/sui/img/i-list-chevron-right.png",
+					"saler-client-index.html",
+					"img/account-ico_06.png"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"driver_index_status_complete.html": {
+				"resources": [
+					"img/mall-index-ad.jpg",
+					"driver_index_status_delivery.html",
+					"driver_index_status.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"driver_index_status.html": {
+				"resources": [
+					"driver_me_index.html",
+					"img/user-ico_03.png",
+					"driver_index_status_delivery.html",
+					"libs/sui/js/zepto.min.js",
+					"js/app.js",
+					"img/ico-me-car2.png",
+					"libs/alifontico/iconfont.css",
+					"libs/sui/fonts/ratchicons.woff",
+					"libs/sui/img/i-list-chevron-right.png",
+					"libs/sui/js/sm-extend.min.js",
+					"libs/sui/js/sm.min.js",
+					"css/style-plugin.css",
+					"img/i-list-chevron-right.png",
+					"libs/sui/css/sm-extend.min.css",
+					"img/me-ico_13.png",
+					"img/me-ico_07.png",
+					"img/ico-me-weight.png",
+					"libs/sui/css/sm.min.css"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"driver_index_status_delivery.html": {
+				"resources": [
+					"img/mall-index-ad.jpg",
+					"driver_index_status_complete.html",
+					"driver_index_status.html"
+				],
+				"refer": [],
+				"priority": 0
+			},
+			"login.html": {
+				"resources": [
+					"libs/sui/js/zepto.min.js",
+					"js/app.js",
+					"img/password-ico.png",
+					"img/iconfont-location.png",
+					"libs/sui/js/sm-extend.min.js",
+					"libs/sui/js/sm.min.js",
+					"libs/sui/css/sm.min.css",
+					"css/style-plugin.css",
+					"img/username-ico.png",
+					"libs/toucher/toucher.js",
+					"libs/sui/css/sm-extend.min.css"
 				],
 				"refer": [],
 				"priority": 0
